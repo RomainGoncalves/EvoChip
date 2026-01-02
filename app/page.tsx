@@ -50,151 +50,16 @@ import {
   BrainCog,
 } from "lucide-react";
 
-// --- Shared Components ---
-const Button = ({
-  children,
-  variant = "primary",
-  className = "",
-  ...props
-}) => {
-  const baseStyle =
-    "px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer whitespace-nowrap relative overflow-hidden group";
-
-  const variants = {
-    primary:
-      "bg-cyan-500 text-slate-900 shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:shadow-[0_0_30px_rgba(6,182,212,0.6)] hover:bg-cyan-400",
-    secondary:
-      "bg-transparent border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10 hover:border-cyan-500",
-    outline:
-      "bg-transparent border border-slate-600 text-slate-300 hover:border-white hover:text-white",
-    cta_nav:
-      "bg-cyan-500 text-slate-900 text-xs px-4 py-2 shadow-[0_0_10px_rgba(6,182,212,0.3)]",
-    devPrimary:
-      "bg-cyan-500 text-slate-900 shadow-[0_0_20px_rgba(6,182,212,0.5)] font-mono hover:bg-cyan-400",
-    devSecondary:
-      "bg-transparent border border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 font-mono",
-    white: "bg-white text-slate-900 hover:bg-gray-100",
-  };
-  return (
-    <button
-      className={`${baseStyle} ${
-        variants[variant] || variants.primary
-      } ${className}`}
-      {...props}
-    >
-      <span className="relative z-10 flex items-center gap-2">{children}</span>
-    </button>
-  );
-};
-
-const SectionHeading = ({
-  subtitle,
-  title,
-  align = "center",
-  theme = "evo",
-}) => (
-  <div
-    className={`mb-12 md:mb-16 ${
-      align === "center" ? "text-center" : "text-left"
-    }`}
-  >
-    <span
-      className={`${
-        theme === "evo" ? "text-cyan-400" : "text-cyan-400"
-      } font-mono text-sm tracking-widest uppercase mb-2 block`}
-    >
-      {subtitle}
-    </span>
-    <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight">
-      {title}
-    </h2>
-    <div
-      className={`h-1 w-24 bg-gradient-to-r ${
-        theme === "evo"
-          ? "from-cyan-500 to-blue-600"
-          : "from-cyan-500 to-blue-600"
-      } mt-4 md:mt-6 ${align === "center" ? "mx-auto" : ""} rounded-full`}
-    ></div>
-  </div>
-);
-
-const Card = ({ children, className = "", theme = "evo" }) => (
-  <div
-    className={`backdrop-blur-sm border p-6 md:p-8 rounded-2xl transition-colors ${
-      theme === "evo"
-        ? "bg-slate-800/40 border-slate-700/50 hover:border-cyan-500/30"
-        : "bg-slate-800/80 border-slate-700 hover:border-cyan-500/50"
-    } ${className}`}
-  >
-    {children}
-  </div>
-);
-
-const LogicBackground = () => (
-  <div className="absolute inset-0 overflow-hidden pointer-events-none">
-    <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.05)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_100%)]"></div>
-    <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/20 rounded-full blur-[100px]"></div>
-    <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-[100px]"></div>
-  </div>
-);
-
-const EvoChipLogo = ({ className = "h-8" }) => (
-  <svg
-    viewBox="0 0 200 44"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    className={`text-cyan-400 ${className}`}
-  >
-    <text
-      x="100"
-      y="32"
-      dominantBaseline="middle"
-      textAnchor="middle"
-      fill="currentColor"
-      fontFamily="sans-serif"
-      fontWeight="900"
-      fontSize="24"
-      letterSpacing="2"
-    >
-      EVOCHIP
-    </text>
-    <path
-      d="M 10 42 H 190"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-    />
-    <path
-      d="M 10 42 V 12 H 40"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-    />
-    <circle cx="46" cy="12" r="3" fill="currentColor" />
-    <path
-      d="M 52 12 H 190 V 42"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-    />
-    <circle cx="190" cy="42" r="2" fill="currentColor" />
-  </svg>
-);
-
-const VideoEmbed = ({ videoId, title, className = "" }) => (
-  <div
-    className={`aspect-video w-full rounded-2xl overflow-hidden border border-cyan-500/20 shadow-2xl bg-slate-950 ${className}`}
-  >
-    <iframe
-      className="w-full h-full"
-      src={`https://www.youtube.com/embed/${videoId}`}
-      title={title}
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowFullScreen
-    ></iframe>
-  </div>
-);
+// Extracted components
+import {
+  Button,
+  SectionHeading,
+  Card,
+  LogicBackground,
+  CookieConsentBanner,
+} from "@/components/ui";
+import { EvoChipLogo, VideoEmbed } from "@/components/brand";
+import { KPICard, IPPortfolioCard } from "@/components/investor";
 
 // --- EVO CHIP SITE COMPONENTS (Corporate - PROTECTED) ---
 const EvoNavbar = ({ onViewChange }) => {
@@ -2354,65 +2219,6 @@ const SidePathBenchmarkSection = () => (
 );
 
 const InvestorPortalContent = ({ onViewChange }) => {
-  const KPICard = ({ title, value, icon: Icon, color, subtitle }) => (
-    <div className="bg-slate-900 p-5 rounded-xl border border-slate-700 shadow-xl flex flex-col items-start min-h-0 h-auto font-sans">
-      <Icon className={`w-6 h-6 ${color} mb-3 font-bold`} />
-      <p className="text-sm text-slate-400 uppercase tracking-widest font-mono font-bold uppercase">
-        {title}
-      </p>
-      <h3
-        className={`text-xl sm:text-2xl font-extrabold text-white mt-1 ${color} font-sans`}
-      >
-        {value}
-      </h3>
-      <p className="text-[10px] text-slate-500 mt-1 uppercase font-semibold font-sans">
-        {subtitle}
-      </p>
-    </div>
-  );
-
-  const IPPortfolioCard = ({
-    title,
-    focus,
-    subHeader,
-    items,
-    color,
-    icon: Icon,
-  }) => (
-    <div className="bg-slate-800/80 p-6 rounded-2xl border border-slate-700 transition-all hover:border-cyan-500/50 flex flex-col font-sans">
-      {Icon && <Icon className={`w-8 h-8 ${color} mb-4 font-bold`} />}
-      <h4 className={`text-xl font-bold text-white mb-1 font-sans`}>{title}</h4>
-      <p
-        className={`text-sm font-mono uppercase tracking-wider mb-2 ${color} font-bold`}
-      >
-        {focus}
-      </p>
-      {subHeader && (
-        <p className="text-xs italic text-slate-300 mb-4 border-l-2 border-cyan-500/50 pl-3 font-sans">
-          "{subHeader}"
-        </p>
-      )}
-      <div className="space-y-3 flex-grow font-sans">
-        {items.map((item, idx) => (
-          <div key={idx} className="flex items-start gap-2 font-sans">
-            <span
-              className={`mt-1.5 w-1.5 h-1.5 rounded-full shrink-0 ${color.replace(
-                "text-",
-                "bg-"
-              )} font-bold`}
-            ></span>
-            <p className="text-sm text-slate-300 font-sans">
-              <span className="font-mono font-bold text-slate-100 uppercase text-[10px] tracking-tight font-bold">
-                {item.label}:
-              </span>{" "}
-              {item.text}
-            </p>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-
   return (
     <div className="min-h-screen bg-slate-900 pt-20 md:pt-24 pb-12 relative overflow-hidden font-sans">
       <LogicBackground />
@@ -3399,30 +3205,6 @@ const AltiHomePage = ({ setCurrentView }) => (
     <AltiFinalCta setCurrentView={setCurrentView} />
   </>
 );
-
-const CookieConsentBanner = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  if (!isVisible) return null;
-  return (
-    <div className="fixed bottom-0 left-0 w-full z-50 p-4 md:p-6 bg-slate-950/90 backdrop-blur-sm border-t border-slate-700 font-sans">
-      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-4">
-        <p className="text-xs text-slate-300 tracking-tight">
-          EvoChip uses cookies to improve your experience. Review our policies
-          for more info.
-        </p>
-        <div className="flex gap-3">
-          <Button
-            variant="primary"
-            className="text-xs py-2 px-3"
-            onClick={() => setIsVisible(false)}
-          >
-            Agree
-          </Button>
-        </div>
-      </div>
-    </div>
-  );
-};
 
 const AltiDeveloperPortalPage = () => (
   <div className="min-h-screen bg-slate-900 flex items-center justify-center pt-24 font-sans">
