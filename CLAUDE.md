@@ -87,4 +87,4 @@ There are 3 products in this app that have the following design requirements. Wh
 
 - AltiCoreMCU: base color is tailwind's blue-400
 - AltiCoreSW: base color is tailwind's teal-400
-- AltiCoreHDL: base color is tailwind's amber-400
+- AltiCoreHDL: base color is tailwind's amber-500

@@ -62,7 +62,11 @@ import { EvoChipLogo, VideoEmbed } from "@/components/brand";
 import { KPICard, IPPortfolioCard } from "@/components/investor";
 
 // --- EVO CHIP SITE COMPONENTS (Corporate - PROTECTED) ---
-const EvoNavbar = ({ onViewChange }) => {
+const EvoNavbar = ({
+  onViewChange,
+}: {
+  onViewChange: (view: string) => void;
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
@@ -78,7 +82,7 @@ const EvoNavbar = ({ onViewChange }) => {
     { name: "Contact", href: "#contact-evo" },
   ];
 
-  const handleNavClick = (href) => {
+  const handleNavClick = (href: string) => {
     setIsOpen(false);
     if (href.startsWith("#")) {
       const element = document.querySelector(href);
@@ -172,7 +176,11 @@ const EvoNavbar = ({ onViewChange }) => {
   );
 };
 
-const EvoHero = ({ onViewChange }) => {
+const EvoHero = ({
+  onViewChange,
+}: {
+  onViewChange: (view: string) => void;
+}) => {
   const heroImageAlt =
     "Diagram illustrating the replacement of a complex neural network (NN) with a simple, efficient gate-level logic unit.";
 
@@ -187,7 +195,7 @@ const EvoHero = ({ onViewChange }) => {
           </div>
           <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight mb-6">
             The Logic Synthesis Standard for{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-mcu-dark">
               Global AI.
             </span>
           </h1>
@@ -202,16 +210,7 @@ const EvoHero = ({ onViewChange }) => {
           {/* Product Secondary Tier - Sovereign Color Mapping */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10 pb-8 border-b border-slate-800/60">
             <div className="flex flex-col gap-1">
-              <div className="flex items-center gap-2 text-[#10b981]">
-                <Server className="w-4 h-4" />
-                <span className="font-mono font-bold tracking-tight">
-                  AltiCoreSW
-                </span>
-              </div>
-              <p className="text-[14px]">Pure software acceleration.</p>
-            </div>
-            <div className="flex flex-col gap-1">
-              <div className="flex items-center gap-2 text-[#2dd4bf]">
+              <div className="flex items-center gap-2 text-mcu">
                 <Microchip className="w-4 h-4" />
                 <span className="font-mono font-bold tracking-tight">
                   AltiCoreMCU
@@ -220,7 +219,16 @@ const EvoHero = ({ onViewChange }) => {
               <p className="text-[14px]">Edge device intelligence.</p>
             </div>
             <div className="flex flex-col gap-1">
-              <div className="flex items-center gap-2 text-[#b45309]">
+              <div className="flex items-center gap-2 text-sw">
+                <Server className="w-4 h-4" />
+                <span className="font-mono font-bold tracking-tight">
+                  AltiCoreSW
+                </span>
+              </div>
+              <p className="text-[14px]">Pure software acceleration.</p>
+            </div>
+            <div className="flex flex-col gap-1">
+              <div className="flex items-center gap-2 text-hdl">
                 <Cpu className="w-4 h-4" />
                 <span className="font-mono font-bold tracking-tight">
                   AltiCoreHDL
@@ -339,8 +347,8 @@ const EvoTechnology = () => (
         </Card>
 
         {/* Box 2: The AI Power Wall */}
-        <Card className="bg-slate-800/40 border-slate-700/50 hover:border-blue-400/30 transition-all group h-full flex flex-col">
-          <Zap className="w-10 h-10 text-blue-400 mb-6 transition-transform group-hover:scale-110" />
+        <Card className="bg-slate-800/40 border-slate-700/50 hover:border-mcu/30 transition-all group h-full flex flex-col">
+          <Zap className="w-10 h-10 text-mcu mb-6 transition-transform group-hover:scale-110" />
           <h3 className="text-xl font-bold text-white mb-4 tracking-tight">
             The AI Power Wall
           </h3>
@@ -355,18 +363,18 @@ const EvoTechnology = () => (
               Engines that optimize fundamental logic paths across the entire
               stack—from MCUs to GPUs.
             </p>
-            <div className="bg-slate-900/50 p-3 rounded border border-blue-400 font-mono text-[10px] text-blue-400 blue-400 mt-4 leading-relaxed uppercase tracking-widest">
+            <div className="bg-slate-900/50 p-3 rounded border border-mcu font-mono text-[10px] text-mcu mcu mt-4 leading-relaxed uppercase tracking-widest">
               Power Metric: 1000x Power Reduction | Drastic Thermal Drop
             </div>
           </div>
-          <div className="mt-8 pt-4 border-t border-slate-700/50 text-[10px] text-blue-400 font-mono blue-400 uppercase tracking-widest">
+          <div className="mt-8 pt-4 border-t border-slate-700/50 text-[10px] text-mcu font-mono mcu uppercase tracking-widest">
             Impact: Slash OpEx (Energy/Cooling) by 90%
           </div>
         </Card>
 
         {/* Box 3: White Box vs. Black Box */}
-        <Card className="bg-slate-800/40 border-slate-700/50 hover:border-amber-500/30 transition-all group h-full flex flex-col">
-          <ShieldCheck className="w-10 h-10 text-amber-500 mb-6 transition-transform group-hover:scale-110" />
+        <Card className="bg-slate-800/40 border-slate-700/50 hover:border-hdl/30 transition-all group h-full flex flex-col">
+          <ShieldCheck className="w-10 h-10 text-hdl mb-6 transition-transform group-hover:scale-110" />
           <h3 className="text-xl font-bold text-white mb-4 tracking-tight">
             White Box vs. Black Box
           </h3>
@@ -383,11 +391,11 @@ const EvoTechnology = () => (
               intelligence that assists core operations without obscuring
               decisions.
             </p>
-            <div className="bg-slate-900/50 p-3 rounded border border-amber-500 font-mono text-[10px] text-amber-500 mt-4 leading-relaxed uppercase tracking-widest">
+            <div className="bg-slate-900/50 p-3 rounded border border-hdl font-mono text-[10px] text-hdl mt-4 leading-relaxed uppercase tracking-widest">
               Operational State: Certification Ready | Optimized Perf-per-Watt
             </div>
           </div>
-          <div className="mt-8 pt-4 border-t border-slate-700/50 text-[10px] font-mono text-amber-500 uppercase tracking-widest">
+          <div className="mt-8 pt-4 border-t border-slate-700/50 text-[10px] font-mono text-hdl uppercase tracking-widest">
             Impact: Unlock regulated markets (Medical, Auto, Defense)
           </div>
         </Card>
@@ -404,8 +412,12 @@ const EvoTechnology = () => (
   </section>
 );
 
-const EvoProducts = ({ onViewChange }) => {
-  const scrollToSection = (id) => {
+const EvoProducts = ({
+  onViewChange,
+}: {
+  onViewChange: (view: string) => void;
+}) => {
+  const scrollToSection = (id: string) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
@@ -422,19 +434,19 @@ const EvoProducts = ({ onViewChange }) => {
         />
         <div className="grid lg:grid-cols-3 gap-8">
           {/* AltiCoreMCU */}
-          <div className="bg-slate-900 rounded-2xl p-6 md:p-8 border border-[#2dd4bf]/30 shadow-[0_0_30px_rgba(45,212,191,0.2)] flex flex-col">
-            <div className="inline-flex mb-4 px-2 py-0.5 bg-teal-900/30 border border-[#2dd4bf]/30 rounded text-[9px] font-mono text-[#2dd4bf] uppercase font-bold w-fit">
+          <div className="bg-slate-900 rounded-2xl p-6 md:p-8 border border-mcu/30 shadow-[0_0_30px_rgba(96,165,250,0.2)] flex flex-col">
+            <div className="inline-flex mb-4 px-2 py-0.5 bg-blue-900/30 border border-mcu/30 rounded text-[9px] font-mono text-mcu uppercase font-bold w-fit">
               Patented Logic-First Architecture
             </div>
-            <Microchip className="w-10 h-10 text-[#2dd4bf] mb-4" />
+            <Microchip className="w-10 h-10 text-mcu mb-4" />
             <h3 className="text-xl md:text-2xl font-bold text-white mb-1">
-              <span className="text-[#2dd4bf]">AltiCoreMCU</span>
+              <span className="text-mcu">AltiCoreMCU</span>
             </h3>
             <p className="text-xs font-mono uppercase tracking-widest text-slate-400 mb-4 font-bold">
               Universal Intelligence at the Edge.
             </p>
             <p className="text-slate-300 text-sm leading-relaxed mb-8">
-              The world’s only solution capable of training and executing AI
+              The world's only solution capable of training and executing AI
               models locally across the entire microcontroller spectrum—from
               high-performance processors to standard $1 MCUs. Our binary
               firmware IP enables total intelligence on resource-constrained
@@ -448,7 +460,7 @@ const EvoProducts = ({ onViewChange }) => {
                 "Zero Cloud / NPU",
               ].map((spec) => (
                 <div key={spec} className="flex items-start gap-2">
-                  <CheckCircle2 className="w-3 h-3 text-[#2dd4bf] shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-3 h-3 text-mcu shrink-0 mt-0.5" />
                   <span className="text-[10px] uppercase tracking-tight">
                     {spec}
                   </span>
@@ -456,7 +468,7 @@ const EvoProducts = ({ onViewChange }) => {
               ))}
             </div>
             <Button
-              className="w-full text-sm mt-auto bg-[#2dd4bf] text-slate-900 shadow-[0_0_20px_rgba(45,212,191,0.4)] hover:bg-[#26bba8] hover:shadow-[0_0_30px_rgba(45,212,191,0.6)]"
+              className="w-full text-sm mt-auto bg-mcu text-slate-900 shadow-[0_0_20px_rgba(96,165,250,0.4)] hover:bg-mcu-dark hover:shadow-[0_0_30px_rgba(96,165,250,0.6)]"
               onClick={() => scrollToSection("mcu-showcase")}
             >
               Technical Details
@@ -465,13 +477,13 @@ const EvoProducts = ({ onViewChange }) => {
           </div>
 
           {/* AltiCoreSW */}
-          <div className="bg-slate-900 rounded-2xl p-6 md:p-8 border border-[#10b981]/30 shadow-[0_0_30px_rgba(16,185,129,0.1)] flex flex-col">
-            <div className="inline-flex mb-4 px-2 py-0.5 bg-emerald-900/30 border border-[#10b981]/30 rounded text-[9px] font-mono text-[#10b981] uppercase font-bold w-fit">
+          <div className="bg-slate-900 rounded-2xl p-6 md:p-8 border border-sw/30 shadow-[0_0_30px_rgba(45,212,191,0.1)] flex flex-col">
+            <div className="inline-flex mb-4 px-2 py-0.5 bg-teal-900/30 border border-sw/30 rounded text-[9px] font-mono text-sw uppercase font-bold w-fit">
               Patented Logic-First Architecture
             </div>
-            <Server className="w-10 h-10 text-[#10b981] mb-4" />
+            <Server className="w-10 h-10 text-sw mb-4" />
             <h3 className="text-xl md:text-2xl font-bold text-white mb-1">
-              <span className="text-[#10b981]">AltiCoreSW</span>
+              <span className="text-sw">AltiCoreSW</span>
             </h3>
             <p className="text-xs font-mono uppercase tracking-widest text-slate-400 mb-4 font-bold">
               Pure Software Acceleration.
@@ -491,7 +503,7 @@ const EvoProducts = ({ onViewChange }) => {
                 "NVIDIA CUDA Optimized",
               ].map((spec) => (
                 <div key={spec} className="flex items-start gap-2">
-                  <CheckCircle2 className="w-3 h-3 text-[#10b981] shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-3 h-3 text-sw shrink-0 mt-0.5" />
                   <span className="text-[10px] uppercase tracking-tight">
                     {spec}
                   </span>
@@ -499,7 +511,7 @@ const EvoProducts = ({ onViewChange }) => {
               ))}
             </div>
             <Button
-              className="w-full text-sm mt-auto bg-[#10b981] text-slate-900 shadow-[0_0_20px_rgba(16,185,129,0.4)] hover:bg-[#0da372] hover:shadow-[0_0_30px_rgba(16,185,129,0.6)]"
+              className="w-full text-sm mt-auto bg-sw text-slate-900 shadow-[0_0_20px_rgba(45,212,191,0.4)] hover:bg-sw-dark hover:shadow-[0_0_30px_rgba(45,212,191,0.6)]"
               onClick={() => scrollToSection("sw-showcase")}
             >
               Architecture Details
@@ -508,13 +520,13 @@ const EvoProducts = ({ onViewChange }) => {
           </div>
 
           {/* AltiCoreHDL */}
-          <div className="bg-slate-900 rounded-2xl p-6 md:p-8 border border-[#b45309]/30 shadow-[0_0_30px_rgba(180,83,9,0.1)] flex flex-col">
-            <div className="inline-flex mb-4 px-2 py-0.5 bg-[#b45309]/20 border border-[#b45309]/30 rounded text-[9px] font-mono text-[#b45309] uppercase font-bold w-fit">
+          <div className="bg-slate-900 rounded-2xl p-6 md:p-8 border border-hdl/30 shadow-[0_0_30px_rgba(245,158,11,0.1)] flex flex-col">
+            <div className="inline-flex mb-4 px-2 py-0.5 bg-amber-900/20 border border-hdl/30 rounded text-[9px] font-mono text-hdl uppercase font-bold w-fit">
               Patented Logic-First Architecture
             </div>
-            <Cpu className="w-10 h-10 text-[#b45309] mb-4" />
+            <Cpu className="w-10 h-10 text-hdl mb-4" />
             <h3 className="text-xl md:text-2xl font-bold text-white mb-1">
-              <span className="text-[#b45309]">AltiCoreHDL</span>
+              <span className="text-hdl">AltiCoreHDL</span>
             </h3>
             <p className="text-xs font-mono uppercase tracking-widest text-slate-400 mb-4 font-bold">
               Synthesizable silicon blueprints.
@@ -534,7 +546,7 @@ const EvoProducts = ({ onViewChange }) => {
                 "Qualitative AI Blocks",
               ].map((spec) => (
                 <div key={spec} className="flex items-start gap-2">
-                  <CheckCircle2 className="w-3 h-3 text-[#b45309] shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-3 h-3 text-hdl shrink-0 mt-0.5" />
                   <span className="text-[10px] uppercase tracking-tight">
                     {spec}
                   </span>
@@ -542,7 +554,7 @@ const EvoProducts = ({ onViewChange }) => {
               ))}
             </div>
             <Button
-              className="w-full text-sm mt-auto bg-[#b45309] text-white shadow-[0_0_20px_rgba(180,83,9,0.4)] hover:bg-[#92400e] hover:shadow-[0_0_30px_rgba(180,83,9,0.6)]"
+              className="w-full text-sm mt-auto bg-hdl text-slate-900 shadow-[0_0_20px_rgba(245,158,11,0.4)] hover:bg-hdl hover:shadow-[0_0_30px_rgba(245,158,11,0.6)]"
               onClick={() => scrollToSection("hdl-showcase")}
             >
               Foundry IP Data
@@ -571,10 +583,9 @@ const EvoMcuShowcase = () => (
         <VideoEmbed videoId="a3iJMI8d0oU" title="AltiCoreMCU Part 2" />
       </div>
       <div className="max-w-3xl mx-auto">
-        <Card theme="alti" className="bg-slate-800/40 border-[#2dd4bf]/30">
+        <Card theme="alti" className="bg-slate-800/40 border-mcu/30">
           <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-            <Silicon className="w-6 h-6 text-[#2dd4bf]" /> Operational
-            Benchmarks
+            <Silicon className="w-6 h-6 text-mcu" /> Operational Benchmarks
           </h3>
           <p className="text-slate-300 leading-relaxed mb-6">
             AltiCoreMCU maintains equivalent test accuracy across all key
@@ -586,7 +597,7 @@ const EvoMcuShowcase = () => (
               <p className="text-[10px] font-mono text-slate-500 uppercase tracking-widest mb-1">
                 Active Power Draw
               </p>
-              <p className="text-2xl font-bold text-[#2dd4bf] font-mono tracking-tighter">
+              <p className="text-2xl font-bold text-mcu font-mono tracking-tighter">
                 450μW – 900μW
               </p>
             </div>
@@ -617,11 +628,11 @@ const EvoSwShowcase = () => (
       />
       <div className="grid lg:grid-cols-2 gap-12 items-start">
         <div className="space-y-6">
-          <div className="p-6 bg-slate-900 rounded-xl border border-[#10b981]/30 mb-6">
-            <p className="text-[#10b981] text-xs font-mono uppercase tracking-widest mb-2">
+          <div className="p-6 bg-slate-900 rounded-xl border border-sw/30 mb-6">
+            <p className="text-sw text-xs font-mono uppercase tracking-widest mb-2">
               Validation Partner: SidePath
             </p>
-            <blockquote className="text-slate-300 italic text-sm leading-relaxed border-l-2 border-[#10b981] pl-4">
+            <blockquote className="text-slate-300 italic text-sm leading-relaxed border-l-2 border-sw pl-4">
               "The benchmark results with AltiCoreSW are transformative. Seeing
               a software synthesis engine outperform established
               hardware-accelerated Neural Networks by such a massive margin
@@ -632,20 +643,20 @@ const EvoSwShowcase = () => (
             </blockquote>
           </div>
           <div className="space-y-6 h-full flex flex-col">
-            <div className="p-6 bg-slate-900/80 border border-[#10b981]/20 rounded-2xl shadow-xl flex-grow">
+            <div className="p-6 bg-slate-900/80 border border-sw/20 rounded-2xl shadow-xl flex-grow">
               <div className="flex items-center gap-3 mb-4">
-                <Zap className="w-6 h-6 text-[#10b981]" />
+                <Zap className="w-6 h-6 text-sw" />
                 <h4 className="text-lg font-bold text-white">
                   Infrastructure Lead
                 </h4>
               </div>
               <p className="text-slate-400 text-sm leading-relaxed mb-6">
                 Benchmark data confirms a{" "}
-                <span className="text-[#10b981] font-bold font-mono tracking-tighter">
+                <span className="text-sw font-bold font-mono tracking-tighter">
                   Geometric Mean of 11.3x
                 </span>{" "}
                 and{" "}
-                <span className="text-[#10b981] font-bold font-mono tracking-tighter">
+                <span className="text-sw font-bold font-mono tracking-tighter">
                   Median of 10.0x
                 </span>{" "}
                 speed advantage when executing AltiCoreSW on DellPrecision 8560
@@ -653,7 +664,7 @@ const EvoSwShowcase = () => (
               </p>
 
               <div className="p-4 bg-slate-950 rounded-lg border border-slate-800 mt-6 font-mono">
-                <h5 className="text-xs font-bold text-[#10b981] uppercase mb-2">
+                <h5 className="text-xs font-bold text-sw uppercase mb-2">
                   Disruptive Potential
                 </h5>
                 <p className="text-xs  leading-relaxed font-sans">
@@ -720,20 +731,18 @@ const EvoHdlShowcase = () => (
       />
       <div className="grid lg:grid-cols-2 gap-12 mb-16">
         <div className="space-y-6">
-          <h3 className="text-2xl font-bold text-[#b45309]">
-            Strategic Capability
-          </h3>
+          <h3 className="text-2xl font-bold text-hdl">Strategic Capability</h3>
           <p className="text-lg text-slate-300 leading-relaxed">
             Achieving equivalent accuracy to massive Neural Networks with{" "}
-            <span className="text-[#b45309] font-bold font-mono tracking-tighter">
+            <span className="text-hdl font-bold font-mono tracking-tighter">
               &lt;1% of the parameter count
             </span>
             . Our AltiCoreAI technology reduces transistor count by up to 1000x
             for native on-chip AI.
           </p>
-          <Card theme="alti" className="border-[#b45309]/20 bg-[#b45309]/5">
+          <Card theme="alti" className="border-hdl/20 bg-hdl/5">
             <h4 className="text-white font-bold mb-2 flex items-center gap-2">
-              <Activity className="w-5 h-5 text-[#b45309]" /> Technical Detail
+              <Activity className="w-5 h-5 text-hdl" /> Technical Detail
             </h4>
             <p className="text-sm text-slate-400 leading-relaxed">
               Benchmark architectures transition from 63,000 arithmetic
@@ -743,16 +752,16 @@ const EvoHdlShowcase = () => (
             </p>
           </Card>
         </div>
-        <div className="bg-slate-950 p-8 rounded-2xl border border-[#b45309]/30 shadow-2xl relative overflow-hidden h-fit">
+        <div className="bg-slate-950 p-8 rounded-2xl border border-hdl/30 shadow-2xl relative overflow-hidden h-fit">
           <div className="absolute top-0 right-0 p-4 opacity-5">
-            <Globe className="w-32 h-32 text-[#b45309]" />
+            <Globe className="w-32 h-32 text-hdl" />
           </div>
           <h4 className="text-white font-bold mb-8 uppercase tracking-widest text-xs font-mono text-center">
             Public Roadmap (2026)
           </h4>
           <div className="space-y-8">
             <div className="flex gap-4 items-start">
-              <div className="w-12 h-12 rounded bg-[#b45309]/30 border border-[#b45309]/30 flex items-center justify-center shrink-0 text-[#b45309] font-bold font-mono text-xs uppercase">
+              <div className="w-12 h-12 rounded bg-amber-900/30 border border-hdl/30 flex items-center justify-center shrink-0 text-hdl font-bold font-mono text-xs uppercase">
                 Q1
               </div>
               <div>
@@ -766,7 +775,7 @@ const EvoHdlShowcase = () => (
               </div>
             </div>
             <div className="flex gap-4 items-start">
-              <div className="w-12 h-12 rounded bg-[#b45309]/30 border border-[#b45309]/30 flex items-center justify-center shrink-0 text-[#b45309] font-bold font-mono text-xs uppercase">
+              <div className="w-12 h-12 rounded bg-amber-900/30 border border-hdl/30 flex items-center justify-center shrink-0 text-hdl font-bold font-mono text-xs uppercase">
                 Q3
               </div>
               <div>
@@ -830,7 +839,7 @@ const EvoAbout = () => (
 
 const EvoContactSection = () => {
   const [submitSuccess, setSubmitSuccess] = useState(false);
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitSuccess(true);
     setTimeout(() => setSubmitSuccess(false), 5000);
@@ -881,7 +890,7 @@ const EvoContactSection = () => {
                 <textarea
                   placeholder="Message"
                   className="w-full bg-slate-900 border border-slate-700 rounded px-4 py-3 text-sm"
-                  rows="4"
+                  rows={4}
                   required
                 ></textarea>
                 <Button type="submit" variant="primary" className="w-full">
@@ -897,7 +906,13 @@ const EvoContactSection = () => {
 };
 
 // --- ALTICOREAI COMPONENTS (Rebranded - TARGET SCOPE) ---
-const AltiNavbar = ({ onViewChange, currentView }) => {
+const AltiNavbar = ({
+  onViewChange,
+  currentView,
+}: {
+  onViewChange: (view: string) => void;
+  currentView: string;
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const navLinks = [
     {
@@ -1024,7 +1039,11 @@ const AltiNavbar = ({ onViewChange, currentView }) => {
   );
 };
 
-const AltiHomeHero = ({ onViewChange }) => (
+const AltiHomeHero = ({
+  onViewChange,
+}: {
+  onViewChange: (view: string) => void;
+}) => (
   <section className="min-h-[60vh] bg-slate-900 flex items-center pt-24 relative overflow-hidden">
     <LogicBackground />
     <div className="container mx-auto px-6 relative z-10 text-center py-20">
@@ -1055,7 +1074,11 @@ const AltiHomeHero = ({ onViewChange }) => (
   </section>
 );
 
-const AltiProductCategories = ({ onViewChange }) => {
+const AltiProductCategories = ({
+  onViewChange,
+}: {
+  onViewChange: (view: string) => void;
+}) => {
   const products = [
     {
       name: "Edge Autonomy IP: The End of Cloud Latency.",
@@ -1068,12 +1091,12 @@ const AltiProductCategories = ({ onViewChange }) => {
       ],
       cta: "MCU Specifications",
       action: () => onViewChange("alticore_mcu"),
-      image: "https://placehold.co/800x400/0F172A/2dd4bf?text=Edge+Autonomy+IP",
+      image: "https://placehold.co/800x400/0F172A/60a5fa?text=Edge+Autonomy+IP",
       badges: ["Cortex-M", "ESP32", "RISC-V"],
-      colorClass: "text-teal-400",
-      badgeClass: "text-teal-400 border-teal-500/30",
-      accentClass: "shadow-teal-500/30",
-      hoverGlow: "hover:shadow-teal-500/20",
+      colorClass: "text-mcu",
+      badgeClass: "text-mcu border-mcu-dark/30",
+      accentClass: "shadow-mcu-dark/30",
+      hoverGlow: "hover:shadow-mcu-dark/20",
     },
     {
       name: "Synthesis Engine: Legacy Infrastructure Rebirth.",
@@ -1086,12 +1109,12 @@ const AltiProductCategories = ({ onViewChange }) => {
       ],
       cta: "SW Architecture Details",
       action: () => onViewChange("alticore_sw"),
-      image: "https://placehold.co/800x400/0F172A/10b981?text=Synthesis+Engine",
+      image: "https://placehold.co/800x400/0F172A/2dd4bf?text=Synthesis+Engine",
       badges: ["CUDA 12.x", "Ubuntu", "Windows 11"],
-      colorClass: "text-emerald-400",
-      badgeClass: "text-emerald-400 border-emerald-500/30",
-      accentClass: "shadow-emerald-500/30",
-      hoverGlow: "hover:shadow-emerald-500/20",
+      colorClass: "text-sw",
+      badgeClass: "text-sw border-sw-dark/30",
+      accentClass: "shadow-sw-dark/30",
+      hoverGlow: "hover:shadow-sw-dark/20",
     },
     {
       name: "Gate-Level Logic IP: Transistor Sovereignty.",
@@ -1105,12 +1128,12 @@ const AltiProductCategories = ({ onViewChange }) => {
       cta: "Foundry IP Data",
       action: () => onViewChange("alticore_hdl"),
       image:
-        "https://placehold.co/800x400/0F172A/b45309?text=Gate-Level+Logic+IP",
+        "https://placehold.co/800x400/0F172A/fbbf24?text=Gate-Level+Logic+IP",
       badges: ["Verilog", "VHDL", "GDSII Ready"],
-      colorClass: "text-[#b45309]",
-      badgeClass: "text-[#b45309] border-[#b45309]/30",
-      accentClass: "shadow-[#b45309]/30",
-      hoverGlow: "hover:shadow-[#b45309]/20",
+      colorClass: "text-hdl",
+      badgeClass: "text-hdl border-hdl/30",
+      accentClass: "shadow-hdl/30",
+      hoverGlow: "hover:shadow-hdl/20",
     },
   ];
 
@@ -1135,8 +1158,9 @@ const AltiProductCategories = ({ onViewChange }) => {
                   alt={p.name}
                   className="w-full h-full object-cover opacity-70"
                   onError={(e) => {
-                    e.target.onerror = null;
-                    e.target.src =
+                    const target = e.target as HTMLImageElement;
+                    target.onerror = null;
+                    target.src =
                       "https://placehold.co/800x400/1E293B/E2E8F0?text=Logic+Stream";
                   }}
                 />
@@ -1201,13 +1225,17 @@ const AltiProductCategories = ({ onViewChange }) => {
   );
 };
 
-const AltiMcuPage = ({ setCurrentView }) => (
+const AltiMcuPage = ({
+  setCurrentView,
+}: {
+  setCurrentView: (view: string) => void;
+}) => (
   <section className="min-h-screen bg-slate-900">
     <div className="pt-32 pb-16 container mx-auto px-6">
       <div className="text-green-400 font-mono font-bold tracking-[0.2em] text-xs mb-2 uppercase">
         ECONOMIC IMPACT: 90% BOM REDUCTION
       </div>
-      <div className="inline-block px-2 py-1 bg-teal-900/30 text-teal-400 text-xs border border-teal-500/30 mb-6 font-mono font-bold uppercase tracking-widest">
+      <div className="inline-block px-2 py-1 bg-blue-900/30 text-mcu text-xs border border-mcu-dark/30 mb-6 font-mono font-bold uppercase tracking-widest">
         COMMERCIAL ASSET: AltiCoreMCU
       </div>
       <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
@@ -1216,7 +1244,7 @@ const AltiMcuPage = ({ setCurrentView }) => (
 
       <div className="grid lg:grid-cols-2 gap-12 mb-16">
         <div className="space-y-6">
-          <h3 className="text-2xl font-bold text-teal-400">
+          <h3 className="text-2xl font-bold text-mcu">
             The End of Cloud Latency
           </h3>
           <p className="text-xl text-slate-300 leading-relaxed">
@@ -1227,12 +1255,11 @@ const AltiMcuPage = ({ setCurrentView }) => (
           </p>
           <div className="p-6 bg-slate-800/40 rounded-xl border border-slate-700">
             <h4 className="text-white font-bold mb-4 flex items-center gap-2 font-sans">
-              <ClipboardCheck className="w-5 h-5 text-teal-400" /> Developer
-              Path
+              <ClipboardCheck className="w-5 h-5 text-mcu" /> Developer Path
             </h4>
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-xs font-mono font-bold uppercase tracking-widest">
               <div className="flex flex-col items-center">
-                <span className="p-2 bg-slate-900 rounded mb-1 border border-slate-700 text-teal-400 tracking-tighter">
+                <span className="p-2 bg-slate-900 rounded mb-1 border border-slate-700 text-mcu tracking-tighter">
                   1. MODEL INGEST
                 </span>
                 <span className="text-[10px] text-slate-500 italic lowercase font-normal">
@@ -1241,7 +1268,7 @@ const AltiMcuPage = ({ setCurrentView }) => (
               </div>
               <ChevronRight className="hidden sm:block text-slate-600" />
               <div className="flex flex-col items-center">
-                <span className="p-2 bg-slate-900 rounded mb-1 border border-slate-700 text-teal-400 tracking-tighter">
+                <span className="p-2 bg-slate-900 rounded mb-1 border border-slate-700 text-mcu tracking-tighter">
                   2. LOGIC SYNTHESIS
                 </span>
                 <span className="text-[10px] text-slate-500 italic lowercase font-normal">
@@ -1250,7 +1277,7 @@ const AltiMcuPage = ({ setCurrentView }) => (
               </div>
               <ChevronRight className="hidden sm:block text-slate-600" />
               <div className="flex flex-col items-center">
-                <span className="p-2 bg-slate-900 rounded mb-1 border border-slate-700 text-teal-400 tracking-tighter">
+                <span className="p-2 bg-slate-900 rounded mb-1 border border-slate-700 text-mcu tracking-tighter">
                   3. BINARY FLASH
                 </span>
                 <span className="text-[10px] text-slate-500 italic lowercase font-normal">
@@ -1263,7 +1290,7 @@ const AltiMcuPage = ({ setCurrentView }) => (
 
         <div className="bg-slate-950 rounded-2xl border border-slate-800 p-8 shadow-2xl">
           <h4 className="text-white font-bold mb-6 text-center flex items-center justify-center gap-2 uppercase tracking-widest text-sm">
-            <Pulse className="w-4 h-4 text-teal-400" /> Operational Benchmarks
+            <Pulse className="w-4 h-4 text-mcu" /> Operational Benchmarks
           </h4>
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs">
@@ -1271,7 +1298,7 @@ const AltiMcuPage = ({ setCurrentView }) => (
                 <tr className="border-b border-slate-800 text-slate-500 uppercase font-mono font-bold">
                   <th className="py-3 px-2">Metric</th>
                   <th className="py-3 px-2">Standard NNP</th>
-                  <th className="py-3 px-2 text-teal-400 font-bold">
+                  <th className="py-3 px-2 text-mcu font-bold">
                     AltiCoreAI Logic
                   </th>
                 </tr>
@@ -1282,7 +1309,7 @@ const AltiMcuPage = ({ setCurrentView }) => (
                     Inference Latency
                   </td>
                   <td className="py-4 px-2 tracking-tighter">12ms - 50ms</td>
-                  <td className="py-4 px-2 font-bold text-teal-400 tracking-tighter">
+                  <td className="py-4 px-2 font-bold text-mcu tracking-tighter">
                     400ns - 800ns
                   </td>
                 </tr>
@@ -1291,7 +1318,7 @@ const AltiMcuPage = ({ setCurrentView }) => (
                     Active Power Draw
                   </td>
                   <td className="py-4 px-2 tracking-tighter">250mW - 1.2W</td>
-                  <td className="py-4 px-2 font-bold text-teal-400 tracking-tighter">
+                  <td className="py-4 px-2 font-bold text-mcu tracking-tighter">
                     450μW - 900μW
                   </td>
                 </tr>
@@ -1302,7 +1329,7 @@ const AltiMcuPage = ({ setCurrentView }) => (
                   <td className="py-4 px-2 uppercase text-[10px] tracking-tight font-sans font-normal">
                     Cloud-Dependent
                   </td>
-                  <td className="py-4 px-2 font-bold text-teal-400 text-[10px] uppercase tracking-tighter">
+                  <td className="py-4 px-2 font-bold text-mcu text-[10px] uppercase tracking-tighter">
                     100% Air-Gapped
                   </td>
                 </tr>
@@ -1318,22 +1345,22 @@ const AltiMcuPage = ({ setCurrentView }) => (
             title: "BOM Destruction",
             desc: "Eliminate expensive AI co-processors. Run complex models on existing $1 hardware to slash unit costs.",
             icon: Silicon,
-            color: "text-teal-400",
+            color: "text-mcu",
           },
           {
             title: "Zero Cloud Dependency",
             desc: "Total local autonomy. 100% of model logic remains on-chip for maximum security.",
             icon: ShieldCheck,
-            color: "text-teal-400",
+            color: "text-mcu",
           },
           {
             title: "Industrial Longevity",
             desc: "Designed for 10-year deployment cycles in remote industrial monitoring and medical wearables.",
             icon: Pulse,
-            color: "text-teal-400",
+            color: "text-mcu",
           },
         ].map((item, i) => (
-          <Card key={i} theme="alti" className="border-teal-500/30">
+          <Card key={i} theme="alti" className="border-mcu-dark/30">
             <item.icon className={`w-10 h-10 ${item.color} mb-4 font-bold`} />
             <h4 className="text-white font-bold text-lg mb-2">{item.title}</h4>
             <p
@@ -1358,10 +1385,10 @@ const AltiMcuPage = ({ setCurrentView }) => (
         ].map((plat) => (
           <div
             key={plat.name}
-            className="p-6 bg-slate-800/40 border border-slate-700 rounded-lg flex flex-col gap-2 shadow-inner hover:border-teal-500/30 transition-all font-sans"
+            className="p-6 bg-slate-800/40 border border-slate-700 rounded-lg flex flex-col gap-2 shadow-inner hover:border-mcu-dark/30 transition-all font-sans"
           >
             <span className="text-white font-bold">{plat.name}</span>
-            <span className="text-teal-400 text-xs font-mono uppercase font-bold">
+            <span className="text-mcu text-xs font-mono uppercase font-bold">
               {plat.spec}
             </span>
           </div>
@@ -1369,7 +1396,7 @@ const AltiMcuPage = ({ setCurrentView }) => (
       </div>
       <Button
         variant="devPrimary"
-        className="bg-teal-500 text-slate-900 hover:bg-teal-400"
+        className="bg-mcu-dark text-slate-900 hover:bg-mcu"
         onClick={() => setCurrentView("alticore_contact_page")}
       >
         Request SDK Trial
@@ -1378,13 +1405,17 @@ const AltiMcuPage = ({ setCurrentView }) => (
   </section>
 );
 
-const AltiSwPage = ({ setCurrentView }) => (
+const AltiSwPage = ({
+  setCurrentView,
+}: {
+  setCurrentView: (view: string) => void;
+}) => (
   <section className="min-h-screen bg-slate-900">
     <div className="pt-32 pb-16 container mx-auto px-6">
       <div className="text-green-400 font-mono font-bold tracking-[0.2em] text-xs mb-2 uppercase">
         ECONOMIC IMPACT: CAPEX AVOIDANCE
       </div>
-      <div className="inline-block px-2 py-1 bg-emerald-900/30 text-emerald-400 text-xs border border-emerald-500/30 mb-6 font-mono font-bold uppercase tracking-widest">
+      <div className="inline-block px-2 py-1 bg-teal-900/30 text-sw text-xs border border-sw-dark/30 mb-6 font-mono font-bold uppercase tracking-widest">
         COMMERCIAL ASSET: AltiCoreSW
       </div>
       <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
@@ -1394,7 +1425,7 @@ const AltiSwPage = ({ setCurrentView }) => (
       {/* Sales Comparison Table */}
       <div className="mb-16 bg-slate-950 rounded-2xl border border-slate-800 p-8 shadow-2xl max-w-4xl">
         <h4 className="text-white font-bold mb-6 flex items-center gap-2 uppercase tracking-widest text-sm">
-          <BarChart className="w-4 h-4 text-emerald-400" /> Infrastructure ROI
+          <BarChart className="w-4 h-4 text-sw" /> Infrastructure ROI
         </h4>
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs font-mono font-bold uppercase tracking-widest">
@@ -1404,9 +1435,7 @@ const AltiSwPage = ({ setCurrentView }) => (
                   Asset Parameter
                 </th>
                 <th className="py-3 px-2">Legacy Cloud AI</th>
-                <th className="py-3 px-2 text-emerald-400">
-                  AltiCoreAI Synthesis
-                </th>
+                <th className="py-3 px-2 text-sw">AltiCoreAI Synthesis</th>
               </tr>
             </thead>
             <tbody className="text-slate-300 divide-y divide-slate-800/50">
@@ -1415,7 +1444,7 @@ const AltiSwPage = ({ setCurrentView }) => (
                   Hardware Lifecycle
                 </td>
                 <td className="py-4 px-2 tracking-tighter">Annual Upgrades</td>
-                <td className="py-4 px-2 font-bold text-emerald-400 tracking-tighter">
+                <td className="py-4 px-2 font-bold text-sw tracking-tighter">
                   +3-5 Year Extension
                 </td>
               </tr>
@@ -1426,7 +1455,7 @@ const AltiSwPage = ({ setCurrentView }) => (
                 <td className="py-4 px-2 tracking-tighter">
                   High (New Clusters)
                 </td>
-                <td className="py-4 px-2 font-bold text-emerald-400 tracking-tighter">
+                <td className="py-4 px-2 font-bold text-sw tracking-tighter">
                   Zero (Legacy Native)
                 </td>
               </tr>
@@ -1435,7 +1464,7 @@ const AltiSwPage = ({ setCurrentView }) => (
                   Effective Throughput
                 </td>
                 <td className="py-4 px-2 tracking-tighter">1x (Baseline)</td>
-                <td className="py-4 px-2 font-bold text-emerald-400 tracking-tighter">
+                <td className="py-4 px-2 font-bold text-sw tracking-tighter">
                   10x - 50x Increase
                 </td>
               </tr>
@@ -1444,7 +1473,7 @@ const AltiSwPage = ({ setCurrentView }) => (
                   Latency / OpEx
                 </td>
                 <td className="py-4 px-2 tracking-tighter">Variable / High</td>
-                <td className="py-4 px-2 font-bold text-emerald-400 tracking-tighter">
+                <td className="py-4 px-2 font-bold text-sw tracking-tighter">
                   Deterministic / Low
                 </td>
               </tr>
@@ -1455,7 +1484,7 @@ const AltiSwPage = ({ setCurrentView }) => (
 
       <div className="grid lg:grid-cols-2 gap-12 mb-16">
         <div className="space-y-6">
-          <h3 className="text-2xl font-bold text-emerald-400">
+          <h3 className="text-2xl font-bold text-sw">
             Legacy Infrastructure Rebirth
           </h3>
           <p className="text-xl text-slate-300 leading-relaxed">
@@ -1471,7 +1500,7 @@ const AltiSwPage = ({ setCurrentView }) => (
             <p className="text-sm text-slate-400 leading-relaxed font-sans">
               By reducing total compute overhead, AltiCoreAI Synthesis allows
               data center operators to run{" "}
-              <span className="text-emerald-400 font-bold font-mono tracking-tighter">
+              <span className="text-sw font-bold font-mono tracking-tighter">
                 2.5x more models per rack
               </span>{" "}
               without upgrading existing systems.
@@ -1480,7 +1509,7 @@ const AltiSwPage = ({ setCurrentView }) => (
         </div>
         <div className="bg-slate-950 rounded-2xl border border-slate-800 p-8 shadow-2xl">
           <h4 className="text-white font-bold mb-6 flex items-center gap-2 uppercase tracking-widest text-sm">
-            <Code className="w-4 h-4 text-emerald-400" /> The Compiler Stack
+            <Code className="w-4 h-4 text-sw" /> The Compiler Stack
           </h4>
           <div className="grid grid-cols-1 gap-4 font-mono font-bold uppercase tracking-widest">
             {[
@@ -1517,24 +1546,24 @@ const AltiSwPage = ({ setCurrentView }) => (
         {[
           {
             title: "Legacy Hardware ROI",
-            desc: "Achieve <span class='text-emerald-400 font-bold font-mono tracking-tighter'>10x speedups</span> on existing standard GPUs. No silicon upgrades required.",
+            desc: "Achieve <span class='text-sw font-bold font-mono tracking-tighter'>10x speedups</span> on existing standard GPUs. No silicon upgrades required.",
             icon: HardDrive,
-            color: "text-emerald-400",
+            color: "text-sw",
           },
           {
             title: "Optimized Training",
             desc: "Accelerate model training cycles by restructuring heavy matrix math into efficient logic paths.",
             icon: Database,
-            color: "text-emerald-400",
+            color: "text-sw",
           },
           {
             title: "Seamless Integration",
             desc: "Plug-and-play compatibility with standard PyTorch and TensorFlow workloads via our logic compiler.",
             icon: Layers,
-            color: "text-emerald-400",
+            color: "text-sw",
           },
         ].map((item, i) => (
-          <Card key={i} theme="alti" className="border-emerald-500/30">
+          <Card key={i} theme="alti" className="border-sw-dark/30">
             <item.icon className={`w-10 h-10 ${item.color} mb-4 font-bold`} />
             <h4 className="text-white font-bold text-lg mb-2">{item.title}</h4>
             <p
@@ -1559,10 +1588,10 @@ const AltiSwPage = ({ setCurrentView }) => (
         ].map((plat) => (
           <div
             key={plat.name}
-            className="p-6 bg-slate-800/40 border border-slate-700 rounded-lg flex flex-col gap-2 shadow-inner hover:border-emerald-500/30 transition-all font-sans"
+            className="p-6 bg-slate-800/40 border border-slate-700 rounded-lg flex flex-col gap-2 shadow-inner hover:border-sw-dark/30 transition-all font-sans"
           >
             <span className="text-white font-bold">{plat.name}</span>
-            <span className="text-emerald-400 text-xs font-mono uppercase font-bold">
+            <span className="text-sw text-xs font-mono uppercase font-bold">
               {plat.spec}
             </span>
           </div>
@@ -1570,7 +1599,7 @@ const AltiSwPage = ({ setCurrentView }) => (
       </div>
       <Button
         variant="devPrimary"
-        className="bg-emerald-500 text-slate-900 hover:bg-emerald-400"
+        className="bg-sw-dark text-slate-900 hover:bg-sw"
         onClick={() => setCurrentView("alticore_contact_page")}
       >
         Get Enterprise License
@@ -1579,13 +1608,17 @@ const AltiSwPage = ({ setCurrentView }) => (
   </section>
 );
 
-const AltiHdlPage = ({ setCurrentView }) => (
+const AltiHdlPage = ({
+  setCurrentView,
+}: {
+  setCurrentView: (view: string) => void;
+}) => (
   <section className="min-h-screen bg-slate-900">
     <div className="pt-32 pb-16 container mx-auto px-6">
       <div className="text-green-400 font-mono font-bold tracking-[0.2em] text-xs mb-2 uppercase">
         ECONOMIC IMPACT: TRANSISTOR SOVEREIGNTY
       </div>
-      <div className="inline-block px-2 py-1 bg-[#b45309]/20 text-[#b45309] text-xs border border-[#b45309]/30 mb-6 font-mono font-bold uppercase tracking-widest">
+      <div className="inline-block px-2 py-1 bg-hdl/20 text-hdl text-xs border border-hdl/30 mb-6 font-mono font-bold uppercase tracking-widest">
         COMMERCIAL ASSET: AltiCoreHDL
       </div>
       <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
@@ -1594,7 +1627,7 @@ const AltiHdlPage = ({ setCurrentView }) => (
 
       <div className="grid lg:grid-cols-2 gap-12 mb-16">
         <div className="space-y-6">
-          <h3 className="text-2xl font-bold text-[#b45309]">
+          <h3 className="text-2xl font-bold text-hdl">
             Transistor Sovereignty
           </h3>
           <p className="text-xl text-slate-300 leading-relaxed">
@@ -1607,12 +1640,11 @@ const AltiHdlPage = ({ setCurrentView }) => (
 
           <div className="p-6 bg-slate-800/40 rounded-xl border border-slate-700">
             <h4 className="text-white font-bold mb-4 flex items-center gap-2 font-sans">
-              <GitBranch className="w-5 h-5 text-[#b45309]" /> Foundry
-              Integration
+              <GitBranch className="w-5 h-5 text-hdl" /> Foundry Integration
             </h4>
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-xs font-mono font-bold uppercase tracking-widest">
               <div className="flex flex-col items-center">
-                <span className="p-2 bg-slate-900 rounded mb-1 border border-slate-700 text-[#b45309] tracking-tighter">
+                <span className="p-2 bg-slate-900 rounded mb-1 border border-slate-700 text-hdl tracking-tighter">
                   1. RTL LICENSING
                 </span>
                 <span className="text-[10px] text-slate-500 font-sans italic font-normal lowercase">
@@ -1621,7 +1653,7 @@ const AltiHdlPage = ({ setCurrentView }) => (
               </div>
               <ChevronRight className="hidden sm:block text-slate-600" />
               <div className="flex flex-col items-center">
-                <span className="p-2 bg-slate-900 rounded mb-1 border border-slate-700 text-[#b45309] tracking-tighter">
+                <span className="p-2 bg-slate-900 rounded mb-1 border border-slate-700 text-hdl tracking-tighter">
                   2. EDA SYNTHESIS
                 </span>
                 <span className="text-[10px] text-slate-500 font-sans italic font-normal lowercase">
@@ -1630,7 +1662,7 @@ const AltiHdlPage = ({ setCurrentView }) => (
               </div>
               <ChevronRight className="hidden sm:block text-slate-600" />
               <div className="flex flex-col items-center">
-                <span className="p-2 bg-slate-900 rounded mb-1 border border-slate-700 text-[#b45309] tracking-tighter">
+                <span className="p-2 bg-slate-900 rounded mb-1 border border-slate-700 text-hdl tracking-tighter">
                   3. GDSII TAPE-OUT
                 </span>
                 <span className="text-[10px] text-slate-500 font-sans italic font-normal lowercase">
@@ -1642,7 +1674,7 @@ const AltiHdlPage = ({ setCurrentView }) => (
         </div>
         <div className="bg-slate-950 rounded-2xl border border-slate-800 p-8 shadow-2xl">
           <h4 className="text-white font-bold mb-6 flex items-center gap-2 uppercase tracking-widest text-sm">
-            <Layers className="w-4 h-4 text-[#b45309]" /> Foundry Deliverables
+            <Layers className="w-4 h-4 text-hdl" /> Foundry Deliverables
           </h4>
           <ul className="space-y-4 font-mono font-bold uppercase tracking-widest">
             {[
@@ -1676,24 +1708,24 @@ const AltiHdlPage = ({ setCurrentView }) => (
         {[
           {
             title: "Foundry Blueprints",
-            desc: "Deliverables in synthesizable <span class='text-[#b45309] font-bold font-mono tracking-tighter'>Verilog/VHDL</span>. Ready for integration into leading foundry nodes.",
+            desc: "Deliverables in synthesizable <span class='text-hdl font-bold font-mono tracking-tighter'>Verilog/VHDL</span>. Ready for integration into leading foundry nodes.",
             icon: Layers,
-            color: "text-[#b45309]",
+            color: "text-hdl",
           },
           {
             title: "1000x Density",
-            desc: "Reduce AI transistor count by <span class='text-[#b45309] font-bold font-mono tracking-tighter'>1000x</span>. Create smaller, cooler, more efficient processors.",
+            desc: "Reduce AI transistor count by <span class='text-hdl font-bold font-mono tracking-tighter'>1000x</span>. Create smaller, cooler, more efficient processors.",
             icon: Silicon,
-            color: "text-[#b45309]",
+            color: "text-hdl",
           },
           {
             title: "Qualitative AI Native",
             desc: "Specialized IP blocks for gate-level LLM execution. Deterministic logic for safety-critical synthesis.",
             icon: Brain,
-            color: "text-[#b45309]",
+            color: "text-hdl",
           },
         ].map((item, i) => (
-          <Card key={i} theme="alti" className="border-[#b45309]/30">
+          <Card key={i} theme="alti" className="border-hdl/30">
             <item.icon className={`w-10 h-10 ${item.color} mb-4 font-bold`} />
             <h4 className="text-white font-bold text-lg mb-2">{item.title}</h4>
             <p
@@ -1718,10 +1750,10 @@ const AltiHdlPage = ({ setCurrentView }) => (
         ].map((plat) => (
           <div
             key={plat.name}
-            className="p-6 bg-slate-800/40 border border-slate-700 rounded-lg flex flex-col gap-2 shadow-inner hover:border-[#b45309]/30 transition-all font-sans"
+            className="p-6 bg-slate-800/40 border border-slate-700 rounded-lg flex flex-col gap-2 shadow-inner hover:border-hdl/30 transition-all font-sans"
           >
             <span className="text-white font-bold">{plat.name}</span>
-            <span className="text-[#b45309] text-xs font-mono uppercase font-bold">
+            <span className="text-hdl text-xs font-mono uppercase font-bold">
               {plat.spec}
             </span>
           </div>
@@ -1729,7 +1761,7 @@ const AltiHdlPage = ({ setCurrentView }) => (
       </div>
       <Button
         variant="devPrimary"
-        className="bg-[#b45309] text-white hover:bg-[#92400e]"
+        className="bg-hdl text-white hover:bg-hdl"
         onClick={() => setCurrentView("alticore_contact_page")}
       >
         Access Foundry Data Room
@@ -1738,7 +1770,11 @@ const AltiHdlPage = ({ setCurrentView }) => (
   </section>
 );
 
-const AltiAboutPage = ({ setCurrentView }) => (
+const AltiAboutPage = ({
+  setCurrentView,
+}: {
+  setCurrentView: (view: string) => void;
+}) => (
   <div className="min-h-screen bg-slate-900 font-sans">
     <section className="pt-32 pb-20 relative overflow-hidden">
       <LogicBackground />
@@ -1837,7 +1873,11 @@ const AltiAboutPage = ({ setCurrentView }) => (
   </div>
 );
 
-const AltiFinalCta = ({ setCurrentView }) => (
+const AltiFinalCta = ({
+  setCurrentView,
+}: {
+  setCurrentView: (view: string) => void;
+}) => (
   <section className="py-24 bg-slate-900 border-t border-slate-800">
     <div className="container mx-auto px-6 max-w-6xl">
       <SectionHeading
@@ -2218,7 +2258,11 @@ const SidePathBenchmarkSection = () => (
   </div>
 );
 
-const InvestorPortalContent = ({ onViewChange }) => {
+const InvestorPortalContent = ({
+  onViewChange,
+}: {
+  onViewChange: (view: string) => void;
+}) => {
   return (
     <div className="min-h-screen bg-slate-900 pt-20 md:pt-24 pb-12 relative overflow-hidden font-sans">
       <LogicBackground />
@@ -2571,7 +2615,7 @@ const InvestorPortalContent = ({ onViewChange }) => {
                   title="AltiCoreMCU"
                   focus="HIGH-VOLUME IP ROYALTIES"
                   subHeader="Turning $2 IoT hardware into high-performance AI assets."
-                  color="text-teal-400"
+                  color="text-mcu"
                   icon={Microchip}
                   items={[
                     {
@@ -2596,7 +2640,7 @@ const InvestorPortalContent = ({ onViewChange }) => {
                   title="AltiCoreSW"
                   focus="ENTERPRISE SAAS"
                   subHeader="Immediate OpEx elimination for existing infrastructure."
-                  color="text-emerald-400"
+                  color="text-sw"
                   icon={Server}
                   items={[
                     {
@@ -2625,7 +2669,7 @@ const InvestorPortalContent = ({ onViewChange }) => {
                   title="AltiCoreHDL"
                   focus="SILICON-IP SAAS"
                   subHeader="The 'Intel-Inside' moat for the next generation of silicon."
-                  color="text-[#b45309]"
+                  color="text-hdl"
                   icon={Silicon}
                   items={[
                     {
@@ -2715,7 +2759,7 @@ const InvestorPortalContent = ({ onViewChange }) => {
               <div className="space-y-6 mb-12">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="p-8 bg-slate-950 border border-slate-800 rounded-xl relative group">
-                    <div className="absolute -inset-px bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div className="absolute -inset-px bg-gradient-to-r from-cyan-500/20 to-mcu-dark/20 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     <div className="relative">
                       <div className="flex flex-col mb-4 font-mono font-bold uppercase tracking-widest">
                         <span className="px-3 py-1 bg-cyan-900/30 text-cyan-400 text-xs rounded-full border border-cyan-500/20 w-fit mb-2">
@@ -2757,14 +2801,14 @@ const InvestorPortalContent = ({ onViewChange }) => {
                       </div>
                       <div className="space-y-3 font-sans">
                         <p className="text-sm text-slate-300">
-                          <span className="text-emerald-400 font-mono font-bold uppercase">
+                          <span className="text-sw font-mono font-bold uppercase">
                             AltiCoreSW Deployment:
                           </span>{" "}
                           Secure and deploy to 2 anchor Cloud clients,
                           validating the OpEx-reduction model.
                         </p>
                         <p className="text-sm text-slate-300">
-                          <span className="text-emerald-400 font-mono font-bold uppercase">
+                          <span className="text-mcu font-mono font-bold uppercase">
                             AltiCoreMCU Beta:
                           </span>{" "}
                           Release production SDK to partners for high-volume
@@ -2775,10 +2819,10 @@ const InvestorPortalContent = ({ onViewChange }) => {
                   </div>
 
                   <div className="p-8 bg-slate-950 border border-slate-800 rounded-xl relative group">
-                    <div className="absolute -inset-px bg-gradient-to-r from-[#b45309]/20 to-[#b45309]/5 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div className="absolute -inset-px bg-gradient-to-r from-hdl/20 to-hdl/5 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     <div className="relative">
                       <div className="flex flex-col mb-4 font-mono font-bold uppercase tracking-widest">
-                        <span className="px-3 py-1 bg-[#b45309]/20 text-[#b45309] text-xs rounded-full border border-[#b45309]/30 w-fit mb-2">
+                        <span className="px-3 py-1 bg-hdl/20 text-hdl text-xs rounded-full border border-hdl/30 w-fit mb-2">
                           Q3 2026
                         </span>
                         <h4 className="text-white text-lg font-sans">
@@ -2787,14 +2831,14 @@ const InvestorPortalContent = ({ onViewChange }) => {
                       </div>
                       <div className="space-y-3 font-sans">
                         <p className="text-sm text-slate-300">
-                          <span className="text-[#b45309] font-mono font-bold uppercase">
+                          <span className="text-hdl font-mono font-bold uppercase">
                             AltiCoreHDL Sign-off:
                           </span>{" "}
                           Execute integration contracts with Tier 1
                           Semiconductor manufacturers.
                         </p>
                         <p className="text-sm text-slate-300">
-                          <span className="text-[#b45309] font-mono font-bold uppercase">
+                          <span className="text-hdl font-mono font-bold uppercase">
                             Mass Market Scaling:
                           </span>{" "}
                           Initiate wide-scale rollout for AltiCoreMCU and
@@ -2805,10 +2849,10 @@ const InvestorPortalContent = ({ onViewChange }) => {
                   </div>
 
                   <div className="p-8 bg-slate-950 border border-slate-800 rounded-xl relative group">
-                    <div className="absolute -inset-px bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div className="absolute -inset-px bg-gradient-to-r from-mcu-dark/20 to-cyan-500/20 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     <div className="relative">
                       <div className="flex flex-col mb-4 font-mono font-bold uppercase tracking-widest">
-                        <span className="px-3 py-1 bg-blue-900/30 text-blue-400 text-xs rounded-full border border-blue-500/20 w-fit mb-2">
+                        <span className="px-3 py-1 bg-blue-900/30 text-mcu text-xs rounded-full border border-mcu-dark/20 w-fit mb-2">
                           Q4 2026
                         </span>
                         <h4 className="text-white text-lg font-sans">
@@ -2817,14 +2861,14 @@ const InvestorPortalContent = ({ onViewChange }) => {
                       </div>
                       <div className="space-y-3 font-sans">
                         <p className="text-sm text-slate-300">
-                          <span className="text-blue-400 font-mono font-bold uppercase">
+                          <span className="text-mcu font-mono font-bold uppercase">
                             Commercial Validation:
                           </span>{" "}
                           Reach target revenue milestones across all three
                           streams.
                         </p>
                         <p className="text-sm text-slate-300">
-                          <span className="text-blue-400 font-mono font-bold uppercase">
+                          <span className="text-mcu font-mono font-bold uppercase">
                             Exit Readiness:
                           </span>{" "}
                           Finalize due diligence room for potential acquisition.
@@ -2887,7 +2931,7 @@ const InvestorPortalContent = ({ onViewChange }) => {
                     </div>
                   </div>
                   <div className="flex gap-4 p-6 bg-slate-900/50 rounded-xl border border-slate-800">
-                    <div className="w-14 h-14 bg-blue-900/30 rounded-lg flex items-center justify-center shrink-0 border border-blue-700/30 text-blue-400 font-extrabold text-2xl">
+                    <div className="w-14 h-14 bg-blue-900/30 rounded-lg flex items-center justify-center shrink-0 border border-blue-700/30 text-mcu font-extrabold text-2xl">
                       100+
                     </div>
                     <div>
@@ -3061,7 +3105,7 @@ const InvestorPortalContent = ({ onViewChange }) => {
                       {
                         label: "IP Expansion",
                         value: "15%",
-                        color: "bg-teal-500",
+                        color: "bg-sw-dark",
                       },
                       {
                         label: "Operations",
@@ -3131,9 +3175,13 @@ const InvestorPortalContent = ({ onViewChange }) => {
 };
 // --- END OF PROTECTED INVESTOR PORTAL ---
 
-const InvestorPortal = ({ onViewChange }) => {
+const InvestorPortal = ({
+  onViewChange,
+}: {
+  onViewChange: (view: string) => void;
+}) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const handleLogin = (e) => {
+  const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoggedIn(true);
   };
@@ -3198,7 +3246,11 @@ const AltiContactPage = () => (
   </div>
 );
 
-const AltiHomePage = ({ setCurrentView }) => (
+const AltiHomePage = ({
+  setCurrentView,
+}: {
+  setCurrentView: (view: string) => void;
+}) => (
   <>
     <AltiHomeHero onViewChange={setCurrentView} />
     <AltiProductCategories onViewChange={setCurrentView} />
