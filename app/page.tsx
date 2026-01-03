@@ -697,7 +697,7 @@ const EvoMcuShowcase = () => (
         </Card>
       </div>
 
-      <div className="max-w-3xl mx-auto">
+      {/* <div className="max-w-3xl mx-auto">
         <Card theme="alti" className="bg-slate-800/40 border-mcu/30">
           <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
             <Silicon className="w-6 h-6 text-mcu" /> Operational Benchmarks
@@ -726,7 +726,7 @@ const EvoMcuShowcase = () => (
             </div>
           </div>
         </Card>
-      </div>
+      </div> */}
     </div>
   </section>
 );
