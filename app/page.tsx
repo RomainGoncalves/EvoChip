@@ -587,6 +587,116 @@ const EvoMcuShowcase = () => (
         <VideoEmbed videoId="whyG2Bq1Eio" title="AltiCoreMCU Part 2" />
         <VideoEmbed videoId="a3iJMI8d0oU" title="AltiCoreMCU Part 2" />
       </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        {/* Slide 2: What is AltiCore-LogicMCU */}
+        <Card
+          theme="alti"
+          className="bg-slate-800/40 border-mcu/30 flex flex-col"
+        >
+          <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+            <Microchip className="w-6 h-6 text-mcu" />
+            What is AltiCore-LogicMCU
+          </h3>
+          <ul className="space-y-3 text-base text-slate-300 leading-relaxed flex-grow">
+            <li className="flex items-start gap-2">
+              <span className="text-mcu mt-1">•</span>
+              <span>
+                Transforms labeled training data into a high-speed,
+                deterministic logic inference engine
+              </span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-mcu mt-1">•</span>
+              <span>
+                Targets ultra-low-cost programmable devices like microchip
+                Arduino UNO or Lattice MachXO2/XO3
+              </span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-mcu mt-1">•</span>
+              <span>
+                Pre-integrated for hardware designers; no expertise in
+                specialized tools needed
+              </span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-mcu mt-1">•</span>
+              <span>
+                Transforms CSV data into symbolic logic and delivers a hardware
+                inference solution
+              </span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-mcu mt-1">•</span>
+              <span>
+                Power-efficient, certifiable, turnkey digital peripheral
+              </span>
+            </li>
+          </ul>
+        </Card>
+
+        {/* Slide 3: Key Features */}
+        <Card
+          theme="alti"
+          className="bg-slate-800/40 border-mcu/30 flex flex-col"
+        >
+          <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+            <Microchip className="w-6 h-6 text-mcu" />
+            Key Features
+          </h3>
+          <ul className="space-y-3 text-base text-slate-300 leading-relaxed flex-grow">
+            <li className="flex items-start gap-2">
+              <span className="text-mcu mt-1">•</span>
+              <span>Trains symbolic classification models automatically</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-mcu mt-1">•</span>
+              <span>Selects most informative features from thousands</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-mcu mt-1">•</span>
+              <span>
+                Outputs a pipelined, word-width configurable logic core
+              </span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-mcu mt-1">•</span>
+              <span>No MCU, memory, or software runtime required</span>
+            </li>
+          </ul>
+        </Card>
+
+        {/* Slide 6: Why Different */}
+        <Card
+          theme="alti"
+          className="bg-slate-800/40 border-mcu/30 flex flex-col"
+        >
+          <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+            <Microchip className="w-6 h-6 text-mcu" />
+            Why AltiCore-LogicMCU is Different
+          </h3>
+          <ul className="space-y-3 text-base text-slate-300 leading-relaxed flex-grow">
+            <li className="flex items-start gap-2">
+              <span className="text-mcu mt-1">•</span>
+              <span>Not a neural net: No weights, activations, or MACs</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-mcu mt-1">•</span>
+              <span>Not Tiny ML: No firmware, runtime, or RAM needed</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-mcu mt-1">•</span>
+              <span>Fully deterministic and traceable at logic level</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span className="text-mcu mt-1">•</span>
+              <span>Drop-in compatible with existing FPGA/CPLD toolchains</span>
+            </li>
+          </ul>
+        </Card>
+      </div>
+
       <div className="max-w-3xl mx-auto">
         <Card theme="alti" className="bg-slate-800/40 border-mcu/30">
           <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
