@@ -320,8 +320,8 @@ const EvoTechnology = () => (
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch text-left">
         {/* Box 1: The AI Efficiency Wall */}
-        <Card className="bg-slate-800/40 border-slate-700/50 hover:border-[#2dd4bf]/50 transition-all group h-full flex flex-col">
-          <Layers className="w-10 h-10 text-[#2dd4bf] mb-6 transition-transform group-hover:scale-110" />
+        <Card className="bg-slate-800/40 border-slate-700/50 hover:border-cyan-400/50 transition-all group h-full flex flex-col">
+          <Layers className="w-10 h-10 text-cyan-400 mb-6 transition-transform group-hover:scale-110" />
           <h3 className="text-xl font-bold text-white mb-4 tracking-tight">
             The AI Efficiency Wall
           </h3>
@@ -337,18 +337,18 @@ const EvoTechnology = () => (
               innovation. AltiCoreAI restructures compute at the logic level to
               deliver gains through a software-first mandate.
             </p>
-            <div className="bg-slate-900/50 p-3 rounded border border-[#2dd4bf] font-mono text-[10px] text-[#2dd4bf] mt-4 leading-relaxed uppercase tracking-widest">
+            <div className="bg-slate-900/50 p-3 rounded border border-cyan-400 font-mono text-[10px] text-cyan-400 leading-relaxed uppercase tracking-widest font-bold">
               Architecture Lead: Up to 1000x Efficiency
             </div>
           </div>
-          <div className="mt-4 pt-4 border-t border-slate-700/50 text-[10px] font-mono text-[#2dd4bf] uppercase tracking-widest">
+          <div className="mt-auto pt-4 border-t border-slate-700/50 text-[10px] font-mono text-cyan-400 uppercase tracking-widest font-bold">
             Impact: Drastically lower Infrastructure CapEx
           </div>
         </Card>
 
         {/* Box 2: The AI Power Wall */}
-        <Card className="bg-slate-800/40 border-slate-700/50 hover:border-mcu/30 transition-all group h-full flex flex-col">
-          <Zap className="w-10 h-10 text-mcu mb-6 transition-transform group-hover:scale-110" />
+        <Card className="bg-slate-800/40 border-slate-700/50 hover:border-cyan-400/50 transition-all group h-full flex flex-col">
+          <Zap className="w-10 h-10 text-cyan-400 mb-6 transition-transform group-hover:scale-110" />
           <h3 className="text-xl font-bold text-white mb-4 tracking-tight">
             The AI Power Wall
           </h3>
@@ -363,18 +363,18 @@ const EvoTechnology = () => (
               Engines that optimize fundamental logic paths across the entire
               stack—from MCUs to GPUs.
             </p>
-            <div className="bg-slate-900/50 p-3 rounded border border-mcu font-mono text-[10px] text-mcu mcu mt-4 leading-relaxed uppercase tracking-widest">
+            <div className="bg-slate-900/50 p-3 rounded border border-cyan-400 font-mono text-[10px] text-cyan-400 leading-relaxed uppercase tracking-widest font-bold">
               Power Metric: 1000x Power Reduction | Drastic Thermal Drop
             </div>
           </div>
-          <div className="mt-8 pt-4 border-t border-slate-700/50 text-[10px] text-mcu font-mono mcu uppercase tracking-widest">
+          <div className="mt-auto pt-4 border-t border-slate-700/50 text-[10px] text-cyan-400 font-mono uppercase tracking-widest font-bold">
             Impact: Slash OpEx (Energy/Cooling) by 90%
           </div>
         </Card>
 
         {/* Box 3: White Box vs. Black Box */}
-        <Card className="bg-slate-800/40 border-slate-700/50 hover:border-hdl/30 transition-all group h-full flex flex-col">
-          <ShieldCheck className="w-10 h-10 text-hdl mb-6 transition-transform group-hover:scale-110" />
+        <Card className="bg-slate-800/40 border-slate-700/50 hover:border-cyan-400/50 transition-all group h-full flex flex-col">
+          <ShieldCheck className="w-10 h-10 text-cyan-400 mb-6 transition-transform group-hover:scale-110" />
           <h3 className="text-xl font-bold text-white mb-4 tracking-tight">
             White Box vs. Black Box
           </h3>
@@ -391,18 +391,18 @@ const EvoTechnology = () => (
               intelligence that assists core operations without obscuring
               decisions.
             </p>
-            <div className="bg-slate-900/50 p-3 rounded border border-hdl font-mono text-[10px] text-hdl mt-4 leading-relaxed uppercase tracking-widest">
+            <div className="bg-slate-900/50 p-3 rounded border border-cyan-400 font-mono text-[10px] text-cyan-400 leading-relaxed uppercase tracking-widest font-bold">
               Operational State: Certification Ready | Optimized Perf-per-Watt
             </div>
           </div>
-          <div className="mt-8 pt-4 border-t border-slate-700/50 text-[10px] font-mono text-hdl uppercase tracking-widest">
+          <div className="mt-auto pt-4 border-t border-slate-700/50 text-[10px] font-mono text-cyan-400 uppercase tracking-widest font-bold">
             Impact: Unlock regulated markets (Medical, Auto, Defense)
           </div>
         </Card>
       </div>
 
-      <div className="max-w-4xl mx-auto mt-12 px-6">
-        <p className="text-lg text-slate-400 italic font-medium leading-relaxed">
+      <div className="max-w-4xl mx-auto mt-8 px-6">
+        <p className="text-xl text-white italic font-medium leading-relaxed">
           "We don't build bigger hardware; we build smarter logic. As a pure IP
           holding company, AltiCoreAI technology scales across global compute
           infrastructure without the constraints of physical manufacturing."
@@ -425,7 +425,7 @@ const EvoProducts = ({
   return (
     <section
       id="products"
-      className="py-16 md:py-24 bg-slate-950 border-t border-slate-800"
+      className="pt-8 md:pt-12 pb-16 md:pb-24 bg-slate-950 border-t border-slate-800"
     >
       <div className="container mx-auto px-6">
         <SectionHeading
@@ -445,7 +445,7 @@ const EvoProducts = ({
             <p className="text-xs font-mono uppercase tracking-widest text-slate-400 mb-4 font-bold">
               Universal Intelligence at the Edge.
             </p>
-            <p className="text-slate-300 text-sm leading-relaxed mb-8">
+            <p className="text-slate-300 text-sm leading-relaxed mb-8 flex-grow">
               The world's only solution capable of training and executing AI
               models locally across the entire microcontroller spectrum—from
               high-performance processors to standard $1 MCUs. Our binary
@@ -471,7 +471,7 @@ const EvoProducts = ({
               className="w-full text-sm mt-auto bg-mcu text-slate-900 shadow-[0_0_20px_rgba(96,165,250,0.4)] hover:bg-mcu-dark hover:shadow-[0_0_30px_rgba(96,165,250,0.6)]"
               onClick={() => scrollToSection("mcu-showcase")}
             >
-              Technical Details
+              More info
               <ChevronRight className="w-4 h-4" />
             </Button>
           </div>
@@ -488,7 +488,7 @@ const EvoProducts = ({
             <p className="text-xs font-mono uppercase tracking-widest text-slate-400 mb-4 font-bold">
               Pure Software Acceleration.
             </p>
-            <p className="text-slate-300 text-sm leading-relaxed mb-8">
+            <p className="text-slate-300 text-sm leading-relaxed mb-8 flex-grow">
               High-performance software acceleration for the global compute
               stack. Our Synthesis Engines restructure AI model execution into
               binary logic streams to maximize throughput on existing Windows,
@@ -514,7 +514,7 @@ const EvoProducts = ({
               className="w-full text-sm mt-auto bg-sw text-slate-900 shadow-[0_0_20px_rgba(45,212,191,0.4)] hover:bg-sw-dark hover:shadow-[0_0_30px_rgba(45,212,191,0.6)]"
               onClick={() => scrollToSection("sw-showcase")}
             >
-              Architecture Details
+              More info
               <ChevronRight className="w-4 h-4" />
             </Button>
           </div>
@@ -524,14 +524,19 @@ const EvoProducts = ({
             <div className="inline-flex mb-4 px-2 py-0.5 bg-amber-900/20 border border-hdl/30 rounded text-[9px] font-mono text-hdl uppercase font-bold w-fit">
               Patented Logic-First Architecture
             </div>
-            <Cpu className="w-10 h-10 text-hdl mb-4" />
+            <div className="flex items-center gap-3 mb-4">
+              <Cpu className="w-10 h-10 text-hdl" />
+              <span className="px-2 py-1 bg-hdl/10 border border-hdl/30 rounded text-[10px] font-mono text-hdl uppercase font-bold tracking-wide">
+                Coming 2026
+              </span>
+            </div>
             <h3 className="text-xl md:text-2xl font-bold text-white mb-1">
               <span className="text-hdl">AltiCoreHDL</span>
             </h3>
             <p className="text-xs font-mono uppercase tracking-widest text-slate-400 mb-4 font-bold">
               Synthesizable silicon blueprints.
             </p>
-            <p className="text-slate-300 text-sm leading-relaxed mb-8">
+            <p className="text-slate-300 text-sm leading-relaxed mb-8 flex-grow">
               The gate-level hardware standard for next-generation AI
               processors. We license synthesizable RTL (VHDL/Verilog) blueprints
               that define the physical architecture of the chip. By executing AI
@@ -557,7 +562,7 @@ const EvoProducts = ({
               className="w-full text-sm mt-auto bg-hdl text-slate-900 shadow-[0_0_20px_rgba(245,158,11,0.4)] hover:bg-hdl hover:shadow-[0_0_30px_rgba(245,158,11,0.6)]"
               onClick={() => scrollToSection("hdl-showcase")}
             >
-              Foundry IP Data
+              More info
               <ChevronRight className="w-4 h-4" />
             </Button>
           </div>
@@ -575,7 +580,7 @@ const EvoMcuShowcase = () => (
     <div className="container mx-auto px-6">
       <SectionHeading
         subtitle="Hardware IP"
-        title="AltiCoreMCU: Edge Training & Power Efficiency"
+        title="AltiCoreMCU: Train and Execute at the Edge"
       />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
         <VideoEmbed videoId="ELwpDyQC-aA" title="AltiCoreMCU Part 1" />
