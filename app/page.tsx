@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import {
   Cpu,
   Zap,
@@ -58,7 +59,7 @@ import {
   LogicBackground,
   CookieConsentBanner,
 } from "@/components/ui";
-import { EvoChipLogo, VideoEmbed } from "@/components/brand";
+import { VideoEmbed } from "@/components/brand";
 import { KPICard, IPPortfolioCard } from "@/components/investor";
 
 // --- EVO CHIP SITE COMPONENTS (Corporate - PROTECTED) ---
@@ -105,7 +106,13 @@ const EvoNavbar = ({
           className="flex items-center gap-2 cursor-pointer"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
-          <EvoChipLogo className="h-10 text-white w-auto" />
+          <Image
+            src="/evochip-logo.png"
+            alt="EvoChip Logo"
+            width={160}
+            height={40}
+            className="h-10 w-auto"
+          />
         </div>
         <div className="hidden lg:flex items-center gap-6">
           {navLinks.map((link) => (
@@ -195,7 +202,7 @@ const EvoHero = ({
           </div>
           <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight mb-6">
             The Logic Synthesis Standard for{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-mcu-dark">
+            <span className="block text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-mcu-dark">
               Global AI.
             </span>
           </h1>
@@ -739,7 +746,7 @@ const EvoSwShowcase = () => (
     <div className="container mx-auto px-6">
       <SectionHeading
         subtitle="Software Acceleration"
-        title="AltiCoreSW: Algorithm Beats Hardware Performance Multipliers"
+        title="AltiCoreSW: Beats Neural Networks In Any Case"
       />
       <div className="grid lg:grid-cols-2 gap-12 items-start">
         <div className="space-y-6">
@@ -765,7 +772,7 @@ const EvoSwShowcase = () => (
                   Infrastructure Lead
                 </h4>
               </div>
-              <p className="text-slate-400 text-sm leading-relaxed mb-6">
+              <p className=" text-sm leading-relaxed mb-6">
                 Benchmark data confirms a{" "}
                 <span className="text-sw font-bold font-mono tracking-tighter">
                   Geometric Mean of 11.3x
@@ -922,7 +929,7 @@ const EvoAbout = () => (
         <div className="p-6 bg-slate-800/50 rounded-xl border border-slate-700">
           <h3 className="text-2xl font-bold text-cyan-400 mb-3">Our Mission</h3>
           <p className="text-slate-300">
-            To replace legacy black-box architectures with deterministic,
+            Replace legacy black-box architectures with deterministic,
             mathematically verifiable intelligence that scales across all
             hardware tiers.
           </p>
@@ -2382,20 +2389,32 @@ const InvestorPortalContent = ({
     <div className="min-h-screen bg-slate-900 pt-20 md:pt-24 pb-12 relative overflow-hidden font-sans">
       <LogicBackground />
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-10 border-b border-slate-800 pb-6">
-          <SectionHeading
-            subtitle="Proprietary Data Room"
-            title="Strategic Roadmap"
-            align="left"
-            theme="evo"
-          />
-          <Button
-            variant="outline"
-            className="w-full sm:w-auto py-2 px-4 text-xs order-first sm:order-last"
-            onClick={() => onViewChange("evochip")}
-          >
-            ← Return to Public Site
-          </Button>
+        <div className="mb-10 border-b border-slate-800 pb-6">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-2">
+            <SectionHeading
+              subtitle="Proprietary Data Room"
+              title="Strategic Roadmap"
+              align="left"
+              theme="evo"
+            />
+            <Button
+              variant="outline"
+              className="w-full sm:w-auto py-2 px-4 text-xs order-first sm:order-last"
+              onClick={() => onViewChange("evochip")}
+            >
+              ← Return to Public Site
+            </Button>
+          </div>
+          <div className="max-w-5xl mx-auto px-6">
+            <p className="text-2xl text-white italic font-medium leading-relaxed text-center">
+              &ldquo;The solution to the exponentially AI growing market will
+              not come from adding always more hardware but from a total{" "}
+              <span className="font-bold text-cyan-400">
+                redesign of the software running this hardware
+              </span>
+              &rdquo;
+            </p>
+          </div>
         </div>
 
         <div className="text-red-400 bg-red-900/30 border border-red-700/50 p-3 rounded-lg text-xs md:text-sm text-center mb-10 font-mono font-bold uppercase">
@@ -3459,7 +3478,13 @@ const App = () => {
         </a>
       </section>
       <footer className="bg-slate-950 py-12 border-t border-slate-900 flex justify-center">
-        <EvoChipLogo className="h-10 text-white w-auto" />
+        <Image
+          src="/evochip-logo.png"
+          alt="EvoChip Logo"
+          width={160}
+          height={40}
+          className="h-10 w-auto"
+        />
       </footer>
       <CookieConsentBanner />
     </div>
