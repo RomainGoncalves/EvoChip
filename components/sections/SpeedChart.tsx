@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { Zap, Gauge, Cpu, TrendingUp, BarChart3, Dna } from "lucide-react";
+import { Gauge } from "lucide-react";
 import {
   BarChart,
   Bar,
@@ -13,21 +13,53 @@ import {
   Label,
 } from "recharts";
 
+// Speed Advantage Dataset (x multiplier)
+const speedDataRaw = [43.3, 17.2, 11.7, 10.1, 9.9, 8.2, 7.5, 5.0];
+
+const labels = [
+  "UCI_HAR",
+  "SPECT",
+  "Credit Fraud",
+  "Intelligent Mfgr (Low)",
+  "Intelligent Mfgr (High)",
+  "Give me some credit",
+  "Credit Default",
+  "Machine Failure",
+];
+
+const longerLabels = {
+  UCI_HAR: "UCI Human Activity Recognition",
+  SPECT: "SPECT Heart Dataset",
+  "Intelligent Mfgr (Low)": "Intelligent Manufacturing (Low Complexity)",
+  "Intelligent Mfgr (High)": "Intelligent Manufacturing (High Complexity)",
+};
+
+const CustomTooltip = ({ active, payload, label }: {
+  active?: boolean;
+  payload?: Array<{ value: number }>;
+  label?: string;
+}) => {
+  if (active && payload && payload.length) {
+    return (
+      <div className="bg-slate-900/95 border border-teal-500/30 p-4 rounded-xl shadow-2xl backdrop-blur-md">
+        <p className="text-[10px] text-slate-300 font-mono mb-2 uppercase tracking-widest border-b border-slate-800 pb-2">
+          {longerLabels[label as keyof typeof longerLabels] || label}
+        </p>
+        <div className="flex justify-between items-center gap-6">
+          <span className="text-[10px] text-teal-400 font-mono font-bold italic">
+            SPEED ADVANTAGE
+          </span>
+          <span className="text-sm text-white font-mono font-black">
+            {payload[0].value.toFixed(1)}x
+          </span>
+        </div>
+      </div>
+    );
+  }
+  return null;
+};
+
 const App = () => {
-  // Speed Advantage Dataset (x multiplier)
-  const speedDataRaw = [43.3, 17.2, 11.7, 10.1, 9.9, 8.2, 7.5, 5.0];
-
-  const labels = [
-    "UCI_HAR",
-    "SPECT",
-    "Credit Fraud",
-    "Intelligent Mfgr (Low)",
-    "Intelligent Mfgr (High)",
-    "Give me some credit",
-    "Credit Default",
-    "Machine Failure",
-  ];
-
   const chartData = useMemo(() => {
     return labels.map((label, idx) => ({
       name: label,
@@ -35,41 +67,9 @@ const App = () => {
     }));
   }, []);
 
-  const avgSpeed = (
-    speedDataRaw.reduce((a, b) => a + b, 0) / speedDataRaw.length
-  ).toFixed(1);
-
   // Specific requested metrics
   const medianValue = 10.0;
   const geometricMeanValue = 11.3;
-
-  const longerLabels = {
-    UCI_HAR: "UCI Human Activity Recognition",
-    SPECT: "SPECT Heart Dataset",
-    "Intelligent Mfgr (Low)": "Intelligent Manufacturing (Low Complexity)",
-    "Intelligent Mfgr (High)": "Intelligent Manufacturing (High Complexity)",
-  };
-
-  const CustomTooltip = ({ active, payload, label }) => {
-    if (active && payload && payload.length) {
-      return (
-        <div className="bg-slate-900/95 border border-teal-500/30 p-4 rounded-xl shadow-2xl backdrop-blur-md">
-          <p className="text-[10px] text-slate-300 font-mono mb-2 uppercase tracking-widest border-b border-slate-800 pb-2">
-            {longerLabels[label] || label}
-          </p>
-          <div className="flex justify-between items-center gap-6">
-            <span className="text-[10px] text-teal-400 font-mono font-bold italic">
-              SPEED ADVANTAGE
-            </span>
-            <span className="text-sm text-white font-mono font-black">
-              {payload[0].value.toFixed(1)}x
-            </span>
-          </div>
-        </div>
-      );
-    }
-    return null;
-  };
 
   return (
     <div className="max-w-5xl">
