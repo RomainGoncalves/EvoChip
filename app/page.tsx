@@ -49,6 +49,8 @@ import {
   Globe,
   FileUp,
   BrainCog,
+  Laptop,
+  Table,
 } from "lucide-react";
 
 // Extracted components
@@ -607,37 +609,36 @@ const EvoMcuShowcase = () => (
           </h3>
           <ul className="space-y-3 text-base text-slate-300 leading-relaxed flex-grow">
             <li className="flex items-start gap-2">
-              <span className="text-mcu mt-1">•</span>
-              <span>
-                Transforms labeled training data into a high-speed,
-                deterministic logic inference engine
+              <span className="mt-1">
+                <span className="text-mcu">Fast Inference:</span> Converts
+                labeled CSV data into a high-speed, deterministic logic engine.
               </span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-mcu mt-1">•</span>
-              <span>
-                Targets ultra-low-cost programmable devices like microchip
-                Arduino UNO or Lattice MachXO2/XO3
+              <span className="mt-1">
+                <span className="text-mcu">Low-Cost Hardware:</span> Optimized
+                for budget devices like Arduino UNO or Lattice MachXO2/XO3
+                FPGAs. 8 16 32 Bit Devices
               </span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-mcu mt-1">•</span>
-              <span>
-                Pre-integrated for hardware designers; no expertise in
-                specialized tools needed
+              <span className="mt-1">
+                <span className="text-mcu">Plug-and-Play:</span> Pre-integrated
+                for hardware designers—no specialized software expertise
+                required.
               </span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-mcu mt-1">•</span>
-              <span>
-                Transforms CSV data into symbolic logic and delivers a hardware
-                inference solution
+              <span className="mt-1">
+                <span className="text-mcu">Symbolic Logic:</span> Automatically
+                transforms raw training data into a ready-to-use hardware
+                solution.
               </span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-mcu mt-1">•</span>
-              <span>
-                Power-efficient, certifiable, turnkey digital peripheral
+              <span className="mt-1">
+                <span className="text-mcu">Industrial Grade:</span> A
+                power-efficient, certifiable, and turnkey digital peripheral.
               </span>
             </li>
           </ul>
@@ -704,6 +705,68 @@ const EvoMcuShowcase = () => (
         </Card>
       </div>
 
+      {/* Workflow Section */}
+      <div className="mt-16 w-full mx-auto">
+        <h4 className="text-center font-mono text-2xl tracking-[0.3em] uppercase mb-10 font-bold">
+          Logic-First Deployment Workflow
+        </h4>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
+          {[
+            {
+              step: 1,
+              title: "Data Ingestion",
+              desc: "Provide a labeled training dataset (CSV, API, etc.)",
+              icon: Database,
+            },
+            {
+              step: 2,
+              title: "Logic Synthesis",
+              desc: "Run the AltiCore-LogicMCU compiler and choose target platform",
+              icon: Cpu,
+            },
+            {
+              step: 3,
+              title: "Asset Delivery",
+              desc: "Receive synthesized code and integration guide",
+              icon: Download,
+            },
+            {
+              step: 4,
+              title: "Toolchain Integration",
+              desc: "Drop into your toolchain like a digital peripheral",
+              icon: GitMerge,
+            },
+          ].map((item, idx, arr) => (
+            <div key={idx} className="relative flex flex-col items-center">
+              {/* Step Indicator */}
+              <div className="w-10 h-10 rounded-full bg-teal-500 text-slate-900 flex items-center justify-center font-black mb-4 z-10 shadow-[0_0_20px_rgba(45,212,191,0.5)]">
+                {item.step}
+              </div>
+
+              <Card
+                theme="alti"
+                className="w-full text-center border-teal-500/20 flex-grow hover:border-teal-500/50 transition-all p-5"
+              >
+                <item.icon className="w-8 h-8 text-teal-400 mx-auto mb-4" />
+                <h5 className="text-white font-bold text-xl mb-2 tracking-tight">
+                  {item.title}
+                </h5>
+                <p className="text-slate-300 text-[15px] leading-relaxed font-sans">
+                  {item.desc}
+                </p>
+              </Card>
+
+              {/* Connector Arrows for Desktop/Tablet */}
+              {idx < arr.length - 1 && (
+                <div className="hidden md:block absolute top-5 -right-6 translate-x-1/2 z-0">
+                  <ChevronRight className="w-6 h-6 text-slate-700" />
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+
       {/* <div className="max-w-3xl mx-auto">
         <Card theme="alti" className="bg-slate-800/40 border-mcu/30">
           <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
@@ -738,108 +801,381 @@ const EvoMcuShowcase = () => (
   </section>
 );
 
-const EvoSwShowcase = () => (
-  <section
-    id="sw-showcase"
-    className="py-16 md:py-24 bg-slate-950 border-t border-slate-800"
-  >
-    <div className="container mx-auto px-6">
-      <SectionHeading
-        subtitle="Software Acceleration"
-        title="AltiCoreSW: Beats Neural Networks In Any Case"
-      />
-      <div className="grid lg:grid-cols-2 gap-12 items-start">
-        <div className="space-y-6">
-          <div className="p-6 bg-slate-900 rounded-xl border border-sw/30 mb-6">
-            <p className="text-sw text-xs font-mono uppercase tracking-widest mb-2">
-              Validation Partner: SidePath
-            </p>
-            <blockquote className="text-slate-300 italic text-sm leading-relaxed border-l-2 border-sw pl-4">
-              "The benchmark results with AltiCoreSW are transformative. Seeing
-              a software synthesis engine outperform established
-              hardware-accelerated Neural Networks by such a massive margin
-              signals a fundamental shift in enterprise AI deployment."
-              <footer className="text-xs text-slate-500 mt-2">
-                — CEO, SidePath
-              </footer>
-            </blockquote>
-          </div>
-          <div className="space-y-6 h-full flex flex-col">
-            <div className="p-6 bg-slate-900/80 border border-sw/20 rounded-2xl shadow-xl flex-grow">
-              <div className="flex items-center gap-3 mb-4">
-                <Zap className="w-6 h-6 text-sw" />
-                <h4 className="text-lg font-bold text-white">
-                  Infrastructure Lead
-                </h4>
-              </div>
-              <p className=" text-sm leading-relaxed mb-6">
-                Benchmark data confirms a{" "}
-                <span className="text-sw font-bold font-mono tracking-tighter">
-                  Geometric Mean of 11.3x
-                </span>{" "}
-                and{" "}
-                <span className="text-sw font-bold font-mono tracking-tighter">
-                  Median of 10.0x
-                </span>{" "}
-                speed advantage when executing AltiCoreSW on DellPrecision 8560
-                versus industry-best non-AltiCoreAI passes.
-              </p>
+const EvoSwShowcase = () => {
+  const datasets = [
+    {
+      name: "Credit Default",
+      laptop: 3798,
+      multicore: 41,
+      tensorflow: 7,
+      tensorflowRUY: 27,
+      server: 11206,
+      smulti: 98,
+      stf: 40,
+      stfRUY: 40,
+    },
+    {
+      name: "Credit Fraud",
+      laptop: 5011,
+      multicore: 51,
+      tensorflow: 7,
+      tensorflowRUY: 20,
+      server: 12488,
+      smulti: 88,
+      stf: 17,
+      stfRUY: 18,
+    },
+    {
+      name: "Give Me Some Credit",
+      laptop: 3879,
+      multicore: 42,
+      tensorflow: 14,
+      tensorflowRUY: 43,
+      server: 11882,
+      smulti: 63,
+      stf: 15,
+      stfRUY: 54,
+    },
+    {
+      name: "Mfg (High Eff)",
+      laptop: 5664,
+      multicore: 50,
+      tensorflow: 13,
+      tensorflowRUY: 64,
+      server: 18482,
+      smulti: 103,
+      stf: 19,
+      stfRUY: 90,
+    },
+    {
+      name: "Mfg (Low Eff)",
+      laptop: 6012,
+      multicore: 50,
+      tensorflow: 13,
+      tensorflowRUY: 73,
+      server: 19119,
+      smulti: 107,
+      stf: 19,
+      stfRUY: 97,
+    },
+    {
+      name: "Machine Failure",
+      laptop: 3921,
+      multicore: 32,
+      tensorflow: 10,
+      tensorflowRUY: 24,
+      server: 11801,
+      smulti: 85,
+      stf: 9,
+      stfRUY: 32,
+    },
+    {
+      name: "Spect",
+      laptop: 8165,
+      multicore: 82,
+      tensorflow: 21,
+      tensorflowRUY: 92,
+      server: 22376,
+      smulti: 143,
+      stf: 28,
+      stfRUY: 110,
+    },
+    {
+      name: "HAR",
+      laptop: 5913,
+      multicore: 292,
+      tensorflow: 181,
+      tensorflowRUY: 92,
+      server: 14122,
+      smulti: 472,
+      stf: 195,
+      stfRUY: 63,
+    },
+  ];
 
-              <div className="p-4 bg-slate-950 rounded-lg border border-slate-800 mt-6 font-mono">
-                <h5 className="text-xs font-bold text-sw uppercase mb-2">
-                  Disruptive Potential
-                </h5>
-                <p className="text-xs  leading-relaxed font-sans">
-                  AltiCoreAI achieved these gains with less than 6 man-years of
-                  development, compared to the estimated 100+ years of
-                  engineering behind legacy Neural Network libraries.
-                </p>
+  const HeatmapCell = ({
+    value,
+    max = 22300,
+  }: {
+    value: number;
+    max: number;
+  }) => {
+    // const intensity = Math.max(0.1, Math.log10(value) / Math.log10(max));
+    const intensity = Math.max(0.1, value / max);
+    const isHigh = value > 10000;
+    return (
+      <div
+        className={`flex items-center justify-center p-1 rounded border border-slate-800 text-[14px] font-mono font-bold transition-all ${
+          isHigh ? "drop-shadow-[0_0_8px_rgba(52,211,153,0.4)]" : ""
+        }`}
+        style={{
+          backgroundColor: `rgba(45, 212, 191, ${intensity * 0.9})`,
+          color: intensity > 0.5 ? "#fff" : "#10b981",
+        }}
+      >
+        {Math.round(value).toLocaleString()}x
+      </div>
+    );
+  };
+
+  return (
+    <section
+      id="sw-showcase"
+      className="py-16 md:py-24 bg-slate-950 border-t border-slate-800"
+    >
+      <div className="container mx-auto px-6">
+        <SectionHeading
+          subtitle="Software Acceleration"
+          title="AltiCoreSW: Beats Neural Networks In Any Case, keeping the same quality models"
+        />
+
+        {/* Hero Metric Section */}
+        <div className="flex flex-col items-center justify-center mb-16 text-center">
+          <div className="relative">
+            <div className="absolute -inset-8 bg-cyan-500/20 blur-3xl rounded-full"></div>
+            <h2 className="text-7xl md:text-9xl font-black text-cyan-400 drop-shadow-[0_0_20px_rgba(34,211,238,0.5)] tracking-tighter mb-2">
+              22,300<span className="text-4xl md:text-6xl">x</span>
+            </h2>
+            <p className="text-xl md:text-2xl font-mono text-emerald-400 uppercase tracking-widest font-bold">
+              Maximum Speed Multiplier
+            </p>
+          </div>
+        </div>
+
+        {/* Validation Quote */}
+        <div className="max-w-4xl mx-auto mb-16">
+          <div className="border-l-4 border-emerald-500 bg-slate-900/50 p-6 rounded-r-xl">
+            <blockquote className="text-lg md:text-xl text-slate-200 font-medium leading-relaxed italic mb-4">
+              "The benchmark results with AltiCoreSW are transformative. Seeing
+              a software synthesis engine outperform established best in class
+              Neural Networks solution by such a massive margin signals a
+              fundamental shift in enterprise AI deployment. AlticoreAI is just
+              at the beginning of its journey. there is a lot of room for
+              optimizations leading to even higher performance."
+            </blockquote>
+            <footer className="text-emerald-400 font-mono text-sm uppercase tracking-widest">
+              — CEO, SidePath
+            </footer>
+          </div>
+        </div>
+
+        {/* Hardware Nodes */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
+          <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl flex items-center gap-6 group hover:border-cyan-500/50 transition-all">
+            <div className="p-4 rounded-xl bg-cyan-500/10 border border-cyan-500/20">
+              <Laptop className="w-8 h-8 text-cyan-400" />
+            </div>
+            <div>
+              <h4 className="text-white font-bold text-sm uppercase tracking-tight mb-1">
+                Laptop
+              </h4>
+              <p className="text-slate-300 font-mono">
+                Dell Precision 5680 | Intel i7-13700H | 32GB RAM | No GPU
+              </p>
+              <div className="mt-2 flex gap-2">
+                <span className="text-[11px] bg-cyan-900/40 text-cyan-400 px-2 py-0.5 rounded border border-cyan-800">
+                  i7-Gen13
+                </span>
+                <span className="text-[11px] bg-cyan-900/40 text-cyan-400 px-2 py-0.5 rounded border border-cyan-800">
+                  Mobile LPAR
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl flex items-center gap-6 group hover:border-emerald-500/50 transition-all">
+            <div className="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20">
+              <Server className="w-8 h-8 text-emerald-400" />
+            </div>
+            <div>
+              <h4 className="text-white font-bold text-sm uppercase tracking-tight mb-1">
+                Enterprise / Datacenter Server
+              </h4>
+              <p className="text-slate-300 font-mono">
+                Dell PowerEdge | Intel Xeon Gold 5416S
+              </p>
+              <div className="mt-2 flex gap-2">
+                <span className="text-[11px] bg-emerald-900/40 text-emerald-400 px-2 py-0.5 rounded border border-emerald-800">
+                  Xeon Gold
+                </span>
+                <span className="text-[11px] bg-emerald-900/40 text-emerald-400 px-2 py-0.5 rounded border border-emerald-800">
+                  Rack Density
+                </span>
               </div>
             </div>
           </div>
         </div>
-        <div className="overflow-x-auto rounded-xl border border-slate-800 bg-slate-900/50">
-          <table className="w-full text-left text-sm">
-            <thead>
-              <tr className="border-b border-slate-800 text-slate-400 uppercase font-mono text-xs">
-                <th className="py-4 px-6">Dataset</th>
-                <th className="py-4 px-6 text-right">Speed Advantage (x)</th>
-              </tr>
-            </thead>
-            <tbody className="text-slate-300 divide-y divide-slate-800/50 font-mono">
-              {[
-                { ds: "UCI_HAR", multi: 43.3 },
-                { ds: "SPECT", multi: 17.2 },
-                { ds: "Credit_Fraud", multi: 11.7 },
-                { ds: "MachineFailure", multi: 5.0 },
-              ].map((row) => (
-                <tr
-                  key={row.ds}
-                  className="hover:bg-[#10b981]/5 transition-colors"
-                >
-                  <td className="py-4 px-6">{row.ds}</td>
-                  <td className="py-4 px-6 text-right">
-                    <div className="flex flex-col items-end gap-1">
-                      <span className="text-[#10b981] font-bold tracking-tighter">
-                        {row.multi.toFixed(1)}x
-                      </span>
-                      <div className="w-24 h-1.5 bg-slate-800 rounded-full overflow-hidden">
-                        <div
-                          className="h-full bg-[#10b981] shadow-[0_0_10px_rgba(16,185,129,0.5)]"
-                          style={{ width: `${(row.multi / 43.3) * 100}%` }}
-                        ></div>
+
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="space-y-6">
+            {/* <div className="p-6 bg-slate-900 rounded-xl border border-sw/30 mb-6">
+              <p className="text-sw text-xs font-mono uppercase tracking-widest mb-2">
+                Validation Partner: SidePath
+              </p>
+              <blockquote className="text-slate-300 italic text-sm leading-relaxed border-l-2 border-sw pl-4">
+                "he benchmark results with AltiCoreSW are transformative. Seeing
+                a software synthesis engine outperform established best in class
+                Neural Networks solution by such a massive margin signals a
+                fundamental shift in enterprise AI deployment. AlticoreAI is
+                just at the beginning of its journey. there is a lot of room for
+                optimizations leading to even higher performance."
+                <footer className="text-xs text-slate-500 mt-2">
+                  — CEO, SidePath
+                </footer>
+              </blockquote>
+            </div> */}
+
+            {/* Edge Performance (Laptop) */}
+            <div className="space-y-6">
+              <div className="flex items-center gap-2 mb-2">
+                <Table className="w-5 h-5 text-cyan-400" />
+                <h4 className="text-white font-mono font-bold uppercase text-sm tracking-widest">
+                  AltiCoreSW Vs. Neural Networks (Laptop)
+                </h4>
+              </div>
+              <div className="bg-slate-900/40 p-4 md:p-6 rounded-2xl border border-slate-800">
+                <div className="overflow-x-auto">
+                  <div className="grid grid-cols-5 gap-2 mb-4 font-mono text-[12px] text-slate-300 uppercase tracking-tighter">
+                    <div className="col-span-1 text-slate-400">Dataset</div>
+                    <div className="text-center">Out of the box Python</div>
+                    <div className="text-center">Multicore Python</div>
+                    <div className="text-center">C++ Tensorflow XNN</div>
+                    <div className="text-center">C++ Tensorflow RUY MT</div>
+                  </div>
+                  <div className="space-y-2">
+                    {datasets.map((ds) => (
+                      <div
+                        key={ds.name}
+                        className="grid grid-cols-5 gap-2 items-center"
+                      >
+                        <div className="text-[12px] text-slate-300 font-sans truncate">
+                          {ds.name}
+                        </div>
+                        <HeatmapCell value={ds.laptop} max={8165} />
+                        <HeatmapCell value={ds.multicore} max={292} />
+                        <HeatmapCell value={ds.tensorflow} max={181} />
+                        <HeatmapCell value={ds.tensorflowRUY} max={92} />
                       </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Enterprise Performance (Server) */}
+          <div className="space-y-6">
+            <div className="flex items-center gap-2 mb-2">
+              <Table className="w-5 h-5 text-emerald-400" />
+              <h4 className="text-white font-mono font-bold uppercase text-sm tracking-widest">
+                AltiCoreSW Vs. Neural Networks (Server)
+              </h4>
+            </div>
+            <div className="bg-slate-900/40 p-4 md:p-6 rounded-2xl border border-slate-800">
+              <div className="overflow-x-auto">
+                <div className="grid grid-cols-5 gap-2 mb-4 font-mono text-[12px] text-slate-300 uppercase tracking-tighter">
+                  <div className="col-span-1 text-slate-400">Dataset</div>
+                  <div className="text-center">Out of the box Python</div>
+                  <div className="text-center">Multicore Python</div>
+                  <div className="text-center">C++ Tensorflow XNN</div>
+                  <div className="text-center">C++ Tensorflow RUY MT</div>
+                </div>
+                <div className="space-y-2">
+                  {datasets.map((ds) => (
+                    <div
+                      key={ds.name}
+                      className="grid grid-cols-5 gap-2 items-center"
+                    >
+                      <div className="text-[12px] text-slate-300 font-sans truncate">
+                        {ds.name}
+                      </div>
+                      <HeatmapCell value={ds.server} max={22376} />
+                      <HeatmapCell value={ds.smulti} max={472} />
+                      <HeatmapCell value={ds.stf} max={195} />
+                      <HeatmapCell value={ds.stfRUY} max={110} />
                     </div>
-                  </td>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* <div className="overflow-x-auto rounded-xl border border-slate-800 bg-slate-900/50">
+            <table className="w-full text-left text-sm">
+              <thead>
+                <tr className="border-b border-slate-800 text-slate-400 uppercase font-mono text-xs">
+                  <th className="py-4 px-6">Dataset</th>
+                  <th className="py-4 px-6 text-right">Speed Advantage (x)</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody className="text-slate-300 divide-y divide-slate-800/50 font-mono">
+                {[
+                  { ds: "UCI_HAR", multi: 43.3 },
+                  { ds: "SPECT", multi: 17.2 },
+                  { ds: "Credit_Fraud", multi: 11.7 },
+                  { ds: "MachineFailure", multi: 5.0 },
+                ].map((row) => (
+                  <tr
+                    key={row.ds}
+                    className="hover:bg-[#10b981]/5 transition-colors"
+                  >
+                    <td className="py-4 px-6">{row.ds}</td>
+                    <td className="py-4 px-6 text-right">
+                      <div className="flex flex-col items-end gap-1">
+                        <span className="text-[#10b981] font-bold tracking-tighter">
+                          {row.multi.toFixed(1)}x
+                        </span>
+                        <div className="w-24 h-1.5 bg-slate-800 rounded-full overflow-hidden">
+                          <div
+                            className="h-full bg-[#10b981] shadow-[0_0_10px_rgba(16,185,129,0.5)]"
+                            style={{ width: `${(row.multi / 43.3) * 100}%` }}
+                          ></div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div> */}
+        </div>
+        {/* ROI Highlight Card */}
+        <div className="p-8 bg-gradient-to-br mt-16 from-slate-900 to-slate-950 border border-cyan-500/20 rounded-3xl text-center relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(6,182,212,0.1),transparent)]"></div>
+          <div className="relative z-10">
+            <h3 className="text-2xl md:text-4xl font-bold text-white mb-4 capitalize">
+              AltiCoreSW on laptop beats neural networks on server
+            </h3>
+            <p className="text-slate-400 max-w-2xl mx-auto text-xl leading-relaxed mb-8">
+              AltiCoreSW restructures legacy workloads into binary logic
+              streams, achieving speed gains that neural networks do not match.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-4 gap-6 max-w-4xl mx-auto">
+              <div className="text-2xl font-bold text-teal-400 pt-2">
+                Worst Case Scenario
+              </div>
+              <div className="p-4 bg-slate-950 border border-slate-800 rounded-xl">
+                <p className="text-[12px] font-mono text-slate-300 capitalize mb-1">
+                  AltiCoreSW Laptop #IPS
+                </p>
+                <p className="text-2xl font-bold text-teal-400">361.010.000</p>
+              </div>
+              <div className="p-4 bg-slate-950 border border-slate-800 rounded-xl">
+                <p className="text-[12px] font-mono text-slate-300 capitalize mb-1">
+                  C++ TF RUYMT #IPS
+                </p>
+                <p className="text-2xl font-bold text-teal-400">30.090.000</p>
+              </div>
+              <div className="p-4 bg-slate-950 border border-slate-800 rounded-xl">
+                <p className="text-[12px] font-mono text-slate-300 capitalize mb-1">
+                  Speed Multiplier
+                </p>
+                <p className="text-2xl font-bold text-teal-400">12x</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 const EvoHdlShowcase = () => (
   <section
@@ -2110,7 +2446,7 @@ const HowItWorksSection = () => (
           <h4 className="text-white font-mono font-bold uppercase tracking-widest text-sm mb-2">
             {i + 1}. {step.title}
           </h4>
-          <p className="text-sm text-slate-400 leading-relaxed font-sans">
+          <p className="text-md text-slate-300 leading-relaxed font-sans">
             {step.desc}
           </p>
         </div>
@@ -2120,22 +2456,22 @@ const HowItWorksSection = () => (
     {/* The Efficiency Edge (Comparison Table) */}
     <div className="rounded-xl border border-slate-800 bg-slate-950/50 overflow-hidden">
       <div className="bg-slate-900/80 p-4 border-b border-slate-800">
-        <h4 className="text-white font-mono font-bold uppercase tracking-widest text-xs">
-          The Efficiency Edge
+        <h4 className="text-white font-mono font-bold uppercase tracking-widest">
+          The Efficiency Limitations
         </h4>
       </div>
       <div className="overflow-x-auto">
-        <table className="w-full text-left text-xs font-sans">
+        <table className="w-full text-left font-sans">
           <thead>
-            <tr className="border-b border-slate-800 text-slate-500 tracking-wider font-mono font-bold">
-              <th className="py-4 px-6">Metric</th>
+            <tr className="border-b border-slate-800 text-slate-300 tracking-wider font-mono font-bold">
+              <th className="py-4 px-6 text-white">Metric</th>
               <th className="py-4 px-4 text-center">Legacy AI (Neural Nets)</th>
               <th className="py-4 px-4 text-center text-cyan-400">
                 AltiCoreAI (Logic-First)
               </th>
             </tr>
           </thead>
-          <tbody className="text-slate-300 divide-y divide-slate-800/50">
+          <tbody className="text-slate-200 divide-y divide-slate-800/50">
             {[
               {
                 label: "Operations",
@@ -2159,7 +2495,7 @@ const HowItWorksSection = () => (
               },
             ].map((row, i) => (
               <tr key={i}>
-                <td className="py-4 px-6 font-mono font-bold uppercase text-[10px] text-slate-100">
+                <td className="py-4 px-6 font-mono font-bold uppercase text-[12px] text-slate-100">
                   {row.label}
                 </td>
                 <td className="py-4 px-4 text-center">{row.legacy}</td>
@@ -2185,7 +2521,7 @@ const HowItWorksSection = () => (
           className="flex items-center gap-3 p-4 bg-slate-900/50 border border-slate-800 rounded-lg"
         >
           <CheckCircle2 className="w-4 h-4 text-cyan-500" />
-          <span className="text-sm text-slate-300">{adv}</span>
+          <span className="text-md text-slate-300">{adv}</span>
         </div>
       ))}
     </div>
@@ -2199,7 +2535,7 @@ const SidePathBenchmarkSection = () => (
       <span className="lowercase">w/o model quality compromise</span>
     </h3>
 
-    <p className="text-slate-300 text-sm mb-8 leading-relaxed font-sans">
+    <p className="text-slate-300 mb-8 leading-relaxed font-sans">
       Independent benchmarking with SidePath confirms that AltiCoreAI’s
       logic-first architecture running on a standard laptop consistently
       outperforms high-end server-class Neural Network configurations. EvoChip
@@ -2221,7 +2557,7 @@ const SidePathBenchmarkSection = () => (
           <p className="text-xl font-bold text-slate-100 font-sans">
             ~100+ Years
           </p>
-          <p className="text-xs text-slate-500 font-sans leading-relaxed">
+          <p className="text-md text-slate-300 font-sans leading-relaxed">
             Reflects senior engineering effort (160k–240k hours) via Google
             TensorFlow libraries. Massive legacy overhead.
           </p>
@@ -2238,7 +2574,7 @@ const SidePathBenchmarkSection = () => (
           <p className="text-xl font-bold text-white font-sans">
             &lt; 6 Man-Years
           </p>
-          <p className="text-xs text-slate-300 font-sans leading-relaxed">
+          <p className="text-md text-slate-300 font-sans leading-relaxed">
             Achieved definitive performance leadership with minimal dev-time.
             Currently at the{" "}
             <span className="font-bold text-cyan-400">earliest stage</span> of
@@ -2270,7 +2606,7 @@ const SidePathBenchmarkSection = () => (
             </span>
           </div>
         </div>
-        <p className="text-xs text-slate-400 font-sans px-4">
+        <p className="text-md text-slate-300 font-sans px-1">
           AltiCoreAI logic running on consumer registers consistently
           outperforms high-density server nodes running legacy matrix stacks.
         </p>
@@ -2283,7 +2619,7 @@ const SidePathBenchmarkSection = () => (
             <h4 className="text-white font-bold text-sm mb-1">
               Accuracy Parity
             </h4>
-            <p className="text-xs text-slate-500 leading-relaxed font-sans">
+            <p className="text-md text-slate-300 leading-relaxed font-sans">
               SidePath data confirms a slight accuracy advantage for AltiCoreAI
               despite running with orders of magnitude fewer resources.
             </p>
@@ -2295,7 +2631,7 @@ const SidePathBenchmarkSection = () => (
             <h4 className="text-white font-bold text-sm mb-1">
               Compute Density
             </h4>
-            <p className="text-xs text-slate-500 leading-relaxed font-sans">
+            <p className="text-md text-slate-300 leading-relaxed font-sans">
               Uses orders of magnitude fewer parameters and arithmetic
               operations per inference cycle.
             </p>
@@ -2323,9 +2659,9 @@ const SidePathBenchmarkSection = () => (
             { ds: "Industry Average", val: 11.3, isLead: true },
           ].map((row, i) => (
             <div key={i} className="space-y-2">
-              <div className="flex justify-between items-end text-[10px] font-mono font-bold uppercase tracking-tight">
+              <div className="flex justify-between items-end text-md font-mono font-bold uppercase tracking-tight">
                 <span
-                  className={row.isLead ? "text-cyan-400" : "text-slate-400"}
+                  className={row.isLead ? "text-cyan-400" : "text-slate-300"}
                 >
                   {row.ds}
                 </span>
@@ -2361,7 +2697,7 @@ const SidePathBenchmarkSection = () => (
           Definitive Accuracy: Zero Compromise for Efficiency
         </h4>
       </div>
-      <p className="text-xs text-slate-400 leading-relaxed font-sans">
+      <p className="text-md text-slate-300 leading-relaxed font-sans">
         Benchmarks confirm that AltiCoreAI maintains near-parity or superior
         test accuracy across all key datasets compared to legacy Neural
         Networks. Our logic-synthesis replaces brute-force matrix math without
@@ -2372,7 +2708,7 @@ const SidePathBenchmarkSection = () => (
       </p>
     </Card>
 
-    <p className="text-slate-400 text-[11px] leading-relaxed italic border-l border-slate-700 pl-4">
+    <p className="text-cyan-300 text-2xl leading-relaxed italic border-l border-slate-700 pl-4">
       Future State: AltiCoreAI is currently at the earliest stage of its
       optimization curve; future algorithmic potential suggests performance
       leads exceeding 100x as compiler logic matures.
@@ -2504,13 +2840,15 @@ const InvestorPortalContent = ({
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch mb-8">
                 {/* Efficiency Crisis Graph */}
                 <div className="bg-slate-900/50 p-6 rounded-xl border border-slate-800 flex flex-col justify-between h-full">
-                  <h4 className="text-cyan-400 font-mono text-[10px] uppercase mb-6 tracking-widest text-center">
+                  <h4 className="text-cyan-400 font-mono text-md uppercase mb-6 tracking-widest text-center">
                     Industry Efficiency Crisis
                   </h4>
                   <div className="space-y-8 flex-grow flex flex-col justify-center">
                     <div>
-                      <div className="flex justify-between text-[10px] mb-2 uppercase font-mono font-bold tracking-tighter">
-                        <span>Current NN Efficiency</span>
+                      <div className="flex justify-between text-md mb-2 uppercase font-mono font-bold tracking-tighter">
+                        <span className="text-slate-300">
+                          Current NN Efficiency
+                        </span>
                         <span className="text-red-500 font-bold">1X</span>
                       </div>
                       <div className="h-2 w-full bg-slate-800 rounded-full overflow-hidden font-sans">
@@ -2518,9 +2856,11 @@ const InvestorPortalContent = ({
                       </div>
                     </div>
                     <div>
-                      <div className="flex justify-between text-[10px] mb-2 uppercase font-mono font-bold tracking-tighter">
-                        <span>Logic-First Efficiency</span>
-                        <span className="text-cyan-400 font-bold">
+                      <div className="flex justify-between text-md mb-2 uppercase font-mono font-bold tracking-tighter">
+                        <span className="text-slate-300">
+                          Logic-First Efficiency
+                        </span>
+                        <span className="text-cyan-400 font-bold text-right">
                           Up to <strong>1000X</strong>
                         </span>
                       </div>
@@ -2529,26 +2869,18 @@ const InvestorPortalContent = ({
                       </div>
                     </div>
                   </div>
-                  <p className="text-[11px] text-slate-400 mt-8 italic text-center">
+                  <p className="text-sm text-slate-300 mt-8 italic text-center">
                     Legacy AI scaling requires "bigger chips." <br />
                     EvoChip solves the problem by making **"smarter software."**
                   </p>
                 </div>
 
                 {/* YouTube Video Placeholder */}
-                <div className="bg-slate-900/50 border border-slate-800 rounded-xl flex flex-col items-center justify-center p-6 relative overflow-hidden group h-full font-mono font-bold uppercase tracking-widest">
-                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent font-sans"></div>
-                  <div className="relative z-10 text-center font-sans font-normal normal-case">
-                    <div className="w-16 h-16 rounded-full bg-slate-950 border border-slate-700 flex items-center justify-center mb-4 group-hover:border-cyan-500/50 transition-colors mx-auto shadow-2xl">
-                      <Rocket className="w-8 h-8 text-cyan-500 animate-pulse" />
-                    </div>
-                    <p className="text-xs font-mono text-slate-300 uppercase tracking-widest font-bold">
-                      Logic-First Architecture Demo
-                    </p>
-                    <p className="text-[10px] text-slate-500 mt-2 font-mono uppercase tracking-tighter font-bold">
-                      [ Video Player Placeholder ]
-                    </p>
-                  </div>
+                <div className="bg-slate-900/50 border border-slate-800 rounded-xl flex flex-col items-center justify-center relative overflow-hidden group h-full font-mono font-bold uppercase tracking-widest">
+                  <VideoEmbed
+                    videoId="IcF4pgFETMM"
+                    title="Technical Overview"
+                  />
                 </div>
               </div>
 
@@ -2589,10 +2921,10 @@ const InvestorPortalContent = ({
                       <impact.icon className="w-5 h-5 text-cyan-500" />
                     </div>
                     <div>
-                      <h4 className="text-white font-bold text-xs uppercase tracking-wider mb-2 leading-tight h-8 flex items-center">
+                      <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-2 leading-tight h-8 flex items-center">
                         {impact.title}
                       </h4>
-                      <p className="text-[10px] text-slate-400 leading-relaxed">
+                      <p className="text-sm text-slate-300 leading-relaxed">
                         {impact.desc}
                       </p>
                     </div>
@@ -2606,7 +2938,7 @@ const InvestorPortalContent = ({
               <h3 className="text-2xl font-bold text-white border-l-4 border-cyan-500 pl-4 mb-4 font-mono uppercase tracking-widest">
                 Competitive Landscape: The Insuperable Moat
               </h3>
-              <p className="text-slate-300 text-sm mb-8 leading-relaxed font-sans">
+              <p className="text-slate-300 text-md mb-8 leading-relaxed font-sans">
                 Current market incumbents focus on "Optimization"—attempting to
                 shrink 70-year-old Neural Network architectures to fit modern
                 hardware. AltiCoreAI represents a fundamental architectural
@@ -2618,10 +2950,10 @@ const InvestorPortalContent = ({
 
               <div className="rounded-xl border border-slate-800 bg-slate-950/50 overflow-hidden mb-6">
                 <div className="overflow-x-auto">
-                  <table className="w-full text-left text-[11px] sm:text-xs">
+                  <table className="w-full text-left text-[13px]">
                     <thead>
-                      <tr className="bg-slate-900/80 border-b border-slate-800 text-slate-400 uppercase tracking-wider font-mono font-bold">
-                        <th className="py-4 px-6 font-sans font-normal">
+                      <tr className="bg-slate-900/80 border-b border-slate-800 text-slate-300 uppercase tracking-wider font-mono font-bold">
+                        <th className="py-4 px-6 font-sans font-normal text-white">
                           Strategic Pillar
                         </th>
                         <th className="py-4 px-4 text-center font-sans font-normal">
@@ -2637,7 +2969,7 @@ const InvestorPortalContent = ({
                     </thead>
                     <tbody className="text-slate-300 divide-y divide-slate-800/50 font-sans">
                       <tr>
-                        <td className="py-4 px-6 font-mono font-bold uppercase text-[10px] text-slate-100">
+                        <td className="py-4 px-6 font-mono font-bold uppercase text-md text-slate-100">
                           Architectural Basis
                         </td>
                         <td className="py-4 px-4 text-center">
@@ -2651,7 +2983,7 @@ const InvestorPortalContent = ({
                         </td>
                       </tr>
                       <tr>
-                        <td className="py-4 px-6 font-mono font-bold uppercase text-[10px] text-slate-100">
+                        <td className="py-4 px-6 font-mono font-bold uppercase text-md text-slate-100">
                           Operational State
                         </td>
                         <td className="py-4 px-4 text-center">
@@ -2665,7 +2997,7 @@ const InvestorPortalContent = ({
                         </td>
                       </tr>
                       <tr>
-                        <td className="py-4 px-6 font-mono font-bold uppercase text-[10px] text-slate-100">
+                        <td className="py-4 px-6 font-mono font-bold uppercase text-md text-slate-100">
                           Safety Profile
                         </td>
                         <td className="py-4 px-4 text-center">
@@ -2679,7 +3011,7 @@ const InvestorPortalContent = ({
                         </td>
                       </tr>
                       <tr>
-                        <td className="py-4 px-6 font-mono font-bold uppercase text-[10px] text-slate-100">
+                        <td className="py-4 px-6 font-mono font-bold uppercase text-md text-slate-100">
                           Efficiency Ceiling
                         </td>
                         <td className="py-4 px-4 text-center">
@@ -2693,7 +3025,7 @@ const InvestorPortalContent = ({
                         </td>
                       </tr>
                       <tr>
-                        <td className="py-4 px-6 font-mono font-bold uppercase text-[10px] text-slate-100">
+                        <td className="py-4 px-6 font-mono font-bold uppercase text-md text-slate-100">
                           Energy Profile
                         </td>
                         <td className="py-4 px-4 text-center">
@@ -2707,7 +3039,7 @@ const InvestorPortalContent = ({
                         </td>
                       </tr>
                       <tr>
-                        <td className="py-4 px-6 font-mono font-bold uppercase text-[10px] text-slate-100">
+                        <td className="py-4 px-6 font-mono font-bold uppercase text-md text-slate-100">
                           Commercial Model
                         </td>
                         <td className="py-4 px-4 text-center">
@@ -2724,7 +3056,7 @@ const InvestorPortalContent = ({
                   </table>
                 </div>
               </div>
-              <p className="text-slate-400 text-[11px] leading-relaxed italic border-l border-slate-700 pl-4">
+              <p className="text-slate-300 text-sm leading-relaxed italic border-l border-slate-700 pl-4">
                 While incumbents focus on incremental gains, AltiCoreAI’s
                 'Fabless' model scales via IP Royalties and Enterprise SaaS,
                 providing the architectural blueprints that define
@@ -2737,7 +3069,7 @@ const InvestorPortalContent = ({
               <h3 className="text-2xl font-bold text-white border-l-4 border-cyan-500 pl-4 mb-4 font-mono uppercase tracking-widest">
                 AltiCoreAI IP Portfolio: Three High-Margin Revenue Streams
               </h3>
-              <p className="text-slate-300 text-sm mb-10 leading-relaxed max-w-3xl">
+              <p className="text-slate-300 text-md mb-10 leading-relaxed max-w-3xl">
                 Strategic Ecosystem: AltiCoreAI owns the entire compute
                 lifecycle. We secure the silicon with HDL, capture the
                 high-volume edge with MCU, and optimize the global cloud with
@@ -2835,7 +3167,7 @@ const InvestorPortalContent = ({
               <h3 className="text-2xl font-bold text-white flex items-center gap-3 mb-6 font-mono uppercase tracking-widest">
                 COMMERCIAL SCALABILITY & DEFENSE
               </h3>
-              <p className="text-slate-400 text-sm mb-10 max-w-3xl leading-relaxed">
+              <p className="text-slate-300 text-md mb-10 max-w-3xl leading-relaxed">
                 Our revenue model is built for exponential growth independent of
                 physical manufacturing constraints. We provide the architectural
                 blueprints that define next-generation AI execution.
@@ -2871,7 +3203,7 @@ const InvestorPortalContent = ({
                     <h4 className="text-white font-bold text-base mb-2 tracking-tight uppercase">
                       {item.title}
                     </h4>
-                    <p className="text-xs text-slate-400 leading-relaxed">
+                    <p className="text-md text-slate-300 leading-relaxed">
                       {item.desc}
                     </p>
                   </div>
@@ -2884,7 +3216,7 @@ const InvestorPortalContent = ({
               <h3 className="text-2xl font-bold text-white border-l-4 border-cyan-500 pl-4 mb-4 font-mono uppercase tracking-widest">
                 Roadmap: Milestones Funded by This Raise
               </h3>
-              <p className="text-slate-300 text-sm mb-10 leading-relaxed max-w-4xl font-sans">
+              <p className="text-slate-300 text-md mb-10 leading-relaxed max-w-4xl font-sans">
                 Execution Strategy: Capitalizing on the 2026 $1T semiconductor
                 milestone, this raise accelerates the parallel deployment of our
                 MCU, SW, and HDL streams.
@@ -2904,14 +3236,14 @@ const InvestorPortalContent = ({
                         </h4>
                       </div>
                       <div className="space-y-3 font-sans">
-                        <p className="text-sm text-slate-300">
+                        <p className="text-md text-slate-300">
                           <span className="text-cyan-400 font-mono font-bold uppercase">
                             Team Finalization:
                           </span>{" "}
                           Scale Sales and Customer Support teams to manage
                           enterprise-grade delivery for AltiCoreSW.
                         </p>
-                        <p className="text-sm text-slate-300">
+                        <p className="text-md text-slate-300">
                           <span className="text-cyan-400 font-mono font-bold uppercase">
                             IP Expansion:
                           </span>{" "}
@@ -2926,7 +3258,7 @@ const InvestorPortalContent = ({
                     <div className="absolute -inset-px bg-gradient-to-r from-emerald-500/20 to-emerald-900/20 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     <div className="relative">
                       <div className="flex flex-col mb-4 font-mono font-bold uppercase tracking-widest">
-                        <span className="px-3 py-1 bg-emerald-900/30 text-emerald-400 text-xs rounded-full border border-emerald-500/20 w-fit mb-2">
+                        <span className="px-3 py-1 bg-emerald-900/30 text-emerald-400 text-md rounded-full border border-emerald-500/20 w-fit mb-2">
                           Q2 2026
                         </span>
                         <h4 className="text-white text-lg font-sans">
@@ -2934,14 +3266,14 @@ const InvestorPortalContent = ({
                         </h4>
                       </div>
                       <div className="space-y-3 font-sans">
-                        <p className="text-sm text-slate-300">
+                        <p className="text-md text-slate-300">
                           <span className="text-sw font-mono font-bold uppercase">
                             AltiCoreSW Deployment:
                           </span>{" "}
                           Secure and deploy to 2 anchor Cloud clients,
                           validating the OpEx-reduction model.
                         </p>
-                        <p className="text-sm text-slate-300">
+                        <p className="text-md text-slate-300">
                           <span className="text-mcu font-mono font-bold uppercase">
                             AltiCoreMCU Beta:
                           </span>{" "}
@@ -2956,7 +3288,7 @@ const InvestorPortalContent = ({
                     <div className="absolute -inset-px bg-gradient-to-r from-hdl/20 to-hdl/5 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     <div className="relative">
                       <div className="flex flex-col mb-4 font-mono font-bold uppercase tracking-widest">
-                        <span className="px-3 py-1 bg-hdl/20 text-hdl text-xs rounded-full border border-hdl/30 w-fit mb-2">
+                        <span className="px-3 py-1 bg-hdl/20 text-hdl text-md rounded-full border border-hdl/30 w-fit mb-2">
                           Q3 2026
                         </span>
                         <h4 className="text-white text-lg font-sans">
@@ -2964,14 +3296,14 @@ const InvestorPortalContent = ({
                         </h4>
                       </div>
                       <div className="space-y-3 font-sans">
-                        <p className="text-sm text-slate-300">
+                        <p className="text-md text-slate-300">
                           <span className="text-hdl font-mono font-bold uppercase">
                             AltiCoreHDL Sign-off:
                           </span>{" "}
                           Execute integration contracts with Tier 1
                           Semiconductor manufacturers.
                         </p>
-                        <p className="text-sm text-slate-300">
+                        <p className="text-md text-slate-300">
                           <span className="text-hdl font-mono font-bold uppercase">
                             Mass Market Scaling:
                           </span>{" "}
@@ -2986,7 +3318,7 @@ const InvestorPortalContent = ({
                     <div className="absolute -inset-px bg-gradient-to-r from-mcu-dark/20 to-cyan-500/20 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     <div className="relative">
                       <div className="flex flex-col mb-4 font-mono font-bold uppercase tracking-widest">
-                        <span className="px-3 py-1 bg-blue-900/30 text-mcu text-xs rounded-full border border-mcu-dark/20 w-fit mb-2">
+                        <span className="px-3 py-1 bg-blue-900/30 text-mcu text-md rounded-full border border-mcu-dark/20 w-fit mb-2">
                           Q4 2026
                         </span>
                         <h4 className="text-white text-lg font-sans">
@@ -2994,14 +3326,14 @@ const InvestorPortalContent = ({
                         </h4>
                       </div>
                       <div className="space-y-3 font-sans">
-                        <p className="text-sm text-slate-300">
+                        <p className="text-md text-slate-300">
                           <span className="text-mcu font-mono font-bold uppercase">
                             Commercial Validation:
                           </span>{" "}
                           Reach target revenue milestones across all three
                           streams.
                         </p>
-                        <p className="text-sm text-slate-300">
+                        <p className="text-md text-slate-300">
                           <span className="text-mcu font-mono font-bold uppercase">
                             Exit Readiness:
                           </span>{" "}
@@ -3020,7 +3352,7 @@ const InvestorPortalContent = ({
                   <h4 className="text-xl font-bold text-white uppercase tracking-tighter">
                     Strategic Positioning & Exit Optionality
                   </h4>
-                  <p className="text-sm text-slate-300">
+                  <p className="text-md text-slate-300">
                     While AltiCoreAI is architected for long-term category
                     dominance, the transition from validated IP to multi-stream
                     revenue (Royalties + SaaS) creates a high-value strategic
@@ -3028,7 +3360,7 @@ const InvestorPortalContent = ({
                     optionality once mass-market milestones are definitively
                     validated.
                   </p>
-                  <p className="text-xs text-slate-400 font-mono font-bold uppercase tracking-tighter">
+                  <p className="text-md text-slate-400 font-mono font-bold uppercase tracking-tighter">
                     Essential IP: Technology for Tier 1 manufacturers seeking to
                     bypass the physical scaling limits of legacy Neural
                     Networks.
@@ -3058,7 +3390,7 @@ const InvestorPortalContent = ({
                       <h4 className="text-white font-bold text-lg">
                         Successful Exits
                       </h4>
-                      <p className="text-xs text-slate-400 leading-relaxed font-sans">
+                      <p className="text-md text-slate-300 leading-relaxed font-sans">
                         Management has a collective track record of building and
                         exiting 11 companies to major industry players.
                       </p>
@@ -3072,7 +3404,7 @@ const InvestorPortalContent = ({
                       <h4 className="text-white font-bold text-lg">
                         Global Patents
                       </h4>
-                      <p className="text-xs text-slate-400 leading-relaxed font-sans">
+                      <p className="text-md text-slate-300 leading-relaxed font-sans">
                         Founder/CTO holds foundational AltiCoreAI IP across
                         logic synthesis, evolutionary algorithms, and hardware
                         architecture.
@@ -3112,13 +3444,13 @@ const InvestorPortalContent = ({
                         )}
                         <div className="w-[18px] h-[18px] rounded-full bg-cyan-500/20 border border-cyan-500 shrink-0 mt-1 shadow-[0_0_10px_rgba(6,182,212,0.5)]"></div>
                         <div>
-                          <p className="text-[10px] text-cyan-500 uppercase">
+                          <p className="text-[14px] text-cyan-500 uppercase">
                             {t.date}
                           </p>
                           <p className="text-sm text-white tracking-tight font-sans">
                             {t.label}
                           </p>
-                          <p className="text-xs text-slate-500 font-sans font-normal normal-case">
+                          <p className="text-md text-slate-300 font-sans font-normal normal-case">
                             {t.sub}
                           </p>
                         </div>
@@ -3161,12 +3493,12 @@ const InvestorPortalContent = ({
                         <h3 className="text-base font-bold text-white">
                           {member.name}
                         </h3>
-                        <p className="text-cyan-400 text-[10px] font-mono uppercase tracking-tighter">
+                        <p className="text-cyan-400 text-[12px] font-mono uppercase tracking-tighter">
                           {member.role}
                         </p>
                       </div>
                     </div>
-                    <p className="text-xs text-slate-400 leading-relaxed border-t border-slate-800/50 pt-4 font-sans">
+                    <p className="text-md text-slate-300 leading-relaxed border-t border-slate-800/50 pt-4 font-sans">
                       {member.bio}
                     </p>
                   </div>
@@ -3248,7 +3580,7 @@ const InvestorPortalContent = ({
                       },
                     ].map((item, i) => (
                       <div key={i}>
-                        <div className="flex justify-between text-[10px] mb-2 font-mono font-bold uppercase">
+                        <div className="flex justify-between text-[13px] mb-2 font-mono font-bold uppercase">
                           <span className="text-slate-300 uppercase tracking-widest">
                             {item.label}
                           </span>
@@ -3275,7 +3607,7 @@ const InvestorPortalContent = ({
                   <p className="text-sm font-bold text-white">
                     Full Financial Model
                   </p>
-                  <p className="text-[10px] text-slate-500 font-mono uppercase tracking-widest">
+                  <p className="text-[13px] text-slate-300 font-mono uppercase tracking-widest">
                     2025-2029 Projections
                   </p>
                 </div>
@@ -3284,7 +3616,7 @@ const InvestorPortalContent = ({
                 <ShieldCheck className="w-6 h-6 text-cyan-500" />
                 <div className="text-left">
                   <p className="text-sm font-bold text-white">Full IP Audit</p>
-                  <p className="text-[10px] text-slate-500 font-mono uppercase tracking-widest">
+                  <p className="text-[13px] text-slate-300 font-mono uppercase tracking-widest">
                     Patent Schedule (100+)
                   </p>
                 </div>
@@ -3295,7 +3627,7 @@ const InvestorPortalContent = ({
                   <p className="text-sm font-bold text-white">
                     Detailed TCO Report
                   </p>
-                  <p className="text-[10px] text-slate-500 font-mono uppercase tracking-widest">
+                  <p className="text-[13px] text-slate-300 font-mono uppercase tracking-widest">
                     Legacy vs AltiCoreAI Logic-First
                   </p>
                 </div>

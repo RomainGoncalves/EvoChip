@@ -27,12 +27,12 @@ export const IPPortfolioCard = ({
     {Icon && <Icon className={`w-8 h-8 ${color} mb-4 font-bold`} />}
     <h4 className={`text-xl font-bold text-white mb-1 font-sans`}>{title}</h4>
     <p
-      className={`text-sm font-mono uppercase tracking-wider mb-2 ${color} font-bold`}
+      className={`text-md font-mono uppercase tracking-wider mb-2 ${color} font-bold`}
     >
       {focus}
     </p>
     {subHeader && (
-      <p className="text-xs italic text-slate-300 mb-4 border-l-2 border-cyan-500/50 pl-3 font-sans">
+      <p className="text-sm italic text-slate-300 mb-4 border-l-2 border-cyan-500/50 pl-3 font-sans">
         &ldquo;{subHeader}&rdquo;
       </p>
     )}
@@ -45,8 +45,8 @@ export const IPPortfolioCard = ({
               "bg-"
             )} font-bold`}
           ></span>
-          <p className="text-sm text-slate-300 font-sans">
-            <span className="font-mono font-bold text-slate-100 uppercase text-[10px] tracking-tight font-bold">
+          <p className="text-md text-slate-300 font-sans">
+            <span className="font-mono font-bold text-slate-100 uppercase text-md tracking-tight">
               {item.label}:
             </span>{" "}
             {item.text}
