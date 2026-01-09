@@ -51,7 +51,11 @@ const App = () => {
   };
 
   // Custom Tooltip Component
-  const CustomTooltip = ({ active, payload, label }: {
+  const CustomTooltip = ({
+    active,
+    payload,
+    label,
+  }: {
     active?: boolean;
     payload?: Array<{ value: number }>;
     label?: string;
@@ -60,7 +64,7 @@ const App = () => {
       return (
         <div className="bg-slate-900/95 border border-slate-700 p-4 rounded-xl shadow-2xl backdrop-blur-md">
           <p className="text-[10px] text-slate-400 font-mono mb-3 uppercase tracking-widest border-b border-slate-800 pb-2">
-            {longerLabels[label] || label}
+            {longerLabels[label as keyof typeof longerLabels] || label}
           </p>
           <div className="space-y-2">
             <div className="flex justify-between items-center gap-8">
