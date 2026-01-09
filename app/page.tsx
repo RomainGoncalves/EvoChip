@@ -63,6 +63,8 @@ import {
 } from "@/components/ui";
 import { VideoEmbed } from "@/components/brand";
 import { KPICard, IPPortfolioCard } from "@/components/investor";
+import AccuracyChart from "@/components/sections/AccuracyChart";
+import SpeedChart from "@/components/sections/SpeedChart";
 
 // --- EVO CHIP SITE COMPONENTS (Corporate - PROTECTED) ---
 const EvoNavbar = ({
@@ -1097,44 +1099,8 @@ const EvoSwShowcase = () => {
               </div>
             </div>
           </div>
-          {/* <div className="overflow-x-auto rounded-xl border border-slate-800 bg-slate-900/50">
-            <table className="w-full text-left text-sm">
-              <thead>
-                <tr className="border-b border-slate-800 text-slate-400 uppercase font-mono text-xs">
-                  <th className="py-4 px-6">Dataset</th>
-                  <th className="py-4 px-6 text-right">Speed Advantage (x)</th>
-                </tr>
-              </thead>
-              <tbody className="text-slate-300 divide-y divide-slate-800/50 font-mono">
-                {[
-                  { ds: "UCI_HAR", multi: 43.3 },
-                  { ds: "SPECT", multi: 17.2 },
-                  { ds: "Credit_Fraud", multi: 11.7 },
-                  { ds: "MachineFailure", multi: 5.0 },
-                ].map((row) => (
-                  <tr
-                    key={row.ds}
-                    className="hover:bg-[#10b981]/5 transition-colors"
-                  >
-                    <td className="py-4 px-6">{row.ds}</td>
-                    <td className="py-4 px-6 text-right">
-                      <div className="flex flex-col items-end gap-1">
-                        <span className="text-[#10b981] font-bold tracking-tighter">
-                          {row.multi.toFixed(1)}x
-                        </span>
-                        <div className="w-24 h-1.5 bg-slate-800 rounded-full overflow-hidden">
-                          <div
-                            className="h-full bg-[#10b981] shadow-[0_0_10px_rgba(16,185,129,0.5)]"
-                            style={{ width: `${(row.multi / 43.3) * 100}%` }}
-                          ></div>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div> */}
+          <AccuracyChart />
+          <SpeedChart />
         </div>
         {/* ROI Highlight Card */}
         <div className="p-8 bg-gradient-to-br mt-16 from-slate-900 to-slate-950 border border-cyan-500/20 rounded-3xl text-center relative overflow-hidden">
