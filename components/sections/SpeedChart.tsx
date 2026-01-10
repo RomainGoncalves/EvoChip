@@ -12,6 +12,7 @@ import {
   ReferenceLine,
   Label,
 } from "recharts";
+import { ChartCard } from "@/components/ChartCard";
 
 // Speed Advantage Dataset (x multiplier)
 const speedDataRaw = [43.3, 17.2, 11.7, 10.1, 9.9, 8.2, 7.5, 5.0];
@@ -76,140 +77,120 @@ const App = () => {
   const geometricMeanValue = 11.3;
 
   return (
-    <div className="max-w-5xl">
-      {/* Analytics Card */}
-      <div className="bg-slate-900/40 border border-slate-800/80 rounded-[2rem] pt-6 px-6 md:px-10 shadow-3xl backdrop-blur-xl relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/5 blur-[100px] rounded-full -mr-20 -mt-20"></div>
+    <ChartCard
+      icon={Gauge}
+      title="Inference Gains"
+      subtitle="AltiCore (Laptop) vs Best Neural Network (Server)"
+      legend={[
+        {
+          label: `Median: ${medianValue}x`,
+          dotColor: "bg-teal-400",
+          bgColor: "bg-teal-500/10",
+          borderColor: "border border-teal-500/20",
+          textColor: "text-teal-100",
+        },
+        {
+          label: `Geo-Mean: ${geometricMeanValue}x`,
+          dotColor: "bg-indigo-400",
+          bgColor: "bg-indigo-500/10",
+          borderColor: "border border-indigo-500/20",
+          textColor: "text-indigo-100",
+        },
+      ]}
+    >
+      <ResponsiveContainer width="100%" height="100%">
+        <BarChart
+          data={chartData}
+          margin={{ top: 40, right: 30, left: 10, bottom: 80 }}
+        >
+          <defs>
+            <linearGradient id="speedGradient" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stopColor="#2dd4bf" stopOpacity={1} />
+              <stop offset="100%" stopColor="#14b8a6" stopOpacity={0.2} />
+            </linearGradient>
+          </defs>
+          <CartesianGrid
+            strokeDasharray="3 3"
+            stroke="#1e293b"
+            vertical={false}
+            opacity={0.3}
+          />
+          <XAxis
+            dataKey="name"
+            angle={-45}
+            textAnchor="end"
+            interval={0}
+            stroke="#475569"
+            fontSize={10}
+            tick={{ fill: "#cad5e2", fontFamily: "monospace" }}
+            height={80}
+          />
+          <YAxis
+            stroke="#475569"
+            fontSize={10}
+            tick={{ fill: "#cad5e2", fontFamily: "monospace" }}
+            tickFormatter={(val) => `${val}x`}
+            domain={[0, "dataMax + 5"]}
+          />
+          <Tooltip
+            content={<CustomTooltip />}
+            cursor={{ fill: "rgba(45,212,191,0.05)" }}
+          />
 
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
-          <div className="flex items-center gap-4">
-            <div className="p-3 bg-teal-500/10 rounded-2xl border border-teal-500/20">
-              <Gauge className="w-6 h-6 text-teal-400" />
-            </div>
-            <div>
-              <h4 className="text-white font-mono font-bold uppercase text-sm tracking-widest">
-                Inference Gains
-              </h4>
-              <p className="text-[10px] text-slate-300 font-mono uppercase tracking-tighter italic">
-                AltiCore (Laptop) vs Best Neural Network (Server)
-              </p>
-            </div>
-          </div>
+          {/* Geometric Mean Reference Line - Rendered First */}
+          <ReferenceLine
+            y={geometricMeanValue}
+            stroke="#6366f1"
+            strokeDasharray="5 5"
+            strokeWidth={2}
+          >
+            <Label
+              value={`GEOMETRIC-MEAN: ${geometricMeanValue}x`}
+              position="top"
+              textAnchor="end"
+              dx={0}
+              fill="#818cf8"
+              fontSize={10}
+              fontFamily="monospace"
+              fontWeight="bold"
+            />
+          </ReferenceLine>
 
-          {/* KPI Summary Legend */}
-          <div className="flex flex-wrap gap-4 items-center">
-            <div className="flex items-center gap-2 bg-teal-500/10 px-3 py-1 rounded-full border border-teal-500/20">
-              <div className="w-2 h-2 rounded-full bg-teal-400"></div>
-              <span className="text-[9px] font-mono text-teal-100 uppercase tracking-widest">
-                Median: {medianValue}x
-              </span>
-            </div>
-            <div className="flex items-center gap-2 bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">
-              <div className="w-2 h-2 rounded-full bg-indigo-400"></div>
-              <span className="text-[9px] font-mono text-indigo-100 uppercase tracking-widest">
-                Geo-Mean: {geometricMeanValue}x
-              </span>
-            </div>
-          </div>
-        </div>
+          {/* Median Reference Line - Rendered Second to stay "on top" */}
+          <ReferenceLine
+            y={medianValue}
+            stroke="#2dd4bf"
+            strokeDasharray="5 5"
+            strokeWidth={2}
+          >
+            <Label
+              value={`MEDIAN: ${medianValue}x`}
+              position="top"
+              textAnchor="start"
+              dx={10}
+              fill="#2dd4bf"
+              fontSize={10}
+              fontFamily="monospace"
+              fontWeight="bold"
+            />
+          </ReferenceLine>
 
-        {/* Chart Section */}
-        <div className="h-[450px] w-full">
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart
-              data={chartData}
-              margin={{ top: 40, right: 30, left: 10, bottom: 80 }}
-            >
-              <defs>
-                <linearGradient id="speedGradient" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#2dd4bf" stopOpacity={1} />
-                  <stop offset="100%" stopColor="#14b8a6" stopOpacity={0.2} />
-                </linearGradient>
-              </defs>
-              <CartesianGrid
-                strokeDasharray="3 3"
-                stroke="#1e293b"
-                vertical={false}
-                opacity={0.3}
+          <Bar
+            dataKey="speed"
+            fill="url(#speedGradient)"
+            radius={[6, 6, 0, 0]}
+            barSize={48}
+          >
+            {chartData.map((entry, index) => (
+              <Cell
+                key={`cell-${index}`}
+                className="hover:filter hover:brightness-125 transition-all duration-300"
               />
-              <XAxis
-                dataKey="name"
-                angle={-45}
-                textAnchor="end"
-                interval={0}
-                stroke="#475569"
-                fontSize={10}
-                tick={{ fill: "#cad5e2", fontFamily: "monospace" }}
-                height={80}
-              />
-              <YAxis
-                stroke="#475569"
-                fontSize={10}
-                tick={{ fill: "#cad5e2", fontFamily: "monospace" }}
-                tickFormatter={(val) => `${val}x`}
-                domain={[0, "dataMax + 5"]}
-              />
-              <Tooltip
-                content={<CustomTooltip />}
-                cursor={{ fill: "rgba(45,212,191,0.05)" }}
-              />
-
-              {/* Geometric Mean Reference Line - Rendered First */}
-              <ReferenceLine
-                y={geometricMeanValue}
-                stroke="#6366f1"
-                strokeDasharray="5 5"
-                strokeWidth={2}
-              >
-                <Label
-                  value={`GEOMETRIC-MEAN: ${geometricMeanValue}x`}
-                  position="top"
-                  textAnchor="end"
-                  dx={0}
-                  fill="#818cf8"
-                  fontSize={10}
-                  fontFamily="monospace"
-                  fontWeight="bold"
-                />
-              </ReferenceLine>
-
-              {/* Median Reference Line - Rendered Second to stay "on top" */}
-              <ReferenceLine
-                y={medianValue}
-                stroke="#2dd4bf"
-                strokeDasharray="5 5"
-                strokeWidth={2}
-              >
-                <Label
-                  value={`MEDIAN: ${medianValue}x`}
-                  position="top"
-                  textAnchor="start"
-                  dx={10}
-                  fill="#2dd4bf"
-                  fontSize={10}
-                  fontFamily="monospace"
-                  fontWeight="bold"
-                />
-              </ReferenceLine>
-
-              <Bar
-                dataKey="speed"
-                fill="url(#speedGradient)"
-                radius={[6, 6, 0, 0]}
-                barSize={48}
-              >
-                {chartData.map((entry, index) => (
-                  <Cell
-                    key={`cell-${index}`}
-                    className="hover:filter hover:brightness-125 transition-all duration-300"
-                  />
-                ))}
-              </Bar>
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
-      </div>
-    </div>
+            ))}
+          </Bar>
+        </BarChart>
+      </ResponsiveContainer>
+    </ChartCard>
   );
 };
 
