@@ -34,7 +34,11 @@ const longerLabels = {
   "Intelligent Mfgr (High)": "Intelligent Manufacturing (High Complexity)",
 };
 
-const CustomTooltip = ({ active, payload, label }: {
+const CustomTooltip = ({
+  active,
+  payload,
+  label,
+}: {
   active?: boolean;
   payload?: Array<{ value: number }>;
   label?: string;
@@ -87,7 +91,7 @@ const App = () => {
                 Inference Gains
               </h4>
               <p className="text-[10px] text-slate-300 font-mono uppercase tracking-tighter italic">
-                AltiCore (Laptop) vs Best Neural Network (Laptop)
+                AltiCore (Laptop) vs Best Neural Network (Server)
               </p>
             </div>
           </div>

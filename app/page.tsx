@@ -951,9 +951,9 @@ const EvoSwShowcase = () => {
               "The benchmark results with AltiCoreSW are transformative. Seeing
               a software synthesis engine outperform established best in class
               Neural Networks solution by such a massive margin signals a
-              fundamental shift in enterprise AI deployment. AlticoreAI is just
-              at the beginning of its journey. there is a lot of room for
-              optimizations leading to even higher performance."
+              fundamental shift in AI deployment. AlticoreAI seems to be at the
+              beginning of its journey. there will be a lot of room for
+              optimizations leading I am sure to even higher performance"
             </blockquote>
             <footer className="text-emerald-400 font-mono text-sm uppercase tracking-widest">
               — CEO, SidePath
@@ -1038,7 +1038,9 @@ const EvoSwShowcase = () => {
                 <div className="overflow-x-auto">
                   <div className="grid grid-cols-5 gap-2 mb-4 font-mono text-[12px] text-slate-300 uppercase tracking-tighter">
                     <div className="col-span-1 text-slate-400">Dataset</div>
-                    <div className="text-center">Out of the box Python</div>
+                    <div className="text-center">
+                      Out of the box Neural Networks
+                    </div>
                     <div className="text-center">Multicore Python</div>
                     <div className="text-center">C++ Tensorflow XNN</div>
                     <div className="text-center">C++ Tensorflow RUY MT</div>
@@ -1075,7 +1077,9 @@ const EvoSwShowcase = () => {
               <div className="overflow-x-auto">
                 <div className="grid grid-cols-5 gap-2 mb-4 font-mono text-[12px] text-slate-300 uppercase tracking-tighter">
                   <div className="col-span-1 text-slate-400">Dataset</div>
-                  <div className="text-center">Out of the box Python</div>
+                  <div className="text-center">
+                    Out of the box Neural Networks
+                  </div>
                   <div className="text-center">Multicore Python</div>
                   <div className="text-center">C++ Tensorflow XNN</div>
                   <div className="text-center">C++ Tensorflow RUY MT</div>
