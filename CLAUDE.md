@@ -8,6 +8,8 @@ This is a Next.js 16.1.1 project using the App Router, React 19.2, TypeScript, a
 
 ## Commands
 
+- DO NOT RUN `npm run build` unless asked
+
 ### Development
 
 ```bash

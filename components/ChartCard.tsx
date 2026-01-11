@@ -12,9 +12,12 @@ interface LegendItem {
 interface ChartCardProps {
   icon: LucideIcon;
   title: string;
-  subtitle: string;
-  legend: LegendItem[];
+  subtitle?: string;
+  legend?: LegendItem[];
   children: React.ReactNode;
+  iconColor?: string;
+  iconBgColor?: string;
+  iconBorderColor?: string;
 }
 
 export const ChartCard: React.FC<ChartCardProps> = ({
@@ -23,46 +26,53 @@ export const ChartCard: React.FC<ChartCardProps> = ({
   subtitle,
   legend,
   children,
+  iconColor = "text-teal-400",
+  iconBgColor = "bg-teal-500/10",
+  iconBorderColor = "border-teal-500/20",
 }) => {
   return (
     <div className="max-w-5xl">
       {/* Main Analytics Card */}
-      <div className="bg-slate-900/40 border border-slate-800/80 rounded-[2rem] px-6 pt-6 md:px-10 shadow-3xl backdrop-blur-xl relative overflow-hidden">
+      <div className="bg-slate-900/40 border border-slate-800/80 rounded-[2rem] px-4 pt-6 md:px-6 shadow-3xl backdrop-blur-xl relative overflow-hidden">
         <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/5 blur-[100px] rounded-full -mr-20 -mt-20"></div>
 
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
           <div className="flex items-center gap-4">
-            <div className="p-3 bg-teal-500/10 rounded-2xl border border-teal-500/20">
-              <Icon className="w-6 h-6 text-teal-400" />
+            <div className={`p-3 ${iconBgColor} rounded-2xl border ${iconBorderColor}`}>
+              <Icon className={`w-6 h-6 ${iconColor}`} />
             </div>
             <div>
               <h4 className="text-white font-mono font-bold uppercase text-sm tracking-widest">
                 {title}
               </h4>
-              <p className="text-[10px] text-slate-300 font-mono uppercase tracking-tighter">
-                {subtitle}
-              </p>
+              {subtitle && (
+                <p className="text-[10px] text-slate-300 font-mono uppercase tracking-tighter">
+                  {subtitle}
+                </p>
+              )}
             </div>
           </div>
 
           {/* Legend Component */}
-          <div className="flex flex-wrap gap-4 items-center">
-            {legend.map((item, index) => (
-              <div
-                key={index}
-                className={`flex items-center gap-2 ${item.bgColor} px-3 py-1 rounded-full ${item.borderColor}`}
-              >
+          {legend && legend.length > 0 && (
+            <div className="flex flex-wrap gap-4 items-center">
+              {legend.map((item, index) => (
                 <div
-                  className={`w-2 h-2 rounded-full ${item.dotColor}`}
-                ></div>
-                <span
-                  className={`text-[9px] font-mono ${item.textColor} uppercase tracking-widest`}
+                  key={index}
+                  className={`flex items-center gap-2 ${item.bgColor} px-3 py-1 rounded-full ${item.borderColor}`}
                 >
-                  {item.label}
-                </span>
-              </div>
-            ))}
-          </div>
+                  <div
+                    className={`w-2 h-2 rounded-full ${item.dotColor}`}
+                  ></div>
+                  <span
+                    className={`text-[9px] font-mono ${item.textColor} uppercase tracking-widest`}
+                  >
+                    {item.label}
+                  </span>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Chart Section */}

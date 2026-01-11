@@ -65,6 +65,8 @@ import { VideoEmbed } from "@/components/brand";
 import { KPICard, IPPortfolioCard } from "@/components/investor";
 import AccuracyChart from "@/components/sections/AccuracyChart";
 import SpeedChart from "@/components/sections/SpeedChart";
+import LaptopComparisonTable from "@/components/sections/LaptopComparisonTable";
+import ServerComparisonTable from "@/components/sections/ServerComparisonTable";
 
 // --- EVO CHIP SITE COMPONENTS (Corporate - PROTECTED) ---
 const EvoNavbar = ({
@@ -804,122 +806,6 @@ const EvoMcuShowcase = () => (
 );
 
 const EvoSwShowcase = () => {
-  const datasets = [
-    {
-      name: "Credit Default",
-      laptop: 3798,
-      multicore: 41,
-      tensorflow: 7,
-      tensorflowRUY: 27,
-      server: 11206,
-      smulti: 98,
-      stf: 40,
-      stfRUY: 40,
-    },
-    {
-      name: "Credit Fraud",
-      laptop: 5011,
-      multicore: 51,
-      tensorflow: 7,
-      tensorflowRUY: 20,
-      server: 12488,
-      smulti: 88,
-      stf: 17,
-      stfRUY: 18,
-    },
-    {
-      name: "Give Me Some Credit",
-      laptop: 3879,
-      multicore: 42,
-      tensorflow: 14,
-      tensorflowRUY: 43,
-      server: 11882,
-      smulti: 63,
-      stf: 15,
-      stfRUY: 54,
-    },
-    {
-      name: "Mfg (High Eff)",
-      laptop: 5664,
-      multicore: 50,
-      tensorflow: 13,
-      tensorflowRUY: 64,
-      server: 18482,
-      smulti: 103,
-      stf: 19,
-      stfRUY: 90,
-    },
-    {
-      name: "Mfg (Low Eff)",
-      laptop: 6012,
-      multicore: 50,
-      tensorflow: 13,
-      tensorflowRUY: 73,
-      server: 19119,
-      smulti: 107,
-      stf: 19,
-      stfRUY: 97,
-    },
-    {
-      name: "Machine Failure",
-      laptop: 3921,
-      multicore: 32,
-      tensorflow: 10,
-      tensorflowRUY: 24,
-      server: 11801,
-      smulti: 85,
-      stf: 9,
-      stfRUY: 32,
-    },
-    {
-      name: "Spect",
-      laptop: 8165,
-      multicore: 82,
-      tensorflow: 21,
-      tensorflowRUY: 92,
-      server: 22376,
-      smulti: 143,
-      stf: 28,
-      stfRUY: 110,
-    },
-    {
-      name: "HAR",
-      laptop: 5913,
-      multicore: 292,
-      tensorflow: 181,
-      tensorflowRUY: 92,
-      server: 14122,
-      smulti: 472,
-      stf: 195,
-      stfRUY: 63,
-    },
-  ];
-
-  const HeatmapCell = ({
-    value,
-    max = 22300,
-  }: {
-    value: number;
-    max: number;
-  }) => {
-    // const intensity = Math.max(0.1, Math.log10(value) / Math.log10(max));
-    const intensity = Math.max(0.1, value / max);
-    const isHigh = value > 10000;
-    return (
-      <div
-        className={`flex items-center justify-center p-1 rounded border border-slate-800 text-[14px] font-mono font-bold transition-all ${
-          isHigh ? "drop-shadow-[0_0_8px_rgba(52,211,153,0.4)]" : ""
-        }`}
-        style={{
-          backgroundColor: `rgba(45, 212, 191, ${intensity * 0.9})`,
-          color: intensity > 0.5 ? "#fff" : "#10b981",
-        }}
-      >
-        {Math.round(value).toLocaleString()}x
-      </div>
-    );
-  };
-
   return (
     <section
       id="sw-showcase"
@@ -1007,7 +893,7 @@ const EvoSwShowcase = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 xl:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 items-start">
           <div className="space-y-6">
             {/* <div className="p-6 bg-slate-900 rounded-xl border border-sw/30 mb-6">
               <p className="text-sw text-xs font-mono uppercase tracking-widest mb-2">
@@ -1027,82 +913,10 @@ const EvoSwShowcase = () => {
             </div> */}
 
             {/* Edge Performance (Laptop) */}
-            <div className="space-y-6">
-              <div className="flex items-center gap-2 mb-2">
-                <Table className="w-5 h-5 text-cyan-400" />
-                <h4 className="text-white font-mono font-bold uppercase text-sm tracking-widest">
-                  AltiCoreSW Vs. Neural Networks (Laptop)
-                </h4>
-              </div>
-              <div className="bg-slate-900/40 p-4 md:p-6 rounded-2xl border border-slate-800">
-                <div className="overflow-x-auto">
-                  <div className="grid grid-cols-5 gap-2 mb-4 font-mono text-[12px] text-slate-300 uppercase tracking-tighter">
-                    <div className="col-span-1 text-slate-400">Dataset</div>
-                    <div className="text-center">
-                      Out of the box Neural Networks
-                    </div>
-                    <div className="text-center">Multicore Python</div>
-                    <div className="text-center">C++ Tensorflow XNN</div>
-                    <div className="text-center">C++ Tensorflow RUY MT</div>
-                  </div>
-                  <div className="space-y-2">
-                    {datasets.map((ds) => (
-                      <div
-                        key={ds.name}
-                        className="grid grid-cols-5 gap-2 items-center"
-                      >
-                        <div className="text-[12px] text-slate-300 font-sans truncate">
-                          {ds.name}
-                        </div>
-                        <HeatmapCell value={ds.laptop} max={8165} />
-                        <HeatmapCell value={ds.multicore} max={292} />
-                        <HeatmapCell value={ds.tensorflow} max={181} />
-                        <HeatmapCell value={ds.tensorflowRUY} max={92} />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
+            <LaptopComparisonTable />
           </div>
           {/* Enterprise Performance (Server) */}
-          <div className="space-y-6">
-            <div className="flex items-center gap-2 mb-2">
-              <Table className="w-5 h-5 text-emerald-400" />
-              <h4 className="text-white font-mono font-bold uppercase text-sm tracking-widest">
-                AltiCoreSW Vs. Neural Networks (Server)
-              </h4>
-            </div>
-            <div className="bg-slate-900/40 p-4 md:p-6 rounded-2xl border border-slate-800">
-              <div className="overflow-x-auto">
-                <div className="grid grid-cols-5 gap-2 mb-4 font-mono text-[12px] text-slate-300 uppercase tracking-tighter">
-                  <div className="col-span-1 text-slate-400">Dataset</div>
-                  <div className="text-center">
-                    Out of the box Neural Networks
-                  </div>
-                  <div className="text-center">Multicore Python</div>
-                  <div className="text-center">C++ Tensorflow XNN</div>
-                  <div className="text-center">C++ Tensorflow RUY MT</div>
-                </div>
-                <div className="space-y-2">
-                  {datasets.map((ds) => (
-                    <div
-                      key={ds.name}
-                      className="grid grid-cols-5 gap-2 items-center"
-                    >
-                      <div className="text-[12px] text-slate-300 font-sans truncate">
-                        {ds.name}
-                      </div>
-                      <HeatmapCell value={ds.server} max={22376} />
-                      <HeatmapCell value={ds.smulti} max={472} />
-                      <HeatmapCell value={ds.stf} max={195} />
-                      <HeatmapCell value={ds.stfRUY} max={110} />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
+          <ServerComparisonTable />
           <AccuracyChart />
           <SpeedChart />
         </div>
