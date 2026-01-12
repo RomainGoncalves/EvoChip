@@ -86,8 +86,28 @@ const insightsData = [
   },
 ];
 
+// --- Type Definitions ---
+type Article = {
+  id: number;
+  title: string;
+  date: string;
+  author: string;
+  category: string;
+  excerpt: string;
+  content: string;
+};
+
+type InsightsPageProps = {
+  onArticleClick: (articleId: number) => void;
+};
+
+type ArticleDetailViewProps = {
+  article: Article | null;
+  onBack: () => void;
+};
+
 // --- INSIGHTS HUB COMPONENTS ---
-const InsightsPage = ({ onArticleClick }) => (
+const InsightsPage = ({ onArticleClick }: InsightsPageProps) => (
   <section className="pt-32 pb-24 min-h-screen bg-slate-900">
     <div className="container mx-auto px-6">
       <SectionHeading subtitle="Media Hub" title="Insights & Intelligence" />
@@ -138,11 +158,11 @@ const InsightsPage = ({ onArticleClick }) => (
   </section>
 );
 
-const ArticleDetailView = ({ article, onBack }) => {
+const ArticleDetailView = ({ article, onBack }: ArticleDetailViewProps) => {
   if (!article) return null;
 
   // Simple renderer for formatting
-  const renderContent = (content) => {
+  const renderContent = (content: string) => {
     return content.split("\n").map((line, i) => {
       if (line.startsWith("###")) {
         return (
