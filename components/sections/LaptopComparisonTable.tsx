@@ -85,7 +85,7 @@ const HeatmapCell = ({
   );
 };
 
-const LaptopComparisonTable = () => {
+const LaptopComparisonTable = ({ showFirstColumn = false }) => {
   return (
     <ChartCard
       icon={Table}
@@ -95,20 +95,31 @@ const LaptopComparisonTable = () => {
       iconBorderColor="border-cyan-500/20"
     >
       <div className="overflow-x-auto h-auto">
-        <div className="grid grid-cols-5 gap-2 mb-4 font-mono text-[12px] text-slate-300 uppercase tracking-tighter">
+        <div
+          className={`grid grid-cols-${
+            showFirstColumn ? "5" : "4"
+          } gap-2 mb-4 font-mono text-[12px] text-slate-300 uppercase tracking-tighter`}
+        >
           <div className="col-span-1 text-slate-400">Dataset</div>
-          <div className="text-center">Out of the box Neural Networks</div>
+          {showFirstColumn && (
+            <div className="text-center">Out of the box Neural Networks</div>
+          )}
           <div className="text-center">Multicore Python</div>
           <div className="text-center">C++ Tensorflow XNN</div>
           <div className="text-center">C++ Tensorflow RUY MT</div>
         </div>
         <div className="space-y-2">
           {datasets.map((ds) => (
-            <div key={ds.name} className="grid grid-cols-5 gap-2 items-center">
+            <div
+              key={ds.name}
+              className={`grid grid-cols-${
+                showFirstColumn ? "5" : "4"
+              } gap-2 items-center`}
+            >
               <div className="text-[12px] text-slate-300 font-sans truncate">
                 {ds.name}
               </div>
-              <HeatmapCell value={ds.laptop} max={8165} />
+              {showFirstColumn && <HeatmapCell value={ds.laptop} max={8165} />}
               <HeatmapCell value={ds.multicore} max={292} />
               <HeatmapCell value={ds.tensorflow} max={181} />
               <HeatmapCell value={ds.tensorflowRUY} max={92} />

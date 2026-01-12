@@ -841,7 +841,7 @@ const EvoSwShowcase = () => {
           <div className="relative">
             <div className="absolute -inset-8 bg-cyan-500/20 blur-3xl rounded-full"></div>
             <h2 className="text-7xl md:text-9xl font-black text-cyan-400 drop-shadow-[0_0_20px_rgba(34,211,238,0.5)] tracking-tighter mb-2">
-              22,300<span className="text-4xl md:text-6xl">x</span>
+              472<span className="text-4xl md:text-6xl">x</span>
             </h2>
             <p className="text-xl md:text-2xl font-mono text-emerald-400 uppercase tracking-widest font-bold">
               Maximum Speed Multiplier
@@ -913,27 +913,8 @@ const EvoSwShowcase = () => {
         </div>
 
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 items-start">
-          <div className="space-y-6">
-            {/* <div className="p-6 bg-slate-900 rounded-xl border border-sw/30 mb-6">
-              <p className="text-sw text-xs font-mono uppercase tracking-widest mb-2">
-                Validation Partner: SidePath
-              </p>
-              <blockquote className="text-slate-300 italic text-sm leading-relaxed border-l-2 border-sw pl-4">
-                "he benchmark results with AltiCoreSW are transformative. Seeing
-                a software synthesis engine outperform established best in class
-                Neural Networks solution by such a massive margin signals a
-                fundamental shift in enterprise AI deployment. AlticoreAI is
-                just at the beginning of its journey. there is a lot of room for
-                optimizations leading to even higher performance."
-                <footer className="text-xs text-slate-500 mt-2">
-                  — CEO, SidePath
-                </footer>
-              </blockquote>
-            </div> */}
-
-            {/* Edge Performance (Laptop) */}
-            <LaptopComparisonTable />
-          </div>
+          {/* Edge Performance (Laptop) */}
+          <LaptopComparisonTable />
           {/* Enterprise Performance (Server) */}
           <ServerComparisonTable />
           <AccuracyChart />
@@ -2443,53 +2424,56 @@ const SidePathBenchmarkSection = () => (
       </div>
     </div>
 
-    {/* Algorithm Beats Hardware Chart */}
-    <div className="rounded-xl border border-slate-800 bg-slate-950/50 overflow-hidden">
-      <div className="bg-slate-900/80 p-5 border-b border-slate-800 flex justify-between items-center">
-        <h4 className="text-white font-mono font-bold uppercase tracking-widest text-xs">
-          Algorithm Beats Hardware
-        </h4>
-        <div className="px-3 py-1 bg-cyan-900/30 border border-cyan-500/30 rounded font-mono text-[10px] text-cyan-400 font-bold">
-          11.3x GEOMETRIC MEAN
+    <div className="grid grid-cols-1 xl:grid-cols-1 gap-6 items-start">
+      <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl flex items-center gap-6 group hover:border-cyan-500/50 transition-all">
+        <div className="p-4 rounded-xl bg-cyan-500/10 border border-cyan-500/20">
+          <Laptop className="w-8 h-8 text-cyan-400" />
+        </div>
+        <div>
+          <h4 className="text-white font-bold text-sm uppercase tracking-tight mb-1">
+            Laptop
+          </h4>
+          <p className="text-slate-300 font-mono">
+            Dell Precision 5680 | Intel i7-13700H | 32GB RAM | No GPU
+          </p>
+          <div className="mt-2 flex gap-2">
+            <span className="text-[11px] bg-cyan-900/40 text-cyan-400 px-2 py-0.5 rounded border border-cyan-800">
+              i7-Gen13
+            </span>
+            <span className="text-[11px] bg-cyan-900/40 text-cyan-400 px-2 py-0.5 rounded border border-cyan-800">
+              Mobile LPAR
+            </span>
+          </div>
         </div>
       </div>
-      <div className="p-6 md:p-8">
-        <div className="space-y-6">
-          {[
-            { ds: "UCI_HAR Dataset", val: 43.3 },
-            { ds: "SPECT Dataset", val: 17.2 },
-            { ds: "Credit_Fraud Dataset", val: 11.7 },
-            { ds: "Industry Average", val: 11.3, isLead: true },
-          ].map((row, i) => (
-            <div key={i} className="space-y-2">
-              <div className="flex justify-between items-end text-md font-mono font-bold uppercase tracking-tight">
-                <span
-                  className={row.isLead ? "text-cyan-400" : "text-slate-300"}
-                >
-                  {row.ds}
-                </span>
-                <span
-                  className={
-                    row.isLead ? "text-cyan-400 text-sm" : "text-white"
-                  }
-                >
-                  {row.val.toFixed(1)}x SPEED Advantage
-                </span>
-              </div>
-              <div className="h-2 w-full bg-slate-900 rounded-full overflow-hidden shadow-inner">
-                <div
-                  className={`h-full transition-all duration-1000 ${
-                    row.isLead
-                      ? "bg-cyan-400 shadow-[0_0_15px_rgba(6,182,212,0.5)]"
-                      : "bg-slate-700"
-                  }`}
-                  style={{ width: `${(row.val / 43.3) * 100}%` }}
-                ></div>
-              </div>
-            </div>
-          ))}
+
+      {/* Edge Performance (Laptop) */}
+      <LaptopComparisonTable showFirstColumn />
+
+      <div className="bg-slate-900 border border-slate-800 p-6 rounded-2xl flex items-center gap-6 group hover:border-emerald-500/50 transition-all">
+        <div className="p-4 rounded-xl bg-emerald-500/10 border border-emerald-500/20">
+          <Server className="w-8 h-8 text-emerald-400" />
+        </div>
+        <div>
+          <h4 className="text-white font-bold text-sm uppercase tracking-tight mb-1">
+            Enterprise / Datacenter Server
+          </h4>
+          <p className="text-slate-300 font-mono">
+            Dell PowerEdge | Intel Xeon Gold 5416S
+          </p>
+          <div className="mt-2 flex gap-2">
+            <span className="text-[11px] bg-emerald-900/40 text-emerald-400 px-2 py-0.5 rounded border border-emerald-800">
+              Xeon Gold
+            </span>
+            <span className="text-[11px] bg-emerald-900/40 text-emerald-400 px-2 py-0.5 rounded border border-emerald-800">
+              Rack Density
+            </span>
+          </div>
         </div>
       </div>
+
+      {/* Enterprise Performance (Server) */}
+      <ServerComparisonTable showFirstColumn />
     </div>
 
     {/* DEFINITIVE ACCURACY VALIDATION BLOCK */}
