@@ -67,6 +67,11 @@ import AccuracyChart from "@/components/sections/AccuracyChart";
 import SpeedChart from "@/components/sections/SpeedChart";
 import LaptopComparisonTable from "@/components/sections/LaptopComparisonTable";
 import ServerComparisonTable from "@/components/sections/ServerComparisonTable";
+import {
+  ArticleDetailView,
+  insightsData,
+  InsightsPage,
+} from "@/components/sections/Insights";
 
 // --- EVO CHIP SITE COMPONENTS (Corporate - PROTECTED) ---
 const EvoNavbar = ({
@@ -76,6 +81,7 @@ const EvoNavbar = ({
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
@@ -86,6 +92,7 @@ const EvoNavbar = ({
     { name: "Technology", href: "#technology" },
     { name: "Products", href: "#products" },
     { name: "About", href: "#about" },
+    { name: "Insights", href: "#insights" },
     { name: "Contact", href: "#contact-evo" },
   ];
 
@@ -128,6 +135,12 @@ const EvoNavbar = ({
               onClick={(e) => {
                 e.preventDefault();
                 handleNavClick(link.href);
+
+                if (link.href === "#insights") {
+                  onViewChange("insights");
+                } else {
+                  onViewChange("evochip");
+                }
               }}
               className="text-slate-300 hover:text-cyan-400 transition-colors text-sm font-medium uppercase tracking-wide"
             >
@@ -159,6 +172,12 @@ const EvoNavbar = ({
               onClick={(e) => {
                 e.preventDefault();
                 handleNavClick(link.href);
+
+                if (link.href === "#insights") {
+                  onViewChange("insights");
+                } else {
+                  onViewChange("evochip");
+                }
               }}
               className="text-slate-300 hover:text-cyan-400 text-lg"
             >
@@ -743,15 +762,15 @@ const EvoMcuShowcase = () => (
           ].map((item, idx, arr) => (
             <div key={idx} className="relative flex flex-col items-center">
               {/* Step Indicator */}
-              <div className="w-10 h-10 rounded-full bg-teal-500 text-slate-900 flex items-center justify-center font-black mb-4 z-10 shadow-[0_0_20px_rgba(45,212,191,0.5)]">
+              <div className="w-10 h-10 rounded-full bg-mcu text-slate-900 flex items-center justify-center font-black mb-4 z-10 shadow-[0_0_20px_rgba(45,212,191,0.5)]">
                 {item.step}
               </div>
 
               <Card
                 theme="alti"
-                className="w-full text-center border-teal-500/20 flex-grow hover:border-teal-500/50 transition-all p-5"
+                className="w-full text-center border-mcu/20 flex-grow hover:border-mcu/50 transition-all p-5"
               >
-                <item.icon className="w-8 h-8 text-teal-400 mx-auto mb-4" />
+                <item.icon className="w-8 h-8 text-mcu mx-auto mb-4" />
                 <h5 className="text-white font-bold text-xl mb-2 tracking-tight">
                   {item.title}
                 </h5>
@@ -762,8 +781,8 @@ const EvoMcuShowcase = () => (
 
               {/* Connector Arrows for Desktop/Tablet */}
               {idx < arr.length - 1 && (
-                <div className="hidden md:block absolute top-5 -right-6 translate-x-1/2 z-0">
-                  <ChevronRight className="w-6 h-6 text-slate-700" />
+                <div className="hidden md:block absolute top-5 -right-3 translate-x-1/2 z-0">
+                  <ChevronRight className="w-6 h-6 text-slate-400" />
                 </div>
               )}
             </div>
@@ -3526,14 +3545,71 @@ const App = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [currentView]);
-
+  const [selectedArticleId, setSelectedArticleId] = useState(null);
   if (currentView === "investor")
     return <InvestorPortal onViewChange={setCurrentView} />;
+  console.log("Current View:", currentView);
 
   const isAltiCorePage = currentView.startsWith("alticore");
+  let content;
+
+  if (currentView === "insights") {
+    let content;
+    if (selectedArticleId) {
+      const article = insightsData.find((a) => a.id === selectedArticleId);
+      content = (
+        <ArticleDetailView
+          article={article}
+          onBack={() => setSelectedArticleId(null)}
+        />
+      );
+    } else {
+      content = <InsightsPage onArticleClick={setSelectedArticleId} />;
+    }
+    // return (
+    //   <div className="min-h-screen bg-slate-900 text-slate-200">
+    //     <AltiNavbar
+    //       onViewChange={setCurrentView}
+    //       currentView={currentView}
+    //       onInsightsClick={handleInsightsNav}
+    //     />
+    //     {content}
+    //     <Footer onViewChange={setCurrentView} />
+    //     <CookieConsentBanner />
+    //   </div>
+    // );
+
+    return (
+      <div className="min-h-screen bg-slate-900 text-slate-200">
+        <EvoNavbar onViewChange={setCurrentView} />
+        {content}
+        <section className="py-12 bg-slate-950 border-t border-slate-800 text-center font-sans">
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              setCurrentView("investor");
+            }}
+            className="text-cyan-400 text-sm font-mono flex items-center justify-center gap-2 uppercase"
+          >
+            <Lock className="w-3 h-3" /> Investor Portal
+          </a>
+        </section>
+        <footer className="bg-slate-950 py-12 border-t border-slate-900 flex justify-center">
+          <Image
+            src="/evochip-logo.png"
+            alt="EvoChip Logo"
+            width={160}
+            height={40}
+            className="h-10 w-auto"
+          />
+        </footer>
+        <CookieConsentBanner />
+      </div>
+    );
+  }
 
   if (isAltiCorePage) {
-    let content;
     switch (currentView) {
       case "alticore_mcu":
         content = <AltiMcuPage setCurrentView={setCurrentView} />;
@@ -3550,6 +3626,9 @@ const App = () => {
       case "alticore_contact_page":
         content = <AltiContactPage />;
         break;
+      case "alticore_insights":
+        content = <AltiContactPage />;
+        break;
       case "alticore_docs_page":
         content = <AltiDeveloperPortalPage />;
         break;
@@ -3557,12 +3636,13 @@ const App = () => {
         content = <AltiHomePage setCurrentView={setCurrentView} />;
         break;
     }
+
     return (
       <div className="min-h-screen bg-slate-900 text-slate-200">
         <AltiNavbar onViewChange={setCurrentView} currentView={currentView} />
         {content}
         <footer className="bg-slate-950 border-t border-slate-800 py-8 text-center text-slate-600 text-sm font-mono tracking-tighter uppercase font-bold">
-          &copy; 2025 AltiCoreAI (an EvoChip company).
+          &copy; 2025 AltiCoreAI (an EvoChipeee company).
         </footer>
         <CookieConsentBanner />
       </div>
