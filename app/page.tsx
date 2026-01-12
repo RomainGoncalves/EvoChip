@@ -3564,6 +3564,7 @@ const App = () => {
         />
       );
     } else {
+      // @ts-ignore
       content = <InsightsPage onArticleClick={setSelectedArticleId} />;
     }
     // return (
