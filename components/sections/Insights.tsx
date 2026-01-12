@@ -98,11 +98,11 @@ type Article = {
 };
 
 type InsightsPageProps = {
-  onArticleClick: (articleId: number) => void;
+  onArticleClick: (articleId: number | null) => void;
 };
 
 type ArticleDetailViewProps = {
-  article: Article | null;
+  article: Article | null | undefined;
   onBack: () => void;
 };
 
