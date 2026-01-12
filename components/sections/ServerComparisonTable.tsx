@@ -96,8 +96,8 @@ const ServerComparisonTable = ({ showFirstColumn = false }) => {
     >
       <div className="overflow-x-auto h-auto">
         <div
-          className={`grid grid-cols-${
-            showFirstColumn ? "5" : "4"
+          className={`grid ${
+            showFirstColumn ? "grid-cols-5" : "grid-cols-4"
           } gap-2 mb-4 font-mono text-[12px] text-slate-300 uppercase tracking-tighter`}
         >
           <div className="col-span-1 text-slate-400">Dataset</div>
@@ -112,8 +112,8 @@ const ServerComparisonTable = ({ showFirstColumn = false }) => {
           {datasets.map((ds) => (
             <div
               key={ds.name}
-              className={`grid grid-cols-${
-                showFirstColumn ? "5" : "4"
+              className={`grid ${
+                showFirstColumn ? "grid-cols-5" : "grid-cols-4"
               } gap-2 items-center`}
             >
               <div className="text-[12px] text-slate-300 font-sans truncate">
