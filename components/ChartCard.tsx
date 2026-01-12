@@ -36,20 +36,17 @@ export const ChartCard: React.FC<ChartCardProps> = ({
       <div className="bg-slate-900/40 border border-slate-800/80 rounded-[2rem] px-4 pt-6 md:px-6 shadow-3xl backdrop-blur-xl relative overflow-hidden">
         <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/5 blur-[100px] rounded-full -mr-20 -mt-20"></div>
 
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-1 mb-6 ">
           <div className="flex items-center gap-4">
-            <div className={`p-3 ${iconBgColor} rounded-2xl border ${iconBorderColor}`}>
+            <div
+              className={`p-3 ${iconBgColor} rounded-2xl border ${iconBorderColor}`}
+            >
               <Icon className={`w-6 h-6 ${iconColor}`} />
             </div>
             <div>
               <h4 className="text-white font-mono font-bold uppercase text-sm tracking-widest">
                 {title}
               </h4>
-              {subtitle && (
-                <p className="text-[10px] text-slate-300 font-mono uppercase tracking-tighter">
-                  {subtitle}
-                </p>
-              )}
             </div>
           </div>
 
@@ -74,6 +71,12 @@ export const ChartCard: React.FC<ChartCardProps> = ({
             </div>
           )}
         </div>
+
+        {subtitle && (
+          <p className="text-[15px] text-white text-center font-mono uppercase tracking-tighter mb-10">
+            {subtitle}
+          </p>
+        )}
 
         {/* Chart Section */}
         <div className="h-[450px] w-full">{children}</div>

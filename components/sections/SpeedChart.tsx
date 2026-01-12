@@ -80,7 +80,7 @@ const App = () => {
     <ChartCard
       icon={Gauge}
       title="Inference Gains"
-      subtitle="AltiCore (Laptop) vs Best Neural Network (Server)"
+      subtitle="AltiCore on Laptop vs Best Neural Network on Server"
       legend={[
         {
           label: `Median: ${medianValue}x`,
