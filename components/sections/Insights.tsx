@@ -55,7 +55,11 @@ const InsightsPage = ({ onArticleClick }: InsightsPageProps) => (
                 {article.title}
               </h3>
               <div className="flex items-center gap-2 text-slate-500 text-xs mb-4">
-                <User className="w-3 h-3" /> {article.author}
+                <img
+                  src={article.authorAvatar}
+                  className="w-5 h-5 rounded-full"
+                />{" "}
+                {article.author}
               </div>
               <p className="text-slate-400 text-sm leading-relaxed line-clamp-3">
                 {article.excerpt}
