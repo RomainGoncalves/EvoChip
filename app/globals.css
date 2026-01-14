@@ -2,15 +2,15 @@
 
 @theme {
   /* Product Brand Colors - AltiCoreMCU */
-  --color-mcu: #60a5fa;      /* blue-400 */
+  --color-mcu: #60a5fa; /* blue-400 */
   --color-mcu-dark: #3b82f6; /* blue-500 for hover states */
 
-  /* Product Brand Colors - AltiCoreSW */
-  --color-sw: #2dd4bf;       /* teal-400 */
-  --color-sw-dark: #14b8a6;  /* teal-500 for hover states */
+  /* Product Brand Colors - AltiCoreSWP */
+  --color-sw: #2dd4bf; /* teal-400 */
+  --color-sw-dark: #14b8a6; /* teal-500 for hover states */
 
   /* Product Brand Colors - AltiCoreHDL */
-  --color-hdl: #f59e0b;      /* amber-500 */
+  --color-hdl: #f59e0b; /* amber-500 */
   --color-hdl-dark: #d97706; /* amber-600 for hover states */
 }
 

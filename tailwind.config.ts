@@ -12,15 +12,15 @@ const config: Config = {
         // Product Brand Colors - Easy to change in one place
         mcu: {
           DEFAULT: "#60a5fa", // blue-400 for AltiCoreMCU
-          dark: "#3b82f6",    // blue-500 for hover states
+          dark: "#3b82f6", // blue-500 for hover states
         },
         sw: {
-          DEFAULT: "#2dd4bf", // teal-400 for AltiCoreSW
-          dark: "#14b8a6",    // teal-500 for hover states
+          DEFAULT: "#2dd4bf", // teal-400 for AltiCoreSWP
+          dark: "#14b8a6", // teal-500 for hover states
         },
         hdl: {
           DEFAULT: "#f59e0b", // amber-500 for AltiCoreHDL
-          dark: "#d97706",    // amber-600 for hover states
+          dark: "#d97706", // amber-600 for hover states
         },
       },
     },
