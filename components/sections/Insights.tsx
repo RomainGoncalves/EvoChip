@@ -2,9 +2,13 @@ import { ArrowLeft, ArrowRight, BookOpen, Calendar, User } from "lucide-react";
 import { Button } from "../ui/Button";
 import { SectionHeading } from "../ui/SectionHeading";
 import insightsData from "@/data/insights.json";
+import { ReactNode } from "react";
 
 // --- Type Definitions ---
 type Article = {
+  authorAvatar: string | Blob | undefined;
+  authorTitle: ReactNode;
+  image: string | Blob | undefined;
   id: number;
   title: string;
   date: string;
