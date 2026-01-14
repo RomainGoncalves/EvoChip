@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "title": "Deep Future VC invests in EvoChip",
+    "date": "Nov 10, 2024",
+    "image": "./insights/deep-future.png",
+    "author": "Pablos Holman",
+    "authorAvatar": "./avatars/pablos_holman.jpeg",
+    "authorTitle": "Investor",
+    "category": "Investment",
+    "excerpt": "Pablos Holman's Deep Future leads seed round to accelerate logic-first synthesis development for global AI infrastructure.",
+    "content": "###From Alain Blancquart, EvoChip CEO:\nI am pleased to confirm the investment of Deep Future VC in EvoChip. This is really for the AI semiconductor and software market a strong signal that our patented technology provides a unique differentiator: Up to 1000 time more computing power with a 1000 times less energy consumption.\n\n###From Pablos Holman Co-Founder and Managing Partner at Deep Future VC:‍\nComputers got twice as fast on a schedule every two years like clockwork for my entire lifetime. Along the way, we marveled at the self-fulfilling prophecy of Moore's Law, which might as well have been tattooed onto the frontal lobe of every forehead in Silicon Valley. We'd been deceived by cause and effect. Moore's law was Intel’s product roadmap.  This squelched any other innovation in computation because if competing with an exponential growth doesn't scare off investors, competing with a \"law\" will.\nFinally in the last decade, it became irrefutable that transistor density would not continue to keep doubling.  Intel's marketing department is still acting like a cartoon coyote that ran off a cliff and is trying to ignore gravity.  Sorry Intel, but the laws of physics are actual laws.\nFor decades, one of the only successful deviations from Intel's worldview was the advent of the graphics co-processor.  The GPU.  A dramatically more efficient way to process the kind of data needed for graphics, these chips found their way into all of our computers starting with video games and evolving into the preferred way to compute AI models.\nWhat should have happened, is that a multitude of new approaches to improving computing should have been invented and developed.  With no practical route to market, we lived through long, cold, silent winter with almost no innovation in computation.  That winter is over.  Every day, I see new algorithms, new chip architectures, new ways of making computers faster.  A hundred times faster, a thousand times faster, sometimes a million times faster.\nThe seeming glut of computation was largely used to create layers of abstraction.  This made it easier to design computers and create software for them. You'd hardly notice, it just takes more memory, more computation.  For example, the number 2 in Python consumes 28 bytes of memory.  That's 224 bits, doing a job that could have been done with two.  Performing a computation like 2+2 in Python will typically use millions of transistors on a CPU, even though it could be done with three dozen.  A modern deep learning model experiences this as compounding inefficiencies.  Exponential friction.\n\nEvoChip has invented a combination of a new mathematical approaches and evolutionary algorithms to rebuild the stack from transistors all the way up to computational models.  This new approach allows for increased efficiency by eliminating many calculation cycles and successive layers of processing.  Already experiencing over 1000x performance improvements for quantitative AI applications, EvoChip radically changes the balance of power in computation and therefore lowers drastically the energy consumption.\nThere aren't enough venture firms with competency to invest in chip advancements which has made me reluctant to back most of the things we see.  It can be difficult to get a new chip made.  EvoChip is uniquely valuable in either software or hardware.  They can support customers in software today, and will become a part of future chip designs once the industry catches onto what they can do. If you know people with computationally intensive models that can't get their hands on a zillion H100s, send them to EvoChip. The team is always looking for more high value use cases to prove themselves.\n\nPablos Holman.\ndeepfuture.tech VC & Podcast\nImplementing Science Fiction\n\n####About Pablos Holman:\nPablos is a hacker, inventor &amp; technology futurist with a unique ability to distill complex technology into practical tools. Always building the future, his projects include cryptocurrency in the 1990s; AI for stock market trading; building spaceships at Blue Origin for Jeff Bezos; the world’s smallest PC and 3D printers at Makerbot. Pablos helped start the Intellectual Ventures Lab for Nathan Myhrvold to support a wide range of invention projects, including a brain surgery tool; a machine to suppress hurricanes; a nuclear reactor powered by nuclear waste; and a machine that can shoot mosquitoes out of the sky with lasers - part of an impact invention effort to eradicate malaria with Bill Gates. A member of the most prolific team of inventors in the world – awarded 6000 patents on their own inventions.\nA world-renowned expert in 3D Printing, Artificial Intelligence, Big Data, Robotics, Automated Manufacturing & Cryptocurrency, Pablos has a unique ability to articulate practical solutions and visions for the future of technology.\nPablos is often invited to speak at conferences about innovation, invention, hacking, technology & cybersecurity. He has spoken at Stanford, the United Nations, the World Economic Forum at Davos, the Microsoft CEO Summit, The FORTUNE CEO Summit, the CIA, Google Zeitgeist, The Milken Global Conference, and to many of the top tech companies and conferences in the world. His TED Talks have over 30 million views.\nCurrently, Pablos is a venture capitalist at Deep Future backing mad scientists, rogue inventors, crazy hackers & maverick entrepreneurs who are implementing science fiction to solve big problems and helping our species become better ancestors."
+  },
+  {
+    "id": 2,
+    "title": "AI at the Edge can't wait for better chips",
+    "date": "May 31, 2025",
+    "author": "Alain Blancquart",
+    "category": "Edge Autonomy",
+    "excerpt": "Why the current 'better silicon' roadmap fails industrial IoT and how logic synthesis bypasses physical scaling limits.",
+    "content": "### The Latency Crisis\n\nIndustrial edge devices are failing under the weight of modern AI models. The current industry response—waiting for smaller nanometer processes—is a strategy of delay, not a solution.\n\n**The Constraints:**\n- **Power:** Edge nodes often operate on milliwatts.\n- **Thermal:** High-density compute generates unmanageable heat in small form factors.\n- **Cost:** Specialized AI co-processors double the Bill of Materials (BOM).\n\n### Bypassing Silicon Limits\nAltiCoreAI logic synthesis restructures models so they don't require specialized NPUs. By using synthesizable RTL, we can embed intelligence directly into the hardware description language of any MCU.\n\n```c\n// Example: Traditional Inference vs Logic Stream\n// Traditional: requires matrix mult library and NPU\nrun_npu_inference(model_data);\n\n// AltiCore: Native logic execution\nif (logic_stream_bitmask & input_vector) { \n    execute_deterministic_path(); \n}\n```\n\nThis shift allows a $1 microcontroller to perform tasks previously reserved for $20 AI chips."
+  },
+  {
+    "id": 3,
+    "title": "The efficiency race",
+    "date": "May 12, 2025",
+    "author": "Alain Blancquart",
+    "category": "Performance",
+    "excerpt": "Benchmarking the AltiCoreSW synthesis engine against industry standards: Algorithm vs. Brute Force.",
+    "content": "### Performance as a First-Class Citizen\n\nIn the AI race, \"Good Enough\" is no longer acceptable. The industry has hit the \"Efficiency Wall,\" where adding more compute nodes results in linear performance gains but exponential power costs.\n\n**The Benchmarks:**\nOur recent tests on AltiCoreSW demonstrate a 10x-50x throughput increase on existing CUDA infrastructure. This is achieved not by overclocking, but by restructuring how data flows through the logic gates.\n\n### Why it Matters\n- **CapEx Avoidance:** Extend the life of existing GPU clusters by 3-5 years.\n- **Lower OpEx:** Drastic reduction in cooling and energy requirements per inference.\n- **Real-time execution:** Sub-microsecond latency for safety-critical systems."
+  },
+  {
+    "id": 4,
+    "title": "AltiCoreAI Launch",
+    "date": "Apr 29, 2025",
+    "author": "Alain Blancquart",
+    "category": "Corporate",
+    "excerpt": "Official reveal of the AltiCoreAI product ecosystem, spanning MCU firmware to synthesizable silicon blueprints.",
+    "content": "### A New Standard is Born\n\nToday, EvoChip officially unveils AltiCoreAI—a multi-tier ecosystem designed to solve the AI compute crisis. \n\n**The Three Pillars:**\n- **AltiCoreMCU:** Binary firmware for high-volume edge devices.\n- **AltiCoreSW:** A synthesis compiler for enterprise datacenter acceleration.\n- **AltiCoreHDL:** Synthesizable VHDL/Verilog for next-gen silicon foundries.\n\nThis launch marks the transition from proprietary R&D to commercial availability. We are moving from the lab to the production line."
+  },
+  {
+    "id": 5,
+    "title": "Green AI",
+    "date": "Sep 2, 2024",
+    "author": "Alain Blancquart",
+    "category": "Sustainability",
+    "excerpt": "Addressing the environmental cost of matrix-math and the path to zero-emission intelligence.",
+    "content": "### The Carbon Cost of Calculus\n\nModern AI is an environmental disaster. Datacenters are consuming vast amounts of water and electricity to perform billions of redundant matrix multiplications. \n\n**The Logical Path Forward:**\nLogic-first synthesis reduces the total number of operations required per inference by up to 1000x. \n\n**Impact:**\n- 90% reduction in rack-level power draw.\n- Elimination of specialized high-heat co-processors.\n- Sustainable scaling for the $1T AI market."
+  },
+  {
+    "id": 6,
+    "title": "Jerry Conrad joins the Board",
+    "date": "Aug 28, 2024",
+    "author": "Alain Blancquart",
+    "category": "Leadership",
+    "excerpt": "Strategic finance expert Jerry Conrad joins EvoChip to lead M&A positioning and Series A strategy.",
+    "content": "### Strengthening the Foundation\n\nWe are pleased to announce the appointment of Jerry Conrad to the EvoChip Board of Directors. Jerry brings 30+ years of institutional finance and M&A expertise.\n\nHis track record includes leading a high-value exit to Allstate and managing complex tech-enabled banking portfolios. Jerry will oversee our capital strategy as we move toward our $10M Series A raise."
+  },
+  {
+    "id": 7,
+    "title": "Can AI avoid hitting the wall?",
+    "date": "June 5, 2024",
+    "author": "Alain Blancquart",
+    "category": "Theory",
+    "excerpt": "An analysis of thermodynamic limits in neural network scaling and the necessity of deterministic logic.",
+    "content": "### The Thermodynamic Limit\n\nPhysics doesn't care about your scaling roadmap. We are reaching the limit of how much heat we can move off a silicon die. \n\n**The Black Box Problem:**\nNeural networks are non-deterministic, which leads to \"computational thrashing\"—performing thousands of operations that don't contribute to the final result.\n\n**The Solution:**\nDeterministic logic allows us to prune the compute path before a single electron moves. We only compute what is necessary."
+  },
+  {
+    "id": 8,
+    "title": "The inevitable limits of exponential growth",
+    "date": "June 5, 2024",
+    "author": "Alain Blancquart",
+    "category": "Economics",
+    "excerpt": "Why the 'GPU-for-everything' economic model is about to collapse and what replaces it.",
+    "content": "### The Economic Fallacy\n\nThe belief that we can simply buy more GPUs to solve the intelligence problem is an economic fallacy. \n\n**The Cost Wall:**\n- GPU prices are rising.\n- Power costs are rising.\n- Integration complexity is rising.\n\n**The Pivot:**\nIntelligence must become a commodity that runs on standard registers. The company that decouples performance from the GPU wins the market. AltiCoreAI is that decoupling."
+  }
+]
