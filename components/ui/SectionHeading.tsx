@@ -25,7 +25,7 @@ export const SectionHeading = ({
     >
       {subtitle}
     </span>
-    <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight">
+    <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight capitalize">
       {title}
     </h2>
     <div

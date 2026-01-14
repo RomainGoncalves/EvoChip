@@ -969,7 +969,7 @@ const EvoHdlShowcase = () => (
     <div className="container mx-auto px-6">
       <SectionHeading
         subtitle="Foundry BLUEPRINTS"
-        title="AltiCoreHDL: Transistor Sovereignty Roadmap"
+        title="AltiCoreHDL: Less transistor count - higher efficiency"
       />
       <div className="grid lg:grid-cols-2 gap-12 mb-16">
         <div className="space-y-6">
@@ -982,53 +982,131 @@ const EvoHdlShowcase = () => (
             . Our AltiCoreAI technology reduces transistor count by up to 1000x
             for native on-chip AI.
           </p>
-          <Card theme="alti" className="border-hdl/20 bg-hdl/5">
+          <Card
+            theme="alti"
+            className="border-hdl/20 bg-hdl/5 hover:border-hdl/50 transition-all"
+          >
             <h4 className="text-white font-bold mb-2 flex items-center gap-2">
-              <Activity className="w-5 h-5 text-hdl" /> Technical Detail
+              <Activity className="w-5 h-5 text-hdl" /> Tightly integrated,
+              deterministic hardware deployments
             </h4>
-            <p className="text-sm text-slate-400 leading-relaxed">
-              Benchmark architectures transition from 63,000 arithmetic
-              operations per inference (Legacy NN) to minimal AltiCoreAI logic
-              path traversals. This translates to instant transistor density
-              gains for next-gen silicon foundries.
+            <p className="text-md text-slate-300 leading-relaxed">
+              AltiCore LogicHDL bridges this gap by compiling symbolic machine
+              learning models directly into FPGA logic cores, eliminating
+              firmware overhead and ensuring nanosecond-to-microsecond inference
+              latencies. Using only labeled CSV data and off-the-shelf FPGA
+              boards, engineering teams across domains have rapidly prototyped
+              and validated production-ready hardware pipelines.
             </p>
           </Card>
+
+          <Card
+            theme="alti"
+            className="border-hdl/20 bg-hdl/5 hover:border-hdl/50 transition-all"
+          >
+            <ul className="space-y-3 text-base text-slate-300 leading-relaxed">
+              <li className="flex items-start gap-2">
+                <span className="text-hdl mt-1">•</span>
+                <span>
+                  Ultra-fast, hyper-efficient, modular, and cost-effective AI
+                  technology
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-hdl mt-1">•</span>
+                <span>Minimal energy consumption and heat production.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-hdl mt-1">•</span>
+                <span>
+                  No chip development required – it is possible to use
+                  commercially available FPGA hardware from experienced
+                  suppliers
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-hdl mt-1">•</span>
+                <span>
+                  Efficient modeling logic – we use fundamental binary logic,
+                  escaping the burden of translating standard mathematics.
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-hdl mt-1">•</span>
+                <span>
+                  Fastest learning process – over a billion model evaluations
+                  per second.
+                </span>
+              </li>
+            </ul>
+          </Card>
         </div>
-        <div className="bg-slate-950 p-8 rounded-2xl border border-hdl/30 shadow-2xl relative overflow-hidden h-fit">
-          <div className="absolute top-0 right-0 p-4 opacity-5">
-            <Globe className="w-32 h-32 text-hdl" />
-          </div>
-          <h4 className="text-white font-bold mb-8 uppercase tracking-widest text-xs font-mono text-center">
-            Public Roadmap (2026)
-          </h4>
-          <div className="space-y-8">
-            <div className="flex gap-4 items-start">
-              <div className="w-12 h-12 rounded bg-amber-900/30 border border-hdl/30 flex items-center justify-center shrink-0 text-hdl font-bold font-mono text-xs uppercase">
-                Q1
-              </div>
-              <div>
-                <h5 className="text-white font-bold text-sm">
-                  RTL Blueprint Finalization
-                </h5>
-                <p className="text-xs text-slate-500 mt-1">
-                  Synthesizable VHDL/Verilog finalization for foundry
-                  integration.
-                </p>
-              </div>
-            </div>
-            <div className="flex gap-4 items-start">
-              <div className="w-12 h-12 rounded bg-amber-900/30 border border-hdl/30 flex items-center justify-center shrink-0 text-hdl font-bold font-mono text-xs uppercase">
-                Q3
-              </div>
-              <div>
-                <h5 className="text-white font-bold text-sm">GDSII Tape-out</h5>
-                <p className="text-xs text-slate-500 mt-1">
-                  Native gate-level AltiCoreAI processors scheduled for
-                  mass-production tape-out.
-                </p>
-              </div>
-            </div>
-          </div>
+        <div className="flex items-center justify-center">
+          <Card
+            theme="alti"
+            className="border-hdl/20 bg-hdl/5 hover:border-hdl/50 transition-all"
+          >
+            <ul className="space-y-3 text-base text-slate-300 leading-relaxed">
+              <li className="flex items-start gap-2">
+                <span className="text-hdl mt-1">•</span>
+                <span>
+                  Complete redesign of the stack from transistor to application
+                  level
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-hdl mt-1">•</span>
+                <span>
+                  Modeling logic with an ultra-low number of gates. Digital
+                  logic structure, massively faster in silicon networks compared
+                  to neural networks.
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-hdl mt-1">•</span>
+                <span>
+                  Ultra-lightweight algorithm and modular architecture allowing
+                  for easy creation of semiconductor configurations suitable for
+                  a wide variety of use cases.
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-hdl mt-1">•</span>
+                <span>No FPU dependency</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-hdl mt-1">•</span>
+                <span>No matrix multiplications.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-hdl mt-1">•</span>
+                <span>Can be massively parallelized in hardware</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-hdl mt-1">•</span>
+                <span>
+                  The same VHDL logic can be migrated to a semi-custom or fully
+                  custom ASIC design.
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-hdl mt-1">•</span>
+                <span>
+                  No human loop optimization – the evolutionary learning engine
+                  learns without human bias and can be constrained for security
+                  reasons.
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-hdl mt-1">•</span>
+                <span>
+                  Unique vision – the result of decades of use of multiple rare
+                  disciplines: evolutionary AI, optimization, and embedded
+                  computing.
+                </span>
+              </li>
+            </ul>
+          </Card>
         </div>
       </div>
     </div>
