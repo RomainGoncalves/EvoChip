@@ -2514,6 +2514,20 @@ const SidePathBenchmarkSection = () => (
         </div>
       </div>
 
+      {/* Note about first column */}
+      <div className="bg-gradient-to-r from-teal-500/10 to-cyan-500/10 border border-teal-500/40 p-5 rounded-2xl relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-32 h-32 bg-teal-400/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2" />
+        <h4 className="text-teal-400 font-bold text-sm uppercase tracking-tight mb-2 flex items-center gap-2">
+          <span className="w-2 h-2 bg-teal-400 rounded-full animate-pulse" />
+          About the table&apos;s first column
+        </h4>
+        <p className="text-slate-300 text-sm leading-relaxed relative z-10">
+          We know that most neural networks implementations are not used
+          directly out of the box however we want to highlight the high
+          efficiency of AltiCoreSWP.
+        </p>
+      </div>
+
       {/* Edge Performance (Laptop) */}
       <LaptopComparisonTable showFirstColumn />
 
@@ -2539,6 +2553,19 @@ const SidePathBenchmarkSection = () => (
         </div>
       </div>
 
+      {/* Note about first column */}
+      <div className="bg-gradient-to-r from-teal-500/10 to-cyan-500/10 border border-teal-500/40 p-5 rounded-2xl relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-32 h-32 bg-teal-400/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2" />
+        <h4 className="text-teal-400 font-bold text-sm uppercase tracking-tight mb-2 flex items-center gap-2">
+          <span className="w-2 h-2 bg-teal-400 rounded-full animate-pulse" />
+          About the table&apos;s first column
+        </h4>
+        <p className="text-slate-300 text-sm leading-relaxed relative z-10">
+          We know that most neural networks implementations are not used
+          directly out of the box however we want to highlight the high
+          efficiency of AltiCoreSWP.
+        </p>
+      </div>
       {/* Enterprise Performance (Server) */}
       <ServerComparisonTable showFirstColumn />
     </div>
