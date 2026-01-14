@@ -530,7 +530,7 @@ const EvoProducts = ({
             <div className="grid grid-cols-2 gap-3 mb-8 font-mono">
               {[
                 "Zero HW Modification",
-                "10x–50x Throughput",
+                "500x+ Throughput",
                 "Enterprise Native",
                 "NVIDIA CUDA Optimized",
               ].map((spec) => (
@@ -558,9 +558,6 @@ const EvoProducts = ({
             </div>
             <div className="flex items-center gap-3 mb-4">
               <Cpu className="w-10 h-10 text-hdl" />
-              <span className="px-2 py-1 bg-hdl/10 border border-hdl/30 rounded text-[10px] font-mono text-hdl uppercase font-bold tracking-wide">
-                Coming 2026
-              </span>
             </div>
             <h3 className="text-xl md:text-2xl font-bold text-white mb-1">
               <span className="text-hdl">AltiCoreHDL</span>
