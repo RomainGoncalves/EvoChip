@@ -525,7 +525,7 @@ const EvoProducts = ({
               stack. Our Synthesis Engines restructure AI model execution into
               binary logic streams to maximize throughput on existing Windows,
               Linux, and CUDA infrastructure. This 100% software layer delivers
-              10x–50x speed gains.
+              500x+ speed gains.
             </p>
             <div className="grid grid-cols-2 gap-3 mb-8 font-mono">
               {[
