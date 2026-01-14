@@ -1014,6 +1014,13 @@ const EvoHdlShowcase = () => (
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-hdl mt-1">•</span>
+                <span>
+                  Complete redesign of the stack from transistor to application
+                  level{" "}
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-hdl mt-1">•</span>
                 <span>Minimal energy consumption and heat production.</span>
               </li>
               <li className="flex items-start gap-2">
@@ -1027,15 +1034,16 @@ const EvoHdlShowcase = () => (
               <li className="flex items-start gap-2">
                 <span className="text-hdl mt-1">•</span>
                 <span>
-                  Efficient modeling logic – we use fundamental binary logic,
-                  escaping the burden of translating standard mathematics.
+                  Fastest learning process – over a billion model evaluations
+                  per second.
                 </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-hdl mt-1">•</span>
                 <span>
-                  Fastest learning process – over a billion model evaluations
-                  per second.
+                  No human loop optimization – the evolutionary learning engine
+                  learns without human bias and can be constrained for security
+                  reasons.
                 </span>
               </li>
             </ul>
@@ -1050,24 +1058,9 @@ const EvoHdlShowcase = () => (
               <li className="flex items-start gap-2">
                 <span className="text-hdl mt-1">•</span>
                 <span>
-                  Complete redesign of the stack from transistor to application
-                  level
-                </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-hdl mt-1">•</span>
-                <span>
                   Modeling logic with an ultra-low number of gates. Digital
                   logic structure, massively faster in silicon networks compared
                   to neural networks.
-                </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-hdl mt-1">•</span>
-                <span>
-                  Ultra-lightweight algorithm and modular architecture allowing
-                  for easy creation of semiconductor configurations suitable for
-                  a wide variety of use cases.
                 </span>
               </li>
               <li className="flex items-start gap-2">
@@ -1085,6 +1078,14 @@ const EvoHdlShowcase = () => (
               <li className="flex items-start gap-2">
                 <span className="text-hdl mt-1">•</span>
                 <span>
+                  Ultra-lightweight algorithm and modular architecture allowing
+                  for easy creation of semiconductor configurations suitable for
+                  a wide variety of use cases.
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-hdl mt-1">•</span>
+                <span>
                   The same VHDL logic can be migrated to a semi-custom or fully
                   custom ASIC design.
                 </span>
@@ -1092,17 +1093,8 @@ const EvoHdlShowcase = () => (
               <li className="flex items-start gap-2">
                 <span className="text-hdl mt-1">•</span>
                 <span>
-                  No human loop optimization – the evolutionary learning engine
-                  learns without human bias and can be constrained for security
-                  reasons.
-                </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-hdl mt-1">•</span>
-                <span>
-                  Unique vision – the result of decades of use of multiple rare
-                  disciplines: evolutionary AI, optimization, and embedded
-                  computing.
+                  We use fundamental binary logic, escaping the burden of
+                  translating standard mathematics.
                 </span>
               </li>
             </ul>
