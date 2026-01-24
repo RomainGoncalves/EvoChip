@@ -608,7 +608,7 @@ const EvoMcuShowcase = () => (
     <div className="container mx-auto px-6">
       <SectionHeading
         subtitle="Hardware IP"
-        title="AltiCoreMCU: Train and Execute at the Edge"
+        title="AltiCoreMCU: Train and Execute Models at the Edge"
       />
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
         <VideoEmbed videoId="ELwpDyQC-aA" title="AltiCoreMCU Part 1" />
@@ -624,7 +624,7 @@ const EvoMcuShowcase = () => (
         >
           <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
             <Microchip className="w-6 h-6 text-mcu" />
-            What is AltiCore-LogicMCU
+            What is AltiCoreMCU
           </h3>
           <ul className="space-y-3 text-base text-slate-300 leading-relaxed flex-grow">
             <li className="flex items-start gap-2">
@@ -701,7 +701,7 @@ const EvoMcuShowcase = () => (
         >
           <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
             <Microchip className="w-6 h-6 text-mcu" />
-            Why AltiCore-LogicMCU is Different
+            Why AltiCoreMCU is Different
           </h3>
           <ul className="space-y-3 text-base text-slate-300 leading-relaxed flex-grow">
             <li className="flex items-start gap-2">
