@@ -89,7 +89,7 @@ const LaptopComparisonTable = ({ showFirstColumn = false }) => {
   return (
     <ChartCard
       icon={Table}
-      title="AltiCoreSWP Vs. Neural Networks (Laptop)"
+      title="AltiCoreAI Vs. Neural Networks (Laptop)"
       iconColor="text-cyan-400"
       iconBgColor="bg-cyan-500/10"
       iconBorderColor="border-cyan-500/20"

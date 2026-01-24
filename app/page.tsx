@@ -153,7 +153,7 @@ const EvoNavbar = ({
             className="py-2 px-4 text-xs"
             onClick={() => onViewChange("alticore_home")}
           >
-            Visit AltiCoreAI
+            Visit AltiCore
           </Button> */}
         </div>
         <button
@@ -200,7 +200,7 @@ const EvoNavbar = ({
               onViewChange("alticore_home");
             }}
           >
-            Visit AltiCoreAI
+            Visit AltiCore
           </Button> */}
         </div>
       )}
@@ -233,7 +233,7 @@ const EvoHero = ({
           </h1>
 
           <p className="text-xl text-slate-300 mb-10 leading-relaxed max-w-2xl">
-            EvoChip is the IP holding company for AltiCoreAI, replacing legacy,
+            EvoChip is the IP holding company for AltiCore, replacing legacy,
             power-hungry Neural Networks with patented 'Logic-First' synthesis
             to solve the fundamental scaling limits of global AI and deliver up
             to 1000x efficiency gains.
@@ -254,7 +254,7 @@ const EvoHero = ({
               <div className="flex items-center gap-2 text-sw">
                 <Server className="w-4 h-4" />
                 <span className="font-mono font-bold tracking-tight">
-                  AltiCoreSWP
+                  AltiCoreAI
                 </span>
               </div>
               <p className="text-[14px]">Pure software acceleration platform</p>
@@ -281,7 +281,7 @@ const EvoHero = ({
               variant="outline"
               onClick={() => onViewChange("alticore_home")}
             >
-              Visit AltiCoreAI
+              Visit AltiCore
             </Button> */}
           </div>
         </div>
@@ -366,7 +366,7 @@ const EvoTechnology = () => (
             </p>
             <p className="text-sm text-slate-300 leading-relaxed">
               <strong className="text-white">Solution:</strong> Architectural
-              innovation. AltiCoreAI restructures compute at the logic level to
+              innovation. AltiCore restructures compute at the logic level to
               deliver gains through a software-first mandate.
             </p>
             <div className="bg-slate-900/50 p-3 rounded border border-cyan-400 font-mono text-[10px] text-cyan-400 leading-relaxed uppercase tracking-widest font-bold">
@@ -419,9 +419,8 @@ const EvoTechnology = () => (
             </p>
             <p className="text-sm text-slate-300 leading-relaxed">
               <strong className="text-white">Solution:</strong> Deterministic
-              Logic. AltiCoreAI provides fully transparent, auditable
-              intelligence that assists core operations without obscuring
-              decisions.
+              Logic. AltiCore provides fully transparent, auditable intelligence
+              that assists core operations without obscuring decisions.
             </p>
             <div className="bg-slate-900/50 p-3 rounded border border-cyan-400 font-mono text-[10px] text-cyan-400 leading-relaxed uppercase tracking-widest font-bold">
               Operational State: Certification Ready | Optimized Perf-per-Watt
@@ -436,7 +435,7 @@ const EvoTechnology = () => (
       <div className="max-w-4xl mx-auto mt-8 px-6">
         <p className="text-xl text-white italic font-medium leading-relaxed">
           "We don't build bigger hardware; we build smarter logic. As a pure IP
-          holding company, AltiCoreAI technology scales across global compute
+          holding company, AltiCore technology scales across global compute
           infrastructure without the constraints of physical manufacturing."
         </p>
       </div>
@@ -462,7 +461,7 @@ const EvoProducts = ({
       <div className="container mx-auto px-6">
         <SectionHeading
           subtitle="Standard Portfolio"
-          title="The AltiCoreAI Ecosystem"
+          title="The AltiCore Ecosystem"
         />
         <div className="grid lg:grid-cols-3 gap-8">
           {/* AltiCoreMCU */}
@@ -508,14 +507,14 @@ const EvoProducts = ({
             </Button>
           </div>
 
-          {/* AltiCoreSWP */}
+          {/* AltiCoreAI */}
           <div className="bg-slate-900 rounded-2xl p-6 md:p-8 border border-sw/30 shadow-[0_0_30px_rgba(45,212,191,0.1)] flex flex-col">
             <div className="inline-flex mb-4 px-2 py-0.5 bg-teal-900/30 border border-sw/30 rounded text-[9px] font-mono text-sw uppercase font-bold w-fit">
               Patented Logic-First Architecture
             </div>
             <Server className="w-10 h-10 text-sw mb-4" />
             <h3 className="text-xl md:text-2xl font-bold text-white mb-1">
-              <span className="text-sw">AltiCoreSWP</span>
+              <span className="text-sw">AltiCoreAI</span>
             </h3>
             <p className="text-xs font-mono uppercase tracking-widest text-slate-400 mb-4 font-bold">
               Pure software acceleration platform
@@ -794,7 +793,7 @@ const EvoMcuShowcase = () => (
           </h3>
           <p className="text-slate-300 leading-relaxed mb-6">
             AltiCoreMCU maintains equivalent test accuracy across all key
-            datasets proving that AltiCoreAI logic-synthesis replaces
+            datasets proving that AltiCore logic-synthesis replaces
             matrix-math without signal loss.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-slate-700">
@@ -830,7 +829,7 @@ const EvoSwShowcase = () => {
       <div className="container mx-auto px-6">
         <SectionHeading
           subtitle="Software Acceleration"
-          title="AltiCoreSWP: Beats Neural Networks In Any Case, keeping the same quality models"
+          title="AltiCoreAI: Beats Neural Networks In Any Case, keeping the same quality models"
         />
 
         {/* Hero Metric Section */}
@@ -850,10 +849,10 @@ const EvoSwShowcase = () => {
         <div className="max-w-4xl mx-auto mb-16">
           <div className="border-l-4 border-emerald-500 bg-slate-900/50 p-6 rounded-r-xl">
             <blockquote className="text-lg md:text-xl text-slate-200 font-medium leading-relaxed italic mb-4">
-              "The benchmark results with AltiCoreSWP are transformative. Seeing
+              "The benchmark results with AltiCoreAI are transformative. Seeing
               a software synthesis engine outperform established best in class
               Neural Networks solution by such a massive margin signals a
-              fundamental shift in AI deployment. AlticoreAI seems to be at the
+              fundamental shift in AI deployment. AltiCore seems to be at the
               beginning of its journey. there will be a lot of room for
               optimizations leading I am sure to even higher performance"
             </blockquote>
@@ -922,10 +921,10 @@ const EvoSwShowcase = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(6,182,212,0.1),transparent)]"></div>
           <div className="relative z-10">
             <h3 className="text-2xl md:text-4xl font-bold text-white mb-4 capitalize">
-              AltiCoreSWP on laptop beats neural networks on server
+              AltiCoreAI on laptop beats neural networks on server
             </h3>
             <p className="text-slate-400 max-w-2xl mx-auto text-xl leading-relaxed mb-8">
-              AltiCoreSWP restructures legacy workloads into binary logic
+              AltiCoreAI restructures legacy workloads into binary logic
               streams, achieving speed gains that neural networks do not match.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-4 gap-6 max-w-4xl mx-auto">
@@ -934,7 +933,7 @@ const EvoSwShowcase = () => {
               </div>
               <div className="p-4 bg-slate-950 border border-slate-800 rounded-xl">
                 <p className="text-[12px] font-mono text-slate-300 capitalize mb-1">
-                  AltiCoreSWP Laptop #IPS
+                  AltiCoreAI Laptop #IPS
                 </p>
                 <p className="text-2xl font-bold text-teal-400">361.010.000</p>
               </div>
@@ -976,7 +975,7 @@ const EvoHdlShowcase = () => (
             <span className="text-hdl font-bold font-mono tracking-tighter">
               &lt;1% of the parameter count
             </span>
-            . Our AltiCoreAI technology reduces transistor count by up to 1000x
+            . Our AltiCore technology reduces transistor count by up to 1000x
             for native on-chip AI.
           </p>
           <Card
@@ -1214,7 +1213,7 @@ const EvoContactSection = () => {
   );
 };
 
-// --- ALTICOREAI COMPONENTS (Rebranded - TARGET SCOPE) ---
+// --- AltiCore COMPONENTS (Rebranded - TARGET SCOPE) ---
 const AltiNavbar = ({
   onViewChange,
   currentView,
@@ -1252,7 +1251,7 @@ const AltiNavbar = ({
         >
           <Terminal className="w-6 h-6 text-cyan-500" />
           <span className="text-xl font-bold text-white tracking-tight">
-            AltiCoreAI<span className="text-cyan-500">AI</span>
+            AltiCore<span className="text-cyan-500">AI</span>
           </span>
         </div>
         <div className="hidden lg:flex items-center gap-6">
@@ -1409,7 +1408,7 @@ const AltiProductCategories = ({
     },
     {
       name: "Synthesis Engine: Legacy Infrastructure Rebirth.",
-      label: "AltiCoreSWP",
+      label: "AltiCoreAI",
       impact: "ECONOMIC IMPACT: CAPEX AVOIDANCE",
       bullets: [
         "Zero hardware changes required for immediate acceleration",
@@ -1520,7 +1519,7 @@ const AltiProductCategories = ({
                     .replace("text-", "bg-")
                     .replace(
                       "-400",
-                      "-500"
+                      "-500",
                     )} text-slate-900 font-bold uppercase`}
                 >
                   {p.cta} <ChevronRight className="w-4 h-4" />
@@ -1558,7 +1557,7 @@ const AltiMcuPage = ({
           </h3>
           <p className="text-xl text-slate-300 leading-relaxed">
             Deploy high-performance AI on 8-16-32 bit chips without recurring
-            API costs. By processing 100% of intelligence locally, AltiCoreAI
+            API costs. By processing 100% of intelligence locally, AltiCore
             eliminates the "Cloud Tax" and the latency bottlenecks that plague
             industrial Edge devices.
           </p>
@@ -1608,7 +1607,7 @@ const AltiMcuPage = ({
                   <th className="py-3 px-2">Metric</th>
                   <th className="py-3 px-2">Standard NNP</th>
                   <th className="py-3 px-2 text-mcu font-bold">
-                    AltiCoreAI Logic
+                    AltiCore Logic
                   </th>
                 </tr>
               </thead>
@@ -1725,10 +1724,10 @@ const AltiSwPage = ({
         ECONOMIC IMPACT: CAPEX AVOIDANCE
       </div>
       <div className="inline-block px-2 py-1 bg-teal-900/30 text-sw text-xs border border-sw-dark/30 mb-6 font-mono font-bold uppercase tracking-widest">
-        COMMERCIAL ASSET: AltiCoreSWP
+        COMMERCIAL ASSET: AltiCoreAI
       </div>
       <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-        AltiCoreSWP: Logic Synthesis Compiler for CUDA/x86
+        AltiCoreAI: Logic Synthesis Compiler for CUDA/x86
       </h1>
 
       {/* Sales Comparison Table */}
@@ -1744,7 +1743,7 @@ const AltiSwPage = ({
                   Asset Parameter
                 </th>
                 <th className="py-3 px-2">Legacy Cloud AI</th>
-                <th className="py-3 px-2 text-sw">AltiCoreAI Synthesis</th>
+                <th className="py-3 px-2 text-sw">AltiCore Synthesis</th>
               </tr>
             </thead>
             <tbody className="text-slate-300 divide-y divide-slate-800/50">
@@ -1807,8 +1806,8 @@ const AltiSwPage = ({
               Expansion
             </h4>
             <p className="text-sm text-slate-400 leading-relaxed font-sans">
-              By reducing total compute overhead, AltiCoreAI Synthesis allows
-              data center operators to run{" "}
+              By reducing total compute overhead, AltiCore Synthesis allows data
+              center operators to run{" "}
               <span className="text-sw font-bold font-mono tracking-tighter">
                 2.5x more models per rack
               </span>{" "}
@@ -2108,8 +2107,8 @@ const AltiAboutPage = ({
             efficiency for the world’s most constrained environments.
           </h2>
           <p className="text-xl text-slate-400 leading-relaxed">
-            AltiCoreAI was established to transition patented logic synthesis
-            from theoretical IP into binary firmware and silicon blueprints. Our
+            AltiCore was established to transition patented logic synthesis from
+            theoretical IP into binary firmware and silicon blueprints. Our
             mission is to enable local autonomy on any device without cloud
             dependencies, reducing TCO for enterprise partners.
           </p>
@@ -2265,7 +2264,7 @@ const HowItWorksSection = () => (
     />
 
     <p className="text-lg text-slate-300 leading-relaxed font-sans -mt-8 mb-8">
-      Transforming "Calculating" AI into "Executable" Logic. AltiCoreAI replaces
+      Transforming "Calculating" AI into "Executable" Logic. AltiCore replaces
       power-hungry matrix calculus with high-speed Boolean synthesis. We don't
       "run" models; we execute them as a stream of pure logic.
     </p>
@@ -2318,7 +2317,7 @@ const HowItWorksSection = () => (
               <th className="py-4 px-6 text-white">Metric</th>
               <th className="py-4 px-4 text-center">Legacy AI (Neural Nets)</th>
               <th className="py-4 px-4 text-center text-cyan-400">
-                AltiCoreAI (Logic-First)
+                AltiCore (Logic-First)
               </th>
             </tr>
           </thead>
@@ -2387,12 +2386,12 @@ const SidePathBenchmarkSection = () => (
     </h3>
 
     <p className="text-slate-300 mb-8 leading-relaxed font-sans">
-      Independent benchmarking with SidePath confirms that AltiCoreAI’s
+      Independent benchmarking with SidePath confirms that AltiCore’s
       logic-first architecture running on a standard laptop consistently
       outperforms high-end server-class Neural Network configurations. EvoChip
-      AltiCoreAI software (CPU-only) on a laptop outperforms neural network
-      models on server-class hardware by approximately 12× to 68× on evaluated
-      subsets, delivering same quality models.
+      AltiCore software (CPU-only) on a laptop outperforms neural network models
+      on server-class hardware by approximately 12× to 68× on evaluated subsets,
+      delivering same quality models.
     </p>
 
     {/* The Development Paradox */}
@@ -2419,7 +2418,7 @@ const SidePathBenchmarkSection = () => (
           <Award className="w-12 h-12 text-cyan-400" />
         </div>
         <h4 className="text-cyan-400 font-mono font-bold uppercase text-[10px] tracking-widest mb-4">
-          AltiCoreAI Status
+          AltiCore Status
         </h4>
         <div className="space-y-2">
           <p className="text-xl font-bold text-white font-sans">
@@ -2458,8 +2457,8 @@ const SidePathBenchmarkSection = () => (
           </div>
         </div>
         <p className="text-md text-slate-300 font-sans px-1">
-          AltiCoreAI logic running on consumer registers consistently
-          outperforms high-density server nodes running legacy matrix stacks.
+          AltiCore logic running on consumer registers consistently outperforms
+          high-density server nodes running legacy matrix stacks.
         </p>
       </div>
 
@@ -2471,7 +2470,7 @@ const SidePathBenchmarkSection = () => (
               Accuracy Parity
             </h4>
             <p className="text-md text-slate-300 leading-relaxed font-sans">
-              SidePath data confirms a slight accuracy advantage for AltiCoreAI
+              SidePath data confirms a slight accuracy advantage for AltiCore
               despite running with orders of magnitude fewer resources.
             </p>
           </div>
@@ -2524,7 +2523,7 @@ const SidePathBenchmarkSection = () => (
         <p className="text-slate-300 text-sm leading-relaxed relative z-10">
           We know that most neural networks implementations are not used
           directly out of the box however we want to highlight the high
-          efficiency of AltiCoreSWP.
+          efficiency of AltiCoreAI.
         </p>
       </div>
 
@@ -2563,7 +2562,7 @@ const SidePathBenchmarkSection = () => (
         <p className="text-slate-300 text-sm leading-relaxed relative z-10">
           We know that most neural networks implementations are not used
           directly out of the box however we want to highlight the high
-          efficiency of AltiCoreSWP.
+          efficiency of AltiCoreAI.
         </p>
       </div>
       {/* Enterprise Performance (Server) */}
@@ -2579,18 +2578,18 @@ const SidePathBenchmarkSection = () => (
         </h4>
       </div>
       <p className="text-md text-slate-300 leading-relaxed font-sans">
-        Benchmarks confirm that AltiCoreAI maintains near-parity or superior
-        test accuracy across all key datasets compared to legacy Neural
-        Networks. Our logic-synthesis replaces brute-force matrix math without
-        signal loss, proving that 1000x efficiency gains are achievable without
-        degrading model intelligence. Testing indicates a slight accuracy
-        advantage for AltiCoreAI logic streams in head-to-head scenarios as
-        noted in the Benchmark Models Accuracy data.
+        Benchmarks confirm that AltiCore maintains near-parity or superior test
+        accuracy across all key datasets compared to legacy Neural Networks. Our
+        logic-synthesis replaces brute-force matrix math without signal loss,
+        proving that 1000x efficiency gains are achievable without degrading
+        model intelligence. Testing indicates a slight accuracy advantage for
+        AltiCore logic streams in head-to-head scenarios as noted in the
+        Benchmark Models Accuracy data.
       </p>
     </Card>
 
     <p className="text-cyan-300 text-2xl leading-relaxed italic border-l border-slate-700 pl-4">
-      Future State: AltiCoreAI is currently at the earliest stage of its
+      Future State: AltiCore is currently at the earliest stage of its
       optimization curve; future algorithmic potential suggests performance
       leads exceeding 100x as compiler logic matures.
     </p>
@@ -2679,7 +2678,7 @@ const InvestorPortalContent = ({
                 The Investment Thesis
               </h3>
               <p className="text-lg text-slate-300 leading-relaxed font-medium">
-                AltiCoreAI is transitioning from Validated and Patented IP to
+                AltiCore is transitioning from Validated and Patented IP to
                 mass-market commercialization. By abandoning Neural Networks for
                 Logic-First synthesis, we provide—from <strong>MCUs</strong> to{" "}
                 <strong>GPU’s</strong>—a software solution to increase AI
@@ -2822,11 +2821,11 @@ const InvestorPortalContent = ({
               <p className="text-slate-300 text-md mb-8 leading-relaxed font-sans">
                 Current market incumbents focus on "Optimization"—attempting to
                 shrink 70-year-old Neural Network architectures to fit modern
-                hardware. AltiCoreAI represents a fundamental architectural
-                reset. By replacing probabilistic Neural Networks with
-                Logic-First Synthesis, we decouple AI performance from physical
-                silicon constraints, delivering the only deterministic solution
-                capable of bypassing industry standards.
+                hardware. AltiCore represents a fundamental architectural reset.
+                By replacing probabilistic Neural Networks with Logic-First
+                Synthesis, we decouple AI performance from physical silicon
+                constraints, delivering the only deterministic solution capable
+                of bypassing industry standards.
               </p>
 
               <div className="rounded-xl border border-slate-800 bg-slate-950/50 overflow-hidden mb-6">
@@ -2844,7 +2843,7 @@ const InvestorPortalContent = ({
                           Optimizers (Edge Impulse / Neuton.ai)
                         </th>
                         <th className="py-4 px-4 text-center text-cyan-400 bg-cyan-400/5 font-bold">
-                          AltiCoreAI (EvoChip IP)
+                          AltiCore (EvoChip IP)
                         </th>
                       </tr>
                     </thead>
@@ -2938,7 +2937,7 @@ const InvestorPortalContent = ({
                 </div>
               </div>
               <p className="text-slate-300 text-sm leading-relaxed italic border-l border-slate-700 pl-4">
-                While incumbents focus on incremental gains, AltiCoreAI’s
+                While incumbents focus on incremental gains, AltiCore’s
                 'Fabless' model scales via IP Royalties and Enterprise SaaS,
                 providing the architectural blueprints that define
                 next-generation AI execution.
@@ -2948,13 +2947,12 @@ const InvestorPortalContent = ({
             {/* --- SECTION 3: REVENUE STREAMS (REFACTORED) --- */}
             <div id="revenue-streams">
               <h3 className="text-2xl font-bold text-white border-l-4 border-cyan-500 pl-4 mb-4 font-mono uppercase tracking-widest">
-                AltiCoreAI IP Portfolio: Three High-Margin Revenue Streams
+                AltiCore IP Portfolio: Three High-Margin Revenue Streams
               </h3>
               <p className="text-slate-300 text-md mb-10 leading-relaxed max-w-3xl">
-                Strategic Ecosystem: AltiCoreAI owns the entire compute
-                lifecycle. We secure the silicon with HDL, capture the
-                high-volume edge with MCU, and optimize the global cloud with
-                SW.
+                Strategic Ecosystem: AltiCore owns the entire compute lifecycle.
+                We secure the silicon with HDL, capture the high-volume edge
+                with MCU, and optimize the global cloud with SW.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -2984,7 +2982,7 @@ const InvestorPortalContent = ({
                   ]}
                 />
                 <IPPortfolioCard
-                  title="AltiCoreSWP"
+                  title="AltiCoreAI"
                   focus="ENTERPRISE SAAS"
                   subHeader="Immediate OpEx elimination for existing infrastructure."
                   color="text-sw"
@@ -3025,7 +3023,7 @@ const InvestorPortalContent = ({
                     },
                     {
                       label: "Model",
-                      text: "Hybrid Silicon-IP embedding AltiCoreAI at the design stage.",
+                      text: "Hybrid Silicon-IP embedding AltiCore at the design stage.",
                     },
                     {
                       label: "Monetization",
@@ -3062,7 +3060,7 @@ const InvestorPortalContent = ({
                   },
                   {
                     title: "Market Entry",
-                    desc: "Leveraging Tier 1 Semiconductor partnerships to embed AltiCoreAI HDL directly into next-gen silicon roadmaps.",
+                    desc: "Leveraging Tier 1 Semiconductor partnerships to embed AltiCore HDL directly into next-gen silicon roadmaps.",
                     icon: Target,
                   },
                   {
@@ -3122,7 +3120,7 @@ const InvestorPortalContent = ({
                             Team Finalization:
                           </span>{" "}
                           Scale Sales and Customer Support teams to manage
-                          enterprise-grade delivery for AltiCoreSWP.
+                          enterprise-grade delivery for AltiCoreAI.
                         </p>
                         <p className="text-md text-slate-300">
                           <span className="text-cyan-400 font-mono font-bold uppercase">
@@ -3149,7 +3147,7 @@ const InvestorPortalContent = ({
                       <div className="space-y-3 font-sans">
                         <p className="text-md text-slate-300">
                           <span className="text-sw font-mono font-bold uppercase">
-                            AltiCoreSWP Deployment:
+                            AltiCoreAI Deployment:
                           </span>{" "}
                           Secure and deploy to 2 anchor Cloud clients,
                           validating the OpEx-reduction model.
@@ -3189,7 +3187,7 @@ const InvestorPortalContent = ({
                             Mass Market Scaling:
                           </span>{" "}
                           Initiate wide-scale rollout for AltiCoreMCU and
-                          AltiCoreSWP.
+                          AltiCoreAI.
                         </p>
                       </div>
                     </div>
@@ -3234,7 +3232,7 @@ const InvestorPortalContent = ({
                     Strategic Positioning & Exit Optionality
                   </h4>
                   <p className="text-md text-slate-300">
-                    While AltiCoreAI is architected for long-term category
+                    While AltiCore is architected for long-term category
                     dominance, the transition from validated IP to multi-stream
                     revenue (Royalties + SaaS) creates a high-value strategic
                     exit window in Q4 2026. Targeting strategic acquisition
@@ -3286,8 +3284,8 @@ const InvestorPortalContent = ({
                         Global Patents
                       </h4>
                       <p className="text-md text-slate-300 leading-relaxed font-sans">
-                        Founder/CTO holds foundational AltiCoreAI IP across
-                        logic synthesis, evolutionary algorithms, and hardware
+                        Founder/CTO holds foundational AltiCore IP across logic
+                        synthesis, evolutionary algorithms, and hardware
                         architecture.
                       </p>
                     </div>
@@ -3353,7 +3351,7 @@ const InvestorPortalContent = ({
                     name: "Patrick O'Neil",
                     role: "CTO",
                     icon: Code,
-                    bio: "Foundational AltiCoreAI Architect. Mathematician with 100+ Patents. 6 successful exits as a technical founder.",
+                    bio: "Foundational AltiCore Architect. Mathematician with 100+ Patents. 6 successful exits as a technical founder.",
                   },
                   {
                     name: "Jerry Conrad",
@@ -3509,7 +3507,7 @@ const InvestorPortalContent = ({
                     Detailed TCO Report
                   </p>
                   <p className="text-[13px] text-slate-300 font-mono uppercase tracking-widest">
-                    Legacy vs AltiCoreAI Logic-First
+                    Legacy vs AltiCore Logic-First
                   </p>
                 </div>
               </button>
@@ -3721,7 +3719,7 @@ const App = () => {
         <AltiNavbar onViewChange={setCurrentView} currentView={currentView} />
         {content}
         <footer className="bg-slate-950 border-t border-slate-800 py-8 text-center text-slate-600 text-sm font-mono tracking-tighter uppercase font-bold">
-          &copy; 2025 AltiCoreAI (an EvoChipeee company).
+          &copy; 2025 AltiCore (an EvoChipeee company).
         </footer>
         <CookieConsentBanner />
       </div>

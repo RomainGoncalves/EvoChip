@@ -37,15 +37,15 @@
   },
   {
     "id": 4,
-    "title": "EvoChip.ai launches revolutionary AltiCoreAI",
+    "title": "EvoChip.ai launches revolutionary AltiCore",
     "date": "Apr 29, 2025",
-    "image": "./insights/alticoreai-launch.jpeg",
+    "image": "./insights/AltiCore-launch.jpeg",
     "author": "Alain Blancquart",
     "authorAvatar": "./avatars/alain_blancquart.jpg",
     "authorTitle": "EvoChip CEO",
     "category": "Corporate",
-    "excerpt": "Official reveal of the AltiCoreAI product ecosystem, spanning MCU firmware to synthesizable silicon blueprints.",
-    "content": "EvoChip.ai has introduced AltiCoreAI, an advanced IP-based technology designed to transform artificial intelligence inference capabilities.\n\n###Performance\nThe solution achieves over 3 billion inferences per second on entry-level hardware like the Xilinx ZCU104 when processing datasets such as MNIST—substantially outperforming conventional solutions that typically manage under 10 million IPS on comparable systems.\n\nThe technology operates efficiently with minimal data requirements, enabling accurate predictions from significantly smaller datasets than traditional AI models demand.\n\n###Delivery Model\nRather than functioning as conventional software, AltiCoreAI comes as a customizable IP block for integration into applications, SoCs, FPGAs, and custom silicon designs.\n\n**Supported Platforms Include:**\n- Windows and Linux environments\n- CUDA-enabled GPU systems\n- AWS Cloud infrastructure\n\n###Applications\nThe technology dramatically cuts inference, hardware and energy costs, positioning it for diverse industries including:\n- Edge computing\n- Autonomous vehicles\n- Healthcare diagnostics\n- Financial fraud detection\n- Predictive maintenance\n\nEarly partner integration has commenced, with general availability anticipated later in 2025. The company holds patents pending on this technology."
+    "excerpt": "Official reveal of the AltiCore product ecosystem, spanning MCU firmware to synthesizable silicon blueprints.",
+    "content": "EvoChip.ai has introduced AltiCore, an advanced IP-based technology designed to transform artificial intelligence inference capabilities.\n\n###Performance\nThe solution achieves over 3 billion inferences per second on entry-level hardware like the Xilinx ZCU104 when processing datasets such as MNIST—substantially outperforming conventional solutions that typically manage under 10 million IPS on comparable systems.\n\nThe technology operates efficiently with minimal data requirements, enabling accurate predictions from significantly smaller datasets than traditional AI models demand.\n\n###Delivery Model\nRather than functioning as conventional software, AltiCore comes as a customizable IP block for integration into applications, SoCs, FPGAs, and custom silicon designs.\n\n**Supported Platforms Include:**\n- Windows and Linux environments\n- CUDA-enabled GPU systems\n- AWS Cloud infrastructure\n\n###Applications\nThe technology dramatically cuts inference, hardware and energy costs, positioning it for diverse industries including:\n- Edge computing\n- Autonomous vehicles\n- Healthcare diagnostics\n- Financial fraud detection\n- Predictive maintenance\n\nEarly partner integration has commenced, with general availability anticipated later in 2025. The company holds patents pending on this technology."
   },
   {
     "id": 5,

@@ -88,5 +88,5 @@ Currently, all components are defined inline within `page.tsx`. If refactoring, 
 There are 3 products in this app that have the following design requirements. When writing about these products, the names should always be written as it is below and never with full uppercase.
 
 - AltiCoreMCU: base color is tailwind's blue-400
-- AltiCoreSWP: base color is tailwind's teal-400
+- AltiCoreAI: base color is tailwind's teal-400
 - AltiCoreHDL: base color is tailwind's amber-500

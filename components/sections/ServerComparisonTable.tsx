@@ -89,7 +89,7 @@ const ServerComparisonTable = ({ showFirstColumn = false }) => {
   return (
     <ChartCard
       icon={Table}
-      title="AltiCoreSWP Vs. Neural Networks (Server)"
+      title="AltiCoreAI Vs. Neural Networks (Server)"
       iconColor="text-emerald-400"
       iconBgColor="bg-emerald-500/10"
       iconBorderColor="border-emerald-500/20"
