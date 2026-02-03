@@ -1163,11 +1163,8 @@ const EvoAbout = () => (
 
 const EvoContactSection = () => {
   const [submitSuccess, setSubmitSuccess] = useState(false);
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSubmitSuccess(true);
-    setTimeout(() => setSubmitSuccess(false), 5000);
-  };
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
+
   return (
     <section
       id="contact-evo"
@@ -1196,22 +1193,52 @@ const EvoContactSection = () => {
           </div>
           <Card>
             {submitSuccess ? (
-              <p className="text-cyan-400">Message Received!</p>
+              <div className="text-center py-8">
+                <CheckCircle2 className="w-16 h-16 text-cyan-400 mx-auto mb-4" />
+                <p className="text-cyan-400 text-lg font-semibold">
+                  Message Sent Successfully!
+                </p>
+                <p className="text-slate-400 text-sm mt-2">
+                  We'll get back to you soon.
+                </p>
+              </div>
             ) : (
-              <form className="space-y-4" onSubmit={handleSubmit}>
+              <form
+                action="https://formsubmit.io/goncalves.romain@gmail.com"
+                method="POST"
+                className="space-y-4"
+              >
+                {/* FormSubmit Configuration */}
+                <input
+                  type="hidden"
+                  name="_next"
+                  value={`${siteUrl}/thank-you`}
+                />
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="New Contact Form Submission - EvoChip"
+                />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="text" name="_honey" style={{ display: "none" }} />
+
                 <input
                   type="text"
+                  name="name"
                   placeholder="Name"
                   className="w-full bg-slate-900 border border-slate-700 rounded px-4 py-3 text-sm"
                   required
                 />
                 <input
                   type="email"
+                  name="email"
                   placeholder="Email"
                   className="w-full bg-slate-900 border border-slate-700 rounded px-4 py-3 text-sm"
                   required
                 />
                 <textarea
+                  name="message"
                   placeholder="Message"
                   className="w-full bg-slate-900 border border-slate-700 rounded px-4 py-3 text-sm"
                   rows={4}
@@ -3546,14 +3573,17 @@ const InvestorPortal = ({
   const [error, setError] = useState("");
 
   // SHA-256 hash of "evochipForLife" - pre-computed for security
-  const VALID_PASSWORD_HASH = "84ce9ec05d4ac0d1305c53f583f82da2c56d8ae3aec14f6e00c06c9b1d6fcb5d";
+  const VALID_PASSWORD_HASH =
+    "84ce9ec05d4ac0d1305c53f583f82da2c56d8ae3aec14f6e00c06c9b1d6fcb5d";
 
   const hashPassword = async (password: string): Promise<string> => {
     const encoder = new TextEncoder();
     const data = encoder.encode(password);
-    const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+    const hashBuffer = await crypto.subtle.digest("SHA-256", data);
     const hashArray = Array.from(new Uint8Array(hashBuffer));
-    const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    const hashHex = hashArray
+      .map((b) => b.toString(16).padStart(2, "0"))
+      .join("");
     return hashHex;
   };
 
@@ -3607,12 +3637,10 @@ const InvestorPortal = ({
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className={`w-full bg-slate-950 border ${error ? 'border-red-500' : 'border-slate-700'} rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-500 font-sans`}
+            className={`w-full bg-slate-950 border ${error ? "border-red-500" : "border-slate-700"} rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-500 font-sans`}
             required
           />
-          {error && (
-            <p className="text-red-400 text-sm text-left">{error}</p>
-          )}
+          {error && <p className="text-red-400 text-sm text-left">{error}</p>}
           <Button type="submit" className="w-full text-sm">
             Secure Login
           </Button>
