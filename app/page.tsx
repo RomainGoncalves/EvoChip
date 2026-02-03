@@ -3541,10 +3541,39 @@ const InvestorPortal = ({
   onViewChange: (view: string) => void;
 }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const handleLogin = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoggedIn(true);
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  // SHA-256 hash of "evochipForLife" - pre-computed for security
+  const VALID_PASSWORD_HASH = "84ce9ec05d4ac0d1305c53f583f82da2c56d8ae3aec14f6e00c06c9b1d6fcb5d";
+
+  const hashPassword = async (password: string): Promise<string> => {
+    const encoder = new TextEncoder();
+    const data = encoder.encode(password);
+    const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    return hashHex;
   };
+
+  const handleLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError("");
+
+    try {
+      const hashedInput = await hashPassword(password);
+
+      if (hashedInput === VALID_PASSWORD_HASH) {
+        setIsLoggedIn(true);
+      } else {
+        setError("Invalid password. Access denied.");
+        setPassword("");
+      }
+    } catch (err) {
+      setError("Authentication error. Please try again.");
+    }
+  };
+
   if (isLoggedIn)
     return (
       <InvestorPortalContent
@@ -3575,9 +3604,14 @@ const InvestorPortal = ({
           <input
             type="password"
             placeholder="Password"
-            className="w-full bg-slate-950 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-500 font-sans"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className={`w-full bg-slate-950 border ${error ? 'border-red-500' : 'border-slate-700'} rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-500 font-sans`}
             required
           />
+          {error && (
+            <p className="text-red-400 text-sm text-left">{error}</p>
+          )}
           <Button type="submit" className="w-full text-sm">
             Secure Login
           </Button>
