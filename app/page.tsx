@@ -1204,11 +1204,11 @@ const EvoContactSection = () => {
               </div>
             ) : (
               <form
-                action="https://formsubmit.io/goncalves.romain@gmail.com"
+                action="https://formspree.io/f/xaqbvzdn"
                 method="POST"
                 className="space-y-4"
               >
-                {/* FormSubmit Configuration */}
+                {/* Formspree Configuration */}
                 <input
                   type="hidden"
                   name="_next"
@@ -1219,9 +1219,6 @@ const EvoContactSection = () => {
                   name="_subject"
                   value="New Contact Form Submission - EvoChip"
                 />
-                <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_template" value="table" />
-                <input type="text" name="_honey" style={{ display: "none" }} />
 
                 <input
                   type="text"
