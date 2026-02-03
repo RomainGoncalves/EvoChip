@@ -15,7 +15,7 @@ const config: Config = {
           dark: "#3b82f6", // blue-500 for hover states
         },
         sw: {
-          DEFAULT: "#2dd4bf", // teal-400 for AltiCoreAI
+          DEFAULT: "#2dd4bf", // teal-400 for AltiCoreSWP
           dark: "#14b8a6", // teal-500 for hover states
         },
         hdl: {

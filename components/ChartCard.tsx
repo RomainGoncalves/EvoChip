@@ -18,6 +18,7 @@ interface ChartCardProps {
   iconColor?: string;
   iconBgColor?: string;
   iconBorderColor?: string;
+  className?: string;
 }
 
 export const ChartCard: React.FC<ChartCardProps> = ({
@@ -29,6 +30,7 @@ export const ChartCard: React.FC<ChartCardProps> = ({
   iconColor = "text-teal-400",
   iconBgColor = "bg-teal-500/10",
   iconBorderColor = "border-teal-500/20",
+  className,
 }) => {
   return (
     <div className="max-w-6xl">
@@ -79,7 +81,7 @@ export const ChartCard: React.FC<ChartCardProps> = ({
         )}
 
         {/* Chart Section */}
-        <div className="h-[450px] w-full">{children}</div>
+        <div className={`mb-6 w-full ${className}`}>{children}</div>
       </div>
     </div>
   );

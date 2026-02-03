@@ -254,7 +254,7 @@ const EvoHero = ({
               <div className="flex items-center gap-2 text-sw">
                 <Server className="w-4 h-4" />
                 <span className="font-mono font-bold tracking-tight">
-                  AltiCoreAI
+                  AltiCoreSWP
                 </span>
               </div>
               <p className="text-[14px]">Pure software acceleration platform</p>
@@ -266,7 +266,9 @@ const EvoHero = ({
                   AltiCoreHDL
                 </span>
               </div>
-              <p className="text-[14px]">Synthesizable silicon blueprints</p>
+              <p className="text-[14px]">
+                FPGA/ASIC hardware inference and training
+              </p>
             </div>
           </div>
 
@@ -469,19 +471,30 @@ const EvoProducts = ({
             <div className="inline-flex mb-4 px-2 py-0.5 bg-blue-900/30 border border-mcu/30 rounded text-[9px] font-mono text-mcu uppercase font-bold w-fit">
               Patented Logic-First Architecture
             </div>
-            <Microchip className="w-10 h-10 text-mcu mb-4" />
-            <h3 className="text-xl md:text-2xl font-bold text-white mb-1">
-              <span className="text-mcu">AltiCoreMCU</span>
-            </h3>
+            <div className="flex items-center gap-3 mb-4">
+              <Microchip className="w-10 h-10 text-mcu" />
+              <h3 className="text-xl md:text-2xl font-bold text-white">
+                <span className="text-mcu">AltiCoreMCU</span>
+              </h3>
+            </div>
             <p className="text-xs font-mono uppercase tracking-widest text-slate-400 mb-4 font-bold">
               Universal Intelligence at the Edge
             </p>
             <p className="text-slate-300 text-sm leading-relaxed mb-8 flex-grow">
-              The world's only solution capable of training and executing AI
-              models locally across the entire microcontroller spectrum—from
-              high-performance processors to standard $1 MCUs. Our binary
-              firmware IP enables total intelligence on resource-constrained
-              hardware without the need for expensive NPUs or cloud dependency.
+              The only solution capable of training and executing AI models
+              locally across the entire microcontroller spectrum—from
+              high-performance processors to standard $1 MCUs. A toolset that
+              uses the model training tools in{" "}
+              <span className="text-sw font-bold">AlticoreSWP</span> and deploys
+              software inference to{" "}
+              <span className="text-mcu font-bold">MCU-class devices</span>. It
+              support{" "}
+              <span className="text-mcu font-bold">
+                on-device (MCU) training
+              </span>{" "}
+              on compatible hardware. Our binary firmware IP enables total
+              intelligence on resource-constrained hardware without the need for
+              expensive NPUs or cloud dependency.
             </p>
             <div className="grid grid-cols-2 gap-3 mb-8 font-mono">
               {[
@@ -507,15 +520,17 @@ const EvoProducts = ({
             </Button>
           </div>
 
-          {/* AltiCoreAI */}
+          {/* AltiCoreSWP */}
           <div className="bg-slate-900 rounded-2xl p-6 md:p-8 border border-sw/30 shadow-[0_0_30px_rgba(45,212,191,0.1)] flex flex-col">
             <div className="inline-flex mb-4 px-2 py-0.5 bg-teal-900/30 border border-sw/30 rounded text-[9px] font-mono text-sw uppercase font-bold w-fit">
               Patented Logic-First Architecture
             </div>
-            <Server className="w-10 h-10 text-sw mb-4" />
-            <h3 className="text-xl md:text-2xl font-bold text-white mb-1">
-              <span className="text-sw">AltiCoreAI</span>
-            </h3>
+            <div className="flex items-center gap-3 mb-4">
+              <Server className="w-10 h-10 text-sw" />
+              <h3 className="text-xl md:text-2xl font-bold text-white">
+                <span className="text-sw">AltiCoreSWP</span>
+              </h3>
+            </div>
             <p className="text-xs font-mono uppercase tracking-widest text-slate-400 mb-4 font-bold">
               Pure software acceleration platform
             </p>
@@ -557,12 +572,12 @@ const EvoProducts = ({
             </div>
             <div className="flex items-center gap-3 mb-4">
               <Cpu className="w-10 h-10 text-hdl" />
+              <h3 className="text-xl md:text-2xl font-bold text-white">
+                <span className="text-hdl">AltiCoreHDL</span>
+              </h3>
             </div>
-            <h3 className="text-xl md:text-2xl font-bold text-white mb-1">
-              <span className="text-hdl">AltiCoreHDL</span>
-            </h3>
             <p className="text-xs font-mono uppercase tracking-widest text-slate-400 mb-4 font-bold">
-              Synthesizable silicon blueprints
+              FPGA/ASIC hardware inference and training
             </p>
             <p className="text-slate-300 text-sm leading-relaxed mb-8 flex-grow">
               The gate-level hardware standard for next-generation AI
@@ -829,7 +844,7 @@ const EvoSwShowcase = () => {
       <div className="container mx-auto px-6">
         <SectionHeading
           subtitle="Software Acceleration"
-          title="AltiCoreAI: Beats Neural Networks In Any Case, keeping the same quality models"
+          title="AltiCoreSWP: Beats Neural Networks In Any Case, keeping the same quality models"
         />
 
         {/* Hero Metric Section */}
@@ -837,7 +852,7 @@ const EvoSwShowcase = () => {
           <div className="relative">
             <div className="absolute -inset-8 bg-cyan-500/20 blur-3xl rounded-full"></div>
             <h2 className="text-7xl md:text-9xl font-black text-cyan-400 drop-shadow-[0_0_20px_rgba(34,211,238,0.5)] tracking-tighter mb-2">
-              472<span className="text-4xl md:text-6xl">x</span>
+              143<span className="text-4xl md:text-6xl">x</span>
             </h2>
             <p className="text-xl md:text-2xl font-mono text-emerald-400 uppercase tracking-widest font-bold">
               Maximum Speed Multiplier
@@ -849,7 +864,7 @@ const EvoSwShowcase = () => {
         <div className="max-w-4xl mx-auto mb-16">
           <div className="border-l-4 border-emerald-500 bg-slate-900/50 p-6 rounded-r-xl">
             <blockquote className="text-lg md:text-xl text-slate-200 font-medium leading-relaxed italic mb-4">
-              "The benchmark results with AltiCoreAI are transformative. Seeing
+              "The benchmark results with AltiCoreSWP are transformative. Seeing
               a software synthesis engine outperform established best in class
               Neural Networks solution by such a massive margin signals a
               fundamental shift in AI deployment. AltiCore seems to be at the
@@ -921,10 +936,10 @@ const EvoSwShowcase = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(6,182,212,0.1),transparent)]"></div>
           <div className="relative z-10">
             <h3 className="text-2xl md:text-4xl font-bold text-white mb-4 capitalize">
-              AltiCoreAI on laptop beats neural networks on server
+              AltiCoreSWP on laptop beats neural networks on server
             </h3>
             <p className="text-slate-400 max-w-2xl mx-auto text-xl leading-relaxed mb-8">
-              AltiCoreAI restructures legacy workloads into binary logic
+              AltiCoreSWP restructures legacy workloads into binary logic
               streams, achieving speed gains that neural networks do not match.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-4 gap-6 max-w-4xl mx-auto">
@@ -933,7 +948,7 @@ const EvoSwShowcase = () => {
               </div>
               <div className="p-4 bg-slate-950 border border-slate-800 rounded-xl">
                 <p className="text-[12px] font-mono text-slate-300 capitalize mb-1">
-                  AltiCoreAI Laptop #IPS
+                  AltiCoreSWP Laptop #IPS
                 </p>
                 <p className="text-2xl font-bold text-teal-400">361.010.000</p>
               </div>
@@ -1408,7 +1423,7 @@ const AltiProductCategories = ({
     },
     {
       name: "Synthesis Engine: Legacy Infrastructure Rebirth.",
-      label: "AltiCoreAI",
+      label: "AltiCoreSWP",
       impact: "ECONOMIC IMPACT: CAPEX AVOIDANCE",
       bullets: [
         "Zero hardware changes required for immediate acceleration",
@@ -1724,10 +1739,10 @@ const AltiSwPage = ({
         ECONOMIC IMPACT: CAPEX AVOIDANCE
       </div>
       <div className="inline-block px-2 py-1 bg-teal-900/30 text-sw text-xs border border-sw-dark/30 mb-6 font-mono font-bold uppercase tracking-widest">
-        COMMERCIAL ASSET: AltiCoreAI
+        COMMERCIAL ASSET: AltiCoreSWP
       </div>
       <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-        AltiCoreAI: Logic Synthesis Compiler for CUDA/x86
+        AltiCoreSWP: Logic Synthesis Compiler for CUDA/x86
       </h1>
 
       {/* Sales Comparison Table */}
@@ -2523,7 +2538,7 @@ const SidePathBenchmarkSection = () => (
         <p className="text-slate-300 text-sm leading-relaxed relative z-10">
           We know that most neural networks implementations are not used
           directly out of the box however we want to highlight the high
-          efficiency of AltiCoreAI.
+          efficiency of AltiCoreSWP.
         </p>
       </div>
 
@@ -2562,7 +2577,7 @@ const SidePathBenchmarkSection = () => (
         <p className="text-slate-300 text-sm leading-relaxed relative z-10">
           We know that most neural networks implementations are not used
           directly out of the box however we want to highlight the high
-          efficiency of AltiCoreAI.
+          efficiency of AltiCoreSWP.
         </p>
       </div>
       {/* Enterprise Performance (Server) */}
@@ -2982,7 +2997,7 @@ const InvestorPortalContent = ({
                   ]}
                 />
                 <IPPortfolioCard
-                  title="AltiCoreAI"
+                  title="AltiCoreSWP"
                   focus="ENTERPRISE SAAS"
                   subHeader="Immediate OpEx elimination for existing infrastructure."
                   color="text-sw"
@@ -3120,7 +3135,7 @@ const InvestorPortalContent = ({
                             Team Finalization:
                           </span>{" "}
                           Scale Sales and Customer Support teams to manage
-                          enterprise-grade delivery for AltiCoreAI.
+                          enterprise-grade delivery for AltiCoreSWP.
                         </p>
                         <p className="text-md text-slate-300">
                           <span className="text-cyan-400 font-mono font-bold uppercase">
@@ -3147,7 +3162,7 @@ const InvestorPortalContent = ({
                       <div className="space-y-3 font-sans">
                         <p className="text-md text-slate-300">
                           <span className="text-sw font-mono font-bold uppercase">
-                            AltiCoreAI Deployment:
+                            AltiCoreSWP Deployment:
                           </span>{" "}
                           Secure and deploy to 2 anchor Cloud clients,
                           validating the OpEx-reduction model.
@@ -3187,7 +3202,7 @@ const InvestorPortalContent = ({
                             Mass Market Scaling:
                           </span>{" "}
                           Initiate wide-scale rollout for AltiCoreMCU and
-                          AltiCoreAI.
+                          AltiCoreSWP.
                         </p>
                       </div>
                     </div>

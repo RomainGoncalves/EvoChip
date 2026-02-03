@@ -52,13 +52,6 @@ const datasets = [
     tensorflow: 21,
     tensorflowRUY: 92,
   },
-  {
-    name: "HAR",
-    laptop: 5913,
-    multicore: 292,
-    tensorflow: 181,
-    tensorflowRUY: 92,
-  },
 ];
 
 const HeatmapCell = ({
@@ -89,7 +82,7 @@ const LaptopComparisonTable = ({ showFirstColumn = false }) => {
   return (
     <ChartCard
       icon={Table}
-      title="AltiCoreAI Vs. Neural Networks (Laptop)"
+      title="AltiCoreSWP Vs. Neural Networks (Laptop)"
       iconColor="text-cyan-400"
       iconBgColor="bg-cyan-500/10"
       iconBorderColor="border-cyan-500/20"
@@ -120,9 +113,9 @@ const LaptopComparisonTable = ({ showFirstColumn = false }) => {
                 {ds.name}
               </div>
               {showFirstColumn && <HeatmapCell value={ds.laptop} max={8165} />}
-              <HeatmapCell value={ds.multicore} max={292} />
-              <HeatmapCell value={ds.tensorflow} max={181} />
-              <HeatmapCell value={ds.tensorflowRUY} max={92} />
+              <HeatmapCell value={ds.multicore} max={150} />
+              <HeatmapCell value={ds.tensorflow} max={150} />
+              <HeatmapCell value={ds.tensorflowRUY} max={150} />
             </div>
           ))}
         </div>

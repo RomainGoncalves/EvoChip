@@ -52,22 +52,9 @@ const datasets = [
     stf: 28,
     stfRUY: 110,
   },
-  {
-    name: "HAR",
-    server: 14122,
-    smulti: 472,
-    stf: 195,
-    stfRUY: 63,
-  },
 ];
 
-const HeatmapCell = ({
-  value,
-  max = 22300,
-}: {
-  value: number;
-  max: number;
-}) => {
+const HeatmapCell = ({ value, max = 150 }: { value: number; max: number }) => {
   const intensity = Math.max(0.1, value / max);
   const isHigh = value > 10000;
   return (
@@ -89,7 +76,7 @@ const ServerComparisonTable = ({ showFirstColumn = false }) => {
   return (
     <ChartCard
       icon={Table}
-      title="AltiCoreAI Vs. Neural Networks (Server)"
+      title="AltiCoreSWP Vs. Neural Networks (Server)"
       iconColor="text-emerald-400"
       iconBgColor="bg-emerald-500/10"
       iconBorderColor="border-emerald-500/20"
@@ -120,9 +107,9 @@ const ServerComparisonTable = ({ showFirstColumn = false }) => {
                 {ds.name}
               </div>
               {showFirstColumn && <HeatmapCell value={ds.server} max={8165} />}
-              <HeatmapCell value={ds.smulti} max={472} />
-              <HeatmapCell value={ds.stf} max={195} />
-              <HeatmapCell value={ds.stfRUY} max={110} />
+              <HeatmapCell value={ds.smulti} max={220} />
+              <HeatmapCell value={ds.stf} max={220} />
+              <HeatmapCell value={ds.stfRUY} max={220} />
             </div>
           ))}
         </div>

@@ -15,10 +15,9 @@ import {
 import { ChartCard } from "@/components/ChartCard";
 
 // Speed Advantage Dataset (x multiplier)
-const speedDataRaw = [43.3, 17.2, 11.7, 10.1, 9.9, 8.2, 7.5, 5.0];
+const speedDataRaw = [17.2, 11.7, 10.1, 9.9, 8.2, 7.5, 5.0];
 
 const labels = [
-  "UCI_HAR",
   "SPECT",
   "Credit Fraud",
   "Intelligent Mfgr (Low)",
@@ -29,7 +28,6 @@ const labels = [
 ];
 
 const longerLabels = {
-  UCI_HAR: "UCI Human Activity Recognition",
   SPECT: "SPECT Heart Dataset",
   "Intelligent Mfgr (Low)": "Intelligent Manufacturing (Low Complexity)",
   "Intelligent Mfgr (High)": "Intelligent Manufacturing (High Complexity)",
@@ -73,11 +71,12 @@ const App = () => {
   }, []);
 
   // Specific requested metrics
-  const medianValue = 10.0;
-  const geometricMeanValue = 11.3;
+  const medianValue = 9.9;
+  const geometricMeanValue = 9.3;
 
   return (
     <ChartCard
+      className="h-112.5 mb-0!"
       icon={Gauge}
       title="Inference Gains"
       subtitle="AltiCore on Laptop vs Best Neural Network on Server"

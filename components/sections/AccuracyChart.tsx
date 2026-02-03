@@ -14,8 +14,8 @@ import { ChartCard } from "@/components/ChartCard";
 const App = () => {
   // Accuracy datasets for comparison
   const datasets = {
-    accuracyAlticore: [0.8, 1, 0.91, 1, 1, 0.95, 0.85, 1],
-    accuracyNN: [0.81, 1, 0.93, 1, 0.96, 0.96, 0.81, 1],
+    accuracyAlticore: [0.8, 1, 0.91, 1, 1, 0.95, 0.85],
+    accuracyNN: [0.81, 1, 0.93, 1, 0.96, 0.96, 0.81],
   };
 
   const labels = [
@@ -26,7 +26,6 @@ const App = () => {
     "Intelligent Mfgr (Low)",
     "Machine Failure",
     "SPECT",
-    "UCI_HAR",
   ];
 
   // Transform data for Recharts - keeping as decimal values
@@ -45,7 +44,6 @@ const App = () => {
     datasets.accuracyNN.reduce((a, b) => a + b, 0) / datasets.accuracyNN.length;
 
   const longerLabels = {
-    UCI_HAR: "UCI Human Activity Recognition",
     SPECT: "SPECT Heart Dataset",
     "Intelligent Mfgr (Low)": "Intelligent Manufacturing (Low Complexity)",
     "Intelligent Mfgr (High)": "Intelligent Manufacturing (High Complexity)",
@@ -99,6 +97,7 @@ const App = () => {
 
   return (
     <ChartCard
+      className="h-112.5 mb-0!"
       icon={Activity}
       title="Global Accuracy"
       subtitle="Alticore vs Neural Network"
