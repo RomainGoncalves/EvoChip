@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   Cpu,
   Zap,
@@ -3721,14 +3722,34 @@ const App = () => {
             <Lock className="w-3 h-3" /> Investor Portal
           </a>
         </section>
-        <footer className="bg-slate-950 py-12 border-t border-slate-900 flex justify-center">
-          <Image
-            src="/evochip-logo.png"
-            alt="EvoChip Logo"
-            width={160}
-            height={40}
-            className="h-10 w-auto"
-          />
+        <footer className="bg-slate-950 py-12 border-t border-slate-900">
+          <div className="flex flex-col items-center gap-6">
+            <Image
+              src="/evochip-logo.png"
+              alt="EvoChip Logo"
+              width={160}
+              height={40}
+              className="h-10 w-auto"
+            />
+            <div className="flex items-center gap-4 text-xs font-mono uppercase">
+              <Link
+                href="/privacy"
+                className="text-slate-500 hover:text-cyan-400 transition-colors"
+              >
+                Privacy Policy
+              </Link>
+              <span className="text-slate-700">|</span>
+              <Link
+                href="/terms"
+                className="text-slate-500 hover:text-cyan-400 transition-colors"
+              >
+                Terms of Service
+              </Link>
+            </div>
+            <p className="text-slate-600 text-xs font-mono">
+              &copy; 2026 EvoChip. All rights reserved.
+            </p>
+          </div>
         </footer>
         <CookieConsentBanner />
       </div>
@@ -3767,8 +3788,25 @@ const App = () => {
       <div className="min-h-screen bg-slate-900 text-slate-200">
         <AltiNavbar onViewChange={setCurrentView} currentView={currentView} />
         {content}
-        <footer className="bg-slate-950 border-t border-slate-800 py-8 text-center text-slate-600 text-sm font-mono tracking-tighter uppercase font-bold">
-          &copy; 2025 AltiCore (an EvoChipeee company).
+        <footer className="bg-slate-950 border-t border-slate-800 py-8 text-center font-mono tracking-tighter uppercase font-bold">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4">
+            <Link
+              href="/privacy"
+              className="text-slate-500 hover:text-cyan-400 text-xs transition-colors"
+            >
+              Privacy Policy
+            </Link>
+            <span className="text-slate-700 hidden sm:inline">|</span>
+            <Link
+              href="/terms"
+              className="text-slate-500 hover:text-cyan-400 text-xs transition-colors"
+            >
+              Terms of Service
+            </Link>
+          </div>
+          <p className="text-slate-600 text-sm">
+            &copy; 2025 AltiCore (an EvoChipeee company).
+          </p>
         </footer>
         <CookieConsentBanner />
       </div>
@@ -3799,14 +3837,34 @@ const App = () => {
           <Lock className="w-3 h-3" /> Investor Portal
         </a>
       </section>
-      <footer className="bg-slate-950 py-12 border-t border-slate-900 flex justify-center">
-        <Image
-          src="/evochip-logo.png"
-          alt="EvoChip Logo"
-          width={160}
-          height={40}
-          className="h-10 w-auto"
-        />
+      <footer className="bg-slate-950 py-12 border-t border-slate-900">
+        <div className="flex flex-col items-center gap-6">
+          <Image
+            src="/evochip-logo.png"
+            alt="EvoChip Logo"
+            width={160}
+            height={40}
+            className="h-10 w-auto"
+          />
+          <div className="flex items-center gap-4 text-xs font-mono uppercase">
+            <Link
+              href="/privacy"
+              className="text-slate-500 hover:text-cyan-400 transition-colors"
+            >
+              Privacy Policy
+            </Link>
+            <span className="text-slate-700">|</span>
+            <Link
+              href="/terms"
+              className="text-slate-500 hover:text-cyan-400 transition-colors"
+            >
+              Terms of Service
+            </Link>
+          </div>
+          <p className="text-slate-600 text-xs font-mono">
+            &copy; 2026 EvoChip. All rights reserved.
+          </p>
+        </div>
       </footer>
       <CookieConsentBanner />
     </div>
