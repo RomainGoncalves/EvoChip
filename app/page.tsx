@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import {
   Cpu,
@@ -62,7 +61,7 @@ import {
   LogicBackground,
   CookieConsentBanner,
 } from "@/components/ui";
-import { VideoEmbed } from "@/components/brand";
+import { VideoEmbed, Logo } from "@/components/brand";
 import { KPICard, IPPortfolioCard } from "@/components/investor";
 import AccuracyChart from "@/components/sections/AccuracyChart";
 import SpeedChart from "@/components/sections/SpeedChart";
@@ -120,13 +119,7 @@ const EvoNavbar = ({
           className="flex items-center gap-2 cursor-pointer"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
-          <Image
-            src="/evochip-logo.png"
-            alt="EvoChip Logo"
-            width={160}
-            height={40}
-            className="h-10 w-auto"
-          />
+          <Logo size="md" />
         </div>
         <div className="hidden lg:flex items-center gap-6">
           {navLinks.map((link) => (
@@ -218,18 +211,18 @@ const EvoHero = ({
     "Diagram illustrating the replacement of a complex neural network (NN) with a simple, efficient gate-level logic unit.";
 
   return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-slate-900">
+    <section className="relative min-h-screen flex items-center pt-24 overflow-hidden bg-slate-900">
       <LogicBackground />
       <div className="container mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
         <div>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-cyan-400 text-xs font-mono mb-6 shadow-[0_0_15px_rgba(6,182,212,0.2)]">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-cyan-400 text-sm font-mono mb-6 shadow-[0_0_15px_rgba(6,182,212,0.2)]">
             <span className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse"></span>
             GLOBAL AI STANDARD
           </div>
           <h1 className="text-5xl lg:text-7xl font-bold text-white leading-tight mb-6">
-            The Logic Synthesis Standard for{" "}
+            Redefining AI Efficiency{" "}
             <span className="block text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-mcu-dark">
-              Global AI.
+              from Sensors to Servers.
             </span>
           </h1>
 
@@ -337,26 +330,31 @@ const EvoHeroVideos = () => (
 const EvoPodcast = () => (
   <section className="py-16 bg-slate-900 border-t border-slate-800 relative">
     <div className="container mx-auto px-6">
-      <SectionHeading
-        subtitle="PODCAST"
-        title="EvoChip Explained"
-      />
+      <SectionHeading subtitle="PODCAST" title="EvoChip Explained" />
 
       <div className="space-y-8 mt-12">
         {/* Episode 1 */}
         <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-6 items-center">
           <div className="w-full aspect-square rounded-2xl overflow-hidden border border-cyan-500/20 shadow-2xl bg-slate-950">
             <div className="w-full h-full bg-gradient-to-br from-cyan-500/20 to-slate-900 flex items-center justify-center">
-              <span className="text-cyan-400 font-mono text-sm">Podcast Cover</span>
+              <span className="text-cyan-400 font-mono text-sm">
+                Podcast Cover
+              </span>
             </div>
           </div>
 
           <div className="space-y-4">
             <div>
-              <div className="text-cyan-400 font-mono text-sm mb-2">Episode 1</div>
-              <h3 className="text-xl font-bold text-white mb-2">Alticore Fits AI Into 521 Bytes</h3>
+              <div className="text-cyan-400 font-mono text-sm mb-2">
+                Episode 1
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">
+                Alticore Fits AI Into 521 Bytes
+              </h3>
               <p className="text-slate-400 text-sm">
-                Discover how Alticore's revolutionary synthesis technology compresses AI models into impossibly small footprints, enabling edge computing at unprecedented scales.
+                Discover how Alticore's revolutionary synthesis technology
+                trains and executes AI models into impossibly small footprints,
+                enabling edge computing at unprecedented scales.
               </p>
             </div>
 
@@ -364,10 +362,13 @@ const EvoPodcast = () => (
               controls
               className="w-full h-12 rounded-lg"
               style={{
-                filter: 'hue-rotate(180deg) saturate(1.5)',
+                filter: "hue-rotate(180deg) saturate(1.5)",
               }}
             >
-              <source src="/podcasts/EvoChipExplained_-_Alticore_Fits_AI_Into_521_Bytes.m4a" type="audio/mp4" />
+              <source
+                src="/podcasts/EvoChipExplained_-_Alticore_Fits_AI_Into_521_Bytes.m4a"
+                type="audio/mp4"
+              />
               Your browser does not support the audio element.
             </audio>
           </div>
@@ -377,21 +378,28 @@ const EvoPodcast = () => (
         <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-6 items-center">
           <div className="w-full aspect-square rounded-2xl overflow-hidden border border-cyan-500/20 shadow-2xl bg-slate-950">
             <div className="w-full h-full bg-gradient-to-br from-cyan-500/20 to-slate-900 flex items-center justify-center">
-              <span className="text-cyan-400 font-mono text-sm">Podcast Cover</span>
+              <span className="text-cyan-400 font-mono text-sm">
+                Podcast Cover
+              </span>
             </div>
           </div>
 
           <div className="space-y-4">
             <div>
-              <div className="text-cyan-400 font-mono text-sm mb-2">Episode 2</div>
+              <div className="text-cyan-400 font-mono text-sm mb-2">
+                Episode 2
+              </div>
               <h3 className="text-xl font-bold text-white mb-2">Coming Soon</h3>
               <p className="text-slate-400 text-sm">
-                Stay tuned for our next episode exploring the future of semiconductor design and AI optimization.
+                Stay tuned for our next episode exploring the future of
+                semiconductor design and AI optimization.
               </p>
             </div>
 
             <div className="w-full h-12 rounded-lg bg-slate-800/50 border border-slate-700/50 flex items-center justify-center">
-              <span className="text-slate-500 font-mono text-sm">Episode Coming Soon</span>
+              <span className="text-slate-500 font-mono text-sm">
+                Episode Coming Soon
+              </span>
             </div>
           </div>
         </div>
@@ -412,12 +420,12 @@ const EvoTechnology = () => (
       />
 
       <p className="text-lg text-slate-300 max-w-4xl mx-auto mb-16 leading-relaxed">
-        Our logic synthesis provides an immediate solution by optimizing the
+        Our Patented Technology provides an immediate solution by optimizing the
         fundamental logic paths of the entire compute stack. This is more than
-        just a chip-level fix; our Synthesis Engines accelerate model training
-        and execution on existing Windows, Linux, and CUDA environments. Beyond
-        software, our technology defines the energy-efficient architecture for
-        MCUs, FPGAs, custom ASICs, and GPUs.
+        just a chip-level fix; our Mathematical Frameworks accelerate model
+        training and execution on existing Windows, Linux, and CUDA
+        environments. Beyond software, our technology defines the
+        energy-efficient architecture for MCUs, FPGAs, custom ASICs, and GPUs.
       </p>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch text-left">
@@ -461,8 +469,8 @@ const EvoTechnology = () => (
               scaling on Edge devices or in high-density racks.
             </p>
             <p className="text-sm text-slate-300 leading-relaxed">
-              <strong className="text-white">Solution:</strong> Synthesis
-              Engines that optimize fundamental logic paths across the entire
+              <strong className="text-white">Solution:</strong> Mathematical
+              Frameworks that optimize fundamental logic paths across the entire
               stack—from MCUs to GPUs.
             </p>
             <div className="bg-slate-900/50 p-3 rounded border border-cyan-400 font-mono text-[10px] text-cyan-400 leading-relaxed uppercase tracking-widest font-bold">
@@ -489,8 +497,8 @@ const EvoTechnology = () => (
             </p>
             <p className="text-sm text-slate-300 leading-relaxed">
               <strong className="text-white">Solution:</strong> Deterministic
-              Logic. AltiCore provides fully transparent, auditable intelligence
-              that assists core operations without obscuring decisions.
+              Logic. AltiCore provides fully transparent, auditable models that
+              assists core operations without obscuring decisions.
             </p>
             <div className="bg-slate-900/50 p-3 rounded border border-cyan-400 font-mono text-[10px] text-cyan-400 leading-relaxed uppercase tracking-widest font-bold">
               Operational State: Certification Ready | Optimized Perf-per-Watt
@@ -504,9 +512,9 @@ const EvoTechnology = () => (
 
       <div className="max-w-4xl mx-auto mt-8 px-6">
         <p className="text-xl text-white italic font-medium leading-relaxed">
-          "We don't build bigger hardware; we build smarter logic. As a pure IP
-          holding company, AltiCore technology scales across global compute
-          infrastructure without the constraints of physical manufacturing."
+          "We don't build bigger hardware; we build smarter logic. AltiCore
+          technology scales across global compute infrastructures without the
+          constraints of physical manufacturing."
         </p>
       </div>
     </div>
@@ -603,11 +611,11 @@ const EvoProducts = ({
               Pure software acceleration platform
             </p>
             <p className="text-slate-300 text-sm leading-relaxed mb-8 flex-grow">
-              High-performance software acceleration for the global compute
-              stack. Our Synthesis Engines restructure AI model execution into
-              binary logic streams to maximize throughput on existing Windows,
-              Linux, and CUDA infrastructure. This 100% software layer delivers
-              500x+ speed gains.
+              High-performance software acceleration platform for the global
+              compute stack. Our Mathematical Frameworks restructure AI model
+              execution into binary logic streams to maximize throughput on
+              existing Windows, Linux, and CUDA infrastructure. This 100%
+              software layer delivers 500x+ speed gains.
             </p>
             <div className="grid grid-cols-2 gap-3 mb-8 font-mono">
               {[
@@ -693,6 +701,15 @@ const EvoMcuShowcase = () => (
         subtitle="Hardware IP"
         title="AltiCoreMCU: Train and Execute Models at the Edge"
       />
+
+      <p className="text-lg text-slate-300 max-w-4xl mx-auto mb-16 leading-relaxed text-center">
+        Beneath the cloud lies the "Edge". Not Data centers but billions of
+        microcontrollers (MCUs) embedded in thermostats, wearables, braking
+        systems, industrial grids… Currently, these devices operate under strict
+        limits of size, power and memory. They are only reactive, not
+        intelligent.
+      </p>
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
         <VideoEmbed videoId="ELwpDyQC-aA" title="AltiCoreMCU Part 1" />
         <VideoEmbed videoId="whyG2Bq1Eio" title="AltiCoreMCU Part 2" />
@@ -809,8 +826,8 @@ const EvoMcuShowcase = () => (
 
       {/* Workflow Section */}
       <div className="mt-16 w-full mx-auto">
-        <h4 className="text-center font-mono text-2xl tracking-[0.3em] uppercase mb-10 font-bold">
-          Logic-First Deployment Workflow
+        <h4 className="text-center font-mono text-2xl tracking-[0.1em] uppercase mb-10 font-bold">
+          DEPLOYMENT WORKFLOW: FROM DATA TO DEVICE
         </h4>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
           {[
@@ -3932,13 +3949,7 @@ const App = () => {
       </section>
       <footer className="bg-slate-950 py-12 border-t border-slate-900">
         <div className="flex flex-col items-center gap-6">
-          <Image
-            src="/evochip-logo.png"
-            alt="EvoChip Logo"
-            width={160}
-            height={40}
-            className="h-10 w-auto"
-          />
+          <Logo size="md" />
           <div className="flex items-center gap-4 text-xs font-mono uppercase">
             <Link
               href="/privacy"
