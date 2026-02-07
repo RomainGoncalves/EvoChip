@@ -699,7 +699,7 @@ const EvoProducts = ({
 const EvoMcuShowcase = () => (
   <section
     id="mcu-showcase"
-    className="py-16 md:py-24 bg-slate-900 border-t border-slate-800"
+    className="py-16 md:py-18 bg-slate-900 border-t border-slate-800"
   >
     <div className="container mx-auto px-6">
       <SectionHeading
@@ -844,20 +844,20 @@ const EvoMcuShowcase = () => (
             },
             {
               step: 2,
-              title: "Logic Synthesis",
-              desc: "Run the AltiCore-LogicMCU compiler and choose target platform",
+              title: "Model Generator",
+              desc: "Automated Conversion. No PhD required.",
               icon: Cpu,
             },
             {
               step: 3,
-              title: "Asset Delivery",
-              desc: "Receive synthesized code and integration guide",
+              title: "Template Integration",
+              desc: "Drop-in C-code templates.",
               icon: Download,
             },
             {
               step: 4,
-              title: "Toolchain Integration",
-              desc: "Drop into your toolchain like a digital peripheral",
+              title: "Deploy",
+              desc: "Drop into your toolchain like a digital peripheral.",
               icon: GitMerge,
             },
           ].map((item, idx, arr) => (
@@ -890,6 +890,11 @@ const EvoMcuShowcase = () => (
           ))}
         </div>
       </div>
+
+      {/* Focus Message */}
+      <p className="text-2xl text-slate-300 max-w-4xl mx-auto mt-12 leading-relaxed text-center italic">
+        Focus on your product. Let AltiCore handle the model creation.
+      </p>
 
       {/* <div className="max-w-3xl mx-auto">
         <Card theme="alti" className="bg-slate-800/40 border-mcu/30">
@@ -3658,9 +3663,9 @@ const InvestorPortal = ({
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  // SHA-256 hash of "evochipForLife" - pre-computed for security
+  // SHA-256 hash of "@inv26-12" - pre-computed for security
   const VALID_PASSWORD_HASH =
-    "84ce9ec05d4ac0d1305c53f583f82da2c56d8ae3aec14f6e00c06c9b1d6fcb5d";
+    "580eca242d6841a1dcb5e0eadfc39783c277ce7cd0bc64dedfb2c447aa40c2eb";
 
   const hashPassword = async (password: string): Promise<string> => {
     const encoder = new TextEncoder();
