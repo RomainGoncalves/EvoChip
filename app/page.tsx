@@ -2392,15 +2392,16 @@ const HowItWorksSection = () => (
   <div id="how-it-works" className="space-y-12">
     <SectionHeading
       subtitle="Technical Mechanism"
-      title="The Science: Logic-First Synthesis"
+      title="The Science: Logic-First Mathematical Framework"
       align="left"
       theme="evo"
     />
 
     <p className="text-lg text-slate-300 leading-relaxed font-sans -mt-8 mb-8">
       Transforming "Calculating" AI into "Executable" Logic. AltiCore replaces
-      power-hungry matrix calculus with high-speed Boolean synthesis. We don't
-      "run" models; we execute them as a stream of pure logic.
+      power-hungry matrix calculus with high-speed Boolean mathematical
+      framework. We don't "run" models; we execute them as a stream of pure
+      logic.
     </p>
 
     {/* The Three-Step Transformation */}
@@ -2412,7 +2413,7 @@ const HowItWorksSection = () => (
           icon: FileUp,
         },
         {
-          title: "Synthesize",
+          title: "Automatic Model Generation",
           desc: "Convert probabilistic weights into Binary Decision Diagrams (BDDs).",
           icon: BrainCog,
         },
@@ -2714,11 +2715,11 @@ const SidePathBenchmarkSection = () => (
       <p className="text-md text-slate-300 leading-relaxed font-sans">
         Benchmarks confirm that AltiCore maintains near-parity or superior test
         accuracy across all key datasets compared to legacy Neural Networks. Our
-        logic-synthesis replaces brute-force matrix math without signal loss,
-        proving that 1000x efficiency gains are achievable without degrading
-        model intelligence. Testing indicates a slight accuracy advantage for
-        AltiCore logic streams in head-to-head scenarios as noted in the
-        Benchmark Models Accuracy data.
+        logic mathematical framework replaces brute-force matrix math without
+        signal loss, proving that 1000x efficiency gains are achievable without
+        degrading model intelligence. Testing indicates a slight accuracy
+        advantage for AltiCore logic streams in head-to-head scenarios as noted
+        in the Benchmark Models Accuracy data.
       </p>
     </Card>
 
@@ -2814,11 +2815,11 @@ const InvestorPortalContent = ({
               <p className="text-lg text-slate-300 leading-relaxed font-medium">
                 AltiCore is transitioning from Validated and Patented IP to
                 mass-market commercialization. By abandoning Neural Networks for
-                Logic-First synthesis, we provide—from <strong>MCUs</strong> to{" "}
-                <strong>GPU’s</strong>—a software solution to increase AI
-                efficiency in line with market demand, creating an insuperable
-                moat for a <strong>$1B+</strong> exit to Tier 1 Semiconductor
-                leaders.
+                Logic-First mathematical framework, we provide—from{" "}
+                <strong>MCUs</strong> to <strong>GPU’s</strong>—a software
+                solution to increase AI efficiency in line with market demand,
+                creating an insuperable moat for a <strong>$1B+</strong> exit to
+                Tier 1 Semiconductor leaders.
               </p>
             </div>
 
@@ -2957,9 +2958,9 @@ const InvestorPortalContent = ({
                 shrink 70-year-old Neural Network architectures to fit modern
                 hardware. AltiCore represents a fundamental architectural reset.
                 By replacing probabilistic Neural Networks with Logic-First
-                Synthesis, we decouple AI performance from physical silicon
-                constraints, delivering the only deterministic solution capable
-                of bypassing industry standards.
+                Mathematical Framework, we decouple AI performance from physical
+                silicon constraints, delivering the only deterministic solution
+                capable of bypassing industry standards.
               </p>
 
               <div className="rounded-xl border border-slate-800 bg-slate-950/50 overflow-hidden mb-6">
@@ -2993,7 +2994,7 @@ const InvestorPortalContent = ({
                           Automated NN Pruning
                         </td>
                         <td className="py-4 px-4 text-center font-bold text-cyan-400 bg-cyan-400/5">
-                          Logic-First Gate Synthesis
+                          Logic-First Gate Framework
                         </td>
                       </tr>
                       <tr>
@@ -3199,7 +3200,7 @@ const InvestorPortalContent = ({
                   },
                   {
                     title: "IP Moat",
-                    desc: "Protected by 100+ foundational patents and proprietary gate-level synthesis algorithms that are functionally impossible to reverse-engineer.",
+                    desc: "Protected by 100+ foundational patents and proprietary gate-level framework algorithms that are functionally impossible to reverse-engineer.",
                     icon: ShieldCheck,
                   },
                   {
@@ -3419,8 +3420,8 @@ const InvestorPortalContent = ({
                       </h4>
                       <p className="text-md text-slate-300 leading-relaxed font-sans">
                         Founder/CTO holds foundational AltiCore IP across logic
-                        synthesis, evolutionary algorithms, and hardware
-                        architecture.
+                        mathematical framework, evolutionary algorithms, and
+                        hardware architecture.
                       </p>
                     </div>
                   </div>
@@ -3435,7 +3436,7 @@ const InvestorPortalContent = ({
                       {
                         date: "2021",
                         label: "Logic-First Discovery",
-                        sub: "Internal breakthrough on gate-level synthesis.",
+                        sub: "Internal breakthrough on gate-level mathematical framework.",
                       },
                       {
                         date: "2023",
