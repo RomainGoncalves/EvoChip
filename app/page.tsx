@@ -3833,13 +3833,7 @@ const App = () => {
         </section>
         <footer className="bg-slate-950 py-12 border-t border-slate-900">
           <div className="flex flex-col items-center gap-6">
-            <Image
-              src="/evochip-logo.png"
-              alt="EvoChip Logo"
-              width={160}
-              height={40}
-              className="h-10 w-auto"
-            />
+            <Logo size="md" />
             <div className="flex items-center gap-4 text-xs font-mono uppercase">
               <Link
                 href="/privacy"
