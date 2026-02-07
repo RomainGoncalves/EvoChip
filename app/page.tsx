@@ -229,9 +229,9 @@ const EvoHero = ({
 
           <p className="text-xl text-slate-300 mb-10 leading-relaxed max-w-2xl">
             EvoChip is the IP holding company for AltiCore, replacing legacy,
-            power-hungry Neural Networks with patented 'Logic-First' synthesis
-            to solve the fundamental scaling limits of global AI and deliver up
-            to 1000x efficiency gains.
+            power-hungry Neural Networks with patented 'Logic-First'
+            mathematical framwork to solve the fundamental scaling limits of
+            global AI and deliver up to 1000x efficiency gains.
           </p>
 
           {/* Product Secondary Tier - Sovereign Color Mapping */}
@@ -427,7 +427,7 @@ const EvoTechnology = () => (
       <p className="text-lg text-slate-300 max-w-4xl mx-auto mb-16 leading-relaxed">
         Our Patented Technology provides an immediate solution by optimizing the
         fundamental logic paths of the entire compute stack. This is more than
-        just a chip-level fix; our Mathematical Frameworks accelerate model
+        just a chip-level fix; our Mathematical framework accelerates model
         training and execution on existing Windows, Linux, and CUDA
         environments. Beyond software, our technology defines the
         energy-efficient architecture for MCUs, FPGAs, custom ASICs, and GPUs.
@@ -617,7 +617,7 @@ const EvoProducts = ({
             </p>
             <p className="text-slate-300 text-sm leading-relaxed mb-8 flex-grow">
               High-performance software acceleration platform for the global
-              compute stack. Our Mathematical Frameworks restructure AI model
+              compute stack. Our Mathematical framework restructures AI model
               execution into binary logic streams to maximize throughput on
               existing Windows, Linux, and CUDA infrastructure. This 100%
               software layer delivers 500x+ speed gains.
