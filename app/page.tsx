@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import {
   Cpu,
@@ -334,13 +335,15 @@ const EvoPodcast = () => (
 
       <div className="space-y-8 mt-12">
         {/* Episode 1 */}
-        <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-6 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-6 items-center">
           <div className="w-full aspect-square rounded-2xl overflow-hidden border border-cyan-500/20 shadow-2xl bg-slate-950">
-            <div className="w-full h-full bg-gradient-to-br from-cyan-500/20 to-slate-900 flex items-center justify-center">
-              <span className="text-cyan-400 font-mono text-sm">
-                Podcast Cover
-              </span>
-            </div>
+            <Image
+              src="/podcasts/podcast_cover.png"
+              alt="EvoChip Explained Podcast Cover"
+              width={200}
+              height={200}
+              className="w-full h-full object-cover"
+            />
           </div>
 
           <div className="space-y-4">
@@ -375,13 +378,15 @@ const EvoPodcast = () => (
         </div>
 
         {/* Episode 2 (Placeholder) */}
-        <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-6 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-6 items-center">
           <div className="w-full aspect-square rounded-2xl overflow-hidden border border-cyan-500/20 shadow-2xl bg-slate-950">
-            <div className="w-full h-full bg-gradient-to-br from-cyan-500/20 to-slate-900 flex items-center justify-center">
-              <span className="text-cyan-400 font-mono text-sm">
-                Podcast Cover
-              </span>
-            </div>
+            <Image
+              src="/podcasts/podcast_cover.png"
+              alt="EvoChip Explained Podcast Cover"
+              width={200}
+              height={200}
+              className="w-full h-full object-cover"
+            />
           </div>
 
           <div className="space-y-4">
