@@ -4128,9 +4128,9 @@ const App = () => {
     <div className="min-h-screen bg-slate-900 text-slate-200">
       <EvoNavbar onViewChange={setCurrentView} />
       <EvoHero onViewChange={setCurrentView} />
-      <EvoInnovation />
       <EvoHeroVideos />
       <EvoPodcast />
+      <EvoInnovation />
       <EvoTechnology />
       <EvoProducts onViewChange={setCurrentView} />
       <EvoMcuShowcase />
