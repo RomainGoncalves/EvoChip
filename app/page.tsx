@@ -1077,12 +1077,13 @@ const EvoProducts = ({
                 More
                 <ChevronRight className="w-4 h-4" />
               </Button>
-              <Button
-                className="flex-1 text-sm bg-hdl text-slate-900 shadow-[0_0_20px_rgba(245,158,11,0.4)] hover:bg-hdl hover:shadow-[0_0_30px_rgba(245,158,11,0.6)]"
-                onClick={() => scrollToSection("hdl-showcase")}
-              >
-                Technical Details
-              </Button>
+              <Link href="/hdl-technical-details">
+                <Button
+                  className="flex-1 text-sm bg-hdl text-slate-900 shadow-[0_0_20px_rgba(245,158,11,0.4)] hover:bg-hdl hover:shadow-[0_0_30px_rgba(245,158,11,0.6)] w-full"
+                >
+                  Technical Details
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
