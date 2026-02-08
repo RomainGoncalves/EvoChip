@@ -1052,7 +1052,7 @@ const EvoProducts = ({
             <p className="text-slate-300 text-sm leading-relaxed mb-8 flex-grow">
               A direct pathway to production silicon by mapping models trained
               within the AltiCore mathematical framework directly into FPGA and
-              AS£IC logic
+              ASIC logic
             </p>
             <div className="grid grid-cols-2 gap-3 mb-8 font-mono">
               {[
