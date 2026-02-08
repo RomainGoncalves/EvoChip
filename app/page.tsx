@@ -284,12 +284,12 @@ const EvoHero = ({
         </div>
         <div className="relative" aria-label={heroImageAlt}>
           <div className="relative z-10 bg-slate-900/50 backdrop-blur-md p-1 rounded-2xl border border-cyan-500/20 shadow-2xl">
-            <div className="bg-slate-950 rounded-xl p-8 overflow-hidden relative min-h-[400px] flex flex-col justify-center items-center text-center">
+            <div className="bg-slate-950 rounded-xl p-8 overflow-hidden relative min-h-100 flex flex-col justify-center items-center text-center">
               <h3 className="text-slate-400 font-mono mb-8 uppercase tracking-widest text-sm">
                 Gate-Level Architecture
               </h3>
               <div className="flex items-center gap-8 mb-8">
-                <div className="flex flex-col items-center gap-2 opacity-30 blur-[1px]">
+                <div className="flex flex-col items-center gap-2 opacity-50 blur-[0.5px]">
                   <Brain className="w-16 h-16 text-slate-500" />
                   <span className="text-xs text-slate-500 line-through decoration-slate-500/50">
                     Neural Network
@@ -859,11 +859,9 @@ const EvoProducts = ({
               FPGA/ASIC hardware inference and training
             </p>
             <p className="text-slate-300 text-sm leading-relaxed mb-8 flex-grow">
-              The gate-level hardware standard for next-generation AI
-              processors. We license synthesizable RTL (VHDL/Verilog) blueprints
-              that define the physical architecture of the chip. By executing AI
-              at the transistor level, we reduce AI transistor count by up to
-              1000x.
+              A direct pathway to production silicon by mapping models trained
+              within the AltiCore mathematical framework directly into FPGA and
+              AS£IC logic
             </p>
             <div className="grid grid-cols-2 gap-3 mb-8 font-mono">
               {[
@@ -1291,16 +1289,17 @@ const EvoHdlShowcase = () => (
             className="border-hdl/20 bg-hdl/5 hover:border-hdl/50 transition-all"
           >
             <h4 className="text-white font-bold mb-2 flex items-center gap-2">
-              <Activity className="w-5 h-5 text-hdl" /> Tightly integrated,
-              deterministic hardware deployments
+              <Activity className="w-5 h-5 text-hdl" /> Hardware Integrated
+              Intelligence
             </h4>
             <p className="text-md text-slate-300 leading-relaxed">
-              AltiCore LogicHDL bridges this gap by compiling symbolic machine
-              learning models directly into FPGA logic cores, eliminating
-              firmware overhead and ensuring nanosecond-to-microsecond inference
-              latencies. Using only labeled CSV data and off-the-shelf FPGA
-              boards, engineering teams across domains have rapidly prototyped
-              and validated production-ready hardware pipelines.
+              Designed for high-throughput and safety critical applications,
+              AltiCoreHDL replaces heavy arithmetic with hardware native
+              primitives and logic-level operations to achieve deterministic,
+              fixed latency-execution. Fullu pipelined core delivering one
+              inference per clock cycle (latency ≈100 clock Cycles), offering
+              high performance for intelligence that remains consistent scaling
+              from prototypes to custom hardware
             </p>
           </Card>
 
@@ -1312,42 +1311,61 @@ const EvoHdlShowcase = () => (
               <li className="flex items-start gap-2">
                 <span className="text-hdl mt-1">•</span>
                 <span>
-                  Ultra-fast, hyper-efficient, modular, and cost-effective AI
-                  technology
+                  Provides production ready IP cores. Direct integration into
+                  FPGAs, ASICs & SOCs
                 </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-hdl mt-1">•</span>
                 <span>
-                  Complete redesign of the stack from transistor to application
-                  level{" "}
-                </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-hdl mt-1">•</span>
-                <span>Minimal energy consumption and heat production.</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-hdl mt-1">•</span>
-                <span>
-                  No chip development required – it is possible to use
-                  commercially available FPGA hardware from experienced
-                  suppliers
+                  Deterministic fixed latency execution: Critical requirement
+                  for safety and compliance-sensitive products
                 </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-hdl mt-1">•</span>
                 <span>
-                  Fastest learning process – over a billion model evaluations
-                  per second.
+                  Extreme performance: (Throughput & Latency) Delivers one
+                  inference per second
                 </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-hdl mt-1">•</span>
                 <span>
-                  No human loop optimization – the evolutionary learning engine
-                  learns without human bias and can be constrained for security
-                  reasons.
+                  Flexible word length: Integer-only logic optimized to match
+                  host hardware
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-hdl mt-1">•</span>
+                <span>
+                  Structural simplicity: Use of minimal feature set, parameters
+                  and arithmetic operations
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-hdl mt-1">•</span>
+                <span>Supports hardware level training and execution</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-hdl mt-1">•</span>
+                <span>
+                  Ultra-low power “Sentinel” monitoring: Minimal energy and
+                  thermal footprint.
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-hdl mt-1">•</span>
+                <span>
+                  Ecosystem continuity: Same mathematical framework as the SWP
+                  and MCU versions
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-hdl mt-1">•</span>
+                <span>
+                  No “Calculator” overhead: No floating-point math and massive
+                  matrix multiplications
                 </span>
               </li>
             </ul>
@@ -1358,47 +1376,52 @@ const EvoHdlShowcase = () => (
             theme="alti"
             className="border-hdl/20 bg-hdl/5 hover:border-hdl/50 transition-all"
           >
+            <h3 className="text-white mb-4 flex items-center gap-2">
+              For High volume and safety critical environments, provides direct
+              pathway to production silicon through IP cores delivering absolute
+              timing predictability based on:
+            </h3>
             <ul className="space-y-3 text-base text-slate-300 leading-relaxed">
               <li className="flex items-start gap-2">
                 <span className="text-hdl mt-1">•</span>
                 <span>
-                  Modeling logic with an ultra-low number of gates. Digital
-                  logic structure, massively faster in silicon networks compared
-                  to neural networks.
+                  Optimization for minimal gate count. No heavy arithmetic's
                 </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-hdl mt-1">•</span>
-                <span>No FPU dependency</span>
+                <span>High throughputs deterministic execution in Silicon</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-hdl mt-1">•</span>
-                <span>No matrix multiplications.</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-hdl mt-1">•</span>
-                <span>Can be massively parallelized in hardware</span>
+                <span>No FPU dependency or matrix multiplications</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-hdl mt-1">•</span>
                 <span>
-                  Ultra-lightweight algorithm and modular architecture allowing
-                  for easy creation of semiconductor configurations suitable for
-                  a wide variety of use cases.
+                  Massively parallelizable. Structurally simple. Minimal feature
+                  set
                 </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-hdl mt-1">•</span>
                 <span>
-                  The same VHDL logic can be migrated to a semi-custom or fully
-                  custom ASIC design.
+                  Direct pathway to production silicon from FPGAs to semi-custom
+                  or fully custom ASIC design
                 </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-hdl mt-1">•</span>
                 <span>
-                  We use fundamental binary logic, escaping the burden of
-                  translating standard mathematics.
+                  Built on binary logic and bitwise operations. No heavy
+                  floating point tensors
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-hdl mt-1">•</span>
+                <span>
+                  Ultra-light weight and modular for rapid creation of
+                  semiconductor configurations.
                 </span>
               </li>
             </ul>
