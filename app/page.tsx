@@ -4116,7 +4116,7 @@ const App = () => {
             </Link>
           </div>
           <p className="text-slate-600 text-sm">
-            &copy; 2025 AltiCore (an EvoChipeee company).
+            &copy; 2025 AltiCore (an EvoChip company).
           </p>
         </footer>
         <CookieConsentBanner />
