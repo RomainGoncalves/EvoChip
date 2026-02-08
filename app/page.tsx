@@ -542,39 +542,212 @@ const EvoInnovation = () => (
           </h3>
 
           {/* Matrix Visual */}
-          <div className="relative bg-slate-950 border border-slate-800 rounded-xl p-6 font-mono text-xs text-slate-500 leading-relaxed overflow-hidden h-64 flex flex-col justify-center">
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-950/50 to-slate-950 pointer-events-none"></div>
-            <div className="opacity-40 select-none">
-              3.1415926535... 0.718281828... 2.718281828...
-              <br />
-              0.718281828... 2.718281828... 3.1415926535...
-              <br />
-              2.718281828... 3.1415926535... 0.718281828...
-              <br />
-              3.1415926535... 0.718281828... 2.718281828...
-              <br />
-              0.718281828... 2.718281828... 3.1415926535...
-              <br />
-              2.718281828... 3.1415926535... 0.718281828...
-              <br />
-              3.1415926535... 0.718281828... 2.718281828...
-              <br />
-              0.718281828... 2.718281828... 3.1415926535...
-              <br />
-              2.718281828... 3.1415926535... 0.718281828...
-              <br />
-            </div>
-            {/* Overlay Neural Net Graphic Suggestion */}
-            <div className="absolute right-4 top-1/2 -translate-y-1/2 opacity-20">
-              <Brain className="w-32 h-32" />
-            </div>
+          <div className="relative bg-slate-950 border border-slate-800 rounded-xl p-4 h-64 flex items-center justify-center overflow-hidden shadow-inner">
+            <svg
+              viewBox="0 0 500 200"
+              className="w-full h-full text-slate-500 font-mono text-[10px]"
+            >
+              {/* Matrix Block (Input Data) */}
+              <g className="opacity-80">
+                {/* Column 1 */}
+                <text x="15" y="40" fill="currentColor">
+                  0.718...
+                </text>
+                <text x="15" y="60" fill="currentColor">
+                  2.718...
+                </text>
+                <text x="15" y="80" fill="currentColor">
+                  3.141...
+                </text>
+                <text x="15" y="100" fill="currentColor">
+                  1.414...
+                </text>
+                <text x="15" y="120" fill="currentColor">
+                  0.577...
+                </text>
+                <text x="15" y="140" fill="currentColor">
+                  1.618...
+                </text>
+                <text x="15" y="160" fill="currentColor">
+                  2.302...
+                </text>
+
+                {/* Column 2 */}
+                <text x="65" y="40" fill="currentColor">
+                  0.993...
+                </text>
+                <text x="65" y="60" fill="currentColor">
+                  0.123...
+                </text>
+                <text x="65" y="80" fill="currentColor">
+                  0.456...
+                </text>
+                <text x="65" y="100" fill="currentColor">
+                  0.789...
+                </text>
+                <text x="65" y="120" fill="currentColor">
+                  0.321...
+                </text>
+                <text x="65" y="140" fill="currentColor">
+                  0.654...
+                </text>
+                <text x="65" y="160" fill="currentColor">
+                  0.987...
+                </text>
+
+                {/* Bracket lines for matrix */}
+                <path
+                  d="M 10 30 V 170 M 110 30 V 170"
+                  stroke="currentColor"
+                  strokeWidth="1"
+                  opacity="0.5"
+                  fill="none"
+                />
+              </g>
+
+              {/* Connecting Lines: Matrix -> Network */}
+              <g stroke="white" strokeWidth="0.5" opacity="0.4">
+                <line x1="115" y1="40" x2="160" y2="50" />
+                <line x1="115" y1="60" x2="160" y2="80" />
+                <line x1="115" y1="80" x2="160" y2="50" />
+                <line x1="115" y1="100" x2="160" y2="110" />
+                <line x1="115" y1="120" x2="160" y2="80" />
+                <line x1="115" y1="140" x2="160" y2="140" />
+                <line x1="115" y1="160" x2="160" y2="140" />
+              </g>
+
+              {/* Neural Network */}
+              <g transform="translate(160, 0)">
+                {/* Layer 1 Nodes */}
+                <circle
+                  cx="0"
+                  cy="50"
+                  r="4"
+                  fill="#334155"
+                  stroke="currentColor"
+                />
+                <circle
+                  cx="0"
+                  cy="80"
+                  r="4"
+                  fill="#334155"
+                  stroke="currentColor"
+                />
+                <circle
+                  cx="0"
+                  cy="110"
+                  r="4"
+                  fill="#334155"
+                  stroke="currentColor"
+                />
+                <circle
+                  cx="0"
+                  cy="140"
+                  r="4"
+                  fill="#334155"
+                  stroke="currentColor"
+                />
+
+                {/* Connections L1->L2 */}
+                <g stroke="white" strokeWidth="0.5" opacity="0.3">
+                  <line x1="4" y1="50" x2="46" y2="65" />
+                  <line x1="4" y1="50" x2="46" y2="95" />
+                  <line x1="4" y1="80" x2="46" y2="65" />
+                  <line x1="4" y1="80" x2="46" y2="125" />
+                  <line x1="4" y1="110" x2="46" y2="95" />
+                  <line x1="4" y1="110" x2="46" y2="125" />
+                  <line x1="4" y1="140" x2="46" y2="95" />
+                  <line x1="4" y1="140" x2="46" y2="125" />
+                </g>
+
+                {/* Layer 2 Nodes */}
+                <circle
+                  cx="50"
+                  cy="65"
+                  r="4"
+                  fill="#334155"
+                  stroke="currentColor"
+                />
+                <circle
+                  cx="50"
+                  cy="95"
+                  r="4"
+                  fill="#334155"
+                  stroke="currentColor"
+                />
+                <circle
+                  cx="50"
+                  cy="125"
+                  r="4"
+                  fill="#334155"
+                  stroke="currentColor"
+                />
+
+                {/* Connections L2->L3 (Output Nodes) */}
+                <g stroke="white" strokeWidth="0.5" opacity="0.3">
+                  <line x1="54" y1="65" x2="96" y2="80" />
+                  <line x1="54" y1="65" x2="96" y2="110" />
+                  <line x1="54" y1="95" x2="96" y2="80" />
+                  <line x1="54" y1="95" x2="96" y2="110" />
+                  <line x1="54" y1="125" x2="96" y2="80" />
+                  <line x1="54" y1="125" x2="96" y2="110" />
+                </g>
+
+                {/* Layer 3 Nodes (Output Layer) */}
+                <circle
+                  cx="100"
+                  cy="80"
+                  r="4"
+                  fill="#475569"
+                  stroke="currentColor"
+                />
+                <circle
+                  cx="100"
+                  cy="110"
+                  r="4"
+                  fill="#475569"
+                  stroke="currentColor"
+                />
+
+                {/* Connections to Result */}
+                <g stroke="currentColor" strokeWidth="1">
+                  <line x1="104" y1="80" x2="140" y2="95" />
+                  <line x1="104" y1="110" x2="140" y2="95" />
+                </g>
+              </g>
+
+              {/* Result Block */}
+              <g transform="translate(300, 80)">
+                <path
+                  d="M 0 15 L 10 15"
+                  stroke="currentColor"
+                  strokeWidth="1"
+                />
+                <rect
+                  x="10"
+                  y="0"
+                  width="80"
+                  height="30"
+                  rx="4"
+                  fill="#1e293b"
+                  stroke="currentColor"
+                  strokeWidth="1"
+                />
+                <text
+                  x="50"
+                  y="19"
+                  textAnchor="middle"
+                  fill="#94a3b8"
+                  fontSize="10"
+                  fontWeight="bold"
+                >
+                  RESULT: ...
+                </text>
+              </g>
+            </svg>
           </div>
 
           <ul className="space-y-4">
-            <li className="flex items-center gap-3 text-slate-300">
-              <span className="w-2 h-2 rounded-full bg-slate-500"></span>
-              Optimized for GPUs.
-            </li>
             <li className="flex items-center gap-3 text-slate-300">
               <span className="w-2 h-2 rounded-full bg-slate-500"></span>
               Heavy Arithmetic Burden.
@@ -698,10 +871,6 @@ const EvoInnovation = () => (
           <ul className="space-y-4">
             <li className="flex items-center gap-3 text-white font-medium">
               <span className="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.8)]"></span>
-              Optimized for Compact Models.
-            </li>
-            <li className="flex items-center gap-3 text-white font-medium">
-              <span className="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.8)]"></span>
               Hardware-Native Primitives (Logic & Shifts).
             </li>
             <li className="flex items-center gap-3 text-white font-medium">
@@ -790,13 +959,21 @@ const EvoProducts = ({
                 </div>
               ))}
             </div>
-            <Button
-              className="w-full text-sm mt-auto bg-mcu text-slate-900 shadow-[0_0_20px_rgba(96,165,250,0.4)] hover:bg-mcu-dark hover:shadow-[0_0_30px_rgba(96,165,250,0.6)]"
-              onClick={() => scrollToSection("mcu-showcase")}
-            >
-              More info
-              <ChevronRight className="w-4 h-4" />
-            </Button>
+            <div className="flex gap-3 mt-auto">
+              <Button
+                className="flex-1 text-sm bg-mcu text-slate-900 shadow-[0_0_20px_rgba(96,165,250,0.4)] hover:bg-mcu-dark hover:shadow-[0_0_30px_rgba(96,165,250,0.6)]"
+                onClick={() => scrollToSection("mcu-showcase")}
+              >
+                More
+                <ChevronRight className="w-4 h-4" />
+              </Button>
+              <Button
+                className="flex-1 text-sm bg-mcu text-slate-900 shadow-[0_0_20px_rgba(96,165,250,0.4)] hover:bg-mcu-dark hover:shadow-[0_0_30px_rgba(96,165,250,0.6)]"
+                onClick={() => scrollToSection("mcu-showcase")}
+              >
+                Technical Details
+              </Button>
+            </div>
           </div>
 
           {/* AltiCoreSWP */}
@@ -835,13 +1012,21 @@ const EvoProducts = ({
                 </div>
               ))}
             </div>
-            <Button
-              className="w-full text-sm mt-auto bg-sw text-slate-900 shadow-[0_0_20px_rgba(45,212,191,0.4)] hover:bg-sw-dark hover:shadow-[0_0_30px_rgba(45,212,191,0.6)]"
-              onClick={() => scrollToSection("sw-showcase")}
-            >
-              More info
-              <ChevronRight className="w-4 h-4" />
-            </Button>
+            <div className="flex gap-3 mt-auto">
+              <Button
+                className="flex-1 text-sm bg-sw text-slate-900 shadow-[0_0_20px_rgba(45,212,191,0.4)] hover:bg-sw-dark hover:shadow-[0_0_30px_rgba(45,212,191,0.6)]"
+                onClick={() => scrollToSection("sw-showcase")}
+              >
+                More
+                <ChevronRight className="w-4 h-4" />
+              </Button>
+              <Button
+                className="flex-1 text-sm bg-sw text-slate-900 shadow-[0_0_20px_rgba(45,212,191,0.4)] hover:bg-sw-dark hover:shadow-[0_0_30px_rgba(45,212,191,0.6)]"
+                onClick={() => scrollToSection("sw-showcase")}
+              >
+                Technical Details
+              </Button>
+            </div>
           </div>
 
           {/* AltiCoreHDL */}
@@ -878,13 +1063,21 @@ const EvoProducts = ({
                 </div>
               ))}
             </div>
-            <Button
-              className="w-full text-sm mt-auto bg-hdl text-slate-900 shadow-[0_0_20px_rgba(245,158,11,0.4)] hover:bg-hdl hover:shadow-[0_0_30px_rgba(245,158,11,0.6)]"
-              onClick={() => scrollToSection("hdl-showcase")}
-            >
-              More info
-              <ChevronRight className="w-4 h-4" />
-            </Button>
+            <div className="flex gap-3 mt-auto">
+              <Button
+                className="flex-1 text-sm bg-hdl text-slate-900 shadow-[0_0_20px_rgba(245,158,11,0.4)] hover:bg-hdl hover:shadow-[0_0_30px_rgba(245,158,11,0.6)]"
+                onClick={() => scrollToSection("hdl-showcase")}
+              >
+                More
+                <ChevronRight className="w-4 h-4" />
+              </Button>
+              <Button
+                className="flex-1 text-sm bg-hdl text-slate-900 shadow-[0_0_20px_rgba(245,158,11,0.4)] hover:bg-hdl hover:shadow-[0_0_30px_rgba(245,158,11,0.6)]"
+                onClick={() => scrollToSection("hdl-showcase")}
+              >
+                Technical Details
+              </Button>
+            </div>
           </div>
         </div>
       </div>
