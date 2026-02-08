@@ -526,6 +526,204 @@ const EvoTechnology = () => (
   </section>
 );
 
+const EvoInnovation = () => (
+  <section className="py-16 md:py-24 bg-slate-900 border-t border-slate-800 relative overflow-hidden">
+    <div className="container mx-auto px-6">
+      <SectionHeading
+        subtitle="CORE DIFFERENTIATOR"
+        title="The Innovation: A New Mathematical Foundation"
+      />
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+        {/* Standard AI Side */}
+        <div className="space-y-8">
+          <h3 className="text-2xl font-bold text-slate-400">
+            Standard AI (Neural Networks)
+          </h3>
+
+          {/* Matrix Visual */}
+          <div className="relative bg-slate-950 border border-slate-800 rounded-xl p-6 font-mono text-xs text-slate-500 leading-relaxed overflow-hidden h-64 flex flex-col justify-center">
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-950/50 to-slate-950 pointer-events-none"></div>
+            <div className="opacity-40 select-none">
+              3.1415926535... 0.718281828... 2.718281828...
+              <br />
+              0.718281828... 2.718281828... 3.1415926535...
+              <br />
+              2.718281828... 3.1415926535... 0.718281828...
+              <br />
+              3.1415926535... 0.718281828... 2.718281828...
+              <br />
+              0.718281828... 2.718281828... 3.1415926535...
+              <br />
+              2.718281828... 3.1415926535... 0.718281828...
+              <br />
+              3.1415926535... 0.718281828... 2.718281828...
+              <br />
+              0.718281828... 2.718281828... 3.1415926535...
+              <br />
+              2.718281828... 3.1415926535... 0.718281828...
+              <br />
+            </div>
+            {/* Overlay Neural Net Graphic Suggestion */}
+            <div className="absolute right-4 top-1/2 -translate-y-1/2 opacity-20">
+              <Brain className="w-32 h-32" />
+            </div>
+          </div>
+
+          <ul className="space-y-4">
+            <li className="flex items-center gap-3 text-slate-300">
+              <span className="w-2 h-2 rounded-full bg-slate-500"></span>
+              Optimized for GPUs.
+            </li>
+            <li className="flex items-center gap-3 text-slate-300">
+              <span className="w-2 h-2 rounded-full bg-slate-500"></span>
+              Heavy Arithmetic Burden.
+            </li>
+            <li className="flex items-center gap-3 text-slate-300">
+              <span className="w-2 h-2 rounded-full bg-slate-500"></span>
+              The "Calculator" Approach.
+            </li>
+          </ul>
+        </div>
+
+        {/* Divider for Mobile/Desktop */}
+        <div className="hidden lg:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-px h-64 bg-gradient-to-b from-transparent via-slate-700 to-transparent"></div>
+
+        {/* AltiCore Side */}
+        <div className="space-y-8 relative">
+          <h3 className="text-2xl font-bold text-cyan-400">AltiCore Logic</h3>
+
+          {/* Logic Visual */}
+          <div className="relative bg-slate-950 border border-cyan-500/30 rounded-xl p-6 h-64 flex items-center justify-center shadow-[0_0_30px_rgba(6,182,212,0.1)]">
+            {/* Custom SVG for Logic Gates */}
+            <svg
+              viewBox="0 0 400 200"
+              className="w-full h-full text-cyan-400"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              {/* Inputs */}
+              <text
+                x="20"
+                y="50"
+                fill="currentColor"
+                stroke="none"
+                className="text-xs font-mono"
+              >
+                INPUT A
+              </text>
+              <text
+                x="20"
+                y="150"
+                fill="currentColor"
+                stroke="none"
+                className="text-xs font-mono"
+              >
+                INPUT B
+              </text>
+
+              {/* Wires - Left */}
+              <path
+                d="M 80 50 H 120"
+                stroke="currentColor"
+                className="opacity-50"
+              />
+              <path
+                d="M 80 150 H 120"
+                stroke="currentColor"
+                className="opacity-50"
+              />
+              <path
+                d="M 100 50 V 90 H 120"
+                stroke="currentColor"
+                className="opacity-50"
+              />
+              <path
+                d="M 100 150 V 110 H 120"
+                stroke="currentColor"
+                className="opacity-50"
+              />
+
+              {/* Gates */}
+              {/* Top Gate (AND-like) */}
+              <path
+                d="M 120 40 V 60 H 135 A 10 10 0 0 0 135 40 H 120"
+                fill="rgba(6,182,212,0.1)"
+              />
+              {/* Bottom Gate (AND-like) */}
+              <path
+                d="M 120 140 V 160 H 135 A 10 10 0 0 0 135 140 H 120"
+                fill="rgba(6,182,212,0.1)"
+              />
+              {/* Middle Gate (XOR-like) */}
+              <path
+                d="M 120 90 Q 125 100 120 110 M 125 90 Q 130 100 125 110 H 135 L 145 100 L 135 90 H 125"
+                fill="none"
+              />
+
+              {/* Middle Wires */}
+              <path d="M 155 50 H 180 V 75" stroke="currentColor" />
+              <path d="M 155 150 H 180 V 125" stroke="currentColor" />
+              <path d="M 145 100 H 200" stroke="currentColor" />
+
+              {/* Final Gate (OR-like) */}
+              <path
+                d="M 200 80 Q 210 100 200 120 H 220 L 240 100 L 220 80 H 200"
+                fill="rgba(6,182,212,0.2)"
+                stroke="currentColor"
+              />
+
+              {/* Output Wire */}
+              <path
+                d="M 240 100 H 280"
+                stroke="currentColor"
+                strokeWidth="3"
+                className="text-cyan-400"
+              />
+
+              {/* Output */}
+              <text
+                x="290"
+                y="105"
+                fill="currentColor"
+                stroke="none"
+                className="text-xs font-mono font-bold"
+              >
+                OUTPUT
+              </text>
+            </svg>
+          </div>
+
+          <ul className="space-y-4">
+            <li className="flex items-center gap-3 text-white font-medium">
+              <span className="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.8)]"></span>
+              Optimized for Compact Models.
+            </li>
+            <li className="flex items-center gap-3 text-white font-medium">
+              <span className="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.8)]"></span>
+              Hardware-Native Primitives (Logic & Shifts).
+            </li>
+            <li className="flex items-center gap-3 text-white font-medium">
+              <span className="w-2 h-2 rounded-full bg-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.8)]"></span>
+              No Matrix Multiplication.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Bottom Banner */}
+      <div className="mt-16 bg-gradient-to-r from-cyan-900/40 to-blue-900/40 border border-cyan-500/20 rounded-2xl p-8 text-center relative overflow-hidden">
+        <div className="absolute inset-0 bg-cyan-500/5 backdrop-blur-sm"></div>
+        <p className="relative z-10 text-lg md:text-xl text-white font-medium tracking-wide">
+          "We do not compress Neural Networks. We train directly in a unique{" "}
+          <span className="text-cyan-400 font-bold">logic-based format</span>."
+        </p>
+      </div>
+    </div>
+  </section>
+);
+
 const EvoProducts = ({
   onViewChange,
 }: {
@@ -3930,6 +4128,7 @@ const App = () => {
     <div className="min-h-screen bg-slate-900 text-slate-200">
       <EvoNavbar onViewChange={setCurrentView} />
       <EvoHero onViewChange={setCurrentView} />
+      <EvoInnovation />
       <EvoHeroVideos />
       <EvoPodcast />
       <EvoTechnology />
