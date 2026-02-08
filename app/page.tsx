@@ -436,10 +436,12 @@ const EvoTechnology = () => (
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch text-left">
         {/* Box 1: The AI Efficiency Wall */}
         <Card className="bg-slate-800/40 border-slate-700/50 hover:border-cyan-400/50 transition-all group h-full flex flex-col">
-          <Layers className="w-10 h-10 text-cyan-400 mb-6 transition-transform group-hover:scale-110" />
-          <h3 className="text-xl font-bold text-white mb-4 tracking-tight">
-            The AI Efficiency Wall
-          </h3>
+          <div className="flex items-center gap-4 mb-4">
+            <Layers className="w-10 h-10 text-cyan-400 transition-transform group-hover:scale-110" />
+            <h3 className="text-xl font-bold text-white tracking-tight">
+              The AI Efficiency Wall
+            </h3>
+          </div>
           <div className="space-y-4 grow justify-between flex flex-col">
             <p className="text-sm text-slate-300 leading-relaxed">
               <strong className="text-white">Problem:</strong> Scaling via
@@ -463,10 +465,12 @@ const EvoTechnology = () => (
 
         {/* Box 2: The AI Power Wall */}
         <Card className="bg-slate-800/40 border-slate-700/50 hover:border-cyan-400/50 transition-all group h-full flex flex-col">
-          <Zap className="w-10 h-10 text-cyan-400 mb-6 transition-transform group-hover:scale-110" />
-          <h3 className="text-xl font-bold text-white mb-4 tracking-tight">
-            The AI Power Wall
-          </h3>
+          <div className="flex items-center gap-4 mb-4">
+            <Zap className="w-10 h-10 text-cyan-400 transition-transform group-hover:scale-110" />
+            <h3 className="text-xl font-bold text-white tracking-tight">
+              The AI Power Wall
+            </h3>
+          </div>
           <div className="space-y-4 grow justify-between flex flex-col">
             <p className="text-sm text-slate-300 leading-relaxed">
               <strong className="text-white">Problem:</strong> Legacy matrix
@@ -489,10 +493,12 @@ const EvoTechnology = () => (
 
         {/* Box 3: White Box vs. Black Box */}
         <Card className="bg-slate-800/40 border-slate-700/50 hover:border-cyan-400/50 transition-all group h-full flex flex-col">
-          <ShieldCheck className="w-10 h-10 text-cyan-400 mb-6 transition-transform group-hover:scale-110" />
-          <h3 className="text-xl font-bold text-white mb-4 tracking-tight">
-            White Box vs. Black Box
-          </h3>
+          <div className="flex items-center gap-4 mb-4">
+            <ShieldCheck className="w-10 h-10 text-cyan-400 transition-transform group-hover:scale-110" />
+            <h3 className="text-xl font-bold text-white tracking-tight">
+              White Box vs. Black Box
+            </h3>
+          </div>
           <div className="space-y-4 grow justify-between flex flex-col">
             <p className="text-sm text-slate-300 leading-relaxed">
               <strong className="text-white">Problem:</strong> Probabilistic
@@ -1466,17 +1472,17 @@ const EvoHdlShowcase = () => (
         subtitle="Foundry BLUEPRINTS"
         title="AltiCoreHDL: Less transistor count - higher efficiency"
       />
+      <p className="text-lg text-slate-300 leading-relaxed mb-12 text-center max-w-5xl mx-auto">
+        Achieving equivalent accuracy to massive Neural Networks with{" "}
+        <span className="text-hdl font-bold font-mono tracking-tighter">
+          &lt;1% of the parameter count
+        </span>
+        . Our AltiCore technology reduces transistor count by up to 1000x
+        for native on-chip AI.
+      </p>
       <div className="grid lg:grid-cols-2 gap-12 mb-16">
         <div className="space-y-6">
           <h3 className="text-2xl font-bold text-hdl">Strategic Capability</h3>
-          <p className="text-lg text-slate-300 leading-relaxed">
-            Achieving equivalent accuracy to massive Neural Networks with{" "}
-            <span className="text-hdl font-bold font-mono tracking-tighter">
-              &lt;1% of the parameter count
-            </span>
-            . Our AltiCore technology reduces transistor count by up to 1000x
-            for native on-chip AI.
-          </p>
           <Card
             theme="alti"
             className="border-hdl/20 bg-hdl/5 hover:border-hdl/50 transition-all"
