@@ -2516,17 +2516,16 @@ const HowItWorksSection = () => (
 const SidePathBenchmarkSection = () => (
   <div id="sidepath-benchmark" className="space-y-12">
     <h3 className="text-2xl font-bold text-white border-l-4 border-cyan-500 pl-4 mb-4 font-mono uppercase ">
-      SidePath Benchmark: Efficiency Superiority{" "}
+      SidePath Results: Efficiency Superiority{" "}
       <span className="lowercase">w/o model quality compromise</span>
     </h3>
 
     <p className="text-slate-300 mb-8 leading-relaxed font-sans">
-      Independent benchmarking with SidePath confirms that AltiCore’s
-      logic-first architecture running on a standard laptop consistently
-      outperforms high-end server-class Neural Network configurations. EvoChip
-      AltiCore software (CPU-only) on a laptop outperforms neural network models
-      on server-class hardware by approximately 12× to 68× on evaluated subsets,
-      delivering same quality models.
+      A joint benchmarking initiative with SidePath confirms that AltiCoreSWP
+      (CPU-only) running on a standard laptop consistently outperforms highly
+      optimized neural network solutions on server-class hardware by
+      approximately 12x to 47x on evaluated subsets, delivering same quality
+      models.
     </p>
 
     {/* The Development Paradox */}
@@ -2543,7 +2542,7 @@ const SidePathBenchmarkSection = () => (
             ~100+ Years
           </p>
           <p className="text-md text-slate-300 font-sans leading-relaxed">
-            Reflects senior engineering effort (160k–240k hours) via Google
+            Reflects senior engineering effort (160k–240k hours) for Google
             TensorFlow libraries. Massive legacy overhead.
           </p>
         </div>
@@ -2605,8 +2604,8 @@ const SidePathBenchmarkSection = () => (
               Accuracy Parity
             </h4>
             <p className="text-md text-slate-300 leading-relaxed font-sans">
-              SidePath data confirms a slight accuracy advantage for AltiCore
-              despite running with orders of magnitude fewer resources.
+              Results confirms a slight accuracy advantage for AltiCore despite
+              running with orders of magnitude fewer resources.
             </p>
           </div>
         </div>
