@@ -1,28 +1,11 @@
-"use client";
-
 import React from "react";
-import { useRouter } from "next/navigation";
-import { Navbar } from "@/components/Navbar";
-import { EvoContactSection } from "@/components/sections/ContactSection";
-import { Footer } from "@/components/sections/Footer";
+import { ProductPageLayout } from "@/components/layouts/ProductPageLayout";
 import { McuShowcase } from "@/components/sections/McuShowcase";
 
 export default function McuTechnicalDetailsPage() {
-  const router = useRouter();
-
-  const handleViewChange = (view: string) => {
-    // Navigate to home page with the view
-    router.push("/");
-  };
-
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-200">
-      <Navbar onViewChange={handleViewChange} />
-
+    <ProductPageLayout>
       <McuShowcase />
-
-      <EvoContactSection />
-      <Footer />
-    </div>
+    </ProductPageLayout>
   );
 }

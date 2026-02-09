@@ -1,10 +1,5 @@
-"use client";
-
 import React from "react";
-import { useRouter } from "next/navigation";
-import Link from "next/link";
 import {
-  ArrowLeft,
   Cpu,
   Zap,
   Box,
@@ -13,59 +8,13 @@ import {
   Target,
   HardDrive,
   Clock,
-  ArrowRight,
 } from "lucide-react";
-import { Navbar } from "@/components/Navbar";
-import { EvoContactSection } from "@/components/sections/ContactSection";
-import { Footer } from "@/components/sections/Footer";
+import { ProductPageLayout } from "@/components/layouts/ProductPageLayout";
 import { HdlShowcase } from "@/components/sections/HdlShowcase";
 
-interface HeroSectionProps {
-  title: string;
-  subtitle: string;
-  icon: React.ElementType;
-  color?: string;
-}
-
-const HeroSection = ({
-  title,
-  subtitle,
-  icon: Icon,
-  color = "orange",
-}: HeroSectionProps) => (
-  <div className="relative py-24 overflow-hidden border-b border-slate-900">
-    <div className="absolute top-0 right-0 -z-10 w-1/3 h-full bg-hdl/5 blur-[120px] rounded-full"></div>
-    <div className="max-w-7xl mx-auto px-6">
-      <div className="flex items-center space-x-3 mb-6">
-        <Icon className={`h-8 w-8 text-${color}`} />
-        <span
-          className={`text-sm font-black text-${color} uppercase tracking-[0.2em]`}
-        >
-          Product Profile
-        </span>
-      </div>
-      <h1 className="text-6xl md:text-8xl font-black text-white mb-8 tracking-tighter italic uppercase">
-        {title}
-      </h1>
-      <p className="text-xl text-slate-400 max-w-3xl leading-relaxed border-l-4 border-hdl pl-8">
-        {subtitle}
-      </p>
-    </div>
-  </div>
-);
-
 export default function HdlTechnicalDetailsPage() {
-  const router = useRouter();
-
-  const handleViewChange = (view: string) => {
-    // Navigate to home page with the view
-    router.push("/");
-  };
-
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-200">
-      <Navbar onViewChange={handleViewChange} />
-
+    <ProductPageLayout>
       <HdlShowcase />
 
       {/* Main Content */}
@@ -406,9 +355,6 @@ export default function HdlTechnicalDetailsPage() {
           </section>
         </div>
       </main>
-
-      <EvoContactSection />
-      <Footer />
-    </div>
+    </ProductPageLayout>
   );
 }
