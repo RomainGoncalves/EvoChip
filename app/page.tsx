@@ -17,6 +17,7 @@ import {
   Layers,
   Code,
   ChevronRight,
+  ChevronDown,
   Target,
   Lock,
   FileText,
@@ -73,135 +74,9 @@ import {
   insightsData,
   InsightsPage,
 } from "@/components/sections/Insights";
+import { Navbar } from "@/components/Navbar";
 
 // --- EVO CHIP SITE COMPONENTS (Corporate - PROTECTED) ---
-const EvoNavbar = ({
-  onViewChange,
-}: {
-  onViewChange: (view: string) => void;
-}) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const navLinks = [
-    { name: "Technology", href: "#technology" },
-    { name: "Products", href: "#products" },
-    { name: "About", href: "#about" },
-    { name: "Insights", href: "#insights" },
-    { name: "Contact", href: "#contact-evo" },
-  ];
-
-  const handleNavClick = (href: string) => {
-    setIsOpen(false);
-    if (href.startsWith("#")) {
-      const element = document.querySelector(href);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-    }
-  };
-
-  return (
-    <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-slate-900/95 backdrop-blur-md shadow-lg py-4"
-          : "bg-transparent py-6"
-      }`}
-    >
-      <div className="container mx-auto px-6 flex justify-between items-center">
-        <div
-          className="flex items-center gap-2 cursor-pointer"
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        >
-          <Logo size="md" />
-        </div>
-        <div className="hidden lg:flex items-center gap-6">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              onClick={(e) => {
-                e.preventDefault();
-                handleNavClick(link.href);
-
-                if (link.href === "#insights") {
-                  onViewChange("insights");
-                } else {
-                  onViewChange("evochip");
-                }
-              }}
-              className="text-slate-300 hover:text-cyan-400 transition-colors text-sm font-medium uppercase tracking-wide"
-            >
-              {link.name}
-            </a>
-          ))}
-          {/* <div className="h-6 w-px bg-slate-700 mx-2"></div> */}
-          {/* <Button
-            variant="outline"
-            className="py-2 px-4 text-xs"
-            onClick={() => onViewChange("alticore_home")}
-          >
-            Visit AltiCore
-          </Button> */}
-        </div>
-        <button
-          className="lg:hidden text-white"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X /> : <Menu />}
-        </button>
-      </div>
-      {isOpen && (
-        <div className="lg:hidden absolute top-full left-0 w-full bg-slate-900 border-t border-slate-800 p-6 flex flex-col gap-4 shadow-xl">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              onClick={(e) => {
-                e.preventDefault();
-                handleNavClick(link.href);
-
-                if (link.href === "#insights") {
-                  onViewChange("insights");
-                } else {
-                  onViewChange("evochip");
-                }
-              }}
-              className="text-slate-300 hover:text-cyan-400 text-lg"
-            >
-              {link.name}
-            </a>
-          ))}
-          <Button
-            variant="primary"
-            onClick={() => {
-              setIsOpen(false);
-              onViewChange("investor");
-            }}
-          >
-            <Lock className="w-4 h-4" /> Investor Portal
-          </Button>
-          {/* <Button
-            variant="outline"
-            onClick={() => {
-              setIsOpen(false);
-              onViewChange("alticore_home");
-            }}
-          >
-            Visit AltiCore
-          </Button> */}
-        </div>
-      )}
-    </nav>
-  );
-};
 
 const EvoHero = ({
   onViewChange,
@@ -4248,7 +4123,7 @@ const App = () => {
 
     return (
       <div className="min-h-screen bg-slate-900 text-slate-200">
-        <EvoNavbar onViewChange={setCurrentView} />
+        <Navbar onViewChange={setCurrentView} />
         {content}
         <section className="py-12 bg-slate-950 border-t border-slate-800 text-center font-sans">
           <a
@@ -4349,7 +4224,7 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-slate-900 text-slate-200">
-      <EvoNavbar onViewChange={setCurrentView} />
+      <Navbar onViewChange={setCurrentView} />
       <EvoHero onViewChange={setCurrentView} />
       <EvoHeroVideos />
       <EvoPodcast />
