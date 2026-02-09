@@ -105,7 +105,7 @@ const EvoHero = ({
           <p className="text-xl text-slate-300 mb-10 leading-relaxed max-w-2xl">
             EvoChip is the IP holding company for AltiCore, replacing legacy,
             power-hungry Neural Networks with patented 'Logic-First'
-            mathematical framwork to solve the fundamental scaling limits of
+            mathematical framework to solve the fundamental scaling limits of
             global AI and deliver up to 1000x efficiency gains.
           </p>
 
@@ -953,9 +953,7 @@ const EvoProducts = ({
                 <ChevronRight className="w-4 h-4" />
               </Button>
               <Link href="/hdl-technical-details">
-                <Button
-                  className="flex-1 text-sm bg-hdl text-slate-900 shadow-[0_0_20px_rgba(245,158,11,0.4)] hover:bg-hdl hover:shadow-[0_0_30px_rgba(245,158,11,0.6)] w-full"
-                >
+                <Button className="flex-1 text-sm bg-hdl text-slate-900 shadow-[0_0_20px_rgba(245,158,11,0.4)] hover:bg-hdl hover:shadow-[0_0_30px_rgba(245,158,11,0.6)] w-full">
                   Technical Details
                 </Button>
               </Link>
@@ -1353,8 +1351,8 @@ const EvoHdlShowcase = () => (
         <span className="text-hdl font-bold font-mono tracking-tighter">
           &lt;1% of the parameter count
         </span>
-        . Our AltiCore technology reduces transistor count by up to 1000x
-        for native on-chip AI.
+        . Our AltiCore technology reduces transistor count by up to 1000x for
+        native on-chip AI.
       </p>
       <div className="grid lg:grid-cols-2 gap-12 mb-16">
         <div className="space-y-6">
