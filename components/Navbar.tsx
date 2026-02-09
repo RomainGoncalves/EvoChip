@@ -55,7 +55,7 @@ export const Navbar = ({ onViewChange }: NavbarProps) => {
     {
       name: "AltiCoreMCU",
       tag: "Embedded & IoT",
-      href: "/hdl-technical-details",
+      href: "/mcu-technical-details",
       icon: Microchip,
       color: "text-blue-400",
       hoverColor: "hover:bg-blue-400/10",
@@ -97,12 +97,9 @@ export const Navbar = ({ onViewChange }: NavbarProps) => {
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <div
-          className="flex items-center gap-2 cursor-pointer"
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        >
+        <Link href="/" className="flex items-center gap-2">
           <Logo size="md" />
-        </div>
+        </Link>
         <div className="hidden lg:flex items-center gap-6">
           {navLinks.map((link) => {
             if (link.name === "Products") {
