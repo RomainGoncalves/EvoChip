@@ -12,7 +12,37 @@ import {
   Target,
   HardDrive,
   Clock,
+  ArrowRight,
 } from "lucide-react";
+
+interface HeroSectionProps {
+  title: string;
+  subtitle: string;
+  icon: React.ElementType;
+  color?: string;
+}
+
+const HeroSection = ({ title, subtitle, icon: Icon, color = "orange" }: HeroSectionProps) => (
+  <div className="relative py-24 overflow-hidden border-b border-slate-900">
+    <div className="absolute top-0 right-0 -z-10 w-1/3 h-full bg-hdl/5 blur-[120px] rounded-full"></div>
+    <div className="max-w-7xl mx-auto px-6">
+      <div className="flex items-center space-x-3 mb-6">
+        <Icon className={`h-8 w-8 text-${color}`} />
+        <span
+          className={`text-sm font-black text-${color} uppercase tracking-[0.2em]`}
+        >
+          Product Profile
+        </span>
+      </div>
+      <h1 className="text-6xl md:text-8xl font-black text-white mb-8 tracking-tighter italic uppercase">
+        {title}
+      </h1>
+      <p className="text-xl text-slate-400 max-w-3xl leading-relaxed border-l-4 border-hdl pl-8">
+        {subtitle}
+      </p>
+    </div>
+  </div>
+);
 
 export default function HdlTechnicalDetailsPage() {
   return (
@@ -31,22 +61,83 @@ export default function HdlTechnicalDetailsPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-b from-slate-900 to-slate-950 border-b border-slate-800">
-        <div className="container mx-auto px-6 text-center">
-          <div className="inline-flex mb-6 px-3 py-1 bg-amber-900/30 border border-hdl/30 rounded text-xs font-mono text-hdl uppercase font-bold">
-            Foundry Blueprints
-          </div>
-          <h1 className="text-4xl md:text-6xl font-black text-hdl mb-6 tracking-tight">
-            AltiCoreHDL Technical Details
-          </h1>
-          <p className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
-            Production-Ready Pathway to Silicon for Intelligent Systems
-          </p>
-        </div>
-      </section>
+      <HeroSection
+        title="AltiCoreHDL"
+        subtitle="Direct pathway to production silicon. Hardware-native logic primitives for deterministic, fixed-latency execution in FPGA and ASIC."
+        icon={Cpu}
+        color="hdl"
+      />
 
       {/* Main Content */}
       <main className="container mx-auto px-6 py-16 max-w-5xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-20">
+          {[
+            { label: "Silicon Cycles", val: "100", sub: "FIXED LATENCY" },
+            { label: "Throughput", val: "1", sub: "INF PER CLK" },
+            { label: "Arithmetic", val: "INTEGER", sub: "ONLY LOGIC" },
+            { label: "Gate Count", val: "MINIMAL", sub: "FOOTPRINT" },
+          ].map((s, i) => (
+            <div
+              key={i}
+              className="bg-slate-900 border-l-4 border-hdl p-6 rounded-r-xl"
+            >
+              <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest">
+                {s.label}
+              </p>
+              <p className="text-4xl font-black text-white italic my-1">
+                {s.val}
+              </p>
+              <p className="text-[10px] font-black text-hdl uppercase">
+                {s.sub}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <div className="bg-slate-900 p-12 rounded-3xl border border-slate-800 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <h3 className="text-3xl font-black text-white mb-6 italic tracking-tighter">
+              Hardware Primitives vs Arithmetic
+            </h3>
+            <p className="text-slate-400 mb-8 leading-relaxed">
+              Standard AI relies on heavy floating-point tensors that require
+              expensive FPUs or GPUs. AltiCoreHDL replaces this computational
+              burden with native logic-level operations.
+            </p>
+            <ul className="space-y-4">
+              <li className="flex items-center text-slate-300 font-bold uppercase text-xs">
+                <ArrowRight className="text-orange-500 mr-3 h-4 w-4" /> No FPU
+                Dependency
+              </li>
+              <li className="flex items-center text-slate-300 font-bold uppercase text-xs">
+                <ArrowRight className="text-orange-500 mr-3 h-4 w-4" />{" "}
+                Arbitrary Word Lengths
+              </li>
+              <li className="flex items-center text-slate-300 font-bold uppercase text-xs">
+                <ArrowRight className="text-orange-500 mr-3 h-4 w-4" /> Native
+                Bitwise Operations
+              </li>
+            </ul>
+          </div>
+          <div className="relative h-64 bg-slate-950 border border-slate-800 rounded-2xl flex items-center justify-center">
+            <div className="grid grid-cols-4 gap-2">
+              {[...Array(16)].map((_, i) => (
+                <div
+                  key={i}
+                  className="w-8 h-8 border border-orange-500/20 rounded flex items-center justify-center"
+                >
+                  <div
+                    className={`w-2 h-2 rounded-full ${i % 3 === 0 ? "bg-orange-500 animate-pulse" : "bg-slate-800"}`}
+                  ></div>
+                </div>
+              ))}
+            </div>
+            <div className="absolute bottom-4 right-4 text-[10px] font-mono text-slate-600">
+              IP_CORE_V1.2_SYNC
+            </div>
+          </div>
+        </div>
+
         <div className="space-y-16">
           {/* Summary */}
           <section>
@@ -84,9 +175,9 @@ export default function HdlTechnicalDetailsPage() {
                   AltiCoreHDL delivers production-ready IP cores designed for
                   direct integration into FPGAs, ASICs, and SoCs. This
                   architecture is optimized for minimal gate counts by utilizing
-                  a mathematically distinct inference architecture that leverages
-                  hardware-native primitives rather than heavy arithmetic
-                  operations.
+                  a mathematically distinct inference architecture that
+                  leverages hardware-native primitives rather than heavy
+                  arithmetic operations.
                 </p>
               </div>
 
@@ -147,8 +238,9 @@ export default function HdlTechnicalDetailsPage() {
                   Computational Efficiency
                 </h3>
                 <p className="text-slate-300 leading-relaxed mb-4">
-                  The architecture eliminates the need for expensive "calculator"
-                  components like GPUs or specialized floating-point units by:
+                  The architecture eliminates the need for expensive
+                  "calculator" components like GPUs or specialized
+                  floating-point units by:
                 </p>
                 <ul className="space-y-3 text-slate-300">
                   <li className="flex items-start gap-3 pl-4">
@@ -177,9 +269,10 @@ export default function HdlTechnicalDetailsPage() {
                   <li className="flex items-start gap-3 pl-4">
                     <span className="text-hdl font-bold mt-1">▸</span>
                     <span>
-                      Building on fundamental binary logic and bitwise operations,
-                      eliminating the computational burden of translating standard
-                      mathematics into heavy floating-point tensors
+                      Building on fundamental binary logic and bitwise
+                      operations, eliminating the computational burden of
+                      translating standard mathematics into heavy floating-point
+                      tensors
                     </span>
                   </li>
                 </ul>
@@ -200,8 +293,8 @@ export default function HdlTechnicalDetailsPage() {
                   Minimalist Architecture
                 </h3>
                 <p className="text-slate-300 leading-relaxed mb-4">
-                  AltiCoreHDL leverages the core AltiCore advantage of doing more
-                  with less through:
+                  AltiCoreHDL leverages the core AltiCore advantage of doing
+                  more with less through:
                 </p>
                 <ul className="space-y-3 text-slate-300">
                   <li className="flex items-start gap-3 pl-4">
@@ -259,10 +352,11 @@ export default function HdlTechnicalDetailsPage() {
                   Hardware-Level Training
                 </h3>
                 <p className="text-slate-300 leading-relaxed">
-                  AltiCoreHDL supports both hardware-level inference and training,
-                  allowing for local model adaptation directly within the logic
-                  core. This capability extends the system's flexibility beyond
-                  traditional inference-only hardware implementations.
+                  AltiCoreHDL supports both hardware-level inference and
+                  training, allowing for local model adaptation directly within
+                  the logic core. This capability extends the system's
+                  flexibility beyond traditional inference-only hardware
+                  implementations.
                 </p>
               </div>
 
@@ -272,11 +366,11 @@ export default function HdlTechnicalDetailsPage() {
                 </h3>
                 <p className="text-slate-300 leading-relaxed">
                   The architecture is optimized for always-on monitoring
-                  applications, where the core can run continuously with a minimal
-                  energy and thermal footprint. This enables the system to wake
-                  heavier system components only when real events are detected,
-                  making it ideal for battery-powered and energy-constrained
-                  deployments.
+                  applications, where the core can run continuously with a
+                  minimal energy and thermal footprint. This enables the system
+                  to wake heavier system components only when real events are
+                  detected, making it ideal for battery-powered and
+                  energy-constrained deployments.
                 </p>
               </div>
             </div>
@@ -294,16 +388,17 @@ export default function HdlTechnicalDetailsPage() {
                 Cross-Platform Continuity
               </h3>
               <p className="text-slate-300 leading-relaxed mb-4">
-                AltiCoreHDL uses the same mathematical framework and parameters as
-                the software (SWP) and MCU versions, ensuring that a model
-                developed in software maps identically to a fixed-latency hardware
-                core. This ecosystem continuity provides:
+                AltiCoreHDL uses the same mathematical framework and parameters
+                as the software (SWP) and MCU versions, ensuring that a model
+                developed in software maps identically to a fixed-latency
+                hardware core. This ecosystem continuity provides:
               </p>
               <ul className="space-y-3 text-slate-300">
                 <li className="flex items-start gap-3 pl-4">
                   <span className="text-hdl font-bold mt-1">▸</span>
                   <span>
-                    Seamless migration from software prototypes to custom hardware
+                    Seamless migration from software prototypes to custom
+                    hardware
                   </span>
                 </li>
                 <li className="flex items-start gap-3 pl-4">
@@ -316,10 +411,10 @@ export default function HdlTechnicalDetailsPage() {
                 <li className="flex items-start gap-3 pl-4">
                   <span className="text-hdl font-bold mt-1">▸</span>
                   <span>
-                    Direct pathway to production silicon, allowing the same static
-                    execution schedule and model parameters to migrate seamlessly
-                    from off-the-shelf FPGAs to semi-custom or fully custom ASIC
-                    designs
+                    Direct pathway to production silicon, allowing the same
+                    static execution schedule and model parameters to migrate
+                    seamlessly from off-the-shelf FPGAs to semi-custom or fully
+                    custom ASIC designs
                   </span>
                 </li>
               </ul>
@@ -388,11 +483,11 @@ export default function HdlTechnicalDetailsPage() {
                 demand predictability, efficiency, and certifiability.
               </p>
               <p>
-                The combination of extreme performance, structural simplicity, and
-                ecosystem continuity positions AltiCoreHDL as the optimal solution
-                for organizations seeking to deploy AI intelligence in hardware
-                while maintaining the development velocity and flexibility of
-                software-based approaches.
+                The combination of extreme performance, structural simplicity,
+                and ecosystem continuity positions AltiCoreHDL as the optimal
+                solution for organizations seeking to deploy AI intelligence in
+                hardware while maintaining the development velocity and
+                flexibility of software-based approaches.
               </p>
             </div>
           </section>
