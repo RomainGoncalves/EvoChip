@@ -14,6 +14,7 @@ import {
   Clock,
   ArrowRight,
 } from "lucide-react";
+import { EvoHdlShowcase } from "../page";
 
 interface HeroSectionProps {
   title: string;
@@ -22,7 +23,12 @@ interface HeroSectionProps {
   color?: string;
 }
 
-const HeroSection = ({ title, subtitle, icon: Icon, color = "orange" }: HeroSectionProps) => (
+const HeroSection = ({
+  title,
+  subtitle,
+  icon: Icon,
+  color = "orange",
+}: HeroSectionProps) => (
   <div className="relative py-24 overflow-hidden border-b border-slate-900">
     <div className="absolute top-0 right-0 -z-10 w-1/3 h-full bg-hdl/5 blur-[120px] rounded-full"></div>
     <div className="max-w-7xl mx-auto px-6">
@@ -60,84 +66,10 @@ export default function HdlTechnicalDetailsPage() {
         </div>
       </header>
 
-      {/* Hero Section */}
-      <HeroSection
-        title="AltiCoreHDL"
-        subtitle="Direct pathway to production silicon. Hardware-native logic primitives for deterministic, fixed-latency execution in FPGA and ASIC."
-        icon={Cpu}
-        color="hdl"
-      />
+      <EvoHdlShowcase />
 
       {/* Main Content */}
       <main className="container mx-auto px-6 py-16 max-w-5xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-20">
-          {[
-            { label: "Silicon Cycles", val: "100", sub: "FIXED LATENCY" },
-            { label: "Throughput", val: "1", sub: "INF PER CLK" },
-            { label: "Arithmetic", val: "INTEGER", sub: "ONLY LOGIC" },
-            { label: "Gate Count", val: "MINIMAL", sub: "FOOTPRINT" },
-          ].map((s, i) => (
-            <div
-              key={i}
-              className="bg-slate-900 border-l-4 border-hdl p-6 rounded-r-xl"
-            >
-              <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest">
-                {s.label}
-              </p>
-              <p className="text-4xl font-black text-white italic my-1">
-                {s.val}
-              </p>
-              <p className="text-[10px] font-black text-hdl uppercase">
-                {s.sub}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        <div className="bg-slate-900 p-12 rounded-3xl border border-slate-800 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <h3 className="text-3xl font-black text-white mb-6 italic tracking-tighter">
-              Hardware Primitives vs Arithmetic
-            </h3>
-            <p className="text-slate-400 mb-8 leading-relaxed">
-              Standard AI relies on heavy floating-point tensors that require
-              expensive FPUs or GPUs. AltiCoreHDL replaces this computational
-              burden with native logic-level operations.
-            </p>
-            <ul className="space-y-4">
-              <li className="flex items-center text-slate-300 font-bold uppercase text-xs">
-                <ArrowRight className="text-orange-500 mr-3 h-4 w-4" /> No FPU
-                Dependency
-              </li>
-              <li className="flex items-center text-slate-300 font-bold uppercase text-xs">
-                <ArrowRight className="text-orange-500 mr-3 h-4 w-4" />{" "}
-                Arbitrary Word Lengths
-              </li>
-              <li className="flex items-center text-slate-300 font-bold uppercase text-xs">
-                <ArrowRight className="text-orange-500 mr-3 h-4 w-4" /> Native
-                Bitwise Operations
-              </li>
-            </ul>
-          </div>
-          <div className="relative h-64 bg-slate-950 border border-slate-800 rounded-2xl flex items-center justify-center">
-            <div className="grid grid-cols-4 gap-2">
-              {[...Array(16)].map((_, i) => (
-                <div
-                  key={i}
-                  className="w-8 h-8 border border-orange-500/20 rounded flex items-center justify-center"
-                >
-                  <div
-                    className={`w-2 h-2 rounded-full ${i % 3 === 0 ? "bg-orange-500 animate-pulse" : "bg-slate-800"}`}
-                  ></div>
-                </div>
-              ))}
-            </div>
-            <div className="absolute bottom-4 right-4 text-[10px] font-mono text-slate-600">
-              IP_CORE_V1.2_SYNC
-            </div>
-          </div>
-        </div>
-
         <div className="space-y-16">
           {/* Summary */}
           <section>

@@ -1346,6 +1346,10 @@ const EvoHdlShowcase = () => (
         subtitle="Foundry BLUEPRINTS"
         title="AltiCoreHDL: Less transistor count - higher efficiency"
       />
+      <p className="text-lg text-slate-300 leading-relaxed mb-6 text-center max-w-5xl mx-auto">
+        Direct pathway to production silicon. Hardware-native logic primitives
+        for deterministic, fixed-latency execution in FPGA and ASIC.
+      </p>
       <p className="text-lg text-slate-300 leading-relaxed mb-12 text-center max-w-5xl mx-auto">
         Achieving equivalent accuracy to massive Neural Networks with{" "}
         <span className="text-hdl font-bold font-mono tracking-tighter">
@@ -1354,6 +1358,27 @@ const EvoHdlShowcase = () => (
         . Our AltiCore technology reduces transistor count by up to 1000x for
         native on-chip AI.
       </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-20">
+        {[
+          { label: "Silicon Cycles", val: "100", sub: "FIXED LATENCY" },
+          { label: "Throughput", val: "1", sub: "INF PER CLK" },
+          { label: "Arithmetic", val: "INTEGER", sub: "ONLY LOGIC" },
+          { label: "Gate Count", val: "MINIMAL", sub: "FOOTPRINT" },
+        ].map((s, i) => (
+          <div
+            key={i}
+            className="bg-slate-900 border-l-4 border-hdl p-6 rounded-r-xl"
+          >
+            <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest">
+              {s.label}
+            </p>
+            <p className="text-4xl font-black text-white italic my-1">
+              {s.val}
+            </p>
+            <p className="text-[10px] font-black text-hdl uppercase">{s.sub}</p>
+          </div>
+        ))}
+      </div>
       <div className="grid lg:grid-cols-2 gap-12 mb-16">
         <div className="space-y-6">
           <h3 className="text-2xl font-bold text-hdl">Strategic Capability</h3>
@@ -1369,7 +1394,7 @@ const EvoHdlShowcase = () => (
               Designed for high-throughput and safety critical applications,
               AltiCoreHDL replaces heavy arithmetic with hardware native
               primitives and logic-level operations to achieve deterministic,
-              fixed latency-execution. Fullu pipelined core delivering one
+              fixed latency-execution. Fully pipelined core delivering one
               inference per clock cycle (latency ≈100 clock Cycles), offering
               high performance for intelligence that remains consistent scaling
               from prototypes to custom hardware
@@ -4231,7 +4256,7 @@ const App = () => {
       <EvoProducts onViewChange={setCurrentView} />
       <EvoMcuShowcase />
       <EvoSwShowcase />
-      <EvoHdlShowcase />
+      {/* <EvoHdlShowcase /> */}
       <EvoAbout />
       <EvoContactSection />
       <section className="py-12 bg-slate-950 border-t border-slate-800 text-center font-sans">
@@ -4273,5 +4298,7 @@ const App = () => {
     </div>
   );
 };
+
+export { EvoHdlShowcase };
 
 export default App;
