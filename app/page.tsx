@@ -1358,7 +1358,7 @@ const EvoHdlShowcase = () => (
         . Our AltiCore technology reduces transistor count by up to 1000x for
         native on-chip AI.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-20 max-w-5xl mx-auto">
         {[
           { label: "Throughput", val: "1", sub: "Inference Per Clock Cycle" },
           { label: "Fixed Latency", val: "~100", sub: "Clock Cycles" },
@@ -1381,28 +1381,34 @@ const EvoHdlShowcase = () => (
           </div>
         ))}
       </div>
+
+      {/* Full Width Card */}
+      <div className="mb-12">
+        <h3 className="text-2xl font-bold text-hdl mb-6">
+          Strategic Capability
+        </h3>
+        <Card
+          theme="alti"
+          className="border-hdl/20 bg-hdl/5 hover:border-hdl/50 transition-all"
+        >
+          <h4 className="text-white font-bold mb-2 flex items-center gap-2">
+            <Activity className="w-5 h-5 text-hdl" /> Hardware Integrated
+            Intelligence
+          </h4>
+          <p className="text-md text-slate-300 leading-relaxed">
+            Designed for high-throughput and safety critical applications,
+            AltiCoreHDL replaces heavy arithmetic with hardware native
+            primitives and logic-level operations to achieve deterministic,
+            fixed latency-execution. Fully pipelined core delivering one
+            inference per clock cycle (latency ≈100 clock Cycles), offering high
+            performance for intelligence that remains consistent scaling from
+            prototypes to custom hardware
+          </p>
+        </Card>
+      </div>
+
       <div className="grid lg:grid-cols-2 gap-12 mb-16">
         <div className="space-y-6">
-          <h3 className="text-2xl font-bold text-hdl">Strategic Capability</h3>
-          <Card
-            theme="alti"
-            className="border-hdl/20 bg-hdl/5 hover:border-hdl/50 transition-all"
-          >
-            <h4 className="text-white font-bold mb-2 flex items-center gap-2">
-              <Activity className="w-5 h-5 text-hdl" /> Hardware Integrated
-              Intelligence
-            </h4>
-            <p className="text-md text-slate-300 leading-relaxed">
-              Designed for high-throughput and safety critical applications,
-              AltiCoreHDL replaces heavy arithmetic with hardware native
-              primitives and logic-level operations to achieve deterministic,
-              fixed latency-execution. Fully pipelined core delivering one
-              inference per clock cycle (latency ≈100 clock Cycles), offering
-              high performance for intelligence that remains consistent scaling
-              from prototypes to custom hardware
-            </p>
-          </Card>
-
           <Card
             theme="alti"
             className="border-hdl/20 bg-hdl/5 hover:border-hdl/50 transition-all"
@@ -1464,14 +1470,14 @@ const EvoHdlShowcase = () => (
               <li className="flex items-start gap-2">
                 <span className="text-hdl mt-1">•</span>
                 <span>
-                  No “Calculator” overhead: No floating-point math and massive
+                  No "Calculator" overhead: No floating-point math and massive
                   matrix multiplications
                 </span>
               </li>
             </ul>
           </Card>
         </div>
-        <div className="flex items-center justify-center">
+        <div className="flex justify-center">
           <Card
             theme="alti"
             className="border-hdl/20 bg-hdl/5 hover:border-hdl/50 transition-all"
