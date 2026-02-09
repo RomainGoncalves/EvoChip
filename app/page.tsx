@@ -1360,22 +1360,24 @@ const EvoHdlShowcase = () => (
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-20">
         {[
-          { label: "Silicon Cycles", val: "100", sub: "FIXED LATENCY" },
-          { label: "Throughput", val: "1", sub: "INF PER CLK" },
-          { label: "Arithmetic", val: "INTEGER", sub: "ONLY LOGIC" },
-          { label: "Gate Count", val: "MINIMAL", sub: "FOOTPRINT" },
+          { label: "Throughput", val: "1", sub: "Inference Per Clock Cycle" },
+          { label: "Fixed Latency", val: "~100", sub: "Clock Cycles" },
+          { label: "Arithmetic", val: "Integer", sub: "Only Logic" },
+          { label: "Footprint", val: "Minimal", sub: "Gate Count" },
         ].map((s, i) => (
           <div
             key={i}
-            className="bg-slate-900 border-l-4 border-hdl p-6 rounded-r-xl"
+            className="bg-slate-800  border-l-4 border-hdl p-6 rounded-r-xl"
           >
-            <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest">
+            <p className="text-[10px] font-black text-hdl  uppercase tracking-widest">
               {s.label}
             </p>
-            <p className="text-4xl font-black text-white italic my-1">
+            <p className="text-2xl font-black text-white italic my-1">
               {s.val}
             </p>
-            <p className="text-[10px] font-black text-hdl uppercase">{s.sub}</p>
+            <p className="text-[10px] font-black text-slate-500 uppercase">
+              {s.sub}
+            </p>
           </div>
         ))}
       </div>

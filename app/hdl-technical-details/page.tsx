@@ -71,25 +71,6 @@ export default function HdlTechnicalDetailsPage() {
       {/* Main Content */}
       <main className="container mx-auto px-6 py-16 max-w-5xl">
         <div className="space-y-16">
-          {/* Summary */}
-          <section>
-            <h2 className="text-3xl font-bold text-white mb-6 pb-3 border-b border-slate-800">
-              Summary
-            </h2>
-            <p className="text-lg text-slate-300 leading-relaxed">
-              AltiCoreHDL provides a direct pathway to production silicon by
-              mapping models trained within the AltiCore mathematical framework
-              directly into FPGA and ASIC logic. Designed for high-throughput
-              and safety-critical applications, it replaces heavy arithmetic
-              with hardware-native primitives and logic-level operations to
-              achieve deterministic, fixed-latency execution. A fully pipelined
-              core can deliver one inference per clock cycle with a latency of
-              approximately 100 clock cycles, offering a high-performance
-              destination for intelligence that remains consistent as you scale
-              from software prototypes to custom hardware.
-            </p>
-          </section>
-
           {/* Core Technical Architecture */}
           <section>
             <h2 className="text-3xl font-bold text-hdl mb-8 flex items-center gap-3">
