@@ -63,7 +63,7 @@ export const Navbar = ({ onViewChange }: NavbarProps) => {
     {
       name: "AltiCoreSWP",
       tag: "FPGA & ASIC",
-      href: "/hdl-technical-details",
+      href: "/swp-technical-details",
       icon: Server,
       color: "text-teal-400",
       hoverColor: "hover:bg-teal-400/10",

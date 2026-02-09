@@ -77,7 +77,6 @@ import {
 import { EvoContactSection } from "@/components/sections/ContactSection";
 import { Footer } from "@/components/sections/Footer";
 import { Navbar } from "@/components/Navbar";
-import { SwShowcase } from "@/components/sections/SwShowcase";
 
 // --- EVO CHIP SITE COMPONENTS (Corporate - PROTECTED) ---
 
@@ -889,19 +888,11 @@ const EvoProducts = ({
               ))}
             </div>
             <div className="flex gap-3 mt-auto">
-              <Button
-                className="flex-1 text-sm bg-sw text-slate-900 shadow-[0_0_20px_rgba(45,212,191,0.4)] hover:bg-sw-dark hover:shadow-[0_0_30px_rgba(45,212,191,0.6)]"
-                onClick={() => scrollToSection("sw-showcase")}
-              >
-                More
-                <ChevronRight className="w-4 h-4" />
-              </Button>
-              <Button
-                className="flex-1 text-sm bg-sw text-slate-900 shadow-[0_0_20px_rgba(45,212,191,0.4)] hover:bg-sw-dark hover:shadow-[0_0_30px_rgba(45,212,191,0.6)]"
-                onClick={() => scrollToSection("sw-showcase")}
-              >
-                Technical Details
-              </Button>
+              <Link href="/swp-technical-details" className="w-full">
+                <Button className="w-full text-sm bg-sw text-slate-900 shadow-[0_0_20px_rgba(45,212,191,0.4)] hover:bg-sw-dark hover:shadow-[0_0_30px_rgba(45,212,191,0.6)]">
+                  Technical Details
+                </Button>
+              </Link>
             </div>
           </div>
 
@@ -3569,7 +3560,6 @@ const App = () => {
       <EvoInnovation />
       <EvoTechnology />
       <EvoProducts onViewChange={setCurrentView} />
-      <SwShowcase />
       {/* <HdlShowcase /> */}
       <EvoAbout />
       <EvoContactSection />
