@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import {
   ArrowLeft,
@@ -15,6 +16,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { EvoHdlShowcase } from "../page";
+import { Navbar } from "@/components/Navbar";
 
 interface HeroSectionProps {
   title: string;
@@ -51,20 +53,16 @@ const HeroSection = ({
 );
 
 export default function HdlTechnicalDetailsPage() {
+  const router = useRouter();
+
+  const handleViewChange = (view: string) => {
+    // Navigate to home page with the view
+    router.push("/");
+  };
+
   return (
     <div className="min-h-screen bg-slate-950 text-slate-200">
-      {/* Header */}
-      <header className="sticky top-0 z-40 bg-slate-900/95 backdrop-blur-sm border-b border-slate-800">
-        <div className="container mx-auto px-6 py-4">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 text-slate-400 hover:text-hdl transition-colors group"
-          >
-            <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
-            <span className="font-medium">Back to Home</span>
-          </Link>
-        </div>
-      </header>
+      <Navbar onViewChange={handleViewChange} />
 
       <EvoHdlShowcase />
 
@@ -406,19 +404,6 @@ export default function HdlTechnicalDetailsPage() {
           </section>
         </div>
       </main>
-
-      {/* Footer CTA */}
-      <section className="py-16 bg-slate-900 border-t border-slate-800 text-center">
-        <div className="container mx-auto px-6">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-hdl text-slate-900 font-bold rounded-lg hover:bg-hdl/90 transition-all shadow-[0_0_20px_rgba(245,158,11,0.4)] hover:shadow-[0_0_30px_rgba(245,158,11,0.6)]"
-          >
-            <ArrowLeft className="w-5 h-5" />
-            Back to Home
-          </Link>
-        </div>
-      </section>
     </div>
   );
 }
