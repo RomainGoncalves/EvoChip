@@ -15,8 +15,10 @@ import {
   Clock,
   ArrowRight,
 } from "lucide-react";
-import { EvoHdlShowcase } from "../page";
 import { Navbar } from "@/components/Navbar";
+import { EvoContactSection } from "@/components/sections/ContactSection";
+import { Footer } from "@/components/sections/Footer";
+import { HdlShowcase } from "@/components/sections/HdlShowcase";
 
 interface HeroSectionProps {
   title: string;
@@ -64,7 +66,7 @@ export default function HdlTechnicalDetailsPage() {
     <div className="min-h-screen bg-slate-950 text-slate-200">
       <Navbar onViewChange={handleViewChange} />
 
-      <EvoHdlShowcase />
+      <HdlShowcase />
 
       {/* Main Content */}
       <main className="container mx-auto px-6 py-16 max-w-5xl">
@@ -404,6 +406,9 @@ export default function HdlTechnicalDetailsPage() {
           </section>
         </div>
       </main>
+
+      <EvoContactSection />
+      <Footer />
     </div>
   );
 }
