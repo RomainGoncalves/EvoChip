@@ -41,7 +41,7 @@ const InsightsPage = ({ onArticleClick }: InsightsPageProps) => (
           >
             <div className="aspect-video relative overflow-hidden bg-slate-950">
               <img
-                src={`/${article.image}`}
+                src={article.image}
                 alt={article.title}
                 className="w-full h-full object-contain opacity-60 group-hover:opacity-100 transition-opacity"
               />
@@ -168,7 +168,7 @@ const ArticleDetailView = ({ article, onBack }: ArticleDetailViewProps) => {
       <div className="container mx-auto px-6 max-w-3xl">
         <button
           onClick={onBack}
-          className="flex items-center gap-2 text-cyan-500 text-xs font-bold uppercase tracking-widest mb-12 hover:text-cyan-400 transition-colors"
+          className="flex items-center gap-2 text-cyan-500 text-xs font-bold uppercase tracking-widest mb-12 hover:text-cyan-400 transition-colors cursor-pointer"
         >
           <ArrowLeft className="w-4 h-4" /> Back to Insights
         </button>

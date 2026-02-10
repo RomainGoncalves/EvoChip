@@ -8,7 +8,7 @@ import { VideoEmbed } from "@/components/brand";
 export const McuShowcase = () => (
   <section
     id="mcu-showcase"
-    className="py-16 md:py-18 bg-slate-900 border-t border-slate-800"
+    className="pt-28 pb-16 md:pb-18 bg-slate-900 border-t border-slate-800"
   >
     <div className="container mx-auto px-6">
       <SectionHeading

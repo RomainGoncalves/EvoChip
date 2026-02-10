@@ -44,10 +44,9 @@ export const Navbar = ({ onViewChange }: NavbarProps) => {
   };
 
   const navLinks = [
-    { name: "Technology", href: "#technology" },
+    { name: "Home", href: "/", external: true },
     { name: "Products", href: "#products" },
-    { name: "About", href: "#about" },
-    { name: "Insights", href: "#insights" },
+    { name: "Insights", href: "/insights", external: true },
     { name: "Contact", href: "#contact-evo" },
     { name: "Investor Portal", href: "/investor-portal", icon: Lock, external: true },
   ];
@@ -183,12 +182,7 @@ export const Navbar = ({ onViewChange }: NavbarProps) => {
                 onClick={(e) => {
                   e.preventDefault();
                   handleNavClick(link.href);
-
-                  if (link.href === "#insights") {
-                    onViewChange("insights");
-                  } else {
-                    onViewChange("evochip");
-                  }
+                  onViewChange("evochip");
                 }}
                 className="text-slate-300 hover:text-cyan-400 transition-colors text-sm font-medium uppercase tracking-wide flex items-center gap-1.5"
               >
@@ -285,12 +279,7 @@ export const Navbar = ({ onViewChange }: NavbarProps) => {
                 onClick={(e) => {
                   e.preventDefault();
                   handleNavClick(link.href);
-
-                  if (link.href === "#insights") {
-                    onViewChange("insights");
-                  } else {
-                    onViewChange("evochip");
-                  }
+                  onViewChange("evochip");
                 }}
                 className="text-slate-300 hover:text-cyan-400 text-lg flex items-center gap-2"
               >

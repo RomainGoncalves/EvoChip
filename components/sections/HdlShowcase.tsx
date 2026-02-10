@@ -7,7 +7,7 @@ import { SectionHeading, Card } from "@/components/ui";
 export const HdlShowcase = () => (
   <section
     id="hdl-showcase"
-    className="py-16 md:py-24 bg-slate-900 border-t border-slate-800"
+    className="pt-28 pb-16 md:pb-24 bg-slate-900 border-t border-slate-800"
   >
     <div className="container mx-auto px-6">
       <SectionHeading

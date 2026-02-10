@@ -69,11 +69,6 @@ import AccuracyChart from "@/components/sections/AccuracyChart";
 import SpeedChart from "@/components/sections/SpeedChart";
 import LaptopComparisonTable from "@/components/sections/LaptopComparisonTable";
 import ServerComparisonTable from "@/components/sections/ServerComparisonTable";
-import {
-  ArticleDetailView,
-  insightsData,
-  InsightsPage,
-} from "@/components/sections/Insights";
 import { EvoContactSection } from "@/components/sections/ContactSection";
 import { Footer } from "@/components/sections/Footer";
 import { Navbar } from "@/components/Navbar";
@@ -2122,47 +2117,10 @@ const App = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [currentView]);
-  const [selectedArticleId, setSelectedArticleId] = useState(null);
   console.log("Current View:", currentView);
 
   const isAltiCorePage = currentView.startsWith("alticore");
   let content;
-
-  if (currentView === "insights") {
-    let content;
-    if (selectedArticleId) {
-      const article = insightsData.find((a) => a.id === selectedArticleId);
-      content = (
-        <ArticleDetailView
-          article={article}
-          onBack={() => setSelectedArticleId(null)}
-        />
-      );
-    } else {
-      // @ts-ignore
-      content = <InsightsPage onArticleClick={setSelectedArticleId} />;
-    }
-    // return (
-    //   <div className="min-h-screen bg-slate-900 text-slate-200">
-    //     <AltiNavbar
-    //       onViewChange={setCurrentView}
-    //       currentView={currentView}
-    //       onInsightsClick={handleInsightsNav}
-    //     />
-    //     {content}
-    //     <Footer onViewChange={setCurrentView} />
-    //     <CookieConsentBanner />
-    //   </div>
-    // );
-
-    return (
-      <div className="min-h-screen bg-slate-900 text-slate-200">
-        <Navbar onViewChange={setCurrentView} />
-        {content}
-        <Footer />
-      </div>
-    );
-  }
 
   if (isAltiCorePage) {
     switch (currentView) {
