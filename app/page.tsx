@@ -53,6 +53,7 @@ import {
   BrainCog,
   Laptop,
   Table,
+  Smartphone,
 } from "lucide-react";
 
 // Extracted components
@@ -819,7 +820,108 @@ const EvoProducts = ({
           subtitle="Standard Portfolio"
           title="The AltiCore Ecosystem"
         />
-        <div className="grid lg:grid-cols-3 gap-8">
+
+        {/* Product hierarchy visualization */}
+        <div className="flex flex-col items-center mb-0">
+          {/* Level 1: AltiCore Mathematical Framework */}
+          <div className="px-8 py-4 bg-slate-800/80 border border-cyan-500/40 rounded-xl text-center shadow-[0_0_20px_rgba(6,182,212,0.15)] max-w-xs w-full sm:w-auto">
+            <h4 className="text-white font-bold text-lg">AltiCore</h4>
+            <p className="text-cyan-400 text-sm font-mono">
+              The Mathematical Framework
+            </p>
+          </div>
+
+          {/* Vertical connector */}
+          <div className="w-px h-8 bg-gradient-to-b from-cyan-500/40 to-white/50" />
+
+          {/* Level 2: AltiCoreAI Product Family */}
+          <div className="px-8 py-4 bg-slate-800/60 border border-slate-600/50 rounded-xl text-center max-w-xs w-full sm:w-auto">
+            <h4 className="text-white font-bold text-lg">AltiCoreAI</h4>
+            <p className="text-slate-300 text-sm font-mono">
+              The Product Family
+            </p>
+          </div>
+
+          {/* Branching connector to 4 columns — desktop only */}
+          <div
+            className="relative w-full hidden lg:block"
+            style={{ height: "3rem" }}
+          >
+            {/* Center vertical down to horizontal junction */}
+            <div className="absolute left-1/2 top-0 h-6 w-px bg-white/40 -translate-x-1/2" />
+            {/* Horizontal spanning line */}
+            <div
+              className="absolute top-6 h-px bg-white/40"
+              style={{
+                left: "calc((100% - 6rem) / 8)",
+                right: "calc((100% - 6rem) / 8)",
+              }}
+            />
+            {/* Branch 1 (far left) */}
+            <div
+              className="absolute top-6 bottom-0 w-px bg-white/40"
+              style={{ left: "calc((100% - 6rem) / 8)" }}
+            />
+            {/* Branch 2 (center-left) */}
+            <div
+              className="absolute top-6 bottom-0 w-px bg-white/40"
+              style={{ left: "calc(3 * (100% - 6rem) / 8 + 2rem)" }}
+            />
+            {/* Branch 3 (center-right) */}
+            <div
+              className="absolute top-6 bottom-0 w-px bg-white/40"
+              style={{ right: "calc(3 * (100% - 6rem) / 8 + 2rem)" }}
+            />
+            {/* Branch 4 (far right) */}
+            <div
+              className="absolute top-6 bottom-0 w-px bg-white/40"
+              style={{ right: "calc((100% - 6rem) / 8)" }}
+            />
+          </div>
+
+          {/* Mobile: single vertical line */}
+          <div className="w-px h-8 bg-white/40 lg:hidden" />
+        </div>
+
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* AltiCoreMCU */}
+          <div className="bg-slate-900 rounded-2xl p-6 border border-mcu/30 shadow-[0_0_30px_rgba(96,165,250,0.15)] flex items-start gap-3">
+            <Microchip className="w-8 h-8 text-mcu shrink-0 mt-1" />
+            <div>
+              <h3 className="text-lg font-bold text-mcu">AltiCoreMCU</h3>
+              <p className="text-sm text-slate-400 mt-0.5">Embedded Toolset. Focus of this deck</p>
+            </div>
+          </div>
+
+          {/* AltiCoreSWP */}
+          <div className="bg-slate-900 rounded-2xl p-6 border border-sw/30 shadow-[0_0_30px_rgba(45,212,191,0.1)] flex items-start gap-3">
+            <Server className="w-8 h-8 text-sw shrink-0 mt-1" />
+            <div>
+              <h3 className="text-lg font-bold text-sw">AltiCoreSWP</h3>
+              <p className="text-sm text-slate-400 mt-0.5">Software platform. Windows/Linux CPU inference</p>
+            </div>
+          </div>
+
+          {/* AltiCoreHDL */}
+          <div className="bg-slate-900 rounded-2xl p-6 border border-hdl/30 shadow-[0_0_30px_rgba(245,158,11,0.1)] flex items-start gap-3">
+            <Cpu className="w-8 h-8 text-hdl shrink-0 mt-1" />
+            <div>
+              <h3 className="text-lg font-bold text-hdl">AltiCoreHDL</h3>
+              <p className="text-sm text-slate-400 mt-0.5">Hardware Core. FPGA/ASIC</p>
+            </div>
+          </div>
+
+          {/* Mobile */}
+          <div className="bg-slate-900 rounded-2xl p-6 border border-violet-500/30 shadow-[0_0_30px_rgba(139,92,246,0.1)] flex items-start gap-3 opacity-40">
+            <Smartphone className="w-8 h-8 text-violet-400 shrink-0 mt-1" />
+            <div>
+              <h3 className="text-lg font-bold text-violet-400">Mobile</h3>
+              <p className="text-sm text-slate-400 mt-0.5">Future Support</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="grid lg:grid-cols-3 gap-8 mt-24">
           {/* AltiCoreMCU */}
           <div className="bg-slate-900 rounded-2xl p-6 md:p-8 border border-mcu/30 shadow-[0_0_30px_rgba(96,165,250,0.2)] flex flex-col">
             <div className="inline-flex mb-4 px-2 py-0.5 bg-blue-900/30 border border-mcu/30 rounded text-[9px] font-mono text-mcu uppercase font-bold w-fit">
