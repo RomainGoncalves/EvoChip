@@ -15,6 +15,7 @@ const prodConfig = {
   output: "export",
   basePath: "",
   assetPrefix: "./",
+  trailingSlash: true,
 };
 
 const nextConfig: NextConfig = {
