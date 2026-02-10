@@ -24,11 +24,11 @@ export const IPPortfolioCard = ({
   icon: Icon,
 }: IPPortfolioCardProps) => (
   <div className="bg-slate-800/80 p-6 rounded-2xl border border-slate-700 transition-all hover:border-cyan-500/50 flex flex-col font-sans">
-    {Icon && <Icon className={`w-8 h-8 ${color} mb-4 font-bold`} />}
-    <h4 className={`text-xl font-bold text-white mb-1 font-sans`}>{title}</h4>
-    <p
-      className={`text-md font-mono uppercase tracking-wider mb-2 ${color} font-bold`}
-    >
+    <div className="flex items-center gap-3 mb-1">
+      {Icon && <Icon className={`w-6 h-6 ${color} shrink-0`} />}
+      <h4 className={`text-xl font-bold ${color} font-sans`}>{title}</h4>
+    </div>
+    <p className="text-md font-mono uppercase tracking-wider mb-2 text-slate-400 font-bold">
       {focus}
     </p>
     {subHeader && (

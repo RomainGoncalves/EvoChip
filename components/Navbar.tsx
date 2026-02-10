@@ -49,6 +49,7 @@ export const Navbar = ({ onViewChange }: NavbarProps) => {
     { name: "About", href: "#about" },
     { name: "Insights", href: "#insights" },
     { name: "Contact", href: "#contact-evo" },
+    { name: "Investor Portal", href: "/investor-portal", icon: Lock, external: true },
   ];
 
   const products = [
@@ -161,6 +162,20 @@ export const Navbar = ({ onViewChange }: NavbarProps) => {
                 </div>
               );
             }
+            // Handle external links (actual routes)
+            if (link.external) {
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className="text-slate-300 hover:text-cyan-400 transition-colors text-sm font-medium uppercase tracking-wide flex items-center gap-1.5"
+                >
+                  {link.icon && <link.icon className="w-3.5 h-3.5" />}
+                  {link.name}
+                </Link>
+              );
+            }
+
             return (
               <a
                 key={link.name}
@@ -175,8 +190,9 @@ export const Navbar = ({ onViewChange }: NavbarProps) => {
                     onViewChange("evochip");
                   }
                 }}
-                className="text-slate-300 hover:text-cyan-400 transition-colors text-sm font-medium uppercase tracking-wide"
+                className="text-slate-300 hover:text-cyan-400 transition-colors text-sm font-medium uppercase tracking-wide flex items-center gap-1.5"
               >
+                {link.icon && <link.icon className="w-3.5 h-3.5" />}
                 {link.name}
               </a>
             );
@@ -247,6 +263,21 @@ export const Navbar = ({ onViewChange }: NavbarProps) => {
                 </div>
               );
             }
+            // Handle external links (actual routes)
+            if (link.external) {
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className="text-slate-300 hover:text-cyan-400 text-lg flex items-center gap-2"
+                >
+                  {link.icon && <link.icon className="w-4 h-4" />}
+                  {link.name}
+                </Link>
+              );
+            }
+
             return (
               <a
                 key={link.name}
@@ -261,21 +292,13 @@ export const Navbar = ({ onViewChange }: NavbarProps) => {
                     onViewChange("evochip");
                   }
                 }}
-                className="text-slate-300 hover:text-cyan-400 text-lg"
+                className="text-slate-300 hover:text-cyan-400 text-lg flex items-center gap-2"
               >
+                {link.icon && <link.icon className="w-4 h-4" />}
                 {link.name}
               </a>
             );
           })}
-          <Button
-            variant="primary"
-            onClick={() => {
-              setIsOpen(false);
-              onViewChange("investor");
-            }}
-          >
-            <Lock className="w-4 h-4" /> Investor Portal
-          </Button>
           {/* <Button
             variant="outline"
             onClick={() => {
