@@ -14,7 +14,7 @@ const prodConfig = {
   },
   output: "export",
   basePath: "",
-  assetPrefix: "./",
+  // assetPrefix: "./",
   trailingSlash: true,
 };
 
