@@ -421,8 +421,6 @@ const EvoTechnology = () => (
           </div>
         </Card>
       </div>
-
-
     </div>
   </section>
 );
@@ -911,11 +909,12 @@ const EvoProducts = ({
             </div>
           </div>
 
-          {/* Mobile */}
-          <div className="bg-slate-900 rounded-2xl p-6 border border-violet-500/30 shadow-[0_0_30px_rgba(139,92,246,0.1)] flex items-start gap-3">
-            <Smartphone className="w-8 h-8 text-violet-400 shrink-0 mt-1" />
+          {/* Mobile + GPU */}
+          <div className="bg-slate-900 rounded-2xl p-6 border border-violet-500/30 shadow-[0_0_30px_rgba(139,92,246,0.1)] flex items-start">
             <div>
-              <h3 className="text-lg font-bold text-violet-400">Mobile</h3>
+              <h3 className="text-lg font-bold text-violet-400">
+                AltiCoreMobile & AltiCoreGPU
+              </h3>
               <p className="text-sm text-slate-400 mt-0.5">Future Support</p>
             </div>
           </div>
