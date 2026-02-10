@@ -889,7 +889,9 @@ const EvoProducts = ({
             <Microchip className="w-8 h-8 text-mcu shrink-0 mt-1" />
             <div>
               <h3 className="text-lg font-bold text-mcu">AltiCoreMCU</h3>
-              <p className="text-sm text-slate-400 mt-0.5">Embedded Toolset. Focus of this deck</p>
+              <p className="text-sm text-slate-400 mt-0.5">
+                Embedded Toolset. Focus of this deck
+              </p>
             </div>
           </div>
 
@@ -898,7 +900,9 @@ const EvoProducts = ({
             <Server className="w-8 h-8 text-sw shrink-0 mt-1" />
             <div>
               <h3 className="text-lg font-bold text-sw">AltiCoreSWP</h3>
-              <p className="text-sm text-slate-400 mt-0.5">Software platform. Windows/Linux CPU inference</p>
+              <p className="text-sm text-slate-400 mt-0.5">
+                Software platform. Windows/Linux CPU inference
+              </p>
             </div>
           </div>
 
@@ -907,12 +911,14 @@ const EvoProducts = ({
             <Cpu className="w-8 h-8 text-hdl shrink-0 mt-1" />
             <div>
               <h3 className="text-lg font-bold text-hdl">AltiCoreHDL</h3>
-              <p className="text-sm text-slate-400 mt-0.5">Hardware Core. FPGA/ASIC</p>
+              <p className="text-sm text-slate-400 mt-0.5">
+                Hardware Core. FPGA/ASIC
+              </p>
             </div>
           </div>
 
           {/* Mobile */}
-          <div className="bg-slate-900 rounded-2xl p-6 border border-violet-500/30 shadow-[0_0_30px_rgba(139,92,246,0.1)] flex items-start gap-3 opacity-40">
+          <div className="bg-slate-900 rounded-2xl p-6 border border-violet-500/30 shadow-[0_0_30px_rgba(139,92,246,0.1)] flex items-start gap-3">
             <Smartphone className="w-8 h-8 text-violet-400 shrink-0 mt-1" />
             <div>
               <h3 className="text-lg font-bold text-violet-400">Mobile</h3>
