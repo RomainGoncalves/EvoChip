@@ -422,13 +422,7 @@ const EvoTechnology = () => (
         </Card>
       </div>
 
-      <div className="max-w-4xl mx-auto mt-8 px-6">
-        <p className="text-xl text-white italic font-medium leading-relaxed">
-          "We don't build bigger hardware; we build smarter logic. AltiCore
-          technology scales across global compute infrastructures without the
-          constraints of physical manufacturing."
-        </p>
-      </div>
+
     </div>
   </section>
 );
@@ -927,7 +921,15 @@ const EvoProducts = ({
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-8 mt-24">
+        <div className="max-w-4xl mx-auto mt-16 px-6 text-center">
+          <p className="text-xl text-white italic font-medium leading-relaxed">
+            "We don't build bigger hardware; we build smarter logic. AltiCore
+            technology scales across global compute infrastructures without the
+            constraints of physical manufacturing."
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-3 gap-8 mt-16">
           {/* AltiCoreMCU */}
           <div className="bg-slate-900 rounded-2xl p-6 md:p-8 border border-mcu/30 shadow-[0_0_30px_rgba(96,165,250,0.2)] flex flex-col">
             <div className="inline-flex mb-4 px-2 py-0.5 bg-blue-900/30 border border-mcu/30 rounded text-[9px] font-mono text-mcu uppercase font-bold w-fit">
