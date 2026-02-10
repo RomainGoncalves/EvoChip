@@ -322,17 +322,23 @@ const EvoTechnology = () => (
           <div className="space-y-4 grow justify-between flex flex-col">
             <p className="text-sm text-slate-300 leading-relaxed">
               <strong className="text-white">Problem:</strong> Scaling via
-              brute-force (adding transistors/data centers) has hit a hard
-              ceiling of physical resource constraints including Energy and
-              Water.
+              brute-force arithmetic (A x B + C) has hit a hard ceiling of
+              physical resource constraints. Legacy Neural Networks are
+              mathematically unsuited for the edge, requiring "bigger chips" to
+              handle heavy matrix math.
             </p>
             <p className="text-sm text-slate-300 leading-relaxed">
               <strong className="text-white">Solution:</strong> Architectural
               innovation. AltiCore restructures compute at the logic level to
-              deliver gains through a software-first mandate.
+              deliver gains through a software-first mandate that revitalizes
+              legacy hardware with{" "}
+              <span className="font-bold text-cyan-400">
+                0% change to the Bill of Materials (BOM)
+              </span>
+              .
             </p>
             <div className="bg-slate-900/50 p-3 rounded border border-cyan-400 font-mono text-[10px] text-cyan-400 leading-relaxed uppercase tracking-widest font-bold">
-              Architecture Lead: Up to 1000x Efficiency
+              Architecture Lead: Up to 1000x density gain
             </div>
           </div>
           <div className="mt-auto pt-4 border-t border-slate-700/50 text-[10px] font-mono text-cyan-400 uppercase tracking-widest font-bold">
@@ -351,20 +357,33 @@ const EvoTechnology = () => (
           <div className="space-y-4 grow justify-between flex flex-col">
             <p className="text-sm text-slate-300 leading-relaxed">
               <strong className="text-white">Problem:</strong> Legacy matrix
-              math generates unsustainable heat and power draw that prevents AI
-              scaling on Edge devices or in high-density racks.
+              math generates unsustainable heat and power draw. This "Heavy
+              Arithmetic Burden" prevents AI scaling on constrained Edge devices
+              and leads to the{" "}
+              <span className="font-bold text-cyan-400">
+                "Dark Silicon" management crisis
+              </span>{" "}
+              in high-density racks.
             </p>
             <p className="text-sm text-slate-300 leading-relaxed">
-              <strong className="text-white">Solution:</strong> Mathematical
-              Frameworks that optimize fundamental logic paths across the entire
-              stack—from MCUs to GPUs.
+              <strong className="text-white">Solution:</strong> A mathematical
+              framework that replaces floating-point tensors{" "}
+              <span className="font-bold text-cyan-400">
+                with hardware-native logic primitives
+              </span>{" "}
+              and{" "}
+              <span className="font-bold text-cyan-400">
+                integer-only logic
+              </span>{" "}
+              across the entire stack—from MCUs to GPUs.
             </p>
             <div className="bg-slate-900/50 p-3 rounded border border-cyan-400 font-mono text-[10px] text-cyan-400 leading-relaxed uppercase tracking-widest font-bold">
-              Power Metric: 1000x Power Reduction | Drastic Thermal Drop
+              Power Metric: ORDER-OF-MAGNITUDE POWER REDUCTION | MINIMAL THERMAL
+              FOOTPRINT
             </div>
           </div>
           <div className="mt-auto pt-4 border-t border-slate-700/50 text-[10px] text-cyan-400 font-mono uppercase tracking-widest font-bold">
-            Impact: Slash OpEx (Energy/Cooling) by 90%
+            Impact: SLASH OPEX (ENERGY/COOLING) BY ELIMINATING FPU DEPENDENCY
           </div>
         </Card>
 
@@ -379,21 +398,30 @@ const EvoTechnology = () => (
           <div className="space-y-4 grow justify-between flex flex-col">
             <p className="text-sm text-slate-300 leading-relaxed">
               <strong className="text-white">Problem:</strong> Probabilistic
-              "Black Box" AI is unauditable and fundamentally unsuitable for
-              safety-critical business processes or regulated industrial
-              sectors.
+              "Black Box" AI is non-deterministic and fundamentally unsuitable
+              for safety-critical business processes or regulated industrial
+              sectors like automotive braking or medical grids.
             </p>
             <p className="text-sm text-slate-300 leading-relaxed">
               <strong className="text-white">Solution:</strong> Deterministic
-              Logic. AltiCore provides fully transparent, auditable models that
-              assists core operations without obscuring decisions.
+              Logic. AltiCore maps a{" "}
+              <span className="font-bold text-cyan-400">
+                static execution schedule
+              </span>{" "}
+              directly to the hardware, providing fully transparent, auditable
+              models that ensure{" "}
+              <span className="font-bold text-cyan-400">
+                Absolute Timing Predictability
+              </span>
+              .
             </p>
             <div className="bg-slate-900/50 p-3 rounded border border-cyan-400 font-mono text-[10px] text-cyan-400 leading-relaxed uppercase tracking-widest font-bold">
-              Operational State: Certification Ready | Optimized Perf-per-Watt
+              Operational State: SAFETY-CRITICAL READY | COMPLIANCE-SENSITIVE
+              OPTIMIZED
             </div>
           </div>
           <div className="mt-auto pt-4 border-t border-slate-700/50 text-[10px] font-mono text-cyan-400 uppercase tracking-widest font-bold">
-            Impact: Unlock regulated markets (Medical, Auto, Defense)
+            Impact: UNLOCK REGULATED MARKETS (MEDICAL, AUTOMOTIVE, DEFENSE)
           </div>
         </Card>
       </div>
@@ -800,7 +828,7 @@ const EvoProducts = ({
           {/* AltiCoreMCU */}
           <div className="bg-slate-900 rounded-2xl p-6 md:p-8 border border-mcu/30 shadow-[0_0_30px_rgba(96,165,250,0.2)] flex flex-col">
             <div className="inline-flex mb-4 px-2 py-0.5 bg-blue-900/30 border border-mcu/30 rounded text-[9px] font-mono text-mcu uppercase font-bold w-fit">
-              Patented Logic-First Architecture
+              UNIQUE LOGIC-BASED ARCHITECTURE
             </div>
             <div className="flex items-center gap-3 mb-4">
               <Microchip className="w-10 h-10 text-mcu" />
@@ -809,28 +837,28 @@ const EvoProducts = ({
               </h3>
             </div>
             <p className="text-xs font-mono uppercase tracking-widest text-slate-400 mb-4 font-bold">
-              Universal Intelligence at the Edge
+              EMBEDDED INTELLIGENCE AT THE SOURCE
             </p>
             <p className="text-slate-300 text-sm leading-relaxed mb-8 flex-grow">
               The only solution capable of training and executing AI models
               locally across the entire microcontroller spectrum—from
-              high-performance processors to standard $1 MCUs. A toolset that
-              uses the model training tools in{" "}
-              <span className="text-sw font-bold">AlticoreSWP</span> and deploys
-              software inference to{" "}
-              <span className="text-mcu font-bold">MCU-class devices</span>. It
-              support{" "}
+              high-performance processors to standard $9 Arduino Uno class
+              devices. This toolset utilizes the Alticore mathematical framework
+              to deploy software inference to{" "}
+              <span className="text-mcu font-bold">MCU-class devices</span> with
+              a memory footprint of less than 521 bytes of RAM and zero dynamic
+              memory allocation. It support{" "}
               <span className="text-mcu font-bold">
                 on-device (MCU) training
               </span>{" "}
-              on compatible hardware. Our binary firmware IP enables total
-              intelligence on resource-constrained hardware without the need for
-              expensive NPUs or cloud dependency.
+              on compatible hardware, enabling total intelligence on
+              resource-constrained devices without the need for expensive NPUs
+              or cloud dependency.
             </p>
             <div className="grid grid-cols-2 gap-3 mb-8 font-mono">
               {[
-                "Available on 8-16-32 bit",
-                "Scalable All MCU Tiers",
+                "8-16-32 bit Support",
+                "~9,000 Inf/Sec (16MHz)",
                 "Local Training & Exec",
                 "Zero Cloud / NPU",
               ].map((spec) => (
@@ -854,7 +882,7 @@ const EvoProducts = ({
           {/* AltiCoreSWP */}
           <div className="bg-slate-900 rounded-2xl p-6 md:p-8 border border-sw/30 shadow-[0_0_30px_rgba(45,212,191,0.1)] flex flex-col">
             <div className="inline-flex mb-4 px-2 py-0.5 bg-teal-900/30 border border-sw/30 rounded text-[9px] font-mono text-sw uppercase font-bold w-fit">
-              Patented Logic-First Architecture
+              UNIQUE LOGIC-BASED ARCHITECTURE
             </div>
             <div className="flex items-center gap-3 mb-4">
               <Server className="w-10 h-10 text-sw" />
@@ -863,21 +891,32 @@ const EvoProducts = ({
               </h3>
             </div>
             <p className="text-xs font-mono uppercase tracking-widest text-slate-400 mb-4 font-bold">
-              Pure software acceleration platform
+              Software acceleration platform
             </p>
             <p className="text-slate-300 text-sm leading-relaxed mb-8 flex-grow">
-              High-performance software acceleration platform for the global
-              compute stack. Our Mathematical framework restructures AI model
-              execution into binary logic streams to maximize throughput on
-              existing Windows, Linux, and CUDA infrastructure. This 100%
-              software layer delivers 500x+ speed gains.
+              A high-performance software platform for the global compute stack.
+              Our mathematical framework restructures AI model execution into
+              logic-level operations to maximize throughput on existing Windows
+              and Linux infrastructure. This mathematically distinct layer
+              delivers a{" "}
+              <span className="text-sw font-bold">
+                17x to 41x throughput advantage
+              </span>{" "}
+              on server CPUs and a{" "}
+              <span className="text-sw font-bold">13x to 21x advantage</span> on
+              workstations over industry-standard optimized baselines (C++
+              TensorFlow Lite XNNPACK),{" "}
+              <span className="text-sw font-bold">
+                enabling high-speed inference on standard general-purpose CPUs
+              </span>
+              .
             </p>
             <div className="grid grid-cols-2 gap-3 mb-8 font-mono">
               {[
                 "Zero HW Modification",
-                "500x+ Throughput",
-                "Enterprise Native",
-                "NVIDIA CUDA Optimized",
+                "17x-41x Throughput",
+                "x86 & ARM Optimized",
+                "300x Less Arithmetic",
               ].map((spec) => (
                 <div key={spec} className="flex items-start gap-2">
                   <CheckCircle2 className="w-3 h-3 text-sw shrink-0 mt-0.5" />
@@ -899,7 +938,7 @@ const EvoProducts = ({
           {/* AltiCoreHDL */}
           <div className="bg-slate-900 rounded-2xl p-6 md:p-8 border border-hdl/30 shadow-[0_0_30px_rgba(245,158,11,0.1)] flex flex-col">
             <div className="inline-flex mb-4 px-2 py-0.5 bg-amber-900/20 border border-hdl/30 rounded text-[9px] font-mono text-hdl uppercase font-bold w-fit">
-              Patented Logic-First Architecture
+              UNIQUE LOGIC-BASED ARCHITECTURE
             </div>
             <div className="flex items-center gap-3 mb-4">
               <Cpu className="w-10 h-10 text-hdl" />
@@ -908,19 +947,33 @@ const EvoProducts = ({
               </h3>
             </div>
             <p className="text-xs font-mono uppercase tracking-widest text-slate-400 mb-4 font-bold">
-              FPGA/ASIC hardware inference and training
+              HARDWARE-INTEGRATED INTELLIGENCE
             </p>
-            <p className="text-slate-300 text-sm leading-relaxed mb-8 flex-grow">
+            <p className="text-slate-300 text-sm leading-relaxed mb-8 grow">
               A direct pathway to production silicon by mapping models trained
-              within the AltiCore mathematical framework directly into FPGA and
-              ASIC logic
+              within the Alticore mathematical framework directly into FPGA and
+              ASIC logic. By{" "}
+              <span className="text-hdl font-bold">
+                replacing heavy arithmetic
+              </span>{" "}
+              with hardware-native primitives and logic-level operations, it
+              achieves{" "}
+              <span className="text-hdl font-bold">
+                one inference per clock cycle
+              </span>{" "}
+              with absolute timing predictability and a{" "}
+              <span className="text-hdl font-bold">
+                fixed latency of approximately 100 clock cycles
+              </span>
+              , making it the foundational IP for safety-critical and
+              high-density Qualitative AI.
             </p>
             <div className="grid grid-cols-2 gap-3 mb-8 font-mono">
               {[
                 "VHDL/Verilog RTL",
-                "1000x Density Gain",
-                "Foundry Ready",
-                "Qualitative AI Blocks",
+                "1 Inf Per Clock Cycle",
+                "Fixed 100-Cycle Latency",
+                "Integer-Only Logic",
               ].map((spec) => (
                 <div key={spec} className="flex items-start gap-2">
                   <CheckCircle2 className="w-3 h-3 text-hdl shrink-0 mt-0.5" />
@@ -2027,10 +2080,6 @@ const AltiFinalCta = ({
     </div>
   </section>
 );
-
-
-
-
 
 const AltiContactPage = () => (
   <div className="min-h-screen bg-slate-900 flex items-center justify-center pt-24 font-sans">

@@ -13,6 +13,27 @@ interface IPPortfolioCardProps {
   items: IPPortfolioItem[];
   color: string;
   icon: LucideIcon;
+  highlights?: string[];
+}
+
+function highlightText(text: string, highlights: string[]): React.ReactNode {
+  if (!highlights.length) return text;
+
+  const escaped = highlights
+    .map((h) => h.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"))
+    .join("|");
+  const regex = new RegExp(`(${escaped})`, "g");
+  const parts = text.split(regex);
+
+  return parts.map((part, i) =>
+    highlights.includes(part) ? (
+      <span key={i} className="font-bold text-cyan-400">
+        {part}
+      </span>
+    ) : (
+      part
+    )
+  );
 }
 
 export const IPPortfolioCard = ({
@@ -22,6 +43,7 @@ export const IPPortfolioCard = ({
   items,
   color,
   icon: Icon,
+  highlights = [],
 }: IPPortfolioCardProps) => (
   <div className="bg-slate-800/80 p-6 rounded-2xl border border-slate-700 transition-all hover:border-cyan-500/50 flex flex-col font-sans">
     <div className="flex items-center gap-3 mb-1">
@@ -49,7 +71,7 @@ export const IPPortfolioCard = ({
             <span className="font-mono font-bold text-slate-100 uppercase text-md tracking-tight">
               {item.label}:
             </span>{" "}
-            {item.text}
+            {highlightText(item.text, highlights)}
           </p>
         </div>
       ))}

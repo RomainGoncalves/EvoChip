@@ -439,13 +439,55 @@ export const InvestorPortalContent = () => {
                 <span className="font-bold text-amber-500">AltiCoreHDL</span>.
               </p>
 
-              <div className="grid grid-cols-1  gap-6">
+              <div className="grid grid-cols-1 gap-6">
+                <IPPortfolioCard
+                  title="AltiCoreSWP"
+                  focus="Software Platform"
+                  subHeader="Immediate OpEx elimination for existing enterprise infrastructure."
+                  color="text-sw"
+                  icon={Server}
+                  highlights={["~575M inferences/sec", "17x–41x", "13x–21x"]}
+                  items={[
+                    {
+                      label: "Definition",
+                      text: "A high-performance software platform for general-purpose compute on laptop, desktop, and server environments.",
+                    },
+                    {
+                      label: "Target Market",
+                      text: "Data Centers, Cloud Providers, and Enterprise IT Infrastructure.",
+                    },
+                    {
+                      label: "Business Model",
+                      text: "Software-only deployment model utilizing Annual Contract Value (ACV) and recurring subscription fees.",
+                    },
+                    {
+                      label: "Environments",
+                      text: "Supporting Windows and Linux for standard x86 and ARM architectures (AVX2 optimized).",
+                    },
+                    {
+                      label: "Technical Benchmarks",
+                      text: "Up to ~575M inferences/sec on Server CPUs; verified 17x–41x throughput advantage on servers and 13x–21x on workstations over industry baselines (C++ TensorFlow Lite XNNPACK).",
+                    },
+                    {
+                      label: "Strategic Advantage",
+                      text: 'Enables high-speed inference on standard CPUs, allowing enterprises to scale AI without the "GPU tax" or hardware refreshes.',
+                    },
+                  ]}
+                />
+
                 <IPPortfolioCard
                   title="AltiCoreMCU"
                   focus="HIGH-VOLUME IP ROYALTIES"
                   subHeader="Turning $9 legacy hardware into high-performance AI assets."
                   color="text-mcu"
                   icon={Microchip}
+                  highlights={[
+                    "local training",
+                    "< 521 bytes of RAM",
+                    "~9,000 inferences/sec",
+                    "zero dynamic memory allocation",
+                    "0% change to the Bill of Materials (BOM)",
+                  ]}
                   items={[
                     {
                       label: "Definition",
@@ -473,57 +515,42 @@ export const InvestorPortalContent = () => {
                     },
                   ]}
                 />
-                <IPPortfolioCard
-                  title="AltiCoreSWP"
-                  focus="ENTERPRISE SAAS"
-                  subHeader="Immediate OpEx elimination for existing infrastructure."
-                  color="text-sw"
-                  icon={Server}
-                  items={[
-                    {
-                      label: "Target Market",
-                      text: "Data Centers, Cloud Providers, and Enterprise IT Infrastructure.",
-                    },
-                    {
-                      label: "Model",
-                      text: "Enterprise SaaS. Software-only deployment for immediate acceleration.",
-                    },
-                    {
-                      label: "Monetization",
-                      text: "Annual Contract Value (ACV). Recurring subscription fees.",
-                    },
-                    {
-                      label: "Environments",
-                      text: "Windows, Linux, CUDA (Nvidia); Laptops, CPUs, FPGAs, and Servers.",
-                    },
-                    {
-                      label: "Strategic Advantage",
-                      text: "Immediate OpEx Reduction without requiring a hardware refresh.",
-                    },
-                  ]}
-                />
+
                 <IPPortfolioCard
                   title="AltiCoreHDL"
-                  focus="SILICON-IP SAAS"
-                  subHeader="The 'Intel-Inside' moat for the next generation of silicon."
+                  focus="Hardware-Integrated Intelligence"
+                  subHeader="The direct pathway to production silicon and absolute timing predictability."
                   color="text-hdl"
                   icon={Silicon}
+                  highlights={[
+                    "one inference per clock cycle",
+                    "~100 clock cycles",
+                    "sentinel",
+                  ]}
                   items={[
+                    {
+                      label: "Definition",
+                      text: "FPGA/ASIC hardware inference and training IP that maps the Alticore framework directly into silicon logic.",
+                    },
                     {
                       label: "Target Market",
                       text: "Tier 1 Semiconductor Manufacturers and Fabless Designers.",
                     },
                     {
-                      label: "Model",
-                      text: "Hybrid Silicon-IP embedding AltiCore at the design stage.",
+                      label: "Business Model",
+                      text: "Silicon-IP Licensing; hybrid model of upfront integration fees plus annual recurring licensing.",
                     },
                     {
-                      label: "Monetization",
-                      text: "Upfront Integration Fees + Annual Recurring Licensing.",
+                      label: "Environments",
+                      text: "Direct pathway from off-the-shelf FPGAs to custom ASICs and SoCs.",
+                    },
+                    {
+                      label: "Technical Benchmarks",
+                      text: "Fully pipelined core delivering one inference per clock cycle; fixed, deterministic latency of ~100 clock cycles.",
                     },
                     {
                       label: "Strategic Advantage",
-                      text: "Foundational IP Moat integrated directly into the Hardware Description Language (HDL).",
+                      text: 'Replaces heavy arithmetic with integer-only logic and hardware-native primitives. This ensures absolute timing predictability—a critical requirement for safety-critical and always-on "sentinel" monitoring.',
                     },
                   ]}
                 />
@@ -539,30 +566,29 @@ export const InvestorPortalContent = () => {
                 COMMERCIAL SCALABILITY & DEFENSE
               </h3>
               <p className="text-slate-300 text-md mb-10 max-w-3xl leading-relaxed">
-                Our revenue model is built for exponential growth independent of
-                physical manufacturing constraints. We provide the architectural
-                blueprints that define next-generation AI execution.
+                Revenue scaled through a ‘Value-per-Device’ framework,
+                independent of physical manufacturing constraints.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {[
                   {
                     title: "Scalable Distribution",
-                    desc: 'A "Fabless" model scaling via IP Royalties and Enterprise SaaS. Growth is independent of physical manufacturing constraints.',
+                    desc: <>A high-margin IP licensing model scaling via High-Volume Royalties and Software Platform subscriptions. Our &ldquo;Fabless&rdquo; approach ensures growth is decoupled from hardware supply chain bottlenecks and physical manufacturing limits. This is supported by the ability to &ldquo;<span className="font-bold text-cyan-400">revitalize legacy hardware</span>&rdquo;, making existing inventory smart without changing the Bill of Materials (BOM).</>,
                     icon: Layers,
                   },
                   {
                     title: "Market Entry",
-                    desc: "Leveraging Tier 1 Semiconductor partnerships to embed AltiCore HDL directly into next-gen silicon roadmaps.",
+                    desc: <>Leveraging Tier 1 Semiconductor partnerships to embed <span className="font-bold text-amber-500">AltiCoreHDL</span> directly into next-gen silicon roadmaps. This provides a direct pathway to production silicon through IP cores that deliver industry-leading throughput and absolute timing predictability, allowing models to migrate seamlessly from off-the-shelf FPGAs to custom ASIC designs.</>,
                     icon: Target,
                   },
                   {
                     title: "IP Moat",
-                    desc: "Protected by 100+ foundational patents and proprietary gate-level framework algorithms that are functionally impossible to reverse-engineer.",
+                    desc: <>Protected by a robust patent portfolio and mathematically distinct algorithms built on a unique logic-based format. By replacing heavy arithmetic with <span className="font-bold text-cyan-400">hardware-native logic primitives</span> and <span className="font-bold text-cyan-400">integer-only logic</span>, the framework eliminates the need for floating-point tensors and matrix multiplications. This mathematically distinct architecture makes it functionally impossible to reverse-engineer via traditional neural network analysis.</>,
                     icon: ShieldCheck,
                   },
                   {
                     title: "High Switching Costs",
-                    desc: 'Deep integration into client HDL and enterprise software stacks ensures long-term ACV retention and "Intel-Inside" brand dominance.',
+                    desc: <>Deep integration into client HDL and existing general-purpose software environments (Windows/Linux) ensures long-term Annual Contract Value (ACV) retention. By mapping a <span className="font-bold text-cyan-400">static execution schedule</span> directly to the hardware logic, Alticore creates a specialized, high-performance environment that establishes &ldquo;Intel-Inside&rdquo; brand dominance within the local compute stack.</>,
                     icon: Lock,
                   },
                 ].map((item, i) => (
