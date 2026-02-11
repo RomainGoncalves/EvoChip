@@ -70,6 +70,7 @@ import AccuracyChart from "@/components/sections/AccuracyChart";
 import SpeedChart from "@/components/sections/SpeedChart";
 import LaptopComparisonTable from "@/components/sections/LaptopComparisonTable";
 import ServerComparisonTable from "@/components/sections/ServerComparisonTable";
+import { PodcastSection } from "@/components/sections/PodcastSection";
 import { EvoContactSection } from "@/components/sections/ContactSection";
 import { Footer } from "@/components/sections/Footer";
 import { Navbar } from "@/components/Navbar";
@@ -200,91 +201,6 @@ const EvoHeroVideos = () => (
   </section>
 );
 
-// Version 1: Horizontal Layout (Image left, player right)
-const EvoPodcast = () => (
-  <section className="py-16 bg-slate-900 border-t border-slate-800 relative">
-    <div className="container mx-auto px-6">
-      <SectionHeading subtitle="PODCAST" title="EvoChip Explained" />
-
-      <div className="space-y-8 mt-12">
-        {/* Episode 1 */}
-        <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-6 items-center">
-          <div className="w-full aspect-square rounded-2xl overflow-hidden border border-cyan-500/20 shadow-2xl bg-slate-950">
-            <Image
-              src="/podcasts/podcast_cover.png"
-              alt="EvoChip Explained Podcast Cover"
-              width={200}
-              height={200}
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          <div className="space-y-4">
-            <div>
-              <div className="text-cyan-400 font-mono text-sm mb-2">
-                Episode 1
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">
-                AltiCore Fits AI Into 521 Bytes
-              </h3>
-              <p className="text-slate-400 text-sm">
-                Discover how AltiCore's revolutionary synthesis technology
-                trains and executes AI models into impossibly small footprints,
-                enabling edge computing at unprecedented scales.
-              </p>
-            </div>
-
-            <audio
-              controls
-              className="w-full h-12 rounded-lg"
-              style={{
-                filter: "hue-rotate(180deg) saturate(1.5)",
-              }}
-            >
-              <source
-                src="/podcasts/EvoChipExplained_-_AltiCore_Fits_AI_Into_521_Bytes.m4a"
-                type="audio/mp4"
-              />
-              Your browser does not support the audio element.
-            </audio>
-          </div>
-        </div>
-
-        {/* Episode 2 (Placeholder) */}
-        <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-6 items-center">
-          <div className="w-full aspect-square rounded-2xl overflow-hidden border border-cyan-500/20 shadow-2xl bg-slate-950">
-            <Image
-              src="/podcasts/podcast_cover.png"
-              alt="EvoChip Explained Podcast Cover"
-              width={200}
-              height={200}
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          <div className="space-y-4">
-            <div>
-              <div className="text-cyan-400 font-mono text-sm mb-2">
-                Episode 2
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">Coming Soon</h3>
-              <p className="text-slate-400 text-sm">
-                Stay tuned for our next episode exploring the future of
-                semiconductor design and AI optimization.
-              </p>
-            </div>
-
-            <div className="w-full h-12 rounded-lg bg-slate-800/50 border border-slate-700/50 flex items-center justify-center">
-              <span className="text-slate-500 font-mono text-sm">
-                Episode Coming Soon
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-);
 
 const EvoTechnology = () => (
   <section
@@ -882,7 +798,8 @@ const EvoProducts = ({
             <div>
               <h3 className="text-lg font-bold text-mcu">AltiCoreMCU</h3>
               <p className="text-sm text-slate-400 mt-0.5">
-                Embedded Toolset. Focus of this deck
+                Edge Device Intelligence Embedded software inference for legacy
+                microcontrollers
               </p>
             </div>
           </div>
@@ -893,7 +810,8 @@ const EvoProducts = ({
             <div>
               <h3 className="text-lg font-bold text-sw">AltiCoreSWP</h3>
               <p className="text-sm text-slate-400 mt-0.5">
-                Software platform. Windows/Linux CPU inference
+                Software Acceleration Platform High-throughput CPU inference for
+                Windows, Linux and Cuda
               </p>
             </div>
           </div>
@@ -904,7 +822,8 @@ const EvoProducts = ({
             <div>
               <h3 className="text-lg font-bold text-hdl">AltiCoreHDL</h3>
               <p className="text-sm text-slate-400 mt-0.5">
-                Hardware Core. FPGA/ASIC
+                Hardware-Integrated Intelligence FPGA and ASIC IP cores for
+                deterministic fixed-latency execution
               </p>
             </div>
           </div>
@@ -915,7 +834,10 @@ const EvoProducts = ({
               <h3 className="text-lg font-bold text-violet-400">
                 AltiCoreMobile & AltiCoreGPU
               </h3>
-              <p className="text-sm text-slate-400 mt-0.5">Future Support</p>
+              <p className="text-sm text-slate-400 mt-0.5">
+                Future Deployment Surfaces Planned support for mobile OS and
+                GPU-accelerated architectures
+              </p>
             </div>
           </div>
         </div>
@@ -1000,8 +922,8 @@ const EvoProducts = ({
             <p className="text-slate-300 text-sm leading-relaxed mb-8 flex-grow">
               A high-performance software platform for the global compute stack.
               Our mathematical framework restructures AI model execution into
-              logic-level operations to maximize throughput on existing Windows
-              and Linux infrastructure. This mathematically distinct layer
+              logic-level operations to maximize throughput on existing Windows,
+              Linux and Cuda infrastructures. This mathematically distinct layer
               delivers a{" "}
               <span className="text-sw font-bold">
                 17x to 41x throughput advantage
@@ -2293,10 +2215,10 @@ const App = () => {
       <Navbar onViewChange={setCurrentView} />
       <EvoHero onViewChange={setCurrentView} />
       <EvoHeroVideos />
-      <EvoPodcast />
       <EvoInnovation />
       <EvoTechnology />
       <EvoProducts onViewChange={setCurrentView} />
+      <PodcastSection />
       {/* <HdlShowcase /> */}
       <EvoAbout />
       <EvoContactSection />
