@@ -70,6 +70,7 @@ import AccuracyChart from "@/components/sections/AccuracyChart";
 import SpeedChart from "@/components/sections/SpeedChart";
 import LaptopComparisonTable from "@/components/sections/LaptopComparisonTable";
 import ServerComparisonTable from "@/components/sections/ServerComparisonTable";
+import { SwShowcase } from "@/components/sections/SwShowcase";
 import { PodcastSection } from "@/components/sections/PodcastSection";
 import { EvoContactSection } from "@/components/sections/ContactSection";
 import { Footer } from "@/components/sections/Footer";
@@ -2215,6 +2216,7 @@ const App = () => {
       <Navbar onViewChange={setCurrentView} />
       <EvoHero onViewChange={setCurrentView} />
       <EvoHeroVideos />
+      <SwShowcase />
       <EvoInnovation />
       <EvoTechnology />
       <EvoProducts onViewChange={setCurrentView} />
