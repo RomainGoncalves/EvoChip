@@ -284,143 +284,6 @@ export const InvestorPortalContent = () => {
             </div>
             </div>
 
-            {/* --- SIDEPATH BENCHMARK: ALGORITHMIC SUPERIORITY --- */}
-            <SidePathBenchmarkSection />
-
-            {/* --- SECTION 2: COMPETITIVE LANDSCAPE (REFACTORED) --- */}
-            <div id="competitive-moat">
-              <h3 className="text-2xl font-bold text-white border-l-4 border-cyan-500 pl-4 mb-4 font-mono uppercase tracking-widest">
-                Competitive Landscape: The Insuperable Moat
-              </h3>
-              <p className="text-slate-300 text-md mb-8 leading-relaxed font-sans">
-                Current market incumbents focus on "Optimization" - attempting
-                to shrink legacy Neural Network architectures to fit modern
-                hardware. AltiCore represents a fundamental architectural reset.
-                By replacing probabilistic Neural Networks with a{" "}
-                <span className="font-bold text-cyan-400">
-                  Unique Logic-Based Format
-                </span>
-                , we decouple AI performance from physical silicon constraints,
-                delivering a mathematically distinct solution capable of
-                bypassing industry standards.
-              </p>
-
-              <div className="rounded-xl border border-slate-800 bg-slate-950/50 overflow-hidden mb-6">
-                <div className="overflow-x-auto">
-                  <table className="w-full text-left text-[13px]">
-                    <thead>
-                      <tr className="bg-slate-900/80 border-b border-slate-800 text-slate-300 uppercase tracking-wider font-mono font-bold">
-                        <th className="py-4 px-6 font-sans font-normal text-white">
-                          Strategic Pillar
-                        </th>
-                        <th className="py-4 px-4 text-center font-sans font-normal">
-                          Legacy (TF Lite / Arm CMSIS-NN)
-                        </th>
-                        <th className="py-4 px-4 text-center font-sans font-normal">
-                          Optimizers (Pruning/Quantization)
-                        </th>
-                        <th className="py-4 px-4 text-center text-cyan-400 bg-cyan-400/5 font-bold">
-                          AltiCore (IP Portfolio)
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody className="text-slate-300 divide-y divide-slate-800/50 font-sans">
-                      <tr>
-                        <td className="py-4 px-6 font-mono font-bold uppercase text-md text-slate-100">
-                          Architectural Basis
-                        </td>
-                        <td className="py-4 px-4 text-center">
-                          Manual Matrix Math (A x B + C)
-                        </td>
-                        <td className="py-4 px-4 text-center">
-                          Automated NN Compression
-                        </td>
-                        <td className="py-4 px-4 text-center font-bold text-cyan-400 bg-cyan-400/5">
-                          Unique Logic-Based Format
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="py-4 px-6 font-mono font-bold uppercase text-md text-slate-100">
-                          Operational State
-                        </td>
-                        <td className="py-4 px-4 text-center">
-                          Probabilistic "Black Box"
-                        </td>
-                        <td className="py-4 px-4 text-center">
-                          Probabilistic "Black Box"
-                        </td>
-                        <td className="py-4 px-4 text-center font-bold text-cyan-400 bg-cyan-400/5">
-                          100% Deterministic (White Box)
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="py-4 px-6 font-mono font-bold uppercase text-md text-slate-100">
-                          Safety Profile
-                        </td>
-                        <td className="py-4 px-4 text-center">
-                          Non-Deterministic
-                        </td>
-                        <td className="py-4 px-4 text-center">
-                          Non-Deterministic
-                        </td>
-                        <td className="py-4 px-4 text-center font-bold text-cyan-400 bg-cyan-400/5">
-                          Absolute Timing Predictability
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="py-4 px-6 font-mono font-bold uppercase text-md text-slate-100">
-                          INFERENCE LATENCY
-                        </td>
-                        <td className="py-4 px-4 text-center">
-                          High / Variable
-                        </td>
-                        <td className="py-4 px-4 text-center">
-                          Optimized / Variable
-                        </td>
-                        <td className="py-4 px-4 text-center font-bold text-cyan-400 bg-cyan-400/5">
-                          Fixed (1 Inference/Clock Cycle)
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="py-4 px-6 font-mono font-bold uppercase text-md text-slate-100">
-                          Energy Profile
-                        </td>
-                        <td className="py-4 px-4 text-center">
-                          High-Draw / Thermal Issues
-                        </td>
-                        <td className="py-4 px-4 text-center">
-                          Optimized (mA)
-                        </td>
-                        <td className="py-4 px-4 text-center font-bold text-cyan-400 bg-cyan-400/5">
-                          Ultra-Low Energy / Heat
-                        </td>
-                      </tr>
-                      <tr>
-                        <td className="py-4 px-6 font-mono font-bold uppercase text-md text-slate-100">
-                          Commercial Model
-                        </td>
-                        <td className="py-4 px-4 text-center">
-                          Hardware Dependency
-                        </td>
-                        <td className="py-4 px-4 text-center">
-                          Subscription Tooling
-                        </td>
-                        <td className="py-4 px-4 text-center font-bold text-cyan-400 bg-cyan-400/5">
-                          High-Margin IP & Royalties
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-              <p className="text-slate-300 text-sm leading-relaxed italic border-l border-slate-700 pl-4">
-                While incumbents focus on incremental gains, AltiCore’s
-                'Fabless' model scales via IP Royalties and Enterprise SaaS,
-                providing the architectural blueprints that define
-                next-generation AI execution.
-              </p>
-            </div>
-
             {/* --- SECTION 3: REVENUE STREAMS (REFACTORED) --- */}
             <div id="revenue-streams">
               <h3 className="text-2xl font-bold text-white border-l-4 border-cyan-500 pl-4 mb-4 font-mono uppercase tracking-widest">
@@ -558,6 +421,143 @@ export const InvestorPortalContent = () => {
               </div>
             </div>
 
+            {/* --- SIDEPATH BENCHMARK: ALGORITHMIC SUPERIORITY --- */}
+            <SidePathBenchmarkSection />
+
+            {/* --- SECTION 2: COMPETITIVE LANDSCAPE (REFACTORED) --- */}
+            <div id="competitive-moat">
+              <h3 className="text-2xl font-bold text-white border-l-4 border-cyan-500 pl-4 mb-4 font-mono uppercase tracking-widest">
+                Competitive Landscape: The Insuperable Moat
+              </h3>
+              <p className="text-slate-300 text-md mb-8 leading-relaxed font-sans">
+                Current market incumbents focus on "Optimization" - attempting
+                to shrink legacy Neural Network architectures to fit modern
+                hardware. AltiCore represents a fundamental architectural reset.
+                By replacing probabilistic Neural Networks with a{" "}
+                <span className="font-bold text-cyan-400">
+                  Unique Logic-Based Format
+                </span>
+                , we decouple AI performance from physical silicon constraints,
+                delivering a mathematically distinct solution capable of
+                bypassing industry standards.
+              </p>
+
+              <div className="rounded-xl border border-slate-800 bg-slate-950/50 overflow-hidden mb-6">
+                <div className="overflow-x-auto">
+                  <table className="w-full text-left text-[13px]">
+                    <thead>
+                      <tr className="bg-slate-900/80 border-b border-slate-800 text-slate-300 uppercase tracking-wider font-mono font-bold">
+                        <th className="py-4 px-6 font-sans font-normal text-white">
+                          Strategic Pillar
+                        </th>
+                        <th className="py-4 px-4 text-center font-sans font-normal">
+                          Legacy (TF Lite / Arm CMSIS-NN)
+                        </th>
+                        <th className="py-4 px-4 text-center font-sans font-normal">
+                          Optimizers (Pruning/Quantization)
+                        </th>
+                        <th className="py-4 px-4 text-center text-cyan-400 bg-cyan-400/5 font-bold">
+                          AltiCore (IP Portfolio)
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody className="text-slate-300 divide-y divide-slate-800/50 font-sans">
+                      <tr>
+                        <td className="py-4 px-6 font-mono font-bold uppercase text-md text-slate-100">
+                          Architectural Basis
+                        </td>
+                        <td className="py-4 px-4 text-center">
+                          Manual Matrix Math (A x B + C)
+                        </td>
+                        <td className="py-4 px-4 text-center">
+                          Automated NN Compression
+                        </td>
+                        <td className="py-4 px-4 text-center font-bold text-cyan-400 bg-cyan-400/5">
+                          Unique Logic-Based Format
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="py-4 px-6 font-mono font-bold uppercase text-md text-slate-100">
+                          Operational State
+                        </td>
+                        <td className="py-4 px-4 text-center">
+                          Probabilistic "Black Box"
+                        </td>
+                        <td className="py-4 px-4 text-center">
+                          Probabilistic "Black Box"
+                        </td>
+                        <td className="py-4 px-4 text-center font-bold text-cyan-400 bg-cyan-400/5">
+                          100% Deterministic (White Box)
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="py-4 px-6 font-mono font-bold uppercase text-md text-slate-100">
+                          Safety Profile
+                        </td>
+                        <td className="py-4 px-4 text-center">
+                          Non-Deterministic
+                        </td>
+                        <td className="py-4 px-4 text-center">
+                          Non-Deterministic
+                        </td>
+                        <td className="py-4 px-4 text-center font-bold text-cyan-400 bg-cyan-400/5">
+                          Absolute Timing Predictability
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="py-4 px-6 font-mono font-bold uppercase text-md text-slate-100">
+                          INFERENCE LATENCY
+                        </td>
+                        <td className="py-4 px-4 text-center">
+                          High / Variable
+                        </td>
+                        <td className="py-4 px-4 text-center">
+                          Optimized / Variable
+                        </td>
+                        <td className="py-4 px-4 text-center font-bold text-cyan-400 bg-cyan-400/5">
+                          Fixed (1 Inference/Clock Cycle)
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="py-4 px-6 font-mono font-bold uppercase text-md text-slate-100">
+                          Energy Profile
+                        </td>
+                        <td className="py-4 px-4 text-center">
+                          High-Draw / Thermal Issues
+                        </td>
+                        <td className="py-4 px-4 text-center">
+                          Optimized (mA)
+                        </td>
+                        <td className="py-4 px-4 text-center font-bold text-cyan-400 bg-cyan-400/5">
+                          Ultra-Low Energy / Heat
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="py-4 px-6 font-mono font-bold uppercase text-md text-slate-100">
+                          Commercial Model
+                        </td>
+                        <td className="py-4 px-4 text-center">
+                          Hardware Dependency
+                        </td>
+                        <td className="py-4 px-4 text-center">
+                          Subscription Tooling
+                        </td>
+                        <td className="py-4 px-4 text-center font-bold text-cyan-400 bg-cyan-400/5">
+                          High-Margin IP & Royalties
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <p className="text-slate-300 text-sm leading-relaxed italic border-l border-slate-700 pl-4">
+                While incumbents focus on incremental gains, AltiCore’s
+                'Fabless' model scales via IP Royalties and Enterprise SaaS,
+                providing the architectural blueprints that define
+                next-generation AI execution.
+              </p>
+            </div>
+
             {/* --- SECTION 4: COMMERCIAL SCALABILITY & DEFENSE --- */}
             <div id="gtm-strategy">
               <h3 className="text-2xl font-bold text-white border-l-4 border-cyan-500 pl-4 mb-6 font-mono uppercase tracking-widest">
@@ -664,6 +664,141 @@ export const InvestorPortalContent = () => {
                     </div>
                     <p className="text-md text-slate-300 leading-relaxed">
                       {item.desc}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            </div>
+
+            {/* --- SECTION 6: TEAM & TRACTION --- */}
+            <div id="team-credibility">
+              <h3 className="text-2xl font-bold text-white border-l-4 border-cyan-500 pl-4 mb-8 font-mono uppercase tracking-widest">
+                Team Credibility & Traction
+              </h3>
+            <div
+              className="p-6 md:p-8 bg-slate-950 border border-green-900/20 rounded-2xl"
+            >
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div className="space-y-6">
+                  <div className="flex gap-4 p-6 bg-slate-900/50 rounded-xl border border-slate-800">
+                    <div className="w-14 h-14 bg-green-900/30 rounded-lg flex items-center justify-center shrink-0 border border-green-700/30 text-green-400 font-extrabold text-2xl">
+                      11+
+                    </div>
+                    <div>
+                      <h4 className="text-white font-bold text-lg">
+                        Successful Exits
+                      </h4>
+                      <p className="text-md text-slate-300 leading-relaxed font-sans">
+                        Management has a collective track record of building and
+                        exiting 11 companies to major industry players.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex gap-4 p-6 bg-slate-900/50 rounded-xl border border-slate-800">
+                    <div className="w-14 h-14 bg-blue-900/30 rounded-lg flex items-center justify-center shrink-0 border border-blue-700/30 text-mcu font-extrabold text-2xl">
+                      100+
+                    </div>
+                    <div>
+                      <h4 className="text-white font-bold text-lg">
+                        Global Patents
+                      </h4>
+                      <p className="text-md text-slate-300 leading-relaxed font-sans">
+                        Founder/CTO holds foundational AltiCore IP across logic
+                        mathematical framework, evolutionary algorithms, and
+                        hardware architecture.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-slate-900 p-8 rounded-xl border border-slate-800">
+                  <h4 className="text-cyan-400 font-mono text-[10px] uppercase mb-8 tracking-widest flex items-center gap-2 font-bold uppercase">
+                    <Activity className="w-3 h-3" /> Traction Timeline
+                  </h4>
+                  <div className="space-y-10">
+                    {[
+                      {
+                        date: "2021",
+                        label: "Logic-First Discovery",
+                        sub: "Internal breakthrough on gate-level mathematical framework.",
+                      },
+                      {
+                        date: "2023",
+                        label: "Seed Funding",
+                        sub: "$750K raised (Deep Future / Angels).",
+                      },
+                      {
+                        date: "2024",
+                        label: "Beta SDK Launch",
+                        sub: "Currently pilot-testing with 3 Industrial IoT partners.",
+                      },
+                    ].map((t, i) => (
+                      <div
+                        key={i}
+                        className="flex gap-6 items-start relative font-mono font-bold uppercase tracking-widest"
+                      >
+                        {i < 2 && (
+                          <div className="absolute left-[9px] top-8 w-px h-12 bg-slate-800"></div>
+                        )}
+                        <div className="w-[18px] h-[18px] rounded-full bg-cyan-500/20 border border-cyan-500 shrink-0 mt-1 shadow-[0_0_10px_rgba(6,182,212,0.5)]"></div>
+                        <div>
+                          <p className="text-[14px] text-cyan-500 uppercase">
+                            {t.date}
+                          </p>
+                          <p className="text-sm text-white tracking-tight font-sans">
+                            {t.label}
+                          </p>
+                          <p className="text-md text-slate-300 font-sans font-normal normal-case">
+                            {t.sub}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 font-sans">
+                {[
+                  {
+                    name: "Alain Blancquart",
+                    role: "Chairman & CEO",
+                    icon: Briefcase,
+                    bio: "3 Public Exits (IPO/M&A). 20+ years of C-Suite leadership in SaaS scaling publishers from Seed to Exit.",
+                  },
+                  {
+                    name: "Patrick O'Neil",
+                    role: "CTO",
+                    icon: Code,
+                    bio: "Foundational AltiCore Architect. Mathematician with 100+ Patents. 6 successful exits as a technical founder.",
+                  },
+                  {
+                    name: "Jerry Conrad",
+                    role: "EVP Business Dev",
+                    icon: TrendingUp,
+                    bio: "Strategic Finance & M&A. 30+ years in banking. Executed a high-value exit to Allstate (NYSE: ALL).",
+                  },
+                ].map((member, i) => (
+                  <div
+                    key={i}
+                    className="bg-slate-950 border border-slate-800 p-6 rounded-xl hover:border-cyan-500/50 transition-all group"
+                  >
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-12 h-12 rounded-full border border-slate-700 flex items-center justify-center bg-slate-900 group-hover:border-cyan-500/50 transition-colors">
+                        <member.icon className="w-5 h-5 text-slate-400 group-hover:text-cyan-400" />
+                      </div>
+                      <div>
+                        <h3 className="text-base font-bold text-white">
+                          {member.name}
+                        </h3>
+                        <p className="text-cyan-400 text-[12px] font-mono uppercase tracking-tighter">
+                          {member.role}
+                        </p>
+                      </div>
+                    </div>
+                    <p className="text-md text-slate-300 leading-relaxed border-t border-slate-800/50 pt-4 font-sans">
+                      {member.bio}
                     </p>
                   </div>
                 ))}
@@ -830,141 +965,6 @@ export const InvestorPortalContent = () => {
                   </p>
                 </div>
               </div>
-            </div>
-
-            {/* --- SECTION 6: TEAM & TRACTION --- */}
-            <div id="team-credibility">
-              <h3 className="text-2xl font-bold text-white border-l-4 border-cyan-500 pl-4 mb-8 font-mono uppercase tracking-widest">
-                Team Credibility & Traction
-              </h3>
-            <div
-              className="p-6 md:p-8 bg-slate-950 border border-green-900/20 rounded-2xl"
-            >
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div className="space-y-6">
-                  <div className="flex gap-4 p-6 bg-slate-900/50 rounded-xl border border-slate-800">
-                    <div className="w-14 h-14 bg-green-900/30 rounded-lg flex items-center justify-center shrink-0 border border-green-700/30 text-green-400 font-extrabold text-2xl">
-                      11+
-                    </div>
-                    <div>
-                      <h4 className="text-white font-bold text-lg">
-                        Successful Exits
-                      </h4>
-                      <p className="text-md text-slate-300 leading-relaxed font-sans">
-                        Management has a collective track record of building and
-                        exiting 11 companies to major industry players.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex gap-4 p-6 bg-slate-900/50 rounded-xl border border-slate-800">
-                    <div className="w-14 h-14 bg-blue-900/30 rounded-lg flex items-center justify-center shrink-0 border border-blue-700/30 text-mcu font-extrabold text-2xl">
-                      100+
-                    </div>
-                    <div>
-                      <h4 className="text-white font-bold text-lg">
-                        Global Patents
-                      </h4>
-                      <p className="text-md text-slate-300 leading-relaxed font-sans">
-                        Founder/CTO holds foundational AltiCore IP across logic
-                        mathematical framework, evolutionary algorithms, and
-                        hardware architecture.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-slate-900 p-8 rounded-xl border border-slate-800">
-                  <h4 className="text-cyan-400 font-mono text-[10px] uppercase mb-8 tracking-widest flex items-center gap-2 font-bold uppercase">
-                    <Activity className="w-3 h-3" /> Traction Timeline
-                  </h4>
-                  <div className="space-y-10">
-                    {[
-                      {
-                        date: "2021",
-                        label: "Logic-First Discovery",
-                        sub: "Internal breakthrough on gate-level mathematical framework.",
-                      },
-                      {
-                        date: "2023",
-                        label: "Seed Funding",
-                        sub: "$750K raised (Deep Future / Angels).",
-                      },
-                      {
-                        date: "2024",
-                        label: "Beta SDK Launch",
-                        sub: "Currently pilot-testing with 3 Industrial IoT partners.",
-                      },
-                    ].map((t, i) => (
-                      <div
-                        key={i}
-                        className="flex gap-6 items-start relative font-mono font-bold uppercase tracking-widest"
-                      >
-                        {i < 2 && (
-                          <div className="absolute left-[9px] top-8 w-px h-12 bg-slate-800"></div>
-                        )}
-                        <div className="w-[18px] h-[18px] rounded-full bg-cyan-500/20 border border-cyan-500 shrink-0 mt-1 shadow-[0_0_10px_rgba(6,182,212,0.5)]"></div>
-                        <div>
-                          <p className="text-[14px] text-cyan-500 uppercase">
-                            {t.date}
-                          </p>
-                          <p className="text-sm text-white tracking-tight font-sans">
-                            {t.label}
-                          </p>
-                          <p className="text-md text-slate-300 font-sans font-normal normal-case">
-                            {t.sub}
-                          </p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 font-sans">
-                {[
-                  {
-                    name: "Alain Blancquart",
-                    role: "Chairman & CEO",
-                    icon: Briefcase,
-                    bio: "3 Public Exits (IPO/M&A). 20+ years of C-Suite leadership in SaaS scaling publishers from Seed to Exit.",
-                  },
-                  {
-                    name: "Patrick O'Neil",
-                    role: "CTO",
-                    icon: Code,
-                    bio: "Foundational AltiCore Architect. Mathematician with 100+ Patents. 6 successful exits as a technical founder.",
-                  },
-                  {
-                    name: "Jerry Conrad",
-                    role: "EVP Business Dev",
-                    icon: TrendingUp,
-                    bio: "Strategic Finance & M&A. 30+ years in banking. Executed a high-value exit to Allstate (NYSE: ALL).",
-                  },
-                ].map((member, i) => (
-                  <div
-                    key={i}
-                    className="bg-slate-950 border border-slate-800 p-6 rounded-xl hover:border-cyan-500/50 transition-all group"
-                  >
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="w-12 h-12 rounded-full border border-slate-700 flex items-center justify-center bg-slate-900 group-hover:border-cyan-500/50 transition-colors">
-                        <member.icon className="w-5 h-5 text-slate-400 group-hover:text-cyan-400" />
-                      </div>
-                      <div>
-                        <h3 className="text-base font-bold text-white">
-                          {member.name}
-                        </h3>
-                        <p className="text-cyan-400 text-[12px] font-mono uppercase tracking-tighter">
-                          {member.role}
-                        </p>
-                      </div>
-                    </div>
-                    <p className="text-md text-slate-300 leading-relaxed border-t border-slate-800/50 pt-4 font-sans">
-                      {member.bio}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
             </div>
 
             {/* --- SECTION 7: CAPITAL STRATEGY --- */}

@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import {
   Cpu,
@@ -13,47 +12,24 @@ import {
   ShieldCheck,
   ArrowRight,
   Menu,
-  X,
   Layers,
   Code,
   ChevronRight,
-  ChevronDown,
-  Target,
-  Lock,
-  FileText,
   BarChart,
   Terminal,
-  Download,
-  Users,
-  Activity,
-  Box,
   Database,
   DollarSign,
   Briefcase,
   GitBranch,
   Mail,
-  Phone,
-  MapPin,
-  Linkedin,
-  AlertTriangle,
-  Rocket,
-  Award,
   CheckCircle2,
-  Flag,
   Activity as Pulse,
   Cpu as Silicon,
   HardDrive,
-  Clock,
   Thermometer,
-  Minimize2,
   ClipboardCheck,
   GitMerge,
   Globe,
-  FileUp,
-  BrainCog,
-  Laptop,
-  Table,
-  Smartphone,
 } from "lucide-react";
 
 // Extracted components
@@ -64,12 +40,7 @@ import {
   LogicBackground,
   CookieConsentBanner,
 } from "@/components/ui";
-import { VideoEmbed, Logo } from "@/components/brand";
-import { KPICard, IPPortfolioCard } from "@/components/investor";
-import AccuracyChart from "@/components/sections/AccuracyChart";
-import SpeedChart from "@/components/sections/SpeedChart";
-import LaptopComparisonTable from "@/components/sections/LaptopComparisonTable";
-import ServerComparisonTable from "@/components/sections/ServerComparisonTable";
+import { VideoEmbed } from "@/components/brand";
 import { SwShowcase } from "@/components/sections/SwShowcase";
 import { PodcastSection } from "@/components/sections/PodcastSection";
 import { EvoContactSection } from "@/components/sections/ContactSection";
