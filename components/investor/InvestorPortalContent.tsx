@@ -190,7 +190,7 @@ export const InvestorPortalContent = () => {
                   </div>
                   <p className="text-sm text-slate-300 mt-8 italic text-center">
                     Legacy AI scaling requires "bigger chips". <br />
-                    Alticore solves the problem by providing a "
+                    AltiCore solves the problem by providing a "
                     <span className="text-cyan-400">
                       Mathematically Distinct Architecture
                     </span>
@@ -215,7 +215,7 @@ export const InvestorPortalContent = () => {
                     problem:
                       "Legacy AI relies on massive floating-point math and heavy arithmetic intensity.",
                     solution:
-                      "The Logic Reset: Alticore replaces arithmetic with hardware-native logic primitives, eliminating FPU dependency.",
+                      "The Logic Reset: AltiCore replaces arithmetic with hardware-native logic primitives, eliminating FPU dependency.",
                     icon: Zap,
                   },
                   {
@@ -223,7 +223,7 @@ export const InvestorPortalContent = () => {
                     problem:
                       "Standard AI makes determinism nearly impossible in NNs; outputs are probabilistic and variable.",
                     solution:
-                      "The Deterministic Core: Alticore ensures Absolute Timing Predictability, and lightweight understandable models required for safety-certified environments.",
+                      "The Deterministic Core: AltiCore ensures Absolute Timing Predictability, and lightweight understandable models required for safety-certified environments.",
                     icon: Lock,
                   },
                   {
@@ -231,7 +231,7 @@ export const InvestorPortalContent = () => {
                     problem:
                       "Transistor density cannot keep up with AI model parameter growth as hardware hits physical limits.",
                     solution:
-                      "The Density Leap: Alticore achieves a 1000x density gain by using 35x to 300x fewer parameters than traditional architectures.",
+                      "The Density Leap: AltiCore achieves a 1000x density gain by using 35x to 300x fewer parameters than traditional architectures.",
                     icon: Microchip,
                   },
                   {
@@ -239,7 +239,7 @@ export const InvestorPortalContent = () => {
                     problem:
                       'Excess power density leads to "Dark Silicon" and thermal throttling in legacy hardware.',
                     solution:
-                      'The Cool Logic: Alticore efficiency solves the "Dark Silicon" management crisis by utilizing minimal gate counts.',
+                      'The Cool Logic: AltiCore efficiency solves the "Dark Silicon" management crisis by utilizing minimal gate counts.',
                     icon: Thermometer,
                   },
                   {
@@ -247,7 +247,7 @@ export const InvestorPortalContent = () => {
                     problem:
                       "Legacy AI causes energy costs and battery consumption to scale exponentially.",
                     solution:
-                      'The Sentinel Efficiency: Alticore delivers an order-of-magnitude reduction in power, enabling always-on "sentinel" monitoring.',
+                      'The Sentinel Efficiency: AltiCore delivers an order-of-magnitude reduction in power, enabling always-on "sentinel" monitoring.',
                     icon: Globe,
                   },
                 ];
@@ -294,7 +294,7 @@ export const InvestorPortalContent = () => {
               <p className="text-slate-300 text-md mb-8 leading-relaxed font-sans">
                 Current market incumbents focus on "Optimization" - attempting
                 to shrink legacy Neural Network architectures to fit modern
-                hardware. Alticore represents a fundamental architectural reset.
+                hardware. AltiCore represents a fundamental architectural reset.
                 By replacing probabilistic Neural Networks with a{" "}
                 <span className="font-bold text-cyan-400">
                   Unique Logic-Based Format
@@ -429,7 +429,7 @@ export const InvestorPortalContent = () => {
                 <span className="font-bold text-cyan-400">
                   Strategic Ecosystem:
                 </span>{" "}
-                Alticore provides a consistent mathematical framework across the
+                AltiCore provides a consistent mathematical framework across the
                 entire compute lifecycle. We enable local intelligence on
                 high-volume edge devices with{" "}
                 <span className="font-bold text-blue-400">AltiCoreMCU</span>,
@@ -530,7 +530,7 @@ export const InvestorPortalContent = () => {
                   items={[
                     {
                       label: "Definition",
-                      text: "FPGA/ASIC hardware inference and training IP that maps the Alticore framework directly into silicon logic.",
+                      text: "FPGA/ASIC hardware inference and training IP that maps the AltiCore framework directly into silicon logic.",
                     },
                     {
                       label: "Target Market",
@@ -573,22 +573,81 @@ export const InvestorPortalContent = () => {
                 {[
                   {
                     title: "Scalable Distribution",
-                    desc: <>A high-margin IP licensing model scaling via High-Volume Royalties and Software Platform subscriptions. Our &ldquo;Fabless&rdquo; approach ensures growth is decoupled from hardware supply chain bottlenecks and physical manufacturing limits. This is supported by the ability to &ldquo;<span className="font-bold text-cyan-400">revitalize legacy hardware</span>&rdquo;, making existing inventory smart without changing the Bill of Materials (BOM).</>,
+                    desc: (
+                      <>
+                        A high-margin IP licensing model scaling via High-Volume
+                        Royalties and Software Platform subscriptions. Our
+                        &ldquo;Fabless&rdquo; approach ensures growth is
+                        decoupled from hardware supply chain bottlenecks and
+                        physical manufacturing limits. This is supported by the
+                        ability to &ldquo;
+                        <span className="font-bold text-cyan-400">
+                          revitalize legacy hardware
+                        </span>
+                        &rdquo;, making existing inventory smart without
+                        changing the Bill of Materials (BOM).
+                      </>
+                    ),
                     icon: Layers,
                   },
                   {
                     title: "Market Entry",
-                    desc: <>Leveraging Tier 1 Semiconductor partnerships to embed <span className="font-bold text-amber-500">AltiCoreHDL</span> directly into next-gen silicon roadmaps. This provides a direct pathway to production silicon through IP cores that deliver industry-leading throughput and absolute timing predictability, allowing models to migrate seamlessly from off-the-shelf FPGAs to custom ASIC designs.</>,
+                    desc: (
+                      <>
+                        Leveraging Tier 1 Semiconductor partnerships to embed{" "}
+                        <span className="font-bold text-amber-500">
+                          AltiCoreHDL
+                        </span>{" "}
+                        directly into next-gen silicon roadmaps. This provides a
+                        direct pathway to production silicon through IP cores
+                        that deliver industry-leading throughput and absolute
+                        timing predictability, allowing models to migrate
+                        seamlessly from off-the-shelf FPGAs to custom ASIC
+                        designs.
+                      </>
+                    ),
                     icon: Target,
                   },
                   {
                     title: "IP Moat",
-                    desc: <>Protected by a robust patent portfolio and mathematically distinct algorithms built on a unique logic-based format. By replacing heavy arithmetic with <span className="font-bold text-cyan-400">hardware-native logic primitives</span> and <span className="font-bold text-cyan-400">integer-only logic</span>, the framework eliminates the need for floating-point tensors and matrix multiplications. This mathematically distinct architecture makes it functionally impossible to reverse-engineer via traditional neural network analysis.</>,
+                    desc: (
+                      <>
+                        Protected by a robust patent portfolio and
+                        mathematically distinct algorithms built on a unique
+                        logic-based format. By replacing heavy arithmetic with{" "}
+                        <span className="font-bold text-cyan-400">
+                          hardware-native logic primitives
+                        </span>{" "}
+                        and{" "}
+                        <span className="font-bold text-cyan-400">
+                          integer-only logic
+                        </span>
+                        , the framework eliminates the need for floating-point
+                        tensors and matrix multiplications. This mathematically
+                        distinct architecture makes it functionally impossible
+                        to reverse-engineer via traditional neural network
+                        analysis.
+                      </>
+                    ),
                     icon: ShieldCheck,
                   },
                   {
                     title: "High Switching Costs",
-                    desc: <>Deep integration into client HDL and existing general-purpose software environments (Windows/Linux) ensures long-term Annual Contract Value (ACV) retention. By mapping a <span className="font-bold text-cyan-400">static execution schedule</span> directly to the hardware logic, Alticore creates a specialized, high-performance environment that establishes &ldquo;Intel-Inside&rdquo; brand dominance within the local compute stack.</>,
+                    desc: (
+                      <>
+                        Deep integration into client HDL and existing
+                        general-purpose software environments (Windows/Linux)
+                        ensures long-term Annual Contract Value (ACV) retention.
+                        By mapping a{" "}
+                        <span className="font-bold text-cyan-400">
+                          static execution schedule
+                        </span>{" "}
+                        directly to the hardware logic, AltiCore creates a
+                        specialized, high-performance environment that
+                        establishes &ldquo;Intel-Inside&rdquo; brand dominance
+                        within the local compute stack.
+                      </>
+                    ),
                     icon: Lock,
                   },
                 ].map((item, i) => (

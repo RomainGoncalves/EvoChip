@@ -24,7 +24,7 @@ export default function HdlTechnicalDetailsPage() {
           <section>
             <h2 className="text-3xl font-bold text-hdl mb-8 flex items-center gap-3">
               <Cpu className="w-8 h-8" />
-              Core Technical Architecture
+              Technical white paper : Executive Summary
             </h2>
 
             <div className="grid md:grid-cols-2 gap-8">

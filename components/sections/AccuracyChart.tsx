@@ -14,7 +14,7 @@ import { ChartCard } from "@/components/ChartCard";
 const App = () => {
   // Accuracy datasets for comparison
   const datasets = {
-    accuracyAlticore: [0.8, 1, 0.91, 1, 1, 0.95, 0.85],
+    accuracyAltiCore: [0.8, 1, 0.91, 1, 1, 0.95, 0.85],
     accuracyNN: [0.81, 1, 0.93, 1, 0.96, 0.96, 0.81],
   };
 
@@ -32,14 +32,14 @@ const App = () => {
   const chartData = useMemo(() => {
     return labels.map((label, idx) => ({
       name: label,
-      alticore: datasets.accuracyAlticore[idx],
+      alticore: datasets.accuracyAltiCore[idx],
       nn: datasets.accuracyNN[idx],
     }));
   }, []);
 
-  const meanAlticore =
-    datasets.accuracyAlticore.reduce((a, b) => a + b, 0) /
-    datasets.accuracyAlticore.length;
+  const meanAltiCore =
+    datasets.accuracyAltiCore.reduce((a, b) => a + b, 0) /
+    datasets.accuracyAltiCore.length;
   const meanNN =
     datasets.accuracyNN.reduce((a, b) => a + b, 0) / datasets.accuracyNN.length;
 
@@ -100,7 +100,7 @@ const App = () => {
       className="h-112.5 mb-0!"
       icon={Activity}
       title="Global Accuracy"
-      subtitle="Alticore vs Neural Network"
+      subtitle="AltiCore vs Neural Network"
       legend={[
         {
           label: "AltiCore",

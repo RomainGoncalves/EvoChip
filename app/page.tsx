@@ -225,10 +225,10 @@ const EvoPodcast = () => (
                 Episode 1
               </div>
               <h3 className="text-xl font-bold text-white mb-2">
-                Alticore Fits AI Into 521 Bytes
+                AltiCore Fits AI Into 521 Bytes
               </h3>
               <p className="text-slate-400 text-sm">
-                Discover how Alticore's revolutionary synthesis technology
+                Discover how AltiCore's revolutionary synthesis technology
                 trains and executes AI models into impossibly small footprints,
                 enabling edge computing at unprecedented scales.
               </p>
@@ -242,7 +242,7 @@ const EvoPodcast = () => (
               }}
             >
               <source
-                src="/podcasts/EvoChipExplained_-_Alticore_Fits_AI_Into_521_Bytes.m4a"
+                src="/podcasts/EvoChipExplained_-_AltiCore_Fits_AI_Into_521_Bytes.m4a"
                 type="audio/mp4"
               />
               Your browser does not support the audio element.
@@ -947,7 +947,7 @@ const EvoProducts = ({
               The only solution capable of training and executing AI models
               locally across the entire microcontroller spectrum—from
               high-performance processors to standard $9 Arduino Uno class
-              devices. This toolset utilizes the Alticore mathematical framework
+              devices. This toolset utilizes the AltiCore mathematical framework
               to deploy software inference to{" "}
               <span className="text-mcu font-bold">MCU-class devices</span> with
               a memory footprint of less than 521 bytes of RAM and zero dynamic
@@ -1055,7 +1055,7 @@ const EvoProducts = ({
             </p>
             <p className="text-slate-300 text-sm leading-relaxed mb-8 grow">
               A direct pathway to production silicon by mapping models trained
-              within the Alticore mathematical framework directly into FPGA and
+              within the AltiCore mathematical framework directly into FPGA and
               ASIC logic. By{" "}
               <span className="text-hdl font-bold">
                 replacing heavy arithmetic

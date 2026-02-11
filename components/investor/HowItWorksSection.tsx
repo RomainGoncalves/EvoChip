@@ -10,27 +10,41 @@ export const HowItWorksSection = () => (
     </h3>
 
     <p className="text-lg text-slate-300 leading-relaxed font-sans mb-8">
-      Alticore is the new mathematical framework that replaces the heavy
+      AltiCore is the new mathematical framework that replaces the heavy
       arithmetic and matrix multiplication (A x B + C) of traditional Neural
-      Networks with a <span className="font-bold text-cyan-400">unique logic-based format</span>. Built to lean into what
-      computers do natively, this <span className="font-bold text-cyan-400">mathematically distinct inference architecture</span>{" "}
+      Networks with a{" "}
+      <span className="font-bold text-cyan-400">unique logic-based format</span>
+      . Built to lean into what computers do natively, this{" "}
+      <span className="font-bold text-cyan-400">
+        mathematically distinct inference architecture
+      </span>{" "}
       utilizes hardware-native primitives and logic-level operations to achieve{" "}
-      <span className="font-bold text-cyan-400">deterministic, fixed-latency execution</span>.
+      <span className="font-bold text-cyan-400">
+        deterministic, fixed-latency execution
+      </span>
+      .
     </p>
 
     <p className="text-lg text-slate-300 leading-relaxed font-sans mb-8">
       By abandoning the "square peg in a round hole" approach of probabilistic
-      Neural Networks, Alticore eliminates FPU dependency and dynamic memory
-      allocation. This results in an order-of-magnitude leap in
-      throughput—<span className="font-bold text-cyan-400">performing as few as 36 to 116 operations per inference</span>{" "}
+      Neural Networks, AltiCore eliminates FPU dependency and dynamic memory
+      allocation. This results in an order-of-magnitude leap in throughput—
+      <span className="font-bold text-cyan-400">
+        performing as few as 36 to 116 operations per inference
+      </span>{" "}
       compared to 21,000+ in standard architectures. Whether deployed via{" "}
-      <span className="font-bold text-cyan-400">AltiCoreSWP</span> (Server/Desktop), <span className="font-bold text-cyan-400">AltiCoreMCU</span> (Edge/IoT), or <span className="font-bold text-cyan-400">AltiCoreHDL</span>{" "}
-      (Custom Silicon), Alticore ensures a <span className="font-bold text-cyan-400">private local loop</span> where decisions
-      happen at the source and data never leaves the device.
+      <span className="font-bold text-cyan-400">AltiCoreSWP</span>{" "}
+      (Server/Desktop),{" "}
+      <span className="font-bold text-cyan-400">AltiCoreMCU</span> (Edge/IoT),
+      or <span className="font-bold text-cyan-400">AltiCoreHDL</span> (Custom
+      Silicon), AltiCore ensures a{" "}
+      <span className="font-bold text-cyan-400">private local loop</span> where
+      decisions happen at the source and data never leaves the device.
     </p>
 
     <p className="text-2xl text-cyan-400 font-bold italic text-center leading-relaxed border-y border-cyan-500/20 py-8">
-      We don&apos;t &ldquo;run&rdquo; models; we execute them as a stream of pure logic.
+      We don&apos;t &ldquo;run&rdquo; models; we execute them as a stream of
+      pure logic.
     </p>
 
     {/* The Three-Step Transformation */}

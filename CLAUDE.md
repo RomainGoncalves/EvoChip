@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a Next.js 16.1.1 project using the App Router, React 19.2, TypeScript, and Tailwind CSS 4. The project appears to be a landing page for "Alticore Gemini" - a semiconductor/chip-related product or service with a single-page application architecture.
+This is a Next.js 16.1.1 project using the App Router, React 19.2, TypeScript, and Tailwind CSS 4. The project appears to be a landing page for "AltiCore Gemini" - a semiconductor/chip-related product or service with a single-page application architecture.
 
 ## Commands
 
