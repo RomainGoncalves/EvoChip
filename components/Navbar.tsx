@@ -62,7 +62,7 @@ export const Navbar = ({ onViewChange }: NavbarProps) => {
     },
     {
       name: "AltiCoreSWP",
-      tag: "FPGA & ASIC",
+      tag: "Server & Desktop",
       href: "/swp-technical-details",
       icon: Server,
       color: "text-teal-400",
@@ -70,7 +70,7 @@ export const Navbar = ({ onViewChange }: NavbarProps) => {
     },
     {
       name: "AltiCoreHDL",
-      tag: "Server & Desktop",
+      tag: "FPGA & ASIC",
       href: "/hdl-technical-details",
       icon: Cpu,
       color: "text-amber-500",

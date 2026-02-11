@@ -103,10 +103,9 @@ const EvoHero = ({
           </h1>
 
           <p className="text-xl text-slate-300 mb-10 leading-relaxed max-w-2xl">
-            EvoChip is the IP holding company for AltiCore, replacing legacy,
-            power-hungry Neural Networks with patented 'Logic-First'
-            mathematical framework to solve the fundamental scaling limits of
-            global AI and deliver up to 1000x efficiency gains.
+            EvoChip is the IP holding company for AltiCore, a patented
+            mathematical framework delivering up to 1000x efficiency gains by
+            replacing legacy neural networks with logic-level operations.
           </p>
 
           {/* Product Secondary Tier - Sovereign Color Mapping */}
@@ -118,7 +117,7 @@ const EvoHero = ({
                   AltiCoreMCU
                 </span>
               </div>
-              <p className="text-[14px]">Edge device intelligence</p>
+              <p className="text-[14px]">Embedded Intelligence at the Source</p>
             </div>
             <div className="flex flex-col gap-1">
               <div className="flex items-center gap-2 text-sw">
@@ -127,7 +126,7 @@ const EvoHero = ({
                   AltiCoreSWP
                 </span>
               </div>
-              <p className="text-[14px]">Pure software acceleration platform</p>
+              <p className="text-[14px]">Software acceleration platform</p>
             </div>
             <div className="flex flex-col gap-1">
               <div className="flex items-center gap-2 text-hdl">
@@ -136,26 +135,10 @@ const EvoHero = ({
                   AltiCoreHDL
                 </span>
               </div>
-              <p className="text-[14px]">
-                FPGA/ASIC hardware inference and training
-              </p>
+              <p className="text-[14px]">Hardware-Integrated Intelligence</p>
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button
-              variant="devPrimary"
-              onClick={() => onViewChange("investor")}
-            >
-              <Lock className="w-4 h-4" /> Access Investor Portal
-            </Button>
-            {/* <Button
-              variant="outline"
-              onClick={() => onViewChange("alticore_home")}
-            >
-              Visit AltiCore
-            </Button> */}
-          </div>
         </div>
         <div className="relative" aria-label={heroImageAlt}>
           <div className="relative z-10 bg-slate-900/50 backdrop-blur-md p-1 rounded-2xl border border-cyan-500/20 shadow-2xl">
@@ -201,7 +184,6 @@ const EvoHeroVideos = () => (
     </div>
   </section>
 );
-
 
 const EvoTechnology = () => (
   <section
@@ -2217,9 +2199,9 @@ const App = () => {
       <EvoHero onViewChange={setCurrentView} />
       <EvoHeroVideos />
       <SwShowcase />
+      <EvoProducts onViewChange={setCurrentView} />
       <EvoInnovation />
       <EvoTechnology />
-      <EvoProducts onViewChange={setCurrentView} />
       <PodcastSection />
       {/* <HdlShowcase /> */}
       <EvoAbout />
