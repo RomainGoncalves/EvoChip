@@ -103,9 +103,15 @@ const EvoHero = ({
           </h1>
 
           <p className="text-xl text-slate-300 mb-10 leading-relaxed max-w-2xl">
-            EvoChip is the IP holding company for AltiCore, a patented
-            mathematical framework delivering up to 1000x efficiency gains by
-            replacing legacy neural networks with logic-level operations.
+            EvoChip is the IP holding company for{" "}
+            <span className="font-bold text-cyan-400">AltiCore</span>, a
+            patented mathematical framework that replaces legacy, power-hungry
+            Neural Networks with logic-level operations. By eliminating the
+            heavy arithmetic burden of standard AI, we deliver up to{" "}
+            <span className="font-bold text-cyan-400">
+              1000x efficiency gains
+            </span>{" "}
+            and solve the fundamental scaling limits of global AI.
           </p>
 
           {/* Product Secondary Tier - Sovereign Color Mapping */}
@@ -138,7 +144,6 @@ const EvoHero = ({
               <p className="text-[14px]">Hardware-Integrated Intelligence</p>
             </div>
           </div>
-
         </div>
         <div className="relative" aria-label={heroImageAlt}>
           <div className="relative z-10 bg-slate-900/50 backdrop-blur-md p-1 rounded-2xl border border-cyan-500/20 shadow-2xl">

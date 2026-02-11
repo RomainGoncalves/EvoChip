@@ -130,20 +130,17 @@ export const InvestorPortalContent = () => {
             {/* --- THE SCIENCE: LOGIC-FIRST SYNTHESIS --- */}
             <HowItWorksSection />
 
-            {/* --- SIDEPATH BENCHMARK: ALGORITHMIC SUPERIORITY --- */}
-            <SidePathBenchmarkSection />
-
             {/* --- SECTION 1: THE PROBLEM --- */}
+            <div id="problem-foundation">
+              <h3 className="text-2xl font-bold text-white border-l-4 border-cyan-500 pl-4 mb-6 font-mono uppercase tracking-widest">
+                Problem: The Flaw in the Foundation
+              </h3>
             <div
-              id="problem-foundation"
               className="p-6 md:p-8 bg-slate-950 border border-red-900/20 rounded-2xl relative overflow-hidden"
             >
               <div className="hidden sm:block absolute top-0 right-0 p-4 opacity-10">
                 <AlertTriangle className="w-24 h-24 text-red-500" />
               </div>
-              <h3 className="text-2xl font-bold text-white flex items-center gap-3 mb-6 font-mono uppercase tracking-widest">
-                Problem: The Flaw in the Foundation
-              </h3>
 
               {/* Top Layer: Paragraph */}
               <p className="text-slate-300 leading-relaxed text-sm md:text-base mb-8">
@@ -285,6 +282,10 @@ export const InvestorPortalContent = () => {
                 );
               })()}
             </div>
+            </div>
+
+            {/* --- SIDEPATH BENCHMARK: ALGORITHMIC SUPERIORITY --- */}
+            <SidePathBenchmarkSection />
 
             {/* --- SECTION 2: COMPETITIVE LANDSCAPE (REFACTORED) --- */}
             <div id="competitive-moat">
@@ -425,7 +426,7 @@ export const InvestorPortalContent = () => {
               <h3 className="text-2xl font-bold text-white border-l-4 border-cyan-500 pl-4 mb-4 font-mono uppercase tracking-widest">
                 AltiCore IP Portfolio: Three High-Margin Revenue Streams
               </h3>
-              <p className="text-slate-300 text-md mb-10 leading-relaxed max-w-3xl">
+              <p className="text-slate-300 text-md mb-10 leading-relaxed">
                 <span className="font-bold text-cyan-400">
                   Strategic Ecosystem:
                 </span>{" "}
@@ -558,13 +559,13 @@ export const InvestorPortalContent = () => {
             </div>
 
             {/* --- SECTION 4: COMMERCIAL SCALABILITY & DEFENSE --- */}
-            <div
-              id="gtm-strategy"
-              className="p-6 md:p-8 bg-slate-950 border border-cyan-900/20 rounded-2xl"
-            >
-              <h3 className="text-2xl font-bold text-white flex items-center gap-3 mb-6 font-mono uppercase tracking-widest">
+            <div id="gtm-strategy">
+              <h3 className="text-2xl font-bold text-white border-l-4 border-cyan-500 pl-4 mb-6 font-mono uppercase tracking-widest">
                 COMMERCIAL SCALABILITY & DEFENSE
               </h3>
+            <div
+              className="p-6 md:p-8 bg-slate-950 border border-cyan-900/20 rounded-2xl"
+            >
               <p className="text-slate-300 text-md mb-10 max-w-3xl leading-relaxed">
                 Revenue scaled through a ‘Value-per-Device’ framework,
                 independent of physical manufacturing constraints.
@@ -667,6 +668,7 @@ export const InvestorPortalContent = () => {
                   </div>
                 ))}
               </div>
+            </div>
             </div>
 
             {/* --- SECTION 5: ROADMAP (REFACTORED) --- */}
@@ -831,13 +833,13 @@ export const InvestorPortalContent = () => {
             </div>
 
             {/* --- SECTION 6: TEAM & TRACTION --- */}
-            <div
-              id="team-credibility"
-              className="p-6 md:p-8 bg-slate-950 border border-green-900/20 rounded-2xl"
-            >
-              <h3 className="text-2xl font-bold text-white flex items-center gap-3 mb-8 font-mono uppercase tracking-widest">
+            <div id="team-credibility">
+              <h3 className="text-2xl font-bold text-white border-l-4 border-cyan-500 pl-4 mb-8 font-mono uppercase tracking-widest">
                 Team Credibility & Traction
               </h3>
+            <div
+              className="p-6 md:p-8 bg-slate-950 border border-green-900/20 rounded-2xl"
+            >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div className="space-y-6">
                   <div className="flex gap-4 p-6 bg-slate-900/50 rounded-xl border border-slate-800">
@@ -963,15 +965,16 @@ export const InvestorPortalContent = () => {
                 ))}
               </div>
             </div>
+            </div>
 
             {/* --- SECTION 7: CAPITAL STRATEGY --- */}
-            <div
-              id="capital-strategy"
-              className="p-6 md:p-8 bg-slate-950 border border-cyan-900/20 rounded-2xl"
-            >
+            <div id="capital-strategy">
               <h3 className="text-2xl font-bold text-white border-l-4 border-cyan-500 pl-4 mb-8 font-mono uppercase tracking-widest">
                 Capital Strategy & Series A Terms
               </h3>
+            <div
+              className="p-6 md:p-8 bg-slate-950 border border-cyan-900/20 rounded-2xl"
+            >
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 font-mono font-bold uppercase tracking-widest">
                 <div className="space-y-6">
                   <h4 className="text-lg text-white font-sans">
@@ -1055,6 +1058,7 @@ export const InvestorPortalContent = () => {
                   </div>
                 </div>
               </div>
+            </div>
             </div>
 
             {/* --- SECURED DUE DILIGENCE FOOTER --- */}

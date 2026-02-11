@@ -105,8 +105,8 @@ export const HowItWorksSection = () => (
             {[
               {
                 label: "Operations",
-                legacy: "Matrix Mult",
-                alti: "Bitwise Boolean",
+                legacy: "Matrix Multiplication",
+                alti: "Logic-level operations",
               },
               {
                 label: "Compute",
@@ -116,7 +116,7 @@ export const HowItWorksSection = () => (
               {
                 label: "Data Flow",
                 legacy: "High Latency",
-                alti: "Zero Bottleneck",
+                alti: "Fixed-Latency Execution",
               },
               {
                 label: "Reliability",
