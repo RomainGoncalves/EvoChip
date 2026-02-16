@@ -32,27 +32,30 @@ export const SwShowcase = ({ showQuote = true }: { showQuote?: boolean }) => {
               <span className="text-4xl md:text-6xl">x</span>
             </h2>
             <p className="text-xl md:text-2xl font-mono text-emerald-400 uppercase tracking-widest font-bold">
-              Maximum Speed Multiplier
+              Speed Multiplier
             </p>
           </div>
         </div>
 
         {/* Validation Quote */}
-        {showQuote && <div className="max-w-4xl mx-auto mb-16">
-          <div className="border-l-4 border-emerald-500 bg-slate-900/50 p-6 rounded-r-xl">
-            <blockquote className="text-lg md:text-xl text-slate-200 font-medium leading-relaxed italic mb-4">
-              &ldquo;The benchmark results with AltiCoreSWP are transformative.
-              Seeing a software synthesis engine outperform established best in
-              class Neural Networks solution by such a massive margin signals a
-              fundamental shift in AI deployment. AltiCore seems to be at the
-              beginning of its journey. There will be a lot of room for
-              optimizations leading I am sure to even higher performance&rdquo;
-            </blockquote>
-            <footer className="text-emerald-400 font-mono text-sm uppercase tracking-widest">
-              — Patrick Mulvee, CEO, SidePath
-            </footer>
+        {showQuote && (
+          <div className="max-w-4xl mx-auto mb-16">
+            <div className="border-l-4 border-emerald-500 bg-slate-900/50 p-6 rounded-r-xl">
+              <blockquote className="text-lg md:text-xl text-slate-200 font-medium leading-relaxed italic mb-4">
+                &ldquo;The benchmark results with AltiCoreSWP are
+                transformative. Seeing a software synthesis engine outperform
+                established best in class Neural Networks solution by such a
+                massive margin signals a fundamental shift in AI deployment.
+                AltiCore seems to be at the beginning of its journey. There will
+                be a lot of room for optimizations leading I am sure to even
+                higher performance&rdquo;
+              </blockquote>
+              <footer className="text-emerald-400 font-mono text-sm uppercase tracking-widest">
+                — Patrick Mulvee, CEO, SidePath
+              </footer>
+            </div>
           </div>
-        </div>}
+        )}
 
         {/* Hardware Nodes */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
