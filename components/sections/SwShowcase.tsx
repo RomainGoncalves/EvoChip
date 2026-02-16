@@ -8,7 +8,7 @@ import ServerComparisonTable from "@/components/sections/ServerComparisonTable";
 import AccuracyChart from "@/components/sections/AccuracyChart";
 import SpeedChart from "@/components/sections/SpeedChart";
 
-export const SwShowcase = () => {
+export const SwShowcase = ({ showQuote = true }: { showQuote?: boolean }) => {
   return (
     <section
       id="sw-showcase"
@@ -24,8 +24,12 @@ export const SwShowcase = () => {
         <div className="flex flex-col items-center justify-center mb-16 text-center">
           <div className="relative">
             <div className="absolute -inset-8 bg-cyan-500/20 blur-3xl rounded-full"></div>
+            <p className="text-2xl md:text-3xl text-white font-bold mb-2">
+              Up to
+            </p>
             <h2 className="text-7xl md:text-9xl font-black text-cyan-400 drop-shadow-[0_0_20px_rgba(34,211,238,0.5)] tracking-tighter mb-2">
-              143<span className="text-4xl md:text-6xl">x</span>
+              143
+              <span className="text-4xl md:text-6xl">x</span>
             </h2>
             <p className="text-xl md:text-2xl font-mono text-emerald-400 uppercase tracking-widest font-bold">
               Maximum Speed Multiplier
@@ -34,21 +38,21 @@ export const SwShowcase = () => {
         </div>
 
         {/* Validation Quote */}
-        <div className="max-w-4xl mx-auto mb-16">
+        {showQuote && <div className="max-w-4xl mx-auto mb-16">
           <div className="border-l-4 border-emerald-500 bg-slate-900/50 p-6 rounded-r-xl">
             <blockquote className="text-lg md:text-xl text-slate-200 font-medium leading-relaxed italic mb-4">
-              &ldquo;The benchmark results with AltiCoreSWP are transformative. Seeing
-              a software synthesis engine outperform established best in class
-              Neural Networks solution by such a massive margin signals a
+              &ldquo;The benchmark results with AltiCoreSWP are transformative.
+              Seeing a software synthesis engine outperform established best in
+              class Neural Networks solution by such a massive margin signals a
               fundamental shift in AI deployment. AltiCore seems to be at the
-              beginning of its journey. there will be a lot of room for
+              beginning of its journey. There will be a lot of room for
               optimizations leading I am sure to even higher performance&rdquo;
             </blockquote>
             <footer className="text-emerald-400 font-mono text-sm uppercase tracking-widest">
-              — CEO, SidePath
+              — Patrick Mulvee, CEO, SidePath
             </footer>
           </div>
-        </div>
+        </div>}
 
         {/* Hardware Nodes */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">

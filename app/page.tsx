@@ -271,7 +271,7 @@ const EvoTechnology = () => (
               <strong className="text-white">Problem:</strong> Probabilistic
               "Black Box" AI is non-deterministic and fundamentally unsuitable
               for safety-critical business processes or regulated industrial
-              sectors like automotive braking or medical grids.
+              sectors like automotive breaking or medical grids.
             </p>
             <p className="text-sm text-slate-300 leading-relaxed">
               <strong className="text-white">Solution:</strong> Deterministic
@@ -305,7 +305,7 @@ const EvoInnovation = () => (
     <div className="container mx-auto px-6">
       <SectionHeading
         subtitle="CORE DIFFERENTIATOR"
-        title="The Innovation: A New Mathematical Foundation"
+        title="The patented Innovation: A New Mathematical Foundation"
       />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">

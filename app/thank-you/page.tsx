@@ -36,7 +36,8 @@ export default function ThankYou() {
             <div className="flex items-center justify-center gap-3 text-slate-400">
               <Mail className="w-5 h-5 text-cyan-400" />
               <p className="text-sm">
-                You should receive a confirmation email at the address you provided.
+                You should receive a confirmation email at the address you
+                provided.
               </p>
             </div>
           </div>
@@ -58,12 +59,14 @@ export default function ThankYou() {
 
           {/* Additional Contact Info */}
           <div className="mt-8 pt-8 border-t border-slate-800">
-            <p className="text-slate-500 text-xs mb-2">Need immediate assistance?</p>
+            <p className="text-slate-500 text-xs mb-2">
+              Need immediate assistance?
+            </p>
             <a
-              href="mailto:ab@evochip.ai"
+              href="mailto:contact@evochip.ai"
               className="text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors"
             >
-              ab@evochip.ai
+              contact@evochip.ai
             </a>
           </div>
         </div>

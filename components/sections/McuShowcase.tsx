@@ -1,7 +1,14 @@
 "use client";
 
 import React from "react";
-import { Microchip, Database, Cpu, Download, GitMerge, ChevronRight } from "lucide-react";
+import {
+  Microchip,
+  Database,
+  Cpu,
+  Download,
+  GitMerge,
+  ChevronRight,
+} from "lucide-react";
 import { SectionHeading, Card } from "@/components/ui";
 import { VideoEmbed } from "@/components/brand";
 
@@ -17,11 +24,11 @@ export const McuShowcase = () => (
       />
 
       <p className="text-lg text-slate-300 max-w-4xl mx-auto mb-16 leading-relaxed text-center">
-        Beneath the cloud lies the &ldquo;Edge&rdquo;. Not Data centers but billions of
-        microcontrollers (MCUs) embedded in thermostats, wearables, braking
-        systems, industrial grids… Currently, these devices operate under strict
-        limits of size, power and memory. They are only reactive, not
-        intelligent.
+        Beneath the cloud lies the &ldquo;Edge&rdquo;. Not Data centers but
+        billions of microcontrollers (MCUs) embedded in thermostats, wearables,
+        breaking systems, industrial grids… Currently, these devices operate
+        under strict limits of size, power and memory. They are only reactive,
+        not intelligent.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">

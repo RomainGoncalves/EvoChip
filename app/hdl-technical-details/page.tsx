@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  Cpu,
   Zap,
   Box,
   Rocket,
@@ -22,11 +21,6 @@ export default function HdlTechnicalDetailsPage() {
         <div className="space-y-16">
           {/* Core Technical Architecture */}
           <section>
-            <h2 className="text-3xl font-bold text-hdl mb-8 flex items-center gap-3">
-              <Cpu className="w-8 h-8" />
-              Technical white paper : Executive Summary
-            </h2>
-
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-slate-900/50 border border-slate-800 rounded-xl p-6">
                 <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">

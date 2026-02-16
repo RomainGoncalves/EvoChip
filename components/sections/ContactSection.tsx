@@ -1,11 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  Mail,
-  MapPin,
-  CheckCircle2,
-} from "lucide-react";
+import { Mail, MapPin, CheckCircle2 } from "lucide-react";
 import { Button, SectionHeading, Card } from "@/components/ui";
 
 export const EvoContactSection = () => {
@@ -34,7 +30,10 @@ export const EvoContactSection = () => {
                 <span>32932 Pacific Coast Hwy, Dana Point, CA</span>
               </div>
               <div className="flex items-center gap-4">
-                <Mail className="text-cyan-500" /> <span>ab@evochip.ai</span>
+                <Mail className="text-cyan-500" />{" "}
+                <span>
+                  <a href="mailto:contact@evochip.ai">contact@evochip.ai</a>
+                </span>
               </div>
             </div>
           </div>

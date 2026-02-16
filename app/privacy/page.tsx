@@ -62,10 +62,10 @@ export default function PrivacyPolicy() {
               a job with us, you may submit your contact information and your
               resume to{" "}
               <a
-                href="mailto:ab@evochip.ai"
+                href="mailto:contact@evochip.ai"
                 className="text-cyan-400 hover:text-cyan-300"
               >
-                ab@evochip.ai
+                contact@evochip.ai
               </a>
               . We will collect the information you choose to provide on your
               resume.
@@ -249,10 +249,10 @@ export default function PrivacyPolicy() {
               with personal information in violation of this Privacy Policy,
               then you may alert us at{" "}
               <a
-                href="mailto:ab@evochip.ai"
+                href="mailto:contact@evochip.ai"
                 className="text-cyan-400 hover:text-cyan-300"
               >
-                ab@evochip.ai
+                contact@evochip.ai
               </a>
               .
             </p>
@@ -317,10 +317,10 @@ export default function PrivacyPolicy() {
               (949) 828-6363
               <br />
               <a
-                href="mailto:ab@evochip.ai"
+                href="mailto:contact@evochip.ai"
                 className="text-cyan-400 hover:text-cyan-300"
               >
-                ab@evochip.ai
+                contact@evochip.ai
               </a>
             </p>
           </section>
