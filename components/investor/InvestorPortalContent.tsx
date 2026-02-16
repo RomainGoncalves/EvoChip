@@ -735,18 +735,18 @@ export const InvestorPortalContent = () => {
                           className="flex gap-6 items-start relative font-mono font-bold uppercase tracking-widest"
                         >
                           {i < 3 && (
-                            <div className="absolute left-[9px] top-8 w-px h-12 bg-slate-800"></div>
+                            <div className="absolute left-2.25 top-8 w-px h-12 bg-slate-800"></div>
                           )}
-                          <div className="w-[18px] h-[18px] rounded-full bg-cyan-500/20 border border-cyan-500 shrink-0 mt-1 shadow-[0_0_10px_rgba(6,182,212,0.5)]"></div>
+                          <div className="w-4.5 h-4.5 rounded-full bg-cyan-500/20 border border-cyan-500 shrink-0 mt-1 shadow-[0_0_10px_rgba(6,182,212,0.5)]"></div>
                           <div>
                             <p className="text-[14px] text-cyan-500 uppercase">
-                              {t.date}
+                              {t && t.date}
                             </p>
                             <p className="text-sm text-white tracking-tight font-sans">
-                              {t.label}
+                              {t && t.label}
                             </p>
                             <p className="text-md text-slate-300 font-sans font-normal normal-case">
-                              {t.sub}
+                              {t && t.sub}
                             </p>
                           </div>
                         </div>
