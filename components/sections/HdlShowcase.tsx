@@ -2,7 +2,15 @@
 
 import React from "react";
 import { Activity } from "lucide-react";
-import { SectionHeading, Card } from "@/components/ui";
+import { SectionHeading, Card, OperationalBoxes } from "@/components/ui";
+import type { OperationalBoxItem } from "@/components/ui";
+
+const HDL_STATS: OperationalBoxItem[] = [
+  { label: "Throughput", val: "1", sub: "Inference Per Clock Cycle" },
+  { label: "Fixed Latency", val: "~100", sub: "Clock Cycles" },
+  { label: "Arithmetic", val: "Integer", sub: "Only Logic" },
+  { label: "Footprint", val: "Minimal", sub: "Gate Count" },
+];
 
 export const HdlShowcase = () => (
   <section
@@ -26,29 +34,8 @@ export const HdlShowcase = () => (
         . Our AltiCore technology reduces transistor count by up to 1000x for
         native on-chip AI.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-20 max-w-5xl mx-auto">
-        {[
-          { label: "Throughput", val: "1", sub: "Inference Per Clock Cycle" },
-          { label: "Fixed Latency", val: "~100", sub: "Clock Cycles" },
-          { label: "Arithmetic", val: "Integer", sub: "Only Logic" },
-          { label: "Footprint", val: "Minimal", sub: "Gate Count" },
-        ].map((s, i) => (
-          <div
-            key={i}
-            className="bg-slate-800  border-l-4 border-hdl p-6 rounded-r-xl"
-          >
-            <p className="text-[10px] font-black text-hdl  uppercase tracking-widest">
-              {s.label}
-            </p>
-            <p className="text-2xl font-black text-white italic my-1">
-              {s.val}
-            </p>
-            <p className="text-[10px] font-black text-slate-500 uppercase">
-              {s.sub}
-            </p>
-          </div>
-        ))}
-      </div>
+      {/* Operational boxes */}
+      <OperationalBoxes items={HDL_STATS} color="hdl" />
 
       {/* Full Width Card */}
       <div className="mb-12">

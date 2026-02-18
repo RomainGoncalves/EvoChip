@@ -43,7 +43,6 @@ export const InvestorPortalContent = () => {
               subtitle="Proprietary Data Room"
               title="Strategic Roadmap"
               align="left"
-              theme="evo"
             />
             <Link href="/">
               <Button

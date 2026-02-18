@@ -1264,7 +1264,6 @@ const AltiProductCategories = ({
         <SectionHeading
           subtitle="Product Suite"
           title="The Acquisition Path"
-          theme="alti"
         />
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {products.map((p, i) => (
@@ -1496,7 +1495,6 @@ const AltiMcuPage = ({
         subtitle="Hardware Support"
         title="Technical Compatibility"
         align="left"
-        theme="alti"
       />
       <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-12">
         {[
@@ -1699,7 +1697,6 @@ const AltiSwPage = ({
         subtitle="Stack Integration"
         title="Enterprise Compliance"
         align="left"
-        theme="alti"
       />
       <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-12">
         {[
@@ -1861,7 +1858,6 @@ const AltiHdlPage = ({
         subtitle="Ecosystem Partners"
         title="Foundry Integration"
         align="left"
-        theme="alti"
       />
       <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-12">
         {[
@@ -1935,7 +1931,6 @@ const AltiAboutPage = ({
           subtitle="Leadership"
           title="Institutional Expertise"
           align="left"
-          theme="alti"
         />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
@@ -2004,7 +1999,6 @@ const AltiFinalCta = ({
       <SectionHeading
         subtitle="Engagement"
         title="Global Deployment Framework"
-        theme="alti"
       />
 
       <div className="grid md:grid-cols-4 gap-6 mb-20 font-mono font-bold uppercase tracking-widest">
