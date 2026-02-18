@@ -52,12 +52,7 @@ export const McuShowcase = () => (
       />
 
       {/* Hero Metric Section */}
-      <HeroMetric
-        color="mcu"
-        prefix="less than"
-        value="521 bytes"
-        label="of RAM"
-      />
+      <HeroMetric color="mcu" prefix="less than" value="521B" label="of RAM" />
 
       <p className="text-lg text-slate-300 max-w-4xl mx-auto mb-6 leading-relaxed text-center">
         Billions of microcontrollers remain "reactive" because traditional

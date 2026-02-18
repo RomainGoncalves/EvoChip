@@ -50,37 +50,6 @@ export const PodcastSection = () => (
           </div>
         </div>
 
-        {/* Episode 2 (Placeholder) */}
-        <div className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-6 items-center">
-          <div className="w-full aspect-square rounded-2xl overflow-hidden border border-cyan-500/20 shadow-2xl bg-slate-950">
-            <Image
-              src="/podcasts/podcast_cover.png"
-              alt="EvoChip Explained Podcast Cover"
-              width={200}
-              height={200}
-              className="w-full h-full object-cover"
-            />
-          </div>
-
-          <div className="space-y-4">
-            <div>
-              <div className="text-cyan-400 font-mono text-sm mb-2">
-                Episode 2
-              </div>
-              <h3 className="text-xl font-bold text-white mb-2">Coming Soon</h3>
-              <p className="text-slate-400 text-sm">
-                Stay tuned for our next episode exploring the future of
-                semiconductor design and AI optimization.
-              </p>
-            </div>
-
-            <div className="w-full h-12 rounded-lg bg-slate-800/50 border border-slate-700/50 flex items-center justify-center">
-              <span className="text-slate-500 font-mono text-sm">
-                Episode Coming Soon
-              </span>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
