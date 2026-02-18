@@ -39,7 +39,7 @@ export const SwShowcase = ({ showQuote = true }: { showQuote?: boolean }) => {
           value="143"
           suffix="x"
           label="Speed Multiplier"
-          labelColor="text-emerald-400"
+          labelColor="text-teal-400"
         />
 
         <p className="text-lg text-slate-300 max-w-4xl mx-auto mb-6 leading-relaxed text-center">
@@ -66,13 +66,12 @@ export const SwShowcase = ({ showQuote = true }: { showQuote?: boolean }) => {
           <div className="max-w-4xl mx-auto mb-16">
             <div className="border-l-4 border-sw bg-slate-900/50 p-6 rounded-r-xl">
               <blockquote className="text-lg md:text-xl text-slate-200 font-medium leading-relaxed italic mb-4">
-                &ldquo;The benchmark results with AltiCoreSWP are
-                transformative. Seeing a software synthesis engine outperform
-                established best in class Neural Networks solution by such a
-                massive margin signals a fundamental shift in AI deployment.
-                AltiCore seems to be at the beginning of its journey. There will
-                be a lot of room for optimizations leading I am sure to even
-                higher performance&rdquo;
+                &ldquo;AltiCore performance is transformative. Seeing a software
+                synthesis engine outperform established best in class Neural
+                Networks solution by such a massive margin signals a fundamental
+                shift in AI deployment. AltiCore seems to be at the beginning of
+                its journey. I am sure there will be a lot of room for
+                optimizations leading to even higher performance&rdquo;
               </blockquote>
               <footer className="text-sw font-mono text-sm uppercase tracking-widest">
                 — Patrick Mulvee, CEO, SidePath

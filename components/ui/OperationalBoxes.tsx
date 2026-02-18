@@ -26,22 +26,33 @@ const colsMap: Record<number, string> = {
   4: "grid-cols-1 md:grid-cols-2 lg:grid-cols-4",
 };
 
-export const OperationalBoxes = ({ items, color, className }: OperationalBoxesProps) => {
+export const OperationalBoxes = ({
+  items,
+  color,
+  className,
+}: OperationalBoxesProps) => {
   const { border, text } = colorMap[color];
-  const cols = colsMap[items.length] ?? "grid-cols-1 md:grid-cols-2 lg:grid-cols-4";
+  const cols =
+    colsMap[items.length] ?? "grid-cols-1 md:grid-cols-2 lg:grid-cols-4";
   return (
     <div className={`max-w-5xl mx-auto${className ? ` ${className}` : ""}`}>
-      <h4 className={`font-mono text-sm tracking-widest uppercase mb-4 ${text}`}>
-        Operational Benchmarks
-      </h4>
       <div className={`grid ${cols} gap-4 mb-20`}>
         {items.map((s, i) => (
-          <div key={i} className={`bg-slate-800 border-l-4 ${border} p-6 rounded-r-xl`}>
-            <p className={`text-[10px] font-black ${text} uppercase tracking-widest`}>
+          <div
+            key={i}
+            className={`bg-slate-800 border-l-4 ${border} p-6 rounded-r-xl`}
+          >
+            <p
+              className={`text-[10px] font-black ${text} uppercase tracking-widest`}
+            >
               {s.label}
             </p>
-            <p className="text-2xl font-black text-white italic my-1">{s.val}</p>
-            <p className="text-[10px] font-black text-slate-500 uppercase">{s.sub}</p>
+            <p className="text-2xl font-black text-white italic my-1">
+              {s.val}
+            </p>
+            <p className="text-[10px] font-black text-slate-500 uppercase">
+              {s.sub}
+            </p>
           </div>
         ))}
       </div>
