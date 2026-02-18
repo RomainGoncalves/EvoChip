@@ -57,7 +57,7 @@ export const SwShowcase = ({ showQuote = true }: { showQuote?: boolean }) => {
         </p>
 
         <SectionHeading
-          subtitle="Realised with Sidepath"
+          subtitle="Realized with Sidepath"
           title="Operational benchmarks"
         />
 
@@ -387,7 +387,10 @@ export const SwShowcase = ({ showQuote = true }: { showQuote?: boolean }) => {
         />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <Card theme="alti" className="bg-slate-800/40 border-sw/30 flex flex-col">
+          <Card
+            theme="alti"
+            className="bg-slate-800/40 border-sw/30 flex flex-col"
+          >
             <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
               <Monitor className="w-6 h-6 text-sw" />
               Target Infrastructure
@@ -403,12 +406,18 @@ export const SwShowcase = ({ showQuote = true }: { showQuote?: boolean }) => {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-sw mt-1">•</span>
-                <span>Optimized for x86 via <span className="text-sw font-bold">AVX2</span></span>
+                <span>
+                  Optimized for x86 via{" "}
+                  <span className="text-sw font-bold">AVX2</span>
+                </span>
               </li>
             </ul>
           </Card>
 
-          <Card theme="alti" className="bg-slate-800/40 border-sw/30 flex flex-col">
+          <Card
+            theme="alti"
+            className="bg-slate-800/40 border-sw/30 flex flex-col"
+          >
             <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
               <Terminal className="w-6 h-6 text-sw" />
               Implementation Paths
@@ -429,7 +438,10 @@ export const SwShowcase = ({ showQuote = true }: { showQuote?: boolean }) => {
             </ul>
           </Card>
 
-          <Card theme="alti" className="bg-slate-800/40 border-sw/30 flex flex-col">
+          <Card
+            theme="alti"
+            className="bg-slate-800/40 border-sw/30 flex flex-col"
+          >
             <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
               <Shield className="w-6 h-6 text-sw" />
               Operational Integrity
@@ -437,7 +449,12 @@ export const SwShowcase = ({ showQuote = true }: { showQuote?: boolean }) => {
             <ul className="space-y-3 text-base text-slate-300 leading-relaxed flex-grow">
               <li className="flex items-start gap-2">
                 <span className="text-sw mt-1">•</span>
-                <span>Logic-centric; <span className="text-sw font-bold">no FPU/Arithmetic dependency</span></span>
+                <span>
+                  Logic-centric;{" "}
+                  <span className="text-sw font-bold">
+                    no FPU/Arithmetic dependency
+                  </span>
+                </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-sw mt-1">•</span>
