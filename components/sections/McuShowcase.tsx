@@ -17,6 +17,7 @@ import {
   Card,
   SectionDivider,
   OperationalBoxes,
+  HeroMetric,
 } from "@/components/ui";
 import type { OperationalBoxItem } from "@/components/ui";
 import { VideoEmbed } from "@/components/brand";
@@ -46,7 +47,15 @@ export const McuShowcase = () => (
         title="AltiCoreMCU: Zero-BOM Intelligence for Legacy Hardware"
       />
 
-      <p className="text-lg text-slate-300 max-w-4xl mx-auto mb-16 leading-relaxed text-center">
+      {/* Hero Metric Section */}
+      <HeroMetric
+        color="mcu"
+        prefix="less than"
+        value="521 bytes"
+        label="of RAM"
+      />
+
+      <p className="text-lg text-slate-300 max-w-4xl mx-auto mb-6 leading-relaxed text-center">
         Billions of microcontrollers remain "reactive" because traditional
         neural networks require{" "}
         <span className="text-mcu font-bold">
@@ -56,9 +65,8 @@ export const McuShowcase = () => (
       </p>
       <p className="text-lg text-slate-300 max-w-4xl mx-auto mb-16 leading-relaxed text-center">
         AltiCoreMCU replaces arithmetic with bitwise logic, enabling
-        high-performance inference within{" "}
-        <span className="text-mcu font-bold">&lt; 521 bytes of RAM</span> with
-        zero BOM changes.
+        high-performance inference with
+        <span className="text-mcu font-bold"> zero BOM changes</span>.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
@@ -328,7 +336,10 @@ export const McuShowcase = () => (
       />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-        <Card theme="alti" className="bg-slate-800/40 border-mcu/30 flex flex-col">
+        <Card
+          theme="alti"
+          className="bg-slate-800/40 border-mcu/30 flex flex-col"
+        >
           <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
             <Cpu className="w-6 h-6 text-mcu" />
             Target Infrastructure
@@ -340,16 +351,22 @@ export const McuShowcase = () => (
             </li>
             <li className="flex items-start gap-2">
               <span className="text-mcu mt-1">•</span>
-              <span>Arduino (Uno/Mega/Nano) &amp; STM32 families</span>
+              <span>Arduino (Uno/Mega/Nano), STM32 families and more</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-mcu mt-1">•</span>
-              <span><span className="text-mcu font-bold">0% BOM change</span>; runs on existing inventory</span>
+              <span>
+                <span className="text-mcu font-bold">0% BOM change</span>; runs
+                on existing inventory
+              </span>
             </li>
           </ul>
         </Card>
 
-        <Card theme="alti" className="bg-slate-800/40 border-mcu/30 flex flex-col">
+        <Card
+          theme="alti"
+          className="bg-slate-800/40 border-mcu/30 flex flex-col"
+        >
           <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
             <Download className="w-6 h-6 text-mcu" />
             Implementation Paths
@@ -370,7 +387,10 @@ export const McuShowcase = () => (
           </ul>
         </Card>
 
-        <Card theme="alti" className="bg-slate-800/40 border-mcu/30 flex flex-col">
+        <Card
+          theme="alti"
+          className="bg-slate-800/40 border-mcu/30 flex flex-col"
+        >
           <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
             <HardDrive className="w-6 h-6 text-mcu" />
             Operational Integrity
@@ -378,7 +398,10 @@ export const McuShowcase = () => (
           <ul className="space-y-3 text-base text-slate-300 leading-relaxed flex-grow">
             <li className="flex items-start gap-2">
               <span className="text-mcu mt-1">•</span>
-              <span>Verified RAM footprint <span className="text-mcu font-bold">&lt; 521 bytes</span></span>
+              <span>
+                Verified RAM footprint{" "}
+                <span className="text-mcu font-bold">&lt; 521 bytes</span>
+              </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-mcu mt-1">•</span>

@@ -2,6 +2,7 @@ export { Button } from "./Button";
 export { SectionHeading } from "./SectionHeading";
 export { SectionDivider } from "./SectionDivider";
 export { OperationalBoxes } from "./OperationalBoxes";
+export { HeroMetric } from "./HeroMetric";
 export type { OperationalBoxItem } from "./OperationalBoxes";
 export { Card } from "./Card";
 export { LogicBackground } from "./LogicBackground";

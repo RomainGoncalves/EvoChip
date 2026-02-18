@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Laptop, Server } from "lucide-react";
-import { SectionHeading } from "@/components/ui";
+import { SectionHeading, HeroMetric } from "@/components/ui";
 import LaptopComparisonTable from "@/components/sections/LaptopComparisonTable";
 import ServerComparisonTable from "@/components/sections/ServerComparisonTable";
 import AccuracyChart from "@/components/sections/AccuracyChart";
@@ -21,21 +21,14 @@ export const SwShowcase = ({ showQuote = true }: { showQuote?: boolean }) => {
         />
 
         {/* Hero Metric Section */}
-        <div className="flex flex-col items-center justify-center mb-16 text-center">
-          <div className="relative">
-            <div className="absolute -inset-8 bg-cyan-500/20 blur-3xl rounded-full"></div>
-            <p className="text-2xl md:text-3xl text-white font-bold mb-2">
-              Up to
-            </p>
-            <h2 className="text-7xl md:text-9xl font-black text-cyan-400 drop-shadow-[0_0_20px_rgba(34,211,238,0.5)] tracking-tighter mb-2">
-              143
-              <span className="text-4xl md:text-6xl">x</span>
-            </h2>
-            <p className="text-xl md:text-2xl font-mono text-emerald-400 uppercase tracking-widest font-bold">
-              Speed Multiplier
-            </p>
-          </div>
-        </div>
+        <HeroMetric
+          color="sw"
+          prefix="Up to"
+          value="143"
+          suffix="x"
+          label="Speed Multiplier"
+          labelColor="text-emerald-400"
+        />
 
         {/* Validation Quote */}
         {showQuote && (
