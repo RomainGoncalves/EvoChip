@@ -8,8 +8,12 @@ import {
   Download,
   GitMerge,
   ChevronRight,
-  HardDrive,
-  Layers,
+  Zap,
+  TrendingUp,
+  RefreshCw,
+  Package,
+  Activity,
+  Shield,
 } from "lucide-react";
 
 import {
@@ -82,7 +86,7 @@ export const McuShowcase = () => (
           className="bg-slate-800/40 border-mcu/30 flex flex-col"
         >
           <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-            <Microchip className="w-6 h-6 text-mcu" />
+            <Cpu className="w-6 h-6 text-mcu" />
             What is AltiCoreMCU
           </h3>
           <ul className="space-y-3 text-base text-slate-300 leading-relaxed flex-grow">
@@ -126,7 +130,7 @@ export const McuShowcase = () => (
           className="bg-slate-800/40 border-mcu/30 flex flex-col"
         >
           <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-            <Microchip className="w-6 h-6 text-mcu" />
+            <Zap className="w-6 h-6 text-mcu" />
             Key Features
           </h3>
           <ul className="space-y-3 text-base text-slate-300 leading-relaxed flex-grow">
@@ -164,7 +168,7 @@ export const McuShowcase = () => (
           className="bg-slate-800/40 border-mcu/30 flex flex-col"
         >
           <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-            <Microchip className="w-6 h-6 text-mcu" />
+            <TrendingUp className="w-6 h-6 text-mcu" />
             Why AltiCoreMCU is Different
           </h3>
           <ul className="space-y-3 text-base text-slate-300 leading-relaxed flex-grow">
@@ -279,7 +283,7 @@ export const McuShowcase = () => (
           className="bg-slate-800/40 border-mcu/30 flex flex-col"
         >
           <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-            <HardDrive className="w-6 h-6 text-mcu" />
+            <RefreshCw className="w-6 h-6 text-mcu" />
             Revitalize Legacy Inventory
           </h3>
           <p className="text-base text-slate-300 leading-relaxed flex-grow">
@@ -298,7 +302,7 @@ export const McuShowcase = () => (
           className="bg-slate-800/40 border-mcu/30 flex flex-col"
         >
           <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-            <Database className="w-6 h-6 text-mcu" />
+            <Package className="w-6 h-6 text-mcu" />
             Ultra-Lightweight Footprint
           </h3>
           <p className="text-base text-slate-300 leading-relaxed grow">
@@ -316,7 +320,7 @@ export const McuShowcase = () => (
           className="bg-slate-800/40 border-mcu/30 flex flex-col"
         >
           <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-            <Layers className="w-6 h-6 text-mcu" />
+            <Activity className="w-6 h-6 text-mcu" />
             High-Speed Local Decisions
           </h3>
           <p className="text-base text-slate-300 leading-relaxed grow">
@@ -341,7 +345,7 @@ export const McuShowcase = () => (
           className="bg-slate-800/40 border-mcu/30 flex flex-col"
         >
           <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-            <Cpu className="w-6 h-6 text-mcu" />
+            <Microchip className="w-6 h-6 text-mcu" />
             Target Infrastructure
           </h3>
           <ul className="space-y-3 text-base text-slate-300 leading-relaxed flex-grow">
@@ -392,7 +396,7 @@ export const McuShowcase = () => (
           className="bg-slate-800/40 border-mcu/30 flex flex-col"
         >
           <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-            <HardDrive className="w-6 h-6 text-mcu" />
+            <Shield className="w-6 h-6 text-mcu" />
             Operational Integrity
           </h3>
           <ul className="space-y-3 text-base text-slate-300 leading-relaxed flex-grow">

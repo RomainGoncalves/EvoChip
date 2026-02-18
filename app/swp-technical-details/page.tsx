@@ -5,7 +5,7 @@ import { SwShowcase } from "@/components/sections/SwShowcase";
 export default function SwpTechnicalDetailsPage() {
   return (
     <ProductPageLayout>
-      <SwShowcase showQuote={false} />
+      <SwShowcase />
     </ProductPageLayout>
   );
 }
