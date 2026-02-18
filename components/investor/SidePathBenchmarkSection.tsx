@@ -27,7 +27,7 @@ export const SidePathBenchmarkSection = () => (
       A joint benchmarking initiative with SidePath confirms that AltiCoreSWP
       (CPU-only) running on a standard laptop consistently outperforms highly
       optimized neural network solutions on server-class hardware by
-      approximately 12x to 47x on evaluated subsets, delivering same quality
+      approximately 12x to 68x on evaluated subsets, delivering same quality
       models.
     </p>
 

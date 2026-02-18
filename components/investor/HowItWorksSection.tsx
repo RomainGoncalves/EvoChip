@@ -30,7 +30,7 @@ export const HowItWorksSection = () => (
       Neural Networks, AltiCore eliminates FPU dependency and dynamic memory
       allocation. This results in an order-of-magnitude leap in throughput—
       <span className="font-bold text-cyan-400">
-        performing as few as 36 to 116 operations per inference
+        performing as few as 62 to 116 operations per inference
       </span>{" "}
       compared to 21,000+ in standard architectures. Whether deployed via{" "}
       <span className="font-bold text-cyan-400">AltiCoreSWP</span>{" "}

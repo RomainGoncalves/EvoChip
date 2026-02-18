@@ -218,7 +218,7 @@ export const InvestorPortalContent = () => {
                       problem:
                         "Transistor density cannot keep up with AI model parameter growth as hardware hits physical limits.",
                       solution:
-                        "The Density Leap: AltiCore achieves a 1000x density gain by using 35x to 300x fewer parameters than traditional architectures.",
+                        "The Density Leap: AltiCore achieves a 1000x density gain by using 35x to 301x fewer parameters than traditional architectures.",
                       icon: Microchip,
                     },
                     {
@@ -321,11 +321,11 @@ export const InvestorPortalContent = () => {
                     },
                     {
                       label: "Environments",
-                      text: "Supporting Windows, Linux and Cuda.",
+                      text: "Supporting Windows, Linux and CUDA.",
                     },
                     {
                       label: "Technical Benchmarks",
-                      text: "Up to ~575M inferences/sec on Server CPUs; verified 17x–41x throughput advantage on servers and 13x–21x on workstations over industry baselines (C++ TensorFlow Lite XNNPACK).",
+                      text: "Up to ~575M inferences/sec on Server CPUs; verified up to 143x throughput advantage on servers and 13x-21x on workstations over industry baselines (C++ TensorFlow Lite XNNPACK).",
                     },
                     {
                       label: "Strategic Advantage",
@@ -383,7 +383,7 @@ export const InvestorPortalContent = () => {
                   icon={Silicon}
                   highlights={[
                     "one inference per clock cycle",
-                    "~100 clock cycles",
+                    "fixed-latency (~100 cycles)",
                     "sentinel",
                   ]}
                   items={[
@@ -405,7 +405,7 @@ export const InvestorPortalContent = () => {
                     },
                     {
                       label: "Technical Benchmarks",
-                      text: "Fully pipelined core delivering one inference per clock cycle; fixed, deterministic latency of ~100 clock cycles.",
+                      text: "Fully pipelined core delivering one inference per clock cycle; deterministic fixed-latency (~100 cycles).",
                     },
                     {
                       label: "Strategic Advantage",
