@@ -811,15 +811,33 @@ const EvoProducts = ({
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8 mt-16">
+          <HeroMetric
+            color="mcu"
+            prefix="less than"
+            value="521B"
+            label="of RAM"
+            labelColor="text-blue-400"
+          />
+          <HeroMetric
+            color="sw"
+            prefix="Up to"
+            value="143"
+            suffix="x"
+            label="Speed Multiplier"
+            labelColor="text-teal-400"
+          />
+          <HeroMetric
+            color="hdl"
+            prefix="Proven"
+            value="100"
+            suffix="%"
+            label="deterministic"
+            labelColor="text-yellow-400"
+          />
+        </div>
+
+        <div className="grid lg:grid-cols-3 gap-8">
           {/* AltiCoreMCU */}
-          <div className="flex flex-col">
-            <HeroMetric
-              color="mcu"
-              prefix="less than"
-              value="521B"
-              label="of RAM"
-              labelColor="text-blue-400"
-            />
             <div className="bg-slate-900 rounded-2xl p-6 md:p-8 border border-mcu/30 shadow-[0_0_30px_rgba(96,165,250,0.2)] flex flex-col">
               <div className="inline-flex mb-4 px-2 py-0.5 bg-blue-900/30 border border-mcu/30 rounded text-[9px] font-mono text-mcu uppercase font-bold w-fit">
                 UNIQUE LOGIC-BASED ARCHITECTURE
@@ -872,18 +890,8 @@ const EvoProducts = ({
                 </Link>
               </div>
             </div>
-          </div>
 
           {/* AltiCoreSWP */}
-          <div className="flex flex-col">
-            <HeroMetric
-              color="sw"
-              prefix="Up to"
-              value="143"
-              suffix="x"
-              label="Speed Multiplier"
-              labelColor="text-teal-400"
-            />
             <div className="bg-slate-900 rounded-2xl p-6 md:p-8 border border-sw/30 shadow-[0_0_30px_rgba(45,212,191,0.1)] flex flex-col">
               <div className="inline-flex mb-4 px-2 py-0.5 bg-teal-900/30 border border-sw/30 rounded text-[9px] font-mono text-sw uppercase font-bold w-fit">
                 UNIQUE LOGIC-BASED ARCHITECTURE
@@ -938,18 +946,8 @@ const EvoProducts = ({
                 </Link>
               </div>
             </div>
-          </div>
 
           {/* AltiCoreHDL */}
-          <div className="flex flex-col">
-            <HeroMetric
-              color="hdl"
-              prefix="Proven"
-              value="100"
-              suffix="%"
-              label="deterministic"
-              labelColor="text-yellow-400"
-            />
             <div className="bg-slate-900 rounded-2xl p-6 md:p-8 border border-hdl/30 shadow-[0_0_30px_rgba(245,158,11,0.1)] flex flex-col">
               <div className="inline-flex mb-4 px-2 py-0.5 bg-amber-900/20 border border-hdl/30 rounded text-[9px] font-mono text-hdl uppercase font-bold w-fit">
                 UNIQUE LOGIC-BASED ARCHITECTURE
@@ -1005,7 +1003,6 @@ const EvoProducts = ({
                 </Link>
               </div>
             </div>
-          </div>
         </div>
       </div>
     </section>
