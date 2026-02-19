@@ -29,7 +29,7 @@ export const SwShowcase = ({ showQuote = true }: { showQuote?: boolean }) => {
       <div className="container mx-auto px-6">
         <SectionHeading
           subtitle="Software Acceleration Platform"
-          title="AltiCoreSWP: Beats Neural Networks In Any Case With The Same Quality Model"
+          title="AltiCoreSWP: Beats Neural Networks in Any Case with the Same Quality Model"
         />
 
         {/* Hero Metric Section */}
@@ -57,7 +57,7 @@ export const SwShowcase = ({ showQuote = true }: { showQuote?: boolean }) => {
         </p>
 
         <SectionHeading
-          subtitle="Realized with Sidepath"
+          subtitle="Realized with SidePath"
           title="Operational benchmarks"
         />
 
@@ -67,11 +67,11 @@ export const SwShowcase = ({ showQuote = true }: { showQuote?: boolean }) => {
             <div className="border-l-4 border-sw bg-slate-900/50 p-6 rounded-r-xl">
               <blockquote className="text-lg md:text-xl text-slate-200 font-medium leading-relaxed italic mb-4">
                 &ldquo;AltiCore performance is transformative. Seeing a software
-                synthesis engine outperform established best in class Neural
+                synthesis engine outperform established best-in-class Neural
                 Networks solution by such a massive margin signals a fundamental
                 shift in AI deployment. AltiCore seems to be at the beginning of
                 its journey. I am sure there will be a lot of room for
-                optimizations leading to even higher performance&rdquo;
+                optimizations leading to even higher performance.&rdquo;
               </blockquote>
               <footer className="text-sw font-mono text-sm uppercase tracking-widest">
                 — Patrick Mulvee, CEO, SidePath
@@ -153,7 +153,7 @@ export const SwShowcase = ({ showQuote = true }: { showQuote?: boolean }) => {
                 <p className="text-[12px] font-mono text-slate-300 capitalize mb-1">
                   AltiCoreSWP Laptop #IPS
                 </p>
-                <p className="text-2xl font-bold text-teal-400">361.010.000</p>
+                <p className="text-2xl font-bold text-teal-400">361,010,000</p>
               </div>
               <div className="p-4 bg-slate-950 border border-slate-800 rounded-xl">
                 <p className="text-[12px] font-mono text-slate-300 capitalize mb-1">

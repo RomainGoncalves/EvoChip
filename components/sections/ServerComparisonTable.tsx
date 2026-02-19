@@ -92,8 +92,8 @@ const ServerComparisonTable = ({ showFirstColumn = false }) => {
             <div className="text-center">Out of the box Neural Networks</div>
           )}
           <div className="text-center">Multicore Python</div>
-          <div className="text-center">C++ Tensorflow XNN</div>
-          <div className="text-center">C++ Tensorflow RUY MT</div>
+          <div className="text-center">C++ TensorFlow XNN</div>
+          <div className="text-center">C++ TensorFlow RUY MT</div>
         </div>
         <div className="space-y-2">
           {datasets.map((ds) => (

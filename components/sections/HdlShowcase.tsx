@@ -1,7 +1,16 @@
 "use client";
 
 import React from "react";
-import { Activity, Cpu, TrendingUp, Layers, Microchip, Zap, Shield, GitMerge } from "lucide-react";
+import {
+  Activity,
+  Cpu,
+  TrendingUp,
+  Layers,
+  Microchip,
+  Zap,
+  Shield,
+  GitMerge,
+} from "lucide-react";
 import {
   SectionHeading,
   Card,
@@ -183,7 +192,7 @@ export const HdlShowcase = () => (
                 <span className="text-hdl">Wire-Speed Throughput:</span> Capable
                 of processing over{" "}
                 <span className="text-hdl font-bold">
-                  3 billion inferences per second
+                  3.1 billion inferences per second
                 </span>{" "}
                 on high-end FPGA hardware (e.g., Xilinx ZCU104).
               </span>
@@ -269,7 +278,10 @@ export const HdlShowcase = () => (
       />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-        <Card theme="alti" className="bg-slate-800/40 border-hdl/30 flex flex-col">
+        <Card
+          theme="alti"
+          className="bg-slate-800/40 border-hdl/30 flex flex-col"
+        >
           <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
             <Microchip className="w-6 h-6 text-hdl" />
             Target Infrastructure
@@ -277,7 +289,11 @@ export const HdlShowcase = () => (
           <ul className="space-y-3 text-base text-slate-300 leading-relaxed flex-grow">
             <li className="flex items-start gap-2">
               <span className="text-hdl mt-1">•</span>
-              <span>Synthesizable <span className="text-hdl font-bold">RTL IP core</span> (VHDL/Verilog)</span>
+              <span>
+                Synthesizable{" "}
+                <span className="text-hdl font-bold">RTL IP core</span>{" "}
+                (VHDL/Verilog)
+              </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-hdl mt-1">•</span>
@@ -290,7 +306,10 @@ export const HdlShowcase = () => (
           </ul>
         </Card>
 
-        <Card theme="alti" className="bg-slate-800/40 border-hdl/30 flex flex-col">
+        <Card
+          theme="alti"
+          className="bg-slate-800/40 border-hdl/30 flex flex-col"
+        >
           <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
             <GitMerge className="w-6 h-6 text-hdl" />
             Implementation Paths
@@ -302,7 +321,12 @@ export const HdlShowcase = () => (
             </li>
             <li className="flex items-start gap-2">
               <span className="text-hdl mt-1">•</span>
-              <span>Backpressure-free <span className="text-hdl font-bold">en/valid token interface</span></span>
+              <span>
+                Backpressure-free{" "}
+                <span className="text-hdl font-bold">
+                  en/valid token interface
+                </span>
+              </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-hdl mt-1">•</span>
@@ -311,7 +335,10 @@ export const HdlShowcase = () => (
           </ul>
         </Card>
 
-        <Card theme="alti" className="bg-slate-800/40 border-hdl/30 flex flex-col">
+        <Card
+          theme="alti"
+          className="bg-slate-800/40 border-hdl/30 flex flex-col"
+        >
           <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
             <Shield className="w-6 h-6 text-hdl" />
             Operational Integrity
@@ -319,11 +346,19 @@ export const HdlShowcase = () => (
           <ul className="space-y-3 text-base text-slate-300 leading-relaxed flex-grow">
             <li className="flex items-start gap-2">
               <span className="text-hdl mt-1">•</span>
-              <span>Fixed-latency execution (<span className="text-hdl font-bold">~100 clock cycles</span>)</span>
+              <span>
+                Fixed-latency execution (
+                <span className="text-hdl font-bold">~100 clock cycles</span>)
+              </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-hdl mt-1">•</span>
-              <span>Logic-centric; <span className="text-hdl font-bold">no floating-point dependency</span></span>
+              <span>
+                Logic-centric;{" "}
+                <span className="text-hdl font-bold">
+                  no floating-point dependency
+                </span>
+              </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-hdl mt-1">•</span>

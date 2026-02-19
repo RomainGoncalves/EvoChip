@@ -29,7 +29,7 @@ import { VideoEmbed } from "@/components/brand";
 const MCU_STATS: OperationalBoxItem[] = [
   { label: "Ultra-Lightweight Footprint", val: "< 521B", sub: "RAM usage" },
   {
-    label: "high Speed Edge Inference",
+    label: "High Speed Edge Inference",
     val: "~9,000+ / sec",
     sub: "on $9 Arduino Uno",
   },
@@ -52,7 +52,7 @@ export const McuShowcase = () => (
       />
 
       {/* Hero Metric Section */}
-      <HeroMetric color="mcu" prefix="less than" value="521B" label="of RAM" />
+      <HeroMetric color="mcu" prefix="Requires" value="0" label="dynamic RAM" />
 
       <p className="text-lg text-slate-300 max-w-4xl mx-auto mb-6 leading-relaxed text-center">
         Billions of microcontrollers remain "reactive" because traditional
@@ -94,7 +94,7 @@ export const McuShowcase = () => (
             <li className="flex items-start gap-2">
               <span className="mt-1">
                 <span className="text-mcu">Low-Cost 8/16/32-Bit Support:</span>{" "}
-                Optimized for budget devices like Arduino Uno and STM32
+                Optimized for budget devices like Arduino Uno and STM32.
               </span>
             </li>
             <li className="flex items-start gap-2">

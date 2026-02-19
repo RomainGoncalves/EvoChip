@@ -354,7 +354,7 @@ export const InvestorPortalContent = () => {
                     },
                     {
                       label: "Target Market",
-                      text: "Industrial Grids, Automotive Systems (Breaking), and Smart Infrastructure.",
+                      text: "Industrial Grids, Automotive Systems (Braking), and Smart Infrastructure.",
                     },
                     {
                       label: "Business Model",
@@ -416,7 +416,7 @@ export const InvestorPortalContent = () => {
               </div>
             </div>
 
-            {/* --- SIDEPATH BENCHMARK: ALGORITHMIC SUPERIORITY --- */}
+            {/* --- SidePath BENCHMARK: ALGORITHMIC SUPERIORITY --- */}
             <SidePathBenchmarkSection />
 
             {/* --- SECTION 2: COMPETITIVE LANDSCAPE (REFACTORED) --- */}

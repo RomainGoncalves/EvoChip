@@ -7,50 +7,50 @@ const datasets = [
     name: "Credit Default",
     laptop: 3798,
     multicore: 41,
-    tensorflow: 7,
-    tensorflowRUY: 27,
+    TensorFlow: 7,
+    TensorFlowRUY: 27,
   },
   {
     name: "Credit Fraud",
     laptop: 5011,
     multicore: 51,
-    tensorflow: 7,
-    tensorflowRUY: 20,
+    TensorFlow: 7,
+    TensorFlowRUY: 20,
   },
   {
     name: "Give Me Some Credit",
     laptop: 3879,
     multicore: 42,
-    tensorflow: 14,
-    tensorflowRUY: 43,
+    TensorFlow: 14,
+    TensorFlowRUY: 43,
   },
   {
     name: "Mfg (High Eff)",
     laptop: 5664,
     multicore: 50,
-    tensorflow: 13,
-    tensorflowRUY: 64,
+    TensorFlow: 13,
+    TensorFlowRUY: 64,
   },
   {
     name: "Mfg (Low Eff)",
     laptop: 6012,
     multicore: 50,
-    tensorflow: 13,
-    tensorflowRUY: 73,
+    TensorFlow: 13,
+    TensorFlowRUY: 73,
   },
   {
     name: "Machine Failure",
     laptop: 3921,
     multicore: 32,
-    tensorflow: 10,
-    tensorflowRUY: 24,
+    TensorFlow: 10,
+    TensorFlowRUY: 24,
   },
   {
     name: "Spect",
     laptop: 8165,
     multicore: 82,
-    tensorflow: 21,
-    tensorflowRUY: 92,
+    TensorFlow: 21,
+    TensorFlowRUY: 92,
   },
 ];
 
@@ -98,8 +98,8 @@ const LaptopComparisonTable = ({ showFirstColumn = false }) => {
             <div className="text-center">Out of the box Neural Networks</div>
           )}
           <div className="text-center">Multicore Python</div>
-          <div className="text-center">C++ Tensorflow XNN</div>
-          <div className="text-center">C++ Tensorflow RUY MT</div>
+          <div className="text-center">C++ TensorFlow XNN</div>
+          <div className="text-center">C++ TensorFlow RUY MT</div>
         </div>
         <div className="space-y-2">
           {datasets.map((ds) => (
@@ -114,8 +114,8 @@ const LaptopComparisonTable = ({ showFirstColumn = false }) => {
               </div>
               {showFirstColumn && <HeatmapCell value={ds.laptop} max={8165} />}
               <HeatmapCell value={ds.multicore} max={150} />
-              <HeatmapCell value={ds.tensorflow} max={150} />
-              <HeatmapCell value={ds.tensorflowRUY} max={150} />
+              <HeatmapCell value={ds.TensorFlow} max={150} />
+              <HeatmapCell value={ds.TensorFlowRUY} max={150} />
             </div>
           ))}
         </div>

@@ -272,7 +272,7 @@ const EvoTechnology = () => (
               <strong className="text-white">Problem:</strong> Probabilistic
               "Black Box" AI is non-deterministic and fundamentally unsuitable
               for safety-critical business processes or regulated industrial
-              sectors like automotive breaking or medical grids.
+              sectors like automotive braking or medical grids.
             </p>
             <p className="text-sm text-slate-300 leading-relaxed">
               <strong className="text-white">Solution:</strong> Deterministic
@@ -771,7 +771,7 @@ const EvoProducts = ({
               <h3 className="text-lg font-bold text-sw">AltiCoreSWP</h3>
               <p className="text-sm text-slate-400 mt-0.5">
                 Software Acceleration Platform High-throughput CPU inference for
-                Windows, Linux and Cuda
+                Windows, Linux and CUDA
               </p>
             </div>
           </div>
@@ -813,11 +813,12 @@ const EvoProducts = ({
         <div className="grid lg:grid-cols-3 gap-8 mt-16">
           <HeroMetric
             color="mcu"
-            prefix="less than"
-            value="521B"
-            label="of RAM"
+            prefix="Requires"
+            value="0"
+            label="dynamic RAM"
             labelColor="text-blue-400"
           />
+
           <HeroMetric
             color="sw"
             prefix="Up to"
@@ -838,171 +839,171 @@ const EvoProducts = ({
 
         <div className="grid lg:grid-cols-3 gap-8">
           {/* AltiCoreMCU */}
-            <div className="bg-slate-900 rounded-2xl p-6 md:p-8 border border-mcu/30 shadow-[0_0_30px_rgba(96,165,250,0.2)] flex flex-col">
-              <div className="inline-flex mb-4 px-2 py-0.5 bg-blue-900/30 border border-mcu/30 rounded text-[9px] font-mono text-mcu uppercase font-bold w-fit">
-                UNIQUE LOGIC-BASED ARCHITECTURE
-              </div>
-              <div className="flex items-center gap-3 mb-4">
-                <Microchip className="w-10 h-10 text-mcu" />
-                <h3 className="text-xl md:text-2xl font-bold text-white">
-                  <span className="text-mcu">AltiCoreMCU</span>
-                </h3>
-              </div>
-              <p className="text-xs font-mono uppercase tracking-widest text-slate-400 mb-4 font-bold">
-                EMBEDDED INTELLIGENCE AT THE SOURCE
-              </p>
-              <p className="text-slate-300 text-sm leading-relaxed mb-8 flex-grow">
-                The only solution capable of training and executing AI models
-                locally across the entire microcontroller spectrum—from
-                high-performance processors to standard $9 Arduino Uno class
-                devices. This toolset utilizes the AltiCore mathematical
-                framework to deploy software inference to{" "}
-                <span className="text-mcu font-bold">MCU-class devices</span>{" "}
-                with a memory footprint of less than 521 bytes of RAM and zero
-                dynamic memory allocation. It support{" "}
-                <span className="text-mcu font-bold">
-                  on-device (MCU) training
-                </span>{" "}
-                on compatible hardware, enabling total intelligence on
-                resource-constrained devices without the need for expensive NPUs
-                or cloud dependency.
-              </p>
-              <div className="grid grid-cols-2 gap-3 mb-8 font-mono">
-                {[
-                  "8-16-32 bit Support",
-                  "~9,000 Inf/Sec (16MHz)",
-                  "Local Training & Exec",
-                  "Zero Cloud / NPU",
-                ].map((spec) => (
-                  <div key={spec} className="flex items-start gap-2">
-                    <CheckCircle2 className="w-3 h-3 text-mcu shrink-0 mt-0.5" />
-                    <span className="text-[10px] uppercase tracking-tight">
-                      {spec}
-                    </span>
-                  </div>
-                ))}
-              </div>
-              <div className="flex gap-3 mt-auto">
-                <Link href="/mcu-technical-details" className="w-full">
-                  <Button className="w-full text-sm bg-mcu text-slate-900 shadow-[0_0_20px_rgba(96,165,250,0.4)] hover:bg-mcu-dark hover:shadow-[0_0_30px_rgba(96,165,250,0.6)]">
-                    Technical Details
-                  </Button>
-                </Link>
-              </div>
+          <div className="bg-slate-900 rounded-2xl p-6 md:p-8 border border-mcu/30 shadow-[0_0_30px_rgba(96,165,250,0.2)] flex flex-col">
+            <div className="inline-flex mb-4 px-2 py-0.5 bg-blue-900/30 border border-mcu/30 rounded text-[9px] font-mono text-mcu uppercase font-bold w-fit">
+              UNIQUE LOGIC-BASED ARCHITECTURE
             </div>
+            <div className="flex items-center gap-3 mb-4">
+              <Microchip className="w-10 h-10 text-mcu" />
+              <h3 className="text-xl md:text-2xl font-bold text-white">
+                <span className="text-mcu">AltiCoreMCU</span>
+              </h3>
+            </div>
+            <p className="text-xs font-mono uppercase tracking-widest text-slate-400 mb-4 font-bold">
+              EMBEDDED INTELLIGENCE AT THE SOURCE
+            </p>
+            <p className="text-slate-300 text-sm leading-relaxed mb-8 flex-grow">
+              The only solution capable of training and executing AI models
+              locally across the entire microcontroller spectrum—from
+              high-performance processors to standard $9 Arduino Uno-class
+              devices. This toolset utilizes the AltiCore mathematical framework
+              to deploy software inference to{" "}
+              <span className="text-mcu font-bold">MCU-class devices</span> with
+              a memory footprint of less than 521 bytes of RAM and zero dynamic
+              memory allocation. It supports{" "}
+              <span className="text-mcu font-bold">
+                on-device (MCU) training
+              </span>{" "}
+              on compatible hardware, enabling total intelligence on
+              resource-constrained devices without the need for expensive NPUs
+              or cloud dependency.
+            </p>
+            <div className="grid grid-cols-2 gap-3 mb-8 font-mono">
+              {[
+                "8-16-32 bit Support",
+                "~9,000 Inf/Sec (16MHz)",
+                "Local Training & Exec",
+                "Zero Cloud / NPU",
+              ].map((spec) => (
+                <div key={spec} className="flex items-start gap-2">
+                  <CheckCircle2 className="w-3 h-3 text-mcu shrink-0 mt-0.5" />
+                  <span className="text-[10px] uppercase tracking-tight">
+                    {spec}
+                  </span>
+                </div>
+              ))}
+            </div>
+            <div className="flex gap-3 mt-auto">
+              <Link href="/mcu-technical-details" className="w-full">
+                <Button className="w-full text-sm bg-mcu text-slate-900 shadow-[0_0_20px_rgba(96,165,250,0.4)] hover:bg-mcu-dark hover:shadow-[0_0_30px_rgba(96,165,250,0.6)]">
+                  Technical Details
+                </Button>
+              </Link>
+            </div>
+          </div>
 
           {/* AltiCoreSWP */}
-            <div className="bg-slate-900 rounded-2xl p-6 md:p-8 border border-sw/30 shadow-[0_0_30px_rgba(45,212,191,0.1)] flex flex-col">
-              <div className="inline-flex mb-4 px-2 py-0.5 bg-teal-900/30 border border-sw/30 rounded text-[9px] font-mono text-sw uppercase font-bold w-fit">
-                UNIQUE LOGIC-BASED ARCHITECTURE
-              </div>
-              <div className="flex items-center gap-3 mb-4">
-                <Server className="w-10 h-10 text-sw" />
-                <h3 className="text-xl md:text-2xl font-bold text-white">
-                  <span className="text-sw">AltiCoreSWP</span>
-                </h3>
-              </div>
-              <p className="text-xs font-mono uppercase tracking-widest text-slate-400 mb-4 font-bold">
-                Software acceleration platform
-              </p>
-              <p className="text-slate-300 text-sm leading-relaxed mb-8 flex-grow">
-                A high-performance software platform for the global compute
-                stack. Our mathematical framework restructures AI model
-                execution into logic-level operations to maximize throughput on
-                existing Windows, Linux and Cuda infrastructures. This
-                mathematically distinct layer delivers a{" "}
-                <span className="text-sw font-bold">
-                  17x to 41x throughput advantage
-                </span>{" "}
-                on server CPUs and a{" "}
-                <span className="text-sw font-bold">13x to 21x advantage</span>{" "}
-                on workstations over industry-standard optimized baselines (C++
-                TensorFlow Lite XNNPACK),{" "}
-                <span className="text-sw font-bold">
-                  enabling high-speed inference on standard general-purpose CPUs
-                </span>
-                .
-              </p>
-              <div className="grid grid-cols-2 gap-3 mb-8 font-mono">
-                {[
-                  "Zero HW Modification",
-                  "17x-41x Throughput",
-                  "x86 & ARM Optimized",
-                  "300x Less Arithmetic",
-                ].map((spec) => (
-                  <div key={spec} className="flex items-start gap-2">
-                    <CheckCircle2 className="w-3 h-3 text-sw shrink-0 mt-0.5" />
-                    <span className="text-[10px] uppercase tracking-tight">
-                      {spec}
-                    </span>
-                  </div>
-                ))}
-              </div>
-              <div className="flex gap-3 mt-auto">
-                <Link href="/swp-technical-details" className="w-full">
-                  <Button className="w-full text-sm bg-sw text-slate-900 shadow-[0_0_20px_rgba(45,212,191,0.4)] hover:bg-sw-dark hover:shadow-[0_0_30px_rgba(45,212,191,0.6)]">
-                    Technical Details
-                  </Button>
-                </Link>
-              </div>
+          <div className="bg-slate-900 rounded-2xl p-6 md:p-8 border border-sw/30 shadow-[0_0_30px_rgba(45,212,191,0.1)] flex flex-col">
+            <div className="inline-flex mb-4 px-2 py-0.5 bg-teal-900/30 border border-sw/30 rounded text-[9px] font-mono text-sw uppercase font-bold w-fit">
+              UNIQUE LOGIC-BASED ARCHITECTURE
             </div>
+            <div className="flex items-center gap-3 mb-4">
+              <Server className="w-10 h-10 text-sw" />
+              <h3 className="text-xl md:text-2xl font-bold text-white">
+                <span className="text-sw">AltiCoreSWP</span>
+              </h3>
+            </div>
+            <p className="text-xs font-mono uppercase tracking-widest text-slate-400 mb-4 font-bold">
+              Software acceleration platform
+            </p>
+            <p className="text-slate-300 text-sm leading-relaxed mb-8 flex-grow">
+              A high-performance software platform for the global compute stack.
+              Our mathematical framework restructures AI model execution into
+              logic-level operations to maximize throughput on existing Windows,
+              Linux and CUDA infrastructures. This mathematically distinct layer
+              delivers a{" "}
+              <span className="text-sw font-bold">
+                17x to 41x throughput advantage
+              </span>{" "}
+              on server CPUs and a{" "}
+              <span className="text-sw font-bold">13x to 21x advantage</span> on
+              workstations over industry-standard optimized baselines (C++
+              TensorFlow Lite XNNPACK),{" "}
+              <span className="text-sw font-bold">
+                enabling high-speed inference on standard general-purpose CPUs
+              </span>
+              .
+            </p>
+            <div className="grid grid-cols-2 gap-3 mb-8 font-mono">
+              {[
+                "Zero HW Modification",
+                "17x-41x Throughput",
+                "x86 & ARM Optimized",
+                "300x Less Arithmetic",
+              ].map((spec) => (
+                <div key={spec} className="flex items-start gap-2">
+                  <CheckCircle2 className="w-3 h-3 text-sw shrink-0 mt-0.5" />
+                  <span className="text-[10px] uppercase tracking-tight">
+                    {spec}
+                  </span>
+                </div>
+              ))}
+            </div>
+            <div className="flex gap-3 mt-auto">
+              <Link href="/swp-technical-details" className="w-full">
+                <Button className="w-full text-sm bg-sw text-slate-900 shadow-[0_0_20px_rgba(45,212,191,0.4)] hover:bg-sw-dark hover:shadow-[0_0_30px_rgba(45,212,191,0.6)]">
+                  Technical Details
+                </Button>
+              </Link>
+            </div>
+          </div>
 
           {/* AltiCoreHDL */}
-            <div className="bg-slate-900 rounded-2xl p-6 md:p-8 border border-hdl/30 shadow-[0_0_30px_rgba(245,158,11,0.1)] flex flex-col">
-              <div className="inline-flex mb-4 px-2 py-0.5 bg-amber-900/20 border border-hdl/30 rounded text-[9px] font-mono text-hdl uppercase font-bold w-fit">
-                UNIQUE LOGIC-BASED ARCHITECTURE
-              </div>
-              <div className="flex items-center gap-3 mb-4">
-                <Cpu className="w-10 h-10 text-hdl" />
-                <h3 className="text-xl md:text-2xl font-bold text-white">
-                  <span className="text-hdl">AltiCoreHDL</span>
-                </h3>
-              </div>
-              <p className="text-xs font-mono uppercase tracking-widest text-slate-400 mb-4 font-bold">
-                HARDWARE-INTEGRATED INTELLIGENCE
-              </p>
-              <p className="text-slate-300 text-sm leading-relaxed mb-8 grow">
-                A direct pathway to production silicon by mapping models trained
-                within the AltiCore mathematical framework directly into FPGA
-                and ASIC logic. By{" "}
-                <span className="text-hdl font-bold">
-                  replacing heavy arithmetic
-                </span>{" "}
-                with hardware-native primitives and logic-level operations, it
-                achieves{" "}
-                <span className="text-hdl font-bold">
-                  one inference per clock cycle
-                </span>{" "}
-                with absolute timing predictability and a{" "}
-                <span className="text-hdl font-bold">
-                  fixed latency of approximately 100 clock cycles
-                </span>
-                , making it the foundational IP for safety-critical and
-                high-density Qualitative AI.
-              </p>
-              <div className="grid grid-cols-2 gap-3 mb-8 font-mono">
-                {[
-                  "VHDL/Verilog RTL",
-                  "1 Inf Per Clock Cycle",
-                  "Fixed 100-Cycle Latency",
-                  "Integer-Only Logic",
-                ].map((spec) => (
-                  <div key={spec} className="flex items-start gap-2">
-                    <CheckCircle2 className="w-3 h-3 text-hdl shrink-0 mt-0.5" />
-                    <span className="text-[10px] uppercase tracking-tight">
-                      {spec}
-                    </span>
-                  </div>
-                ))}
-              </div>
-              <div className="flex gap-3 mt-auto">
-                <Link href="/hdl-technical-details" className="w-full">
-                  <Button className="flex-1 text-sm bg-hdl text-slate-900 shadow-[0_0_20px_rgba(245,158,11,0.4)] hover:bg-hdl hover:shadow-[0_0_30px_rgba(245,158,11,0.6)] w-full">
-                    Technical Details
-                  </Button>
-                </Link>
-              </div>
+          <div className="bg-slate-900 rounded-2xl p-6 md:p-8 border border-hdl/30 shadow-[0_0_30px_rgba(245,158,11,0.1)] flex flex-col">
+            <div className="inline-flex mb-4 px-2 py-0.5 bg-amber-900/20 border border-hdl/30 rounded text-[9px] font-mono text-hdl uppercase font-bold w-fit">
+              UNIQUE LOGIC-BASED ARCHITECTURE
             </div>
+            <div className="flex items-center gap-3 mb-4">
+              <Cpu className="w-10 h-10 text-hdl" />
+              <h3 className="text-xl md:text-2xl font-bold text-white">
+                <span className="text-hdl">AltiCoreHDL</span>
+              </h3>
+            </div>
+            <p className="text-xs font-mono uppercase tracking-widest text-slate-400 mb-4 font-bold">
+              HARDWARE-INTEGRATED INTELLIGENCE
+            </p>
+            <p className="text-slate-300 text-sm leading-relaxed mb-8 grow">
+              A direct pathway to production silicon by mapping models trained
+              within the AltiCore mathematical framework directly into FPGA and
+              ASIC logic. By{" "}
+              <span className="text-hdl font-bold">
+                replacing heavy arithmetic
+              </span>{" "}
+              with hardware-native primitives and logic-level operations, it
+              achieves{" "}
+              <span className="text-hdl font-bold">
+                one inference per clock cycle
+              </span>{" "}
+              with absolute timing predictability and a{" "}
+              <span className="text-hdl font-bold">
+                fixed latency of approximately 100 clock cycles
+              </span>
+              , making it the foundational IP for safety-critical and
+              high-density Qualitative AI.
+            </p>
+            <div className="grid grid-cols-2 gap-3 mb-8 font-mono">
+              {[
+                "VHDL/Verilog RTL",
+                "1 Inf Per Clock Cycle",
+                "Fixed 100-Cycle Latency",
+                "Integer-Only Logic",
+              ].map((spec) => (
+                <div key={spec} className="flex items-start gap-2">
+                  <CheckCircle2 className="w-3 h-3 text-hdl shrink-0 mt-0.5" />
+                  <span className="text-[10px] uppercase tracking-tight">
+                    {spec}
+                  </span>
+                </div>
+              ))}
+            </div>
+            <div className="flex gap-3 mt-auto">
+              <Link href="/hdl-technical-details" className="w-full">
+                <Button className="flex-1 text-sm bg-hdl text-slate-900 shadow-[0_0_20px_rgba(245,158,11,0.4)] hover:bg-hdl hover:shadow-[0_0_30px_rgba(245,158,11,0.6)] w-full">
+                  Technical Details
+                </Button>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </section>

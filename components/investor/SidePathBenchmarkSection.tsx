@@ -17,7 +17,7 @@ import ServerComparisonTable from "@/components/sections/ServerComparisonTable";
 import { ShieldCheck } from "lucide-react";
 
 export const SidePathBenchmarkSection = () => (
-  <div id="sidepath-benchmark" className="space-y-12">
+  <div id="SidePath-benchmark" className="space-y-12">
     <h3 className="text-2xl font-bold text-white border-l-4 border-cyan-500 pl-4 mb-4 font-mono uppercase ">
       Benchmark Results: Efficiency Superiority{" "}
       <span className="lowercase">w/o model quality compromise</span>

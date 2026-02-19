@@ -20,7 +20,7 @@ export const SectionHeading = ({
     <span className="text-cyan-400 font-mono text-sm tracking-widest uppercase mb-2 block">
       {subtitle}
     </span>
-    <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight capitalize">
+    <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight">
       {title}
     </h2>
     <SectionDivider align={align} />
