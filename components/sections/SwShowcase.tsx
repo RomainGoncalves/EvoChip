@@ -28,7 +28,7 @@ export const SwShowcase = ({ showQuote = true }: { showQuote?: boolean }) => {
     >
       <div className="container mx-auto px-6">
         <SectionHeading
-          subtitle="Software Acceleration Platform"
+          subtitle="Software Platform"
           title="AltiCoreSWP: Beats Neural Networks in Any Case with the Same Quality Model"
         />
 
@@ -40,6 +40,7 @@ export const SwShowcase = ({ showQuote = true }: { showQuote?: boolean }) => {
           suffix="x"
           label="Speed Multiplier"
           labelColor="text-teal-400"
+          asterisks={2}
         />
 
         <p className="text-lg text-slate-300 max-w-4xl mx-auto mb-6 leading-relaxed text-center">

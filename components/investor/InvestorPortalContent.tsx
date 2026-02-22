@@ -377,7 +377,7 @@ export const InvestorPortalContent = () => {
 
                 <IPPortfolioCard
                   title="AltiCoreHDL"
-                  focus="Hardware-Integrated Intelligence"
+                  focus="HARDWARE IP CORE"
                   subHeader="The direct pathway to production silicon and absolute timing predictability."
                   color="text-hdl"
                   icon={Silicon}

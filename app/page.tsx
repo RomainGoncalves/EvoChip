@@ -75,13 +75,11 @@ const EvoHero = ({
           </h1>
 
           <p className="text-xl text-slate-300 mb-10 leading-relaxed max-w-2xl">
-            EvoChip is the IP holding company for{" "}
-            <span className="font-bold text-cyan-400">AltiCore</span>, a
-            patented mathematical framework that replaces legacy, power-hungry
-            Neural Networks with logic-level operations. By eliminating the
-            heavy arithmetic burden of standard AI, we deliver up to{" "}
+            AltiCore, Evochip's patented mathematical framework replaces legacy,
+            power-hungry Neural Networks with logic-level operations. By
+            eliminating the heavy arithmetic burden of standard AI, we deliver{" "}
             <span className="font-bold text-cyan-400">
-              1000x efficiency gains
+              1000x more Inference per second
             </span>{" "}
             and solve the fundamental scaling limits of global AI.
           </p>
@@ -104,7 +102,7 @@ const EvoHero = ({
                   AltiCoreSWP
                 </span>
               </div>
-              <p className="text-[14px]">Software acceleration platform</p>
+              <p className="text-[14px]">Software Platform</p>
             </div>
             <div className="flex flex-col gap-1">
               <div className="flex items-center gap-2 text-hdl">
@@ -113,7 +111,7 @@ const EvoHero = ({
                   AltiCoreHDL
                 </span>
               </div>
-              <p className="text-[14px]">Hardware-Integrated Intelligence</p>
+              <p className="text-[14px]">HARDWARE IP CORE</p>
             </div>
           </div>
         </div>
@@ -770,8 +768,8 @@ const EvoProducts = ({
             <div>
               <h3 className="text-lg font-bold text-sw">AltiCoreSWP</h3>
               <p className="text-sm text-slate-400 mt-0.5">
-                Software Acceleration Platform High-throughput CPU inference for
-                Windows, Linux and CUDA
+                Software Platform High-throughput CPU inference for Windows,
+                Linux and CUDA
               </p>
             </div>
           </div>
@@ -782,8 +780,8 @@ const EvoProducts = ({
             <div>
               <h3 className="text-lg font-bold text-hdl">AltiCoreHDL</h3>
               <p className="text-sm text-slate-400 mt-0.5">
-                Hardware-Integrated Intelligence FPGA and ASIC IP cores for
-                deterministic fixed-latency execution
+                Hardware IP core FPGA and ASIC IP cores for deterministic
+                fixed-latency execution
               </p>
             </div>
           </div>
@@ -792,7 +790,7 @@ const EvoProducts = ({
           <div className="bg-slate-900 rounded-2xl p-6 border border-violet-500/30 shadow-[0_0_30px_rgba(139,92,246,0.1)] flex items-start">
             <div>
               <h3 className="text-lg font-bold text-violet-400">
-                AltiCoreMobile & AltiCoreGPU
+                AltiCoreMobile & AltiCoreLLM
               </h3>
               <p className="text-sm text-slate-400 mt-0.5">
                 Future Deployment Surfaces Planned support for mobile OS and
@@ -813,10 +811,10 @@ const EvoProducts = ({
         <div className="grid lg:grid-cols-3 gap-8 mt-16">
           <HeroMetric
             color="mcu"
-            prefix="Requires"
-            value="0"
-            label="dynamic RAM"
-            labelColor="text-blue-400"
+            prefix="Less than"
+            value="521B"
+            label="of RAM"
+            asterisks={1}
           />
 
           <HeroMetric
@@ -826,6 +824,7 @@ const EvoProducts = ({
             suffix="x"
             label="Speed Multiplier"
             labelColor="text-teal-400"
+            asterisks={2}
           />
           <HeroMetric
             color="hdl"
@@ -855,12 +854,16 @@ const EvoProducts = ({
             <p className="text-slate-300 text-sm leading-relaxed mb-8 flex-grow">
               The only solution capable of training and executing AI models
               locally across the entire microcontroller spectrum—from
-              high-performance processors to standard $9 Arduino Uno-class
+              high-performance processors to standard $9 Arduino Uno class
               devices. This toolset utilizes the AltiCore mathematical framework
-              to deploy software inference to{" "}
-              <span className="text-mcu font-bold">MCU-class devices</span> with
-              a memory footprint of less than 521 bytes of RAM and zero dynamic
-              memory allocation. It supports{" "}
+              to deploy software inference to
+              <span className="text-mcu font-bold">
+                {" "}
+                MCU-class devices
+              </span>{" "}
+              with a tiny memory footprint and zero dynamic memory allocation
+              ((*) 521 bytes of RAM on Arduino uno 8bit - see the AltiCoreMCU
+              Currency Demo Video). It support{" "}
               <span className="text-mcu font-bold">
                 on-device (MCU) training
               </span>{" "}
@@ -904,7 +907,7 @@ const EvoProducts = ({
               </h3>
             </div>
             <p className="text-xs font-mono uppercase tracking-widest text-slate-400 mb-4 font-bold">
-              Software acceleration platform
+              Software Platform
             </p>
             <p className="text-slate-300 text-sm leading-relaxed mb-8 flex-grow">
               A high-performance software platform for the global compute stack.
@@ -960,7 +963,7 @@ const EvoProducts = ({
               </h3>
             </div>
             <p className="text-xs font-mono uppercase tracking-widest text-slate-400 mb-4 font-bold">
-              HARDWARE-INTEGRATED INTELLIGENCE
+              HARDWARE IP CORE
             </p>
             <p className="text-slate-300 text-sm leading-relaxed mb-8 grow">
               A direct pathway to production silicon by mapping models trained

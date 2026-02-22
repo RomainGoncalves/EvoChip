@@ -48,11 +48,17 @@ export const McuShowcase = () => (
     <div className="container mx-auto px-6">
       <SectionHeading
         subtitle="Embedded Toolset"
-        title="AltiCoreMCU: Zero-BOM Intelligence for Legacy Hardware"
+        title="AltiCoreMCU: Intelligence for Legacy and Future MCUs"
       />
 
       {/* Hero Metric Section */}
-      <HeroMetric color="mcu" prefix="Requires" value="0" label="dynamic RAM" />
+      <HeroMetric
+        color="mcu"
+        prefix="Less than"
+        value="521B"
+        label="of RAM"
+        asterisks={1}
+      />
 
       <p className="text-lg text-slate-300 max-w-4xl mx-auto mb-6 leading-relaxed text-center">
         Billions of microcontrollers remain "reactive" because traditional
