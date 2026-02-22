@@ -9,6 +9,7 @@ interface HeroMetricProps {
   prefix?: string;
   suffix?: string;
   asterisks?: number;
+  asterisksHref?: string;
   labelColor?: string;
 }
 
@@ -37,9 +38,14 @@ export const HeroMetric = ({
   prefix,
   suffix,
   asterisks,
+  asterisksHref,
   labelColor,
 }: HeroMetricProps) => {
   const { text, glow, shadow } = colorMap[color];
+  const asteriskContent = asterisks
+    ? "*".repeat(asterisks).split("").join("\u2002")
+    : null;
+
   return (
     <div className="flex flex-col items-center justify-center mb-16 text-center">
       <div className="relative">
@@ -50,7 +56,15 @@ export const HeroMetric = ({
         <h2 className={`text-7xl md:text-9xl font-black ${text} ${shadow} tracking-tighter mb-2`}>
           {value}
           {suffix && <span className="text-4xl md:text-6xl">{suffix}</span>}
-          {asterisks && <span className="text-2xl md:text-3xl align-top">{"*".repeat(asterisks).split("").join("\u2002")}</span>}
+          {asteriskContent && (
+            <span className="text-2xl md:text-3xl align-top">
+              {asterisksHref ? (
+                <a href={asterisksHref} className="hover:opacity-70 transition-opacity">{asteriskContent}</a>
+              ) : (
+                asteriskContent
+              )}
+            </span>
+          )}
         </h2>
         <p className={`text-xl md:text-2xl font-mono ${labelColor ?? text} uppercase tracking-widest font-bold`}>
           {label}

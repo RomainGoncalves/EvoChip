@@ -41,6 +41,7 @@ export const SwShowcase = ({ showQuote = true }: { showQuote?: boolean }) => {
           label="Speed Multiplier"
           labelColor="text-teal-400"
           asterisks={2}
+          asterisksHref="/swp-technical-details#swp-vs-nn-server"
         />
 
         <p className="text-lg text-slate-300 max-w-4xl mx-auto mb-6 leading-relaxed text-center">

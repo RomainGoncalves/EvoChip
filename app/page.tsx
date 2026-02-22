@@ -825,6 +825,7 @@ const EvoProducts = ({
             label="Speed Multiplier"
             labelColor="text-teal-400"
             asterisks={2}
+            asterisksHref="/swp-technical-details#swp-vs-nn-server"
           />
           <HeroMetric
             color="hdl"
@@ -861,9 +862,10 @@ const EvoProducts = ({
                 {" "}
                 MCU-class devices
               </span>{" "}
-              with a tiny memory footprint and zero dynamic memory allocation
-              ((*) 521 bytes of RAM on Arduino uno 8bit - see the AltiCoreMCU
-              Currency Demo Video). It support{" "}
+              with a tiny memory footprint and zero dynamic memory allocation (
+              <span className="text-mcu font-bold">(*)</span> 521 bytes of RAM
+              on Arduino uno 8bit - see the AltiCoreMCU Currency Demo Video). It
+              support{" "}
               <span className="text-mcu font-bold">
                 on-device (MCU) training
               </span>{" "}

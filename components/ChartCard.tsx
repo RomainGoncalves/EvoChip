@@ -19,6 +19,7 @@ interface ChartCardProps {
   iconBgColor?: string;
   iconBorderColor?: string;
   className?: string;
+  id?: string;
 }
 
 export const ChartCard: React.FC<ChartCardProps> = ({
@@ -31,9 +32,10 @@ export const ChartCard: React.FC<ChartCardProps> = ({
   iconBgColor = "bg-teal-500/10",
   iconBorderColor = "border-teal-500/20",
   className,
+  id,
 }) => {
   return (
-    <div className="max-w-6xl">
+    <div id={id} className="max-w-6xl">
       {/* Main Analytics Card */}
       <div className="bg-slate-900/40 border border-slate-800/80 rounded-[2rem] px-4 pt-6 md:px-6 shadow-3xl backdrop-blur-xl relative overflow-hidden">
         <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/5 blur-[100px] rounded-full -mr-20 -mt-20"></div>
