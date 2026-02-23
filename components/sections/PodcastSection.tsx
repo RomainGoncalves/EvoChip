@@ -28,9 +28,9 @@ export const PodcastSection = () => (
                 AltiCore Fits AI Into 521 Bytes
               </h3>
               <p className="text-slate-400 text-sm">
-                Discover how AltiCore's revolutionary synthesis technology
-                trains and executes AI models into impossibly small footprints,
-                enabling edge computing at unprecedented scales.
+                Discover how AltiCore’s mathematical framework scales AI down to
+                ultra-compact footprints, enabling on-device training and
+                execution without cloud dependency or NPUs.
               </p>
             </div>
 
@@ -49,7 +49,6 @@ export const PodcastSection = () => (
             </audio>
           </div>
         </div>
-
       </div>
     </div>
   </section>

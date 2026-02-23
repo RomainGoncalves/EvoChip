@@ -28,7 +28,7 @@ export const SwShowcase = ({ showQuote = true }: { showQuote?: boolean }) => {
     >
       <div className="container mx-auto px-6">
         <SectionHeading
-          subtitle="Software Platform"
+          subtitle="Deterministic AI for Microcontrollers"
           title="AltiCoreSWP: Beats Neural Networks in Any Case with the Same Quality Model"
         />
 

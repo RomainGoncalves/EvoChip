@@ -301,7 +301,7 @@ export const InvestorPortalContent = () => {
               <div className="grid grid-cols-1 gap-6">
                 <IPPortfolioCard
                   title="AltiCoreSWP"
-                  focus="Software Platform"
+                  focus="Deterministic AI for Microcontrollers"
                   subHeader="Immediate OpEx elimination for existing enterprise infrastructure."
                   color="text-sw"
                   icon={Server}
@@ -377,7 +377,7 @@ export const InvestorPortalContent = () => {
 
                 <IPPortfolioCard
                   title="AltiCoreHDL"
-                  focus="HARDWARE IP CORE"
+                  focus="High-Performance CPU AI Execution"
                   subHeader="The direct pathway to production silicon and absolute timing predictability."
                   color="text-hdl"
                   icon={Silicon}
