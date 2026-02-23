@@ -21,9 +21,13 @@ import type { OperationalBoxItem } from "@/components/ui";
 
 const HDL_STATS: OperationalBoxItem[] = [
   { label: "Throughput", val: "1", sub: "Inference Per Clock Cycle" },
-  { label: "Fixed Latency", val: "~100", sub: "Clock Cycles" },
-  { label: "Arithmetic", val: "Integer", sub: "Only Logic" },
-  { label: "Footprint", val: "Minimal", sub: "Gate Count" },
+  {
+    label: "Fixed Latency",
+    val: "~100",
+    sub: "Clock Cycles (Model Dependent)",
+  },
+  { label: "Computation", val: "Zero FPU", sub: "Logic-Dominant" },
+  { label: "Silicon Footprint", val: "Minimal", sub: "Gate utilization" },
 ];
 
 export const HdlShowcase = () => (
@@ -34,7 +38,7 @@ export const HdlShowcase = () => (
     <div className="container mx-auto px-6">
       <SectionHeading
         subtitle="Hardware IP"
-        title="AltiCoreHDL: Minimal Gate Count - Maximum Efficiency"
+        title="AltiCoreHDL: Minimal Gate Count, Maximum Efficiency"
       />
 
       {/* Hero Metric Section */}
@@ -48,17 +52,23 @@ export const HdlShowcase = () => (
       />
 
       <p className="text-lg text-slate-300 leading-relaxed mb-6 text-center max-w-5xl mx-auto">
-        Traditional AI is mathematically unsuited for production silicon,
-        introducing{" "}
-        <span className="text-hdl font-bold">unpredictable timing jitter</span>{" "}
-        and consuming excessive gate area.
+        Conventional neural networks are fundamentally mismatched for raw
+        silicon. Their reliance on heavy matrix arithmetic introduces
+        <span className="text-hdl font-bold">unpredictable timing jitter</span>,
+        demands external memory fetch cycles, and consumes excessive gate area.
       </p>
       <p className="text-lg text-slate-300 leading-relaxed mb-12 text-center max-w-5xl mx-auto">
-        AltiCoreHDL maps intelligence into hardware logic, delivering{" "}
+        AltiCoreHDL synthesizes intelligence directly into logic-dominant
+        operator chains. By completely{" "}
         <span className="text-hdl font-bold">
-          deterministic, one-inference-per-cycle throughput
-        </span>{" "}
-        without external memory or floating-point units.
+          bypassing floating-point arithmetic
+        </span>
+        , it delivers strictly deterministic,{" "}
+        <span className="text-hdl font-bold">
+          one-inference-per-clock-cycle throughput
+        </span>
+        —requiring zero external memory and drastically reducing your overall
+        silicon footprint.
       </p>
       {/* Operational boxes */}
       <SectionHeading subtitle="" title="Operational Benchmarks" />
@@ -79,8 +89,8 @@ export const HdlShowcase = () => (
                 <span className="text-hdl">
                   Deterministic Logic for Silicon:
                 </span>{" "}
-                Hardware IP mapping AI models trained in the AltiCore framework
-                directly into{" "}
+                Hardware IP that maps AI models trained in the AltiCore
+                framework directly into{" "}
                 <span className="text-hdl font-bold">FPGA and ASIC logic</span>.
               </span>
             </li>
@@ -88,15 +98,15 @@ export const HdlShowcase = () => (
               <span className="mt-1">
                 <span className="text-hdl">Arithmetic Wall Solution:</span>{" "}
                 Replaces heavy arithmetic and matrix math with hardware-native
-                primitives and logic-level operations.
+                primitives and logic-dominant operator chains.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="mt-1">
                 <span className="text-hdl">Hard-Wired Performance:</span>{" "}
-                Enables high-throughput execution delivering{" "}
+                Enables extreme-throughput execution delivering{" "}
                 <span className="text-hdl font-bold">
-                  one inference per clock cycle
+                  exactly one inference per clock cycle per clock
                 </span>
                 .
               </span>
@@ -105,7 +115,7 @@ export const HdlShowcase = () => (
               <span className="mt-1">
                 <span className="text-hdl">True Determinism:</span> Guaranteed
                 hard-real-time execution via fixed-depth synchronous pipelines
-                and static execution schedules.
+                and strictly static execution schedules.
               </span>
             </li>
           </ul>
@@ -123,7 +133,8 @@ export const HdlShowcase = () => (
             <li className="flex items-start gap-2">
               <span className="mt-1">
                 <span className="text-hdl">Minimal Gate Count:</span> Uses a
-                mathematically distinct architecture to minimize{" "}
+                mathematically distinct architecture to radically reduce
+                programmable{" "}
                 <span className="text-hdl font-bold">
                   fabric overhead and silicon footprint
                 </span>
@@ -133,22 +144,25 @@ export const HdlShowcase = () => (
             <li className="flex items-start gap-2">
               <span className="mt-1">
                 <span className="text-hdl">Memory Efficiency:</span> Operates
-                using on-chip resources only; no external DRAM is required for
-                inference.
+                using on-chip resources only; zero external DRAM fetch cycles
+                are required for inference.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="mt-1">
                 <span className="text-hdl">Native HDL Output:</span> Delivered
-                as synthesizable RTL cores (Verilog/VHDL) with defined
-                input/output pins.
+                as immediately synthesizable VHDL RTL cores with clearly defined
+                input/output intefaces.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="mt-1">
                 <span className="text-hdl">Fixed Latency:</span> Provides a
-                cycle-constant core latency of approximately{" "}
-                <span className="text-hdl font-bold">100 clock cycles</span>.
+                cycle-constant core latency (e.g., ~100 clock cycles) that{" "}
+                <span className="text-hdl font-bold">
+                  scales predictably with model depth
+                </span>
+                .
               </span>
             </li>
             <li className="flex items-start gap-2">
@@ -175,33 +189,33 @@ export const HdlShowcase = () => (
                 <span className="text-hdl">Logic-Level Synthesis:</span>{" "}
                 Transforms models into{" "}
                 <span className="text-hdl font-bold">
-                  bitwise logic and shifts
+                  mathematically efficient, discrete logic circuits
                 </span>{" "}
-                rather than floating-point tensors.
+                rather than relying on floating-point tensor ALUs.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="mt-1">
                 <span className="text-hdl">Zero-BOM AI Scaling:</span>{" "}
-                Integrates intelligence into existing silicon or FPGAs without
-                needing dedicated AI co-processors or hardware changes.
+                Integrates intelligence directly into existing FPGA fabric or
+                ASIC designs without requiring dedicated, power-hungry AI
+                co-processors.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="mt-1">
                 <span className="text-hdl">Wire-Speed Throughput:</span> Capable
-                of processing over{" "}
-                <span className="text-hdl font-bold">
-                  3.1 billion inferences per second
-                </span>{" "}
-                on high-end FPGA hardware (e.g., Xilinx ZCU104).
+                of processing over 3.18 billion inferences per second on
+                mainstream, edge-class FPGA hardware (e.g., Xilinx Zynq
+                UltraScale+ ZU7EV) via parallel core instantiation.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="mt-1">
                 <span className="text-hdl">Unrivaled Power Efficiency:</span>{" "}
-                Logic-centric compute reduces energy and thermal footprints,
-                ideal for &ldquo;Sentinel&rdquo; always-on monitoring.
+                Logic-dominant compute drastically reduces energy and thermal
+                footprints, making it ideal for &ldquo;Sentinel&rdquo; always-on
+                monitoring devices.
               </span>
             </li>
           </ul>
@@ -224,13 +238,12 @@ export const HdlShowcase = () => (
           </h3>
           <p className="text-base text-slate-300 leading-relaxed flex-grow">
             Map models directly into{" "}
-            <span className="text-hdl font-bold">FPGA and ASIC logic</span>.
-            Synthesizable RTL cores ensure seamless migration from software
-            prototypes to custom hardware,{" "}
+            <span className="text-hdl font-bold">FPGA and ASIC logic</span>.{" "}
             <span className="text-hdl font-bold">
-              slashing development cycles
-            </span>
-            .
+              Drop-in synthesizable VHDL RTL cores
+            </span>{" "}
+            ensure seamless migration from software prototypes to custom
+            hardware, streamlining integration and slashing development cycles.
           </p>
         </Card>
 
@@ -243,14 +256,13 @@ export const HdlShowcase = () => (
             Extreme Throughput
           </h3>
           <p className="text-base text-slate-300 leading-relaxed flex-grow">
-            Achieve massive performance with a backpressure-free,{" "}
-            <span className="text-hdl font-bold">fully pipelined core</span>.
-            Deliver over{" "}
+            Achieve massive performance with a backpressure-free, fully
+            pipelined core.{" "}
             <span className="text-hdl font-bold">
-              3.1 billion inferences per second
+              Deliver over 3.18 billion inferences per second
             </span>{" "}
-            on existing hardware, eliminating the need for expensive GPU
-            clusters.
+            on mainstream FPGA hardware, eliminating the need for expensive,
+            dedicated AI co-processors.
           </p>
         </Card>
 
@@ -263,11 +275,13 @@ export const HdlShowcase = () => (
             Deterministic Fixed-Latency
           </h3>
           <p className="text-base text-slate-300 leading-relaxed flex-grow">
-            Ensure cycle-accurate determinism with a constant latency of{" "}
-            <span className="text-hdl font-bold">~100 clock cycles</span>.
-            Mitigate operational risk by eliminating the{" "}
-            <span className="text-hdl font-bold">timing jitter</span> inherent
-            in traditional AI accelerators.
+            Ensure cycle-accurate determinism with a constant core latency
+            (e.g., ~100 clock cycles, scaling predictably with model depth).
+            <span className="text-hdl font-bold">
+              Mitigate operational risk
+            </span>{" "}
+            by completely eliminating the timing jitter inherent in traditional
+            AI hardware.
           </p>
         </Card>
       </div>
@@ -290,9 +304,8 @@ export const HdlShowcase = () => (
             <li className="flex items-start gap-2">
               <span className="text-hdl mt-1">•</span>
               <span>
-                Synthesizable{" "}
-                <span className="text-hdl font-bold">RTL IP core</span>{" "}
-                (VHDL/Verilog)
+                Drop-in synthesizable{" "}
+                <span className="text-hdl font-bold">RTL IP core</span> (VHDL)
               </span>
             </li>
             <li className="flex items-start gap-2">
@@ -347,8 +360,11 @@ export const HdlShowcase = () => (
             <li className="flex items-start gap-2">
               <span className="text-hdl mt-1">•</span>
               <span>
-                Fixed-latency execution (
-                <span className="text-hdl font-bold">~100 clock cycles</span>)
+                Fixed-core latency execution (
+                <span className="text-hdl font-bold">
+                  e.g., ~100 cycles, model dependent
+                </span>
+                )
               </span>
             </li>
             <li className="flex items-start gap-2">
@@ -362,7 +378,7 @@ export const HdlShowcase = () => (
             </li>
             <li className="flex items-start gap-2">
               <span className="text-hdl mt-1">•</span>
-              <span>One inference per clock cycle throughput</span>
+              <span>One inference per clock cycle per core</span>
             </li>
           </ul>
         </Card>
