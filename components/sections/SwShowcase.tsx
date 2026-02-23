@@ -28,34 +28,34 @@ export const SwShowcase = ({ showQuote = true }: { showQuote?: boolean }) => {
     >
       <div className="container mx-auto px-6">
         <SectionHeading
-          subtitle="Deterministic AI for Microcontrollers"
-          title="AltiCoreSWP: Beats Neural Networks in Any Case with the Same Quality Model"
+          subtitle="CROSS-PLATFORM SOFTWARE RUNTIME"
+          title="AltiCoreSWP: Massive Throughput at Matched Accuracy"
         />
 
         {/* Hero Metric Section */}
         <HeroMetric
           color="sw"
           prefix="Up to"
-          value="143"
+          value="28"
           suffix="x"
-          label="Speed Multiplier"
+          label="Speed Versus Neural Networks"
           labelColor="text-teal-400"
           asterisks={2}
           asterisksHref="/swp-technical-details#swp-vs-nn-server"
         />
 
         <p className="text-lg text-slate-300 max-w-4xl mx-auto mb-6 leading-relaxed text-center">
-          Enterprise data centers are hitting the "Arithmetic Wall," where
-          legacy neural networks force a{" "}
-          <span className="text-sw font-bold">
-            costly dependency on specialized GPUs
-          </span>
-          .
+          Enterprise data centers are hitting the "Arithmetic Wall."
+          Conventional neural networks rely on dense matrix math, forcing a{" "}
+          <span className="text-sw">costly dependency on specialized GPUs</span>{" "}
+          and power-heavy accelerators to scale performance.
         </p>
         <p className="text-lg text-slate-300 max-w-4xl mx-auto mb-16 leading-relaxed text-center">
-          AltiCoreSWP replaces matrix math with bitwise logic, delivering{" "}
-          <span className="text-sw font-bold">17x-41x faster throughput</span>{" "}
-          on existing CPUs with no hardware changes.
+          AltiCoreSWP replaces heavy arithmetic with logic-dominant operator
+          chains. In benchmark evaluations at equivalent accuracy, it delivered{" "}
+          <span className="text-sw">13x to 28x throughput gains</span> on
+          standard CPU speedups, maximizing performance on your existing
+          infrastructure without hardware modifications.
         </p>
 
         <SectionHeading
@@ -93,14 +93,15 @@ export const SwShowcase = ({ showQuote = true }: { showQuote?: boolean }) => {
                 Laptop
               </h4>
               <p className="text-slate-300 font-mono">
-                Dell Precision 5680 | Intel i7-13700H | 32GB RAM | No GPU
+                Mobile Workstation Dell Precision 5680 | Intel i7-13700H | 32GB
+                RAM | No GPU
               </p>
               <div className="mt-2 flex gap-2">
                 <span className="text-[11px] bg-cyan-900/40 text-cyan-400 px-2 py-0.5 rounded border border-cyan-800">
                   i7-Gen13
                 </span>
                 <span className="text-[11px] bg-cyan-900/40 text-cyan-400 px-2 py-0.5 rounded border border-cyan-800">
-                  Mobile LPAR
+                  CPU-execution Only
                 </span>
               </div>
             </div>
@@ -114,14 +115,14 @@ export const SwShowcase = ({ showQuote = true }: { showQuote?: boolean }) => {
                 Enterprise / Datacenter Server
               </h4>
               <p className="text-slate-300 font-mono">
-                Dell PowerEdge | Intel Xeon Gold 5416S
+                Dell PowerEdge R760 | Intel Xeon Gold 5416S
               </p>
               <div className="mt-2 flex gap-2">
                 <span className="text-[11px] bg-emerald-900/40 text-emerald-400 px-2 py-0.5 rounded border border-emerald-800">
                   Xeon Gold
                 </span>
                 <span className="text-[11px] bg-emerald-900/40 text-emerald-400 px-2 py-0.5 rounded border border-emerald-800">
-                  Rack Density
+                  Max Rack Density
                 </span>
               </div>
             </div>
@@ -137,31 +138,32 @@ export const SwShowcase = ({ showQuote = true }: { showQuote?: boolean }) => {
           <SpeedChart />
         </div>
         {/* ROI Highlight Card */}
-        <div className="p-8 bg-gradient-to-br mt-16 from-slate-900 to-slate-950 border border-cyan-500/20 rounded-3xl text-center relative overflow-hidden">
+        <div className="p-8 bg-linear-to-br mt-16 from-slate-900 to-slate-950 border border-cyan-500/20 rounded-3xl text-center relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(6,182,212,0.1),transparent)]"></div>
           <div className="relative z-10">
             <h3 className="text-2xl md:text-4xl font-bold text-white mb-4 capitalize">
               AltiCoreSWP on laptop beats neural networks on server
             </h3>
             <p className="text-slate-400 max-w-2xl mx-auto text-xl leading-relaxed mb-8">
-              AltiCoreSWP restructures legacy workloads into binary logic
-              streams, achieving speed gains that neural networks do not match.
+              AltiCoreSWP restructures legacy workloads into logic-dominant
+              operator chains, achieving such massive efficiency that a mobile
+              workstation easily outpaces a server-class execution.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <div className="text-2xl font-bold text-teal-400 pt-2">
-                Worst Case Scenario
+                Benchmark Example:  Credit Fraud Detection
               </div>
               <div className="p-4 bg-slate-950 border border-slate-800 rounded-xl">
                 <p className="text-[12px] font-mono text-slate-300 capitalize mb-1">
-                  AltiCoreSWP Laptop #IPS
+                  AltiCoreSWP Laptop (Inf/Sec)
                 </p>
                 <p className="text-2xl font-bold text-teal-400">361,010,000</p>
               </div>
               <div className="p-4 bg-slate-950 border border-slate-800 rounded-xl">
                 <p className="text-[12px] font-mono text-slate-300 capitalize mb-1">
-                  C++ TF RUYMT #IPS
+                  Server Neural Network (Inf/Sec)
                 </p>
-                <p className="text-2xl font-bold text-teal-400">30.090.000</p>
+                <p className="text-2xl font-bold text-teal-400">30,090,000</p>
               </div>
               <div className="p-4 bg-slate-950 border border-slate-800 rounded-xl">
                 <p className="text-[12px] font-mono text-slate-300 capitalize mb-1">
@@ -182,40 +184,42 @@ export const SwShowcase = ({ showQuote = true }: { showQuote?: boolean }) => {
               <Zap className="w-6 h-6 text-sw" />
               What is AltiCoreSWP
             </h3>
-            <ul className="space-y-3 text-base text-slate-300 leading-relaxed flex-grow">
+            <ul className="space-y-3 text-base text-slate-300 leading-relaxed grow">
               <li className="flex items-start gap-2">
                 <span className="mt-1">
-                  <span className="text-sw">AI Performance Leap:</span> Delivers
-                  order-of-magnitude gains in decisions per second on standard
-                  compute.
+                  <span className="text-sw">
+                    Order-of-Magnitude Throughput:
+                  </span>{" "}
+                  Delivers massive gains in decisions per second on standard
+                  general-purpose compute.
                 </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-1">
                   <span className="text-sw">Arithmetic Wall Solution:</span>{" "}
-                  Replaces legacy matrix-math (A x B + C) with bitwise-logic
-                  streams.
+                  Replaces heavy matrix arithmetic with mathematically
+                  efficient, logic-dominant operator chains.
                 </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-1">
                   <span className="text-sw">Zero-Change Deployment:</span>{" "}
-                  Optimized for existing hardware, requiring no physical
-                  infrastructure upgrades.
+                  Optimized for existing CPU infrastructure, requiring no
+                  hardware accelerators or NPU upgrades.
                 </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-1">
                   <span className="text-sw">Logic-Based Synthesis:</span> Trains
-                  models from scratch into logic-centric primitives for
-                  high-efficiency.
+                  models from scratch directly into logic-centric primitives for
+                  maximum execution efficiency.
                 </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-1">
                   <span className="text-sw">Superior Unit Economics:</span>{" "}
-                  Maximizes throughput-per-watt to reduce the total cost of AI
-                  scaling.
+                  Maximizes inferences per watt, directly reducing the total
+                  cost of ownership for AI scaling.
                 </span>
               </li>
             </ul>
@@ -232,38 +236,37 @@ export const SwShowcase = ({ showQuote = true }: { showQuote?: boolean }) => {
             <ul className="space-y-3 text-base text-slate-300 leading-relaxed flex-grow">
               <li className="flex items-start gap-2">
                 <span className="mt-1">
-                  <span className="text-sw">Arithmetic-Free Inference:</span>{" "}
-                  Eliminates floating-point overhead via hardware-native
-                  primitives.
+                  <span className="text-sw">Reduced Arithmetic Intensity:</span>{" "}
+                  Dramatically minimizes floating-point overhead by leveraging
+                  hardware-native logical operations.
                 </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-1">
-                  <span className="text-sw">Massive Throughput:</span> Verified
-                  to achieve{" "}
-                  <span className="text-sw font-bold">17x-41x faster</span>{" "}
-                  performance than optimized baselines.
+                  <span className="text-sw">Massive Throughput:</span> Achieved
+                  peak speedups up to 27.6x faster than highly optimized C++
+                  neural network baselines.
                 </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-1">
                   <span className="text-sw">AVX2 Optimization:</span>{" "}
-                  Specifically tuned for high-speed execution on standard
-                  x86/ARM architectures.
+                  Specifically tuned for high-speed, vectorized execution on
+                  standard enterprise architectures
                 </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-1">
-                  <span className="text-sw">Deterministic Execution:</span>{" "}
-                  Optimized for massive steady-state throughput on existing
-                  CPUs.
+                  <span className="text-sw">Steady-State Efficiency:</span>{" "}
+                  Optimized for sustained, massive-scale throughput rather than
+                  isolated micro-latency.
                 </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-1">
-                  <span className="text-sw">Horizontal Scalability:</span> Plugs
-                  into standard dev-ops workflows for rapid deployment across
-                  clusters.
+                  <span className="text-sw">Horizontal Scalability:</span>{" "}
+                  Integrates cleanly into standard dev-ops workflows for rapid,
+                  hardware-agnostic deployment across clusters.
                 </span>
               </li>
             </ul>
@@ -281,36 +284,38 @@ export const SwShowcase = ({ showQuote = true }: { showQuote?: boolean }) => {
               <li className="flex items-start gap-2">
                 <span className="mt-1">
                   <span className="text-sw">Bypasses GPU Dependency:</span>{" "}
-                  Enables high-speed AI on CPUs, removing the need for costly
-                  accelerators.
+                  Enables high-speed AI on CPUs, removing the bottleneck of
+                  specialized, costly hardware accelerators.
                 </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-1">
-                  <span className="text-sw">Integer-Only Logic:</span> Operates
-                  without the &ldquo;calculator&rdquo; overhead of traditional
-                  floating-point tensors.
+                  <span className="text-sw">Logic-Dominant Execution:</span>{" "}
+                  Replaces traditional floating-point tensor overhead with
+                  mathematically efficient, discrete logic.
                 </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-1">
-                  <span className="text-sw">Server Revitalization:</span>{" "}
-                  Extends the life of legacy racks by enabling AI speeds on
-                  older hardware.
+                  <span className="text-sw">
+                    Infrastructure Revitalization:
+                  </span>{" "}
+                  Extends the lifecycle of existing server racks by enabling
+                  massive AI throughput on current hardware.
                 </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-1">
                   <span className="text-sw">Reduced Thermal Load:</span> Lower
-                  complexity significantly reduces energy draw and cooling
-                  requirements.
+                  computational complexity significantly reduces energy draw and
+                  data center cooling requirements.
                 </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-1">
-                  <span className="text-sw">Enterprise Privacy:</span> Local
-                  execution within the &ldquo;Server Core&rdquo; ensures data
-                  never leaves the loop.
+                  <span className="text-sw">On-Premises Security:</span>{" "}
+                  CPU-only execution allows high-speed AI to remain entirely
+                  within your secure enterprise boundary.
                 </span>
               </li>
             </ul>
@@ -318,7 +323,7 @@ export const SwShowcase = ({ showQuote = true }: { showQuote?: boolean }) => {
         </div>
 
         <SectionHeading
-          subtitle="70% INFRASTRUCTURE SAVINGS"
+          subtitle="MASSIVE CAPEX & OPEX SAVINGS"
           title="Strategic Advantage"
         />
 
@@ -329,12 +334,12 @@ export const SwShowcase = ({ showQuote = true }: { showQuote?: boolean }) => {
           >
             <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
               <Cpu className="w-6 h-6 text-sw" />
-              Maximize Legacy CPU ROI
+              Maximize Existing CPU ROI
             </h3>
             <p className="text-base text-slate-300 leading-relaxed flex-grow">
               Achieve{" "}
               <span className="text-sw font-bold">
-                17x to 41x throughput speedups
+                observed peak throughput speedups up to 28x
               </span>{" "}
               on existing workstation and server CPUs.{" "}
               <span className="text-sw font-bold">
@@ -357,10 +362,10 @@ export const SwShowcase = ({ showQuote = true }: { showQuote?: boolean }) => {
               Bypass the &ldquo;Arithmetic Wall&rdquo; by replacing
               resource-heavy matrix math with{" "}
               <span className="text-sw font-bold">
-                hardware-native bitwise logic
+                mathematically efficient, logic-dominant operator chains
               </span>
-              . This fundamental shift in computation reduces thermal overhead
-              and energy consumption per inference.
+              . This fundamental shift in computation radically reduces thermal
+              overhead and energy consumption per inference.
             </p>
           </Card>
 
@@ -375,9 +380,11 @@ export const SwShowcase = ({ showQuote = true }: { showQuote?: boolean }) => {
             <p className="text-base text-slate-300 leading-relaxed flex-grow">
               Deploy high-throughput workloads on Windows and Linux using
               automated conversion into{" "}
-              <span className="text-sw font-bold">drop-in C++ templates</span>.
-              Ensure rapid deployment with minimal changes to existing DevOps
-              pipelines or software architectures.
+              <span className="text-sw font-bold">
+                highly portable C/C++ templates
+              </span>
+              . Ensure rapid deployment and horizontal scaling with minimal
+              changes to existing DevOps pipelines or software architectures.
             </p>
           </Card>
         </div>
@@ -399,7 +406,7 @@ export const SwShowcase = ({ showQuote = true }: { showQuote?: boolean }) => {
             <ul className="space-y-3 text-base text-slate-300 leading-relaxed flex-grow">
               <li className="flex items-start gap-2">
                 <span className="text-sw mt-1">•</span>
-                <span>Windows and Linux compatible</span>
+                <span>Windows and Linux OS</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-sw mt-1">•</span>
@@ -426,11 +433,11 @@ export const SwShowcase = ({ showQuote = true }: { showQuote?: boolean }) => {
             <ul className="space-y-3 text-base text-slate-300 leading-relaxed flex-grow">
               <li className="flex items-start gap-2">
                 <span className="text-sw mt-1">•</span>
-                <span>Supports C++ and Python workflows</span>
+                <span>Supports standard C/C++ and Python workflows</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-sw mt-1">•</span>
-                <span>Native support for CUDA paths</span>
+                <span>Optional CUDA support for GPU scaling</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-sw mt-1">•</span>
@@ -451,9 +458,9 @@ export const SwShowcase = ({ showQuote = true }: { showQuote?: boolean }) => {
               <li className="flex items-start gap-2">
                 <span className="text-sw mt-1">•</span>
                 <span>
-                  Logic-centric;{" "}
+                  Logic-dominant;{" "}
                   <span className="text-sw font-bold">
-                    no FPU/Arithmetic dependency
+                    drastically reduces FPU usage
                   </span>
                 </span>
               </li>
@@ -463,7 +470,7 @@ export const SwShowcase = ({ showQuote = true }: { showQuote?: boolean }) => {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-sw mt-1">•</span>
-                <span>CPU-first; reduces specialized GPU reliance</span>
+                <span>CPU-first performance without GPU reliance</span>
               </li>
             </ul>
           </Card>

@@ -96,7 +96,9 @@ const EvoHero = ({
                   AltiCoreMCU
                 </span>
               </div>
-              <p className="text-[14px]">Embedded Intelligence at the Source</p>
+              <p className="text-[14px]">
+                Deterministic AI for Microcontrollers
+              </p>
             </div>
             <div className="flex flex-col gap-1">
               <div className="flex items-center gap-2 text-sw">
@@ -105,9 +107,7 @@ const EvoHero = ({
                   AltiCoreSWP
                 </span>
               </div>
-              <p className="text-[14px]">
-                Deterministic AI for Microcontrollers
-              </p>
+              <p className="text-[14px]">High-Performance CPU AI Execution</p>
             </div>
             <div className="flex flex-col gap-1">
               <div className="flex items-center gap-2 text-hdl">
@@ -116,7 +116,7 @@ const EvoHero = ({
                   AltiCoreHDL
                 </span>
               </div>
-              <p className="text-[14px]">High-Performance CPU AI Execution</p>
+              <p className="text-[14px]">Massive-Throughput Hardware AI</p>
             </div>
           </div>
         </div>
@@ -815,7 +815,7 @@ const EvoProducts = ({
           <HeroMetric
             color="sw"
             prefix="Up to"
-            value="143"
+            value="28"
             suffix="x"
             label="Speed Multiplier"
             labelColor="text-teal-400"
@@ -845,7 +845,7 @@ const EvoProducts = ({
               </h3>
             </div>
             <p className="text-xs font-mono uppercase tracking-widest text-slate-400 mb-4 font-bold">
-              EMBEDDED INTELLIGENCE AT THE SOURCE
+              Deterministic AI for Microcontrollers
             </p>
             <p className="text-slate-300 text-sm leading-relaxed mb-8 grow">
               AlticoreMCU enables training and execution of AI models locally
@@ -900,7 +900,7 @@ const EvoProducts = ({
               </h3>
             </div>
             <p className="text-xs font-mono uppercase tracking-widest text-slate-400 mb-4 font-bold">
-              Deterministic AI for Microcontrollers
+              High-Performance CPU AI Execution
             </p>
             <p className="text-slate-300 text-sm leading-relaxed mb-8 flex-grow">
               A high-performance software runtime for model training and
@@ -952,7 +952,7 @@ const EvoProducts = ({
               </h3>
             </div>
             <p className="text-xs font-mono uppercase tracking-widest text-slate-400 mb-4 font-bold">
-              High-Performance CPU AI Execution
+              Massive-Throughput Hardware AI
             </p>
             <p className="text-slate-300 text-sm leading-relaxed mb-8 grow">
               A direct pathway to production silicon that maps AltiCore models
