@@ -119,13 +119,13 @@ const EvoHero = ({
           <div className="relative z-10 bg-slate-900/50 backdrop-blur-md p-1 rounded-2xl border border-cyan-500/20 shadow-2xl">
             <div className="bg-slate-950 rounded-xl p-8 overflow-hidden relative min-h-100 flex flex-col justify-center items-center text-center">
               <h3 className="text-slate-400 font-mono mb-8 uppercase tracking-widest text-sm">
-                Gate-Level Architecture
+                Logic-Dominant Architecture
               </h3>
               <div className="flex items-center gap-8 mb-8">
-                <div className="flex flex-col items-center gap-2 opacity-50 blur-[0.5px]">
-                  <Brain className="w-16 h-16 text-slate-500" />
-                  <span className="text-xs text-slate-500 line-through decoration-slate-500/50">
-                    Neural Network
+                <div className="flex flex-col items-center gap-2 opacity-50">
+                  <Brain className="w-20 h-20 text-white" />
+                  <span className="text-xs text-white">
+                    Arithmetic-Bound AI
                   </span>
                 </div>
                 <ArrowRight className="w-8 h-8 text-cyan-500 animate-pulse" />
@@ -134,12 +134,13 @@ const EvoHero = ({
                     <Cpu className="w-10 h-10 text-cyan-400" />
                   </div>
                   <span className="text-xs text-cyan-400 font-bold">
-                    Up to 1000x Efficiency
+                    Logic-Dominant Execution
                   </span>
                 </div>
               </div>
               <p className="text-slate-300 text-sm font-mono tracking-tighter uppercase">
-                Hardware-agnostic Logic Streams. Real-world 1000x gains.
+                Reduced arithmetic intensity. Orders-of-magnitude efficientcy
+                gains.
               </p>
             </div>
           </div>
