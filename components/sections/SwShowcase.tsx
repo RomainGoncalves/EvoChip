@@ -151,7 +151,7 @@ export const SwShowcase = ({ showQuote = true }: { showQuote?: boolean }) => {
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-4 gap-6 max-w-4xl mx-auto">
               <div className="text-2xl font-bold text-teal-400 pt-2">
-                Benchmark Example:  Credit Fraud Detection
+                Benchmark Example: Credit Fraud Detection
               </div>
               <div className="p-4 bg-slate-950 border border-slate-800 rounded-xl">
                 <p className="text-[12px] font-mono text-slate-300 capitalize mb-1">
