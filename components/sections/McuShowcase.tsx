@@ -27,16 +27,20 @@ import type { OperationalBoxItem } from "@/components/ui";
 import { VideoEmbed } from "@/components/brand";
 
 const MCU_STATS: OperationalBoxItem[] = [
-  { label: "Ultra-Lightweight Footprint", val: "< 521B", sub: "RAM usage" },
   {
-    label: "High Speed Edge Inference",
+    label: "Ultra-Lightweight Footprint",
+    val: "< 521B",
+    sub: "parameter RAM (example)",
+  },
+  {
+    label: "High-Speed Edge Inference",
     val: "~9,000+ / sec",
-    sub: "on $9 Arduino Uno",
+    sub: "@ 16MHz (BENCHMARK)",
   },
   {
     label: "Execution Stability",
-    val: "CONSTANT EXECUTION TIME",
-    sub: "Fully Deterministic",
+    val: "CYCLE-CONSTANT",
+    sub: "Strictly Deterministic",
   },
 ];
 
@@ -48,30 +52,34 @@ export const McuShowcase = () => (
     <div className="container mx-auto px-6">
       <SectionHeading
         subtitle="Embedded Toolset"
-        title="AltiCoreMCU: Intelligence for Legacy and Future MCUs"
+        title="AltiCoreMCU: Embedded AI Runtime for Resource-Constrained Devices"
       />
 
       {/* Hero Metric Section */}
       <HeroMetric
         color="mcu"
-        prefix="Less than"
+        prefix="Benchmark example"
         value="521B"
-        label="of RAM"
+        label="Model State RAM"
         asterisks={1}
       />
 
       <p className="text-lg text-slate-300 max-w-4xl mx-auto mb-6 leading-relaxed text-center">
-        Billions of microcontrollers remain "reactive" because traditional
-        neural networks require{" "}
-        <span className="text-mcu font-bold">
-          massive RAM and heavy matrix math
-        </span>{" "}
-        that standard hardware cannot process locally.
+        Billions of microcontrollers remain strictly reactive because
+        traditional neural networks require{" "}
+        <span className="text-mcu font-bold">massive memory overhead</span> and
+        dense matrix arithmetic.
       </p>
       <p className="text-lg text-slate-300 max-w-4xl mx-auto mb-16 leading-relaxed text-center">
-        AltiCoreMCU replaces arithmetic with bitwise logic, enabling
-        high-performance inference with
-        <span className="text-mcu font-bold"> zero BOM changes</span>.
+        AltiCoreMCU solves this by compiling models into logic-dominant operator
+        chains.
+        <br />
+        This approach enables{" "}
+        <span className="text-mcu font-bold">
+          deterministic, high-performance inference
+        </span>{" "}
+        on existing hardware—without requiring NPUs, cloud connectivity, or
+        costly hardware redesigns.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
@@ -93,20 +101,24 @@ export const McuShowcase = () => (
           <ul className="space-y-3 text-base text-slate-300 leading-relaxed flex-grow">
             <li className="flex items-start gap-2">
               <span className="mt-1">
-                <span className="text-mcu">Fast Inference:</span> Converts
-                labeled CSV data into a high-speed, deterministic logic engine.
+                <span className="text-mcu">Deterministic Logic Engine:</span>{" "}
+                Converts trained models into high-speed, hardware-native
+                operator chains rather than arithmetic-heavy neural networks.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="mt-1">
-                <span className="text-mcu">Low-Cost 8/16/32-Bit Support:</span>{" "}
-                Optimized for budget devices like Arduino Uno and STM32.
+                <span className="text-mcu">Arbitrary Word Widths:</span> Adapts
+                to any native register size—spanning legacy 8-bit MCUs, modern
+                32/64-bit processors, and custom DSPs—without requiring hardware
+                accelerators.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="mt-1">
-                <span className="text-mcu">Plug-and-Play Integration:</span>{" "}
-                Pre-integrated workflow for embedded engineers.
+                <span className="text-mcu">C-Code Synthesis:</span>{" "}
+                Automatically transforms models into highly portable, static
+                C-code templates ready for embedded IDEs.
               </span>
             </li>
             <li className="flex items-start gap-2">
@@ -118,8 +130,9 @@ export const McuShowcase = () => (
             </li>
             <li className="flex items-start gap-2">
               <span className="mt-1">
-                <span className="text-mcu">Industrial Grade:</span> A
-                power-efficient, certifiable, and turnkey digital peripheral.
+                <span className="text-mcu">Industrial-Grade Reliability:</span>{" "}
+                Operates as a power-efficient, cycle-predictable digital
+                peripheral for safety-critical and real-time systems.
               </span>
             </li>
           </ul>
@@ -138,26 +151,32 @@ export const McuShowcase = () => (
             <li className="flex items-start gap-2">
               <span className="mt-1">
                 <span className="text-mcu">Ultra-Lightweight Footprint:</span>{" "}
-                Verified to operate within less than{" "}
-                <span className="text-mcu font-bold">521 bytes</span> of RAM.
+                Model parameter state requires{" "}
+                <span className="text-mcu font-bold">
+                  (*) as little as 521 bytes of RAM
+                </span>{" "}
+                in benchmark configurations, preserving system memory.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="mt-1">
                 <span className="text-mcu">Zero Dynamic Allocation:</span>{" "}
-                Eliminates malloc and fragmentation for constant memory usage.
+                Operates entirely within a static memory footprint. Eliminates
+                malloc and the risk of heap fragmentation.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="mt-1">
-                <span className="text-mcu">Constant Timing:</span> Deterministic
-                execution ensures AI never interferes with critical interrupts.
+                <span className="text-mcu">Constant Timing:</span> Strict
+                deterministic execution ensures AI workloads never interfere
+                with critical bare-metal control loops or interrupts.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="mt-1">
                 <span className="text-mcu">Automated Deployment:</span>{" "}
-                Streamlined workflow outputs production-ready C-code templates.
+                Streamlined workflow outputs production-ready, compiler-
+                agnostic code templates for rapid integration.
               </span>
             </li>
           </ul>
@@ -175,27 +194,30 @@ export const McuShowcase = () => (
           <ul className="space-y-3 text-base text-slate-300 leading-relaxed flex-grow">
             <li className="flex items-start gap-2">
               <span className="mt-1">
-                <span className="text-mcu">No "Calculator" Overhead:</span>{" "}
-                Replaces matrix math with hardware-native bitwise logic.
+                <span className="text-mcu">Logic-Dominant Execution:</span>{" "}
+                Replaces heavy matrix arithmetic with hardware-native bitwise
+                operations, drastically reducing compute cycles.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="mt-1">
-                <span className="text-mcu">Zero-BOM AI Scaling:</span> Adds
-                intelligence to legacy hardware with no changes to the BOM.
+                <span className="text-mcu">Hardware-Agnostic Scaling:</span>{" "}
+                Adds advanced intelligence to existing hardware inventory
+                without requiring costly Bill of Materials (BOM) changes.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="mt-1">
-                <span className="text-mcu">Always-On "Sentinel":</span>{" "}
-                Ultra-low-power monitoring wakes the main CPU only for real
-                events.
+                <span className="text-mcu">Always-On Edge Autonomy:</span>{" "}
+                Enables ultra-low-power local monitoring, waking the main system
+                only when critical events are detected.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <span className="mt-1">
-                <span className="text-mcu">Proven Performance:</span> 9,000+
-                inferences/sec on a standard 16MHz processor.
+                <span className="text-mcu">High-Speed Throughput:</span>{" "}
+                Delivers thousands of inferences per second locally (e.g.,
+                ~9,000 inf/sec observed at 16MHz) without cloud latency.
               </span>
             </li>
           </ul>
@@ -212,25 +234,25 @@ export const McuShowcase = () => (
             {
               step: 1,
               title: "Data Ingestion",
-              desc: "Provide a labeled training dataset (CSV, API, etc.)",
+              desc: "Provide a labeled training dataset (CSV, API, etc.) via the AltiCore toolchain.",
               icon: Database,
             },
             {
               step: 2,
-              title: "Model Generator",
-              desc: "Automated Conversion. No PhD required.",
+              title: "Logic-Dominant Compilation",
+              desc: "The framework automatically generates an optimized, logic-dominant model, bypassing standard neural network architectures.",
               icon: Cpu,
             },
             {
               step: 3,
-              title: "Template Integration",
-              desc: "Drop-in C-code templates.",
+              title: "C-Code Export",
+              desc: "The synthesized model is exported as a drop-in, hardware-agnostic C-code template.",
               icon: Download,
             },
             {
               step: 4,
-              title: "Deploy",
-              desc: "Drop into your toolchain like a digital peripheral.",
+              title: "Embedded Integration",
+              desc: "Integrate the code into your existing embedded IDE as a standard, predictable function call. Focus on your application; let AltiCore handle the intelligence.",
               icon: GitMerge,
             },
           ].map((item, idx, arr) => (
@@ -288,13 +310,14 @@ export const McuShowcase = () => (
             Revitalize Legacy Inventory
           </h3>
           <p className="text-base text-slate-300 leading-relaxed flex-grow">
-            Make existing 8-bit and 32-bit microcontrollers &ldquo;smart&rdquo;
-            without changing your Bill of Materials (BOM).{" "}
+            Make existing hardware—from legacy 8-bit microcontrollers to 32-bit
+            systems and custom architectures—&quot;smart&quot; without changing
+            your Bill of Materials (BOM).{" "}
             <span className="text-mcu font-bold">
               Extend product lifecycles
             </span>{" "}
-            by adding high-performance intelligence to current-generation
-            hardware.
+            by injecting high-performance intelligence directly into your
+            current-generation inventory.
           </p>
         </Card>
 
@@ -307,12 +330,14 @@ export const McuShowcase = () => (
             Ultra-Lightweight Footprint
           </h3>
           <p className="text-base text-slate-300 leading-relaxed grow">
-            Operate with a fixed memory footprint of{" "}
+            Deploy advanced intelligence on edge devices previously considered
+            mathematically impossible to utilize for AI. AltiCoreMCU operates
+            with extreme efficiency, requiring{" "}
             <span className="text-mcu font-bold">
-              less than 521 bytes of RAM
-            </span>
-            . Deploy intelligence on devices previously considered too
-            resource-constrained for AI.
+              as little as 521 bytes of parameter RAM
+            </span>{" "}
+            in benchmark testing, leaving your device’s working memory entirely
+            free for core logic.
           </p>
         </Card>
 
@@ -325,12 +350,13 @@ export const McuShowcase = () => (
             High-Speed Local Decisions
           </h3>
           <p className="text-base text-slate-300 leading-relaxed grow">
-            Execute over{" "}
+            Achieve real-time, deterministic response times without the latency,
+            security vulnerabilities, or recurring costs of cloud processing.
+            Benchmark trials demonstrate massive local throughput—yielding{" "}
             <span className="text-mcu font-bold">
               9,000 inferences per second
             </span>{" "}
-            locally on a 16MHz processor. Achieve real-time, deterministic
-            response times without the latency or cost of cloud processing.
+            on a low end 16MHz processor.
           </p>
         </Card>
       </div>
@@ -352,18 +378,15 @@ export const McuShowcase = () => (
           <ul className="space-y-3 text-base text-slate-300 leading-relaxed flex-grow">
             <li className="flex items-start gap-2">
               <span className="text-mcu mt-1">•</span>
-              <span>8, 16, and 32-bit native MCU support</span>
+              <span>Arbitrary word sizes (8/16/32/64-bit &amp; custom)</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-mcu mt-1">•</span>
-              <span>Arduino (Uno/Mega/Nano), STM32 families and more</span>
+              <span>Supports ARM Cortex-M, STM32, ESP32, and DSPs</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-mcu mt-1">•</span>
-              <span>
-                <span className="text-mcu font-bold">0% BOM change</span>; runs
-                on existing inventory
-              </span>
+              <span>CPU-only execution; no NPU or accelerator required</span>
             </li>
           </ul>
         </Card>
@@ -379,15 +402,15 @@ export const McuShowcase = () => (
           <ul className="space-y-3 text-base text-slate-300 leading-relaxed flex-grow">
             <li className="flex items-start gap-2">
               <span className="text-mcu mt-1">•</span>
-              <span>Automated CSV to C-code template workflow</span>
+              <span>Automated CSV to optimized C-code synthesis</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-mcu mt-1">•</span>
-              <span>Compatible with standard embedded IDEs</span>
+              <span>Drop-in compatibility with standard embedded IDEs</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-mcu mt-1">•</span>
-              <span>Supports on-device training on compatible hardware</span>
+              <span>Supports on-device training where memory permits</span>
             </li>
           </ul>
         </Card>
@@ -403,10 +426,7 @@ export const McuShowcase = () => (
           <ul className="space-y-3 text-base text-slate-300 leading-relaxed flex-grow">
             <li className="flex items-start gap-2">
               <span className="text-mcu mt-1">•</span>
-              <span>
-                Verified RAM footprint{" "}
-                <span className="text-mcu font-bold">&lt; 521 bytes</span>
-              </span>
+              <span>Parameter RAM of 521 bytes (benchmark example)</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-mcu mt-1">•</span>
@@ -414,7 +434,7 @@ export const McuShowcase = () => (
             </li>
             <li className="flex items-start gap-2">
               <span className="text-mcu mt-1">•</span>
-              <span>Deterministic, constant execution time</span>
+              <span>Cycle-constant, strictly deterministic execution</span>
             </li>
           </ul>
         </Card>
