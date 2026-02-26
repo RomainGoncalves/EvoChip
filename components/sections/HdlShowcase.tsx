@@ -53,7 +53,7 @@ export const HdlShowcase = () => (
 
       <p className="text-lg text-slate-300 leading-relaxed mb-6 text-center max-w-5xl mx-auto">
         Conventional neural networks are fundamentally mismatched for raw
-        silicon. Their reliance on heavy matrix arithmetic introduces
+        silicon. Their reliance on heavy matrix arithmetic introduces{" "}
         <span className="text-hdl font-bold">unpredictable timing jitter</span>,
         demands external memory fetch cycles, and consumes excessive gate area.
       </p>
@@ -274,9 +274,9 @@ export const HdlShowcase = () => (
             <Shield className="w-6 h-6 text-hdl" />
             Deterministic Fixed-Latency
           </h3>
-          <p className="text-base text-slate-300 leading-relaxed flex-grow">
+          <p className="text-base text-slate-300 leading-relaxed grow">
             Ensure cycle-accurate determinism with a constant core latency
-            (e.g., ~100 clock cycles, scaling predictably with model depth).
+            (e.g., ~100 clock cycles, scaling predictably with model depth).{" "}
             <span className="text-hdl font-bold">
               Mitigate operational risk
             </span>{" "}
