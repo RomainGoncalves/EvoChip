@@ -62,7 +62,9 @@ export default function ContactPage() {
               <div key={item.title} className="flex items-start gap-4">
                 <item.icon className="w-5 h-5 text-cyan-400 shrink-0 mt-0.5" />
                 <div>
-                  <p className="text-white font-semibold text-sm">{item.title}</p>
+                  <p className="text-white font-semibold text-sm">
+                    {item.title}
+                  </p>
                   <p className="text-slate-400 text-sm mt-0.5">{item.desc}</p>
                 </div>
               </div>
@@ -75,7 +77,6 @@ export default function ContactPage() {
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-start max-w-5xl mx-auto">
-
             {/* Left: contact details */}
             <div className="space-y-8">
               <div>
@@ -86,9 +87,8 @@ export default function ContactPage() {
                   Reach the EvoChip Team
                 </h2>
                 <p className="text-slate-400 leading-relaxed">
-                  We respond to all inquiries within 24–48 business hours. For
-                  time-sensitive technical evaluations, mention your timeline in
-                  the message.
+                  For time-sensitive technical evaluations, mention your
+                  timeline in the message.
                 </p>
               </div>
 
@@ -126,7 +126,7 @@ export default function ContactPage() {
                     Send a Message
                   </h3>
                   <form
-                    action="https://formspree.io/f/xaqbvzdn"
+                    action="https://formspree.io/f/xeelnlyq"
                     method="POST"
                     className="space-y-4"
                   >
@@ -143,7 +143,7 @@ export default function ContactPage() {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-xs font-mono uppercase tracking-widest text-slate-400 mb-1.5">
+                        <label className="block text-xs font-mono uppercase tracking-widest text-white mb-1.5">
                           Name
                         </label>
                         <input
@@ -155,7 +155,7 @@ export default function ContactPage() {
                         />
                       </div>
                       <div>
-                        <label className="block text-xs font-mono uppercase tracking-widest text-slate-400 mb-1.5">
+                        <label className="block text-xs font-mono uppercase tracking-widest text-white mb-1.5">
                           Company
                         </label>
                         <input
@@ -168,7 +168,7 @@ export default function ContactPage() {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-mono uppercase tracking-widest text-slate-400 mb-1.5">
+                      <label className="block text-xs font-mono uppercase tracking-widest text-white mb-1.5">
                         Email
                       </label>
                       <input
@@ -181,7 +181,7 @@ export default function ContactPage() {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-mono uppercase tracking-widest text-slate-400 mb-1.5">
+                      <label className="block text-xs font-mono uppercase tracking-widest text-white mb-1.5">
                         Area of Interest
                       </label>
                       <select
@@ -189,18 +189,28 @@ export default function ContactPage() {
                         className="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-3 text-sm text-white focus:outline-none focus:border-cyan-500/50 transition-colors"
                       >
                         <option value="">Select one...</option>
-                        <option value="AltiCoreMCU">AltiCoreMCU — Edge / Microcontrollers</option>
-                        <option value="AltiCoreSWP">AltiCoreSWP — Software / CPU</option>
-                        <option value="AltiCoreHDL">AltiCoreHDL — FPGA / ASIC / Silicon</option>
-                        <option value="Partnership">Partnership & Licensing</option>
-                        <option value="Investment">Investment & Investor Relations</option>
+                        <option value="AltiCoreMCU">
+                          AltiCoreMCU — Edge / Microcontrollers
+                        </option>
+                        <option value="AltiCoreSWP">
+                          AltiCoreSWP — Software / CPU
+                        </option>
+                        <option value="AltiCoreHDL">
+                          AltiCoreHDL — FPGA / ASIC / Silicon
+                        </option>
+                        <option value="Partnership">
+                          Partnership & Licensing
+                        </option>
+                        <option value="Investment">
+                          Investment & Investor Relations
+                        </option>
                         <option value="Media">Media & Press</option>
                         <option value="Other">Other</option>
                       </select>
                     </div>
 
                     <div>
-                      <label className="block text-xs font-mono uppercase tracking-widest text-slate-400 mb-1.5">
+                      <label className="block text-xs font-mono uppercase tracking-widest text-white mb-1.5">
                         Message
                       </label>
                       <textarea
