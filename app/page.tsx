@@ -744,54 +744,52 @@ const EvoProducts = ({
           <div className="w-px h-8 bg-white/40 lg:hidden" />
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8">
           {/* AltiCoreMCU */}
-          <div className="bg-slate-900 rounded-2xl p-6 border border-mcu/30 shadow-[0_0_30px_rgba(96,165,250,0.15)] flex items-start gap-3">
-            <Microchip className="w-8 h-8 text-mcu shrink-0 mt-1" />
-            <div>
-              <h3 className="text-lg font-bold text-mcu">AltiCoreMCU</h3>
-              <p className="text-sm text-slate-400 mt-0.5">
-                Inference on resource-constrained microcontrollers, with
-                optional on-device training where memory permits
-              </p>
+          <div className="bg-slate-900 rounded-2xl p-4 lg:p-6 border border-mcu/30 shadow-[0_0_30px_rgba(96,165,250,0.15)] flex flex-col gap-2">
+            <div className="flex items-center gap-2">
+              <Microchip className="w-5 h-5 lg:w-8 lg:h-8 text-mcu shrink-0" />
+              <h3 className="text-sm lg:text-lg font-bold text-mcu">AltiCoreMCU</h3>
             </div>
+            <p className="text-xs lg:text-sm text-slate-400">
+              Inference on resource-constrained microcontrollers, with
+              optional on-device training where memory permits
+            </p>
           </div>
 
           {/* AltiCoreSWP */}
-          <div className="bg-slate-900 rounded-2xl p-6 border border-sw/30 shadow-[0_0_30px_rgba(45,212,191,0.1)] flex items-start gap-3">
-            <Server className="w-8 h-8 text-sw shrink-0 mt-1" />
-            <div>
-              <h3 className="text-lg font-bold text-sw">AltiCoreSWP</h3>
-              <p className="text-sm text-slate-400 mt-0.5">
-                Full model training and inference across general-purpose and
-                embedded operating systems
-              </p>
+          <div className="bg-slate-900 rounded-2xl p-4 lg:p-6 border border-sw/30 shadow-[0_0_30px_rgba(45,212,191,0.1)] flex flex-col gap-2">
+            <div className="flex items-center gap-2">
+              <Server className="w-5 h-5 lg:w-8 lg:h-8 text-sw shrink-0" />
+              <h3 className="text-sm lg:text-lg font-bold text-sw">AltiCoreSWP</h3>
             </div>
+            <p className="text-xs lg:text-sm text-slate-400">
+              Full model training and inference across general-purpose and
+              embedded operating systems
+            </p>
           </div>
 
           {/* AltiCoreHDL */}
-          <div className="bg-slate-900 rounded-2xl p-6 border border-hdl/30 shadow-[0_0_30px_rgba(245,158,11,0.1)] flex items-start gap-3">
-            <Cpu className="w-8 h-8 text-hdl shrink-0 mt-1" />
-            <div>
-              <h3 className="text-lg font-bold text-hdl">AltiCoreHDL</h3>
-              <p className="text-sm text-slate-400 mt-0.5">
-                FPGA and ASIC implementations accelerating model training and
-                inference at extreme scale
-              </p>
+          <div className="bg-slate-900 rounded-2xl p-4 lg:p-6 border border-hdl/30 shadow-[0_0_30px_rgba(245,158,11,0.1)] flex flex-col gap-2">
+            <div className="flex items-center gap-2">
+              <Cpu className="w-5 h-5 lg:w-8 lg:h-8 text-hdl shrink-0" />
+              <h3 className="text-sm lg:text-lg font-bold text-hdl">AltiCoreHDL</h3>
             </div>
+            <p className="text-xs lg:text-sm text-slate-400">
+              FPGA and ASIC implementations accelerating model training and
+              inference at extreme scale
+            </p>
           </div>
 
           {/* Mobile + GPU */}
-          <div className="bg-slate-900 rounded-2xl p-6 border border-violet-500/30 shadow-[0_0_30px_rgba(139,92,246,0.1)] flex items-start">
-            <div>
-              <h3 className="text-lg font-bold text-violet-400">
-                AltiCoreMobile & AltiCoreLLM
-              </h3>
-              <p className="text-sm text-slate-400 mt-0.5">
-                Active development expanding CUDA capabilities, broader GPU
-                compute API support, and mobile training and inference
-              </p>
-            </div>
+          <div className="bg-slate-900 rounded-2xl p-4 lg:p-6 border border-violet-500/30 shadow-[0_0_30px_rgba(139,92,246,0.1)] flex flex-col gap-2">
+            <h3 className="text-sm lg:text-lg font-bold text-violet-400">
+              AltiCoreMobile & AltiCoreLLM
+            </h3>
+            <p className="text-xs lg:text-sm text-slate-400">
+              Active development expanding CUDA capabilities, broader GPU
+              compute API support, and mobile training and inference
+            </p>
           </div>
         </div>
 

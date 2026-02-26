@@ -42,7 +42,7 @@ export const PodcastSection = () => (
               }}
             >
               <source
-                src="/podcasts/EvoChipExplained_-_AltiCore_Fits_AI_Into_521_Bytes.m4a"
+                src="/podcasts/EvoChipExplained_-_Alticore_Fits_AI_Into_521_Bytes.m4a"
                 type="audio/mp4"
               />
               Your browser does not support the audio element.
