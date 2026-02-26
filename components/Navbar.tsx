@@ -44,11 +44,11 @@ export const Navbar = ({ onViewChange }: NavbarProps) => {
   };
 
   const navLinks = [
-    { name: "Home", href: "/", external: true },
+    { name: "Home", href: "/" },
     { name: "Products", href: "#products" },
-    { name: "Insights", href: "/insights", external: true },
-    { name: "Contact", href: "#contact-evo" },
-    { name: "Investor Portal", href: "/investor-portal", icon: Lock, external: true },
+    { name: "Insights", href: "/insights" },
+    { name: "Contact", href: "/contact" },
+    { name: "Investor Portal", href: "/investor-portal", icon: Lock },
   ];
 
   const products = [
@@ -161,34 +161,15 @@ export const Navbar = ({ onViewChange }: NavbarProps) => {
                 </div>
               );
             }
-            // Handle external links (actual routes)
-            if (link.external) {
-              return (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className="text-slate-300 hover:text-cyan-400 transition-colors text-sm font-medium uppercase tracking-wide flex items-center gap-1.5"
-                >
-                  {link.icon && <link.icon className="w-3.5 h-3.5" />}
-                  {link.name}
-                </Link>
-              );
-            }
-
             return (
-              <a
+              <Link
                 key={link.name}
                 href={link.href}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick(link.href);
-                  onViewChange("evochip");
-                }}
                 className="text-slate-300 hover:text-cyan-400 transition-colors text-sm font-medium uppercase tracking-wide flex items-center gap-1.5"
               >
                 {link.icon && <link.icon className="w-3.5 h-3.5" />}
                 {link.name}
-              </a>
+              </Link>
             );
           })}
           {/* <div className="h-6 w-px bg-slate-700 mx-2"></div> */}
@@ -257,35 +238,16 @@ export const Navbar = ({ onViewChange }: NavbarProps) => {
                 </div>
               );
             }
-            // Handle external links (actual routes)
-            if (link.external) {
-              return (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className="text-slate-300 hover:text-cyan-400 text-lg flex items-center gap-2"
-                >
-                  {link.icon && <link.icon className="w-4 h-4" />}
-                  {link.name}
-                </Link>
-              );
-            }
-
             return (
-              <a
+              <Link
                 key={link.name}
                 href={link.href}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick(link.href);
-                  onViewChange("evochip");
-                }}
+                onClick={() => setIsOpen(false)}
                 className="text-slate-300 hover:text-cyan-400 text-lg flex items-center gap-2"
               >
                 {link.icon && <link.icon className="w-4 h-4" />}
                 {link.name}
-              </a>
+              </Link>
             );
           })}
           {/* <Button

@@ -7,3 +7,4 @@ export type { OperationalBoxItem } from "./OperationalBoxes";
 export { Card } from "./Card";
 export { LogicBackground } from "./LogicBackground";
 export { CookieConsentBanner } from "./CookieConsentBanner";
+export { CompanyInfo } from "./CompanyInfo";

@@ -1,4 +1,5 @@
-import { ArrowLeft, ArrowRight, BookOpen, Calendar, User } from "lucide-react";
+import { ArrowLeft, ArrowRight, BookOpen, Calendar, Mail, User } from "lucide-react";
+import Link from "next/link";
 import { Button } from "../ui/Button";
 import { SectionHeading } from "../ui/SectionHeading";
 import insightsData from "@/data/insights.json";
@@ -213,21 +214,23 @@ const ArticleDetailView = ({ article, onBack }: ArticleDetailViewProps) => {
         </div>
 
         <div className="mt-20 pt-10 border-t border-slate-900">
-          <div className="bg-slate-900/50 p-8 rounded-2xl border border-slate-800 text-center">
-            <BookOpen className="w-10 h-10 text-cyan-500 mx-auto mb-4" />
-            <h4 className="text-white font-bold mb-2">Enjoyed this Insight?</h4>
-            <p className="text-slate-400 text-sm mb-6">
-              Stay informed on the evolution of logic-first synthesis and edge
-              autonomy.
-            </p>
-            <Button
-              variant="devPrimary"
-              className="mx-auto"
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            >
-              Request Enterprise Briefing
-            </Button>
-          </div>
+          <Link href="/contact" className="block group">
+            <div className="bg-gradient-to-r from-cyan-900/30 to-slate-900/60 p-8 rounded-2xl border border-cyan-500/20 group-hover:border-cyan-500/50 transition-all text-center shadow-[0_0_40px_rgba(6,182,212,0.05)] group-hover:shadow-[0_0_40px_rgba(6,182,212,0.15)]">
+              <div className="w-12 h-12 bg-cyan-500/10 border border-cyan-500/30 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-cyan-500/20 transition-colors">
+                <Mail className="w-5 h-5 text-cyan-400" />
+              </div>
+              <h4 className="text-white font-bold text-lg mb-2">
+                Want to go deeper?
+              </h4>
+              <p className="text-slate-400 text-sm mb-4 max-w-sm mx-auto">
+                Talk to our team about how AltiCore can apply to your
+                infrastructure, silicon roadmap, or edge deployment.
+              </p>
+              <span className="inline-flex items-center gap-2 text-cyan-400 font-semibold text-sm group-hover:gap-3 transition-all">
+                Get in touch <ArrowRight className="w-4 h-4" />
+              </span>
+            </div>
+          </Link>
         </div>
       </div>
     </article>
