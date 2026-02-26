@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { Mail, MapPin, CheckCircle2 } from "lucide-react";
-import { Button, SectionHeading, Card } from "@/components/ui";
+import { CheckCircle2 } from "lucide-react";
+import { Button, SectionHeading, Card, CompanyInfo } from "@/components/ui";
 
 export const EvoContactSection = () => {
   const [submitSuccess, setSubmitSuccess] = useState(false);
@@ -24,18 +24,7 @@ export const EvoContactSection = () => {
             <p className="text-lg text-slate-300">
               For media or partnership opportunities, contact us directly.
             </p>
-            <div className="space-y-4 text-slate-400">
-              <div className="flex items-start gap-4">
-                <MapPin className="text-cyan-500" />{" "}
-                <span>32932 Pacific Coast Hwy, Dana Point, CA</span>
-              </div>
-              <div className="flex items-center gap-4">
-                <Mail className="text-cyan-500" />{" "}
-                <span>
-                  <a href="mailto:contact@evochip.ai">contact@evochip.ai</a>
-                </span>
-              </div>
-            </div>
+            <CompanyInfo />
           </div>
           <Card>
             {submitSuccess ? (
@@ -50,7 +39,7 @@ export const EvoContactSection = () => {
               </div>
             ) : (
               <form
-                action="https://formspree.io/f/xaqbvzdn"
+                action="https://formspree.io/f/xeelnlyq"
                 method="POST"
                 className="space-y-4"
               >
