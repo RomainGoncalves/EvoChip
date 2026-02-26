@@ -9,6 +9,7 @@ type Article = {
   authorAvatar: string | Blob | undefined;
   authorTitle: ReactNode;
   image: string | Blob | undefined;
+  objectFit?: string;
   id: number;
   title: string;
   date: string;
@@ -43,7 +44,7 @@ const InsightsPage = ({ onArticleClick }: InsightsPageProps) => (
               <img
                 src={article.image}
                 alt={article.title}
-                className="w-full h-full object-contain opacity-60 group-hover:opacity-100 transition-opacity"
+                className={`w-full h-full ${article.objectFit === "contain" ? "object-contain p-4" : "object-cover"} opacity-60 group-hover:opacity-100 transition-opacity`}
               />
               <div className="absolute top-4 left-4">
                 <span className="bg-cyan-500 text-slate-900 text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">
@@ -203,7 +204,7 @@ const ArticleDetailView = ({ article, onBack }: ArticleDetailViewProps) => {
           <img
             src={article.image}
             alt={article.title}
-            className="w-full h-full object-contain opacity-80"
+            className={`w-full h-full ${article?.objectFit === "contain" ? "object-contain p-8" : "object-cover"} opacity-80`}
           />
         </div>
 

@@ -749,11 +749,13 @@ const EvoProducts = ({
           <div className="bg-slate-900 rounded-2xl p-4 lg:p-6 border border-mcu/30 shadow-[0_0_30px_rgba(96,165,250,0.15)] flex flex-col gap-2">
             <div className="flex items-center gap-2">
               <Microchip className="w-5 h-5 lg:w-8 lg:h-8 text-mcu shrink-0" />
-              <h3 className="text-sm lg:text-lg font-bold text-mcu">AltiCoreMCU</h3>
+              <h3 className="text-sm lg:text-lg font-bold text-mcu">
+                AltiCoreMCU
+              </h3>
             </div>
             <p className="text-xs lg:text-sm text-slate-400">
-              Inference on resource-constrained microcontrollers, with
-              optional on-device training where memory permits
+              Inference on resource-constrained microcontrollers, with optional
+              on-device training where memory permits
             </p>
           </div>
 
@@ -761,7 +763,9 @@ const EvoProducts = ({
           <div className="bg-slate-900 rounded-2xl p-4 lg:p-6 border border-sw/30 shadow-[0_0_30px_rgba(45,212,191,0.1)] flex flex-col gap-2">
             <div className="flex items-center gap-2">
               <Server className="w-5 h-5 lg:w-8 lg:h-8 text-sw shrink-0" />
-              <h3 className="text-sm lg:text-lg font-bold text-sw">AltiCoreSWP</h3>
+              <h3 className="text-sm lg:text-lg font-bold text-sw">
+                AltiCoreSWP
+              </h3>
             </div>
             <p className="text-xs lg:text-sm text-slate-400">
               Full model training and inference across general-purpose and
@@ -773,7 +777,9 @@ const EvoProducts = ({
           <div className="bg-slate-900 rounded-2xl p-4 lg:p-6 border border-hdl/30 shadow-[0_0_30px_rgba(245,158,11,0.1)] flex flex-col gap-2">
             <div className="flex items-center gap-2">
               <Cpu className="w-5 h-5 lg:w-8 lg:h-8 text-hdl shrink-0" />
-              <h3 className="text-sm lg:text-lg font-bold text-hdl">AltiCoreHDL</h3>
+              <h3 className="text-sm lg:text-lg font-bold text-hdl">
+                AltiCoreHDL
+              </h3>
             </div>
             <p className="text-xs lg:text-sm text-slate-400">
               FPGA and ASIC implementations accelerating model training and
@@ -858,7 +864,7 @@ const EvoProducts = ({
               <span className="text-mcu font-bold">On-device training</span> is
               supported on compatible hardware, enabling adaptive intelligence
               on resource-constrained systems without reliance on NPUs or cloud
-              infrastructure. <br />
+              infrastructure. <br />(
               <span className="text-mcu font-bold">(*)</span> 521 bytes of RAM
               on Arduino uno 8bit - see the AltiCoreMCU Currency Demo Video).
             </p>
