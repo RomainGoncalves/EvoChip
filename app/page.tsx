@@ -914,9 +914,9 @@ const EvoProducts = ({
               benchmark experiment across six public datasets at matched
               accuracy, AltiCoreSWP was{" "}
               <span className="text-sw font-bold">typically ~13x faster</span>{" "}
-              on a workstation-class CPU (range ~13x to ~21x) and typically ~17x{" "}
+              on a workstation-class CPU (range ~13x to ~21x) and typically{" "}
               <span className="text-sw font-bold">
-                faster on a server-class CPU (range ~17x to ~41x)
+                ~17x faster on a server-class CPU (range ~17x to ~41x)
               </span>{" "}
               versus the fastest equivalent NN CPU implementation.
             </p>
