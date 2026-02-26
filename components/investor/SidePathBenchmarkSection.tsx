@@ -218,10 +218,10 @@ export const SidePathBenchmarkSection = () => (
         Benchmarks confirm that AltiCore maintains near-parity or superior test
         accuracy across all key datasets compared to legacy Neural Networks. Our
         logic mathematical framework replaces brute-force matrix math without
-        signal loss, proving that 1000x efficiency gains are achievable without
-        degrading model intelligence. Testing indicates a slight accuracy
-        advantage for AltiCore logic streams in head-to-head scenarios as noted
-        in the Benchmark Models Accuracy data.
+        signal loss, proving that order-of-magnitude efficiency gains are
+        achievable without degrading model intelligence. Testing indicates a
+        slight accuracy advantage for AltiCore logic streams in head-to-head
+        scenarios as noted in the Benchmark Models Accuracy data.
       </p>
     </Card>
 

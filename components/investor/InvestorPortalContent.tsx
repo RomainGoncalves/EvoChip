@@ -41,7 +41,7 @@ export const InvestorPortalContent = () => {
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-2">
             <SectionHeading
               subtitle="Proprietary Data Room"
-              title="Strategic Roadmap"
+              title="Investor Portal"
               align="left"
             />
             <Link href="/">
@@ -104,10 +104,10 @@ export const InvestorPortalContent = () => {
               </h3>
               <p className="text-lg text-slate-300 leading-relaxed font-medium">
                 <span className="font-bold text-cyan-400">
-                  AltiCore is transitioning from Validated and Patented IP to
+                  EvoChip.ai is transitioning from Validated and Patented IP to
                   mass-market commercialization.
                 </span>{" "}
-                By abandoning Neural Networks for Logic-First mathematical
+                By abandoning Neural Networks for Logic-Dominant mathematical
                 framework, we provide—from{" "}
                 <span className="font-bold text-cyan-400">
                   MCUs to high-performance CPUs/GPUs
@@ -301,7 +301,7 @@ export const InvestorPortalContent = () => {
               <div className="grid grid-cols-1 gap-6">
                 <IPPortfolioCard
                   title="AltiCoreSWP"
-                  focus="Deterministic AI for Microcontrollers"
+                  focus="High-Performance CPU AI Execution"
                   subHeader="Immediate OpEx elimination for existing enterprise infrastructure."
                   color="text-sw"
                   icon={Server}
@@ -336,7 +336,7 @@ export const InvestorPortalContent = () => {
 
                 <IPPortfolioCard
                   title="AltiCoreMCU"
-                  focus="HIGH-VOLUME IP ROYALTIES"
+                  focus="Deterministic AI for Microcontrollers"
                   subHeader="Turning $9 legacy hardware into high-performance AI assets."
                   color="text-mcu"
                   icon={Microchip}
@@ -362,7 +362,7 @@ export const InvestorPortalContent = () => {
                     },
                     {
                       label: "Environments",
-                      text: "8-bit, 16-bit, and 32-bit hardware including Arduino (Uno, Mega, Nano) and the STM32 Family.",
+                      text: "8-bit, 16-bit, and 32-bit hardware including, today, Arduino (Uno, Mega, Nano) and the STM32 Family.",
                     },
                     {
                       label: "Technical Benchmarks",
@@ -377,7 +377,7 @@ export const InvestorPortalContent = () => {
 
                 <IPPortfolioCard
                   title="AltiCoreHDL"
-                  focus="High-Performance CPU AI Execution"
+                  focus="Massive-Throughput Hardware AI"
                   subHeader="The direct pathway to production silicon and absolute timing predictability."
                   color="text-hdl"
                   icon={Silicon}
