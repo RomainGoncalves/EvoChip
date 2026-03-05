@@ -53,7 +53,8 @@ export default function MCUWhitePaper() {
         .wp-toc { background: #f4f6fa; border-left: 4px solid #c8923a; padding: 36px 64px; }
         .wp-toc-title { font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #5a6070; margin-bottom: 20px; }
         .wp-toc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 40px; }
-        .wp-toc-item { display: flex; align-items: baseline; gap: 8px; font-size: 13px; color: #1a2744; }
+        .wp-toc-item { display: flex; align-items: baseline; gap: 8px; font-size: 13px; color: #1a2744; text-decoration: none; }
+        .wp-toc-item:hover span:last-child { text-decoration: underline; color: #c8923a; }
         .wp-toc-num { font-weight: 700; color: #c8923a; font-size: 12px; min-width: 20px; }
 
         /* BODY */
@@ -82,11 +83,11 @@ export default function MCUWhitePaper() {
         .wp-num-badge { display: inline-flex; align-items: center; justify-content: center; width: 22px; height: 22px; border-radius: 50%; background: #1a2744; color: #fff; font-size: 11px; font-weight: 700; flex-shrink: 0; }
 
         /* stat bar */
-        .wp-stat-bar { background: #1a2744; color: #fff; border-radius: 4px; padding: 20px 28px; margin: 24px 0; display: flex; gap: 40px; align-items: center; flex-wrap: wrap; }
-        .wp-stat { text-align: center; }
-        .wp-stat-val { font-size: 26px; font-weight: 700; color: #e8b96a; line-height: 1; }
-        .wp-stat-lbl { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.6); margin-top: 4px; }
-        .wp-stat-div { width: 1px; background: rgba(255,255,255,.2); height: 44px; }
+        .wp-stat-bar { background: #1a2744; color: #fff; border-radius: 4px; padding: 20px 24px; margin: 24px 0; display: flex; gap: 16px; align-items: center; flex-wrap: nowrap; justify-content: space-between; }
+        .wp-stat { text-align: center; flex: 1; }
+        .wp-stat-val { font-size: 24px; font-weight: 700; color: #e8b96a; line-height: 1; white-space: nowrap; }
+        .wp-stat-lbl { font-size: 10px; letter-spacing: .04em; text-transform: uppercase; color: rgba(255,255,255,.6); margin-top: 4px; white-space: nowrap; }
+        .wp-stat-div { width: 1px; background: rgba(255,255,255,.2); height: 44px; flex-shrink: 0; }
 
         /* app list */
         .wp-app-item { margin-bottom: 20px; }
@@ -167,50 +168,50 @@ export default function MCUWhitePaper() {
           <div className="wp-toc">
             <div className="wp-toc-title">Table of Contents</div>
             <div className="wp-toc-grid">
-              <div className="wp-toc-item">
+              <a href="#section-01" className="wp-toc-item">
                 <span className="wp-toc-num">01</span>
                 <span>Executive Summary</span>
-              </div>
-              <div className="wp-toc-item">
+              </a>
+              <a href="#section-05" className="wp-toc-item">
                 <span className="wp-toc-num">05</span>
                 <span>Deployment Workflow and Integration Model</span>
-              </div>
-              <div className="wp-toc-item">
+              </a>
+              <a href="#section-02" className="wp-toc-item">
                 <span className="wp-toc-num">02</span>
                 <span>Product Boundary and Integration Scope</span>
-              </div>
-              <div className="wp-toc-item">
+              </a>
+              <a href="#section-06" className="wp-toc-item">
                 <span className="wp-toc-num">06</span>
                 <span>Demonstrated Implementations and Measured Performance</span>
-              </div>
-              <div className="wp-toc-item">
+              </a>
+              <a href="#section-03" className="wp-toc-item">
                 <span className="wp-toc-num">03</span>
                 <span>Runtime Execution, Timing, and Memory Contract</span>
-              </div>
-              <div className="wp-toc-item">
+              </a>
+              <a href="#section-07" className="wp-toc-item">
                 <span className="wp-toc-num">07</span>
                 <span>Ecosystem Integration</span>
-              </div>
-              <div className="wp-toc-item">
+              </a>
+              <a href="#section-04" className="wp-toc-item">
                 <span className="wp-toc-num">04</span>
                 <span>Core Technical Architecture</span>
-              </div>
-              <div className="wp-toc-item">
+              </a>
+              <a href="#section-08" className="wp-toc-item">
                 <span className="wp-toc-num">08</span>
                 <span>Target Applications</span>
-              </div>
+              </a>
               <div className="wp-toc-item" style={{ gridColumn: "1 / -1" }}></div>
-              <div className="wp-toc-item">
+              <a href="#section-09" className="wp-toc-item">
                 <span className="wp-toc-num">09</span>
                 <span>Conclusion</span>
-              </div>
+              </a>
             </div>
           </div>
 
           {/* BODY */}
           <div className="wp-body-section">
             {/* Section 01 */}
-            <div className="wp-chapter">
+            <div className="wp-chapter" id="section-01">
               <div className="wp-ch-number">Section 01</div>
               <div className="wp-ch-title">Executive Summary</div>
               <div className="wp-ch-rule"></div>
@@ -283,7 +284,7 @@ export default function MCUWhitePaper() {
             <hr className="wp-ch-divider" />
 
             {/* Section 02 */}
-            <div className="wp-chapter">
+            <div className="wp-chapter" id="section-02">
               <div className="wp-ch-number">Section 02</div>
               <div className="wp-ch-title">
                 Product Boundary and Integration Scope
@@ -332,7 +333,7 @@ export default function MCUWhitePaper() {
             <hr className="wp-ch-divider" />
 
             {/* Section 03 */}
-            <div className="wp-chapter">
+            <div className="wp-chapter" id="section-03">
               <div className="wp-ch-number">Section 03</div>
               <div className="wp-ch-title">
                 Runtime Execution, Timing, and Memory Contract
@@ -417,7 +418,7 @@ export default function MCUWhitePaper() {
             <hr className="wp-ch-divider" />
 
             {/* Section 04 */}
-            <div className="wp-chapter">
+            <div className="wp-chapter" id="section-04">
               <div className="wp-ch-number">Section 04</div>
               <div className="wp-ch-title">Core Technical Architecture</div>
               <div className="wp-ch-rule"></div>
@@ -480,7 +481,7 @@ export default function MCUWhitePaper() {
             <hr className="wp-ch-divider" />
 
             {/* Section 05 */}
-            <div className="wp-chapter">
+            <div className="wp-chapter" id="section-05">
               <div className="wp-ch-number">Section 05</div>
               <div className="wp-ch-title">
                 Deployment Workflow and Integration Model
@@ -532,7 +533,7 @@ export default function MCUWhitePaper() {
             <hr className="wp-ch-divider" />
 
             {/* Section 06 */}
-            <div className="wp-chapter">
+            <div className="wp-chapter" id="section-06">
               <div className="wp-ch-number">Section 06</div>
               <div className="wp-ch-title">
                 Demonstrated Implementations and Measured Performance
@@ -594,7 +595,7 @@ export default function MCUWhitePaper() {
             <hr className="wp-ch-divider" />
 
             {/* Section 07 */}
-            <div className="wp-chapter">
+            <div className="wp-chapter" id="section-07">
               <div className="wp-ch-number">Section 07</div>
               <div className="wp-ch-title">Ecosystem Integration</div>
               <div className="wp-ch-rule"></div>
@@ -631,7 +632,7 @@ export default function MCUWhitePaper() {
             <hr className="wp-ch-divider" />
 
             {/* Section 08 */}
-            <div className="wp-chapter">
+            <div className="wp-chapter" id="section-08">
               <div className="wp-ch-number">Section 08</div>
               <div className="wp-ch-title">Target Applications</div>
               <div className="wp-ch-rule"></div>
@@ -690,7 +691,7 @@ export default function MCUWhitePaper() {
             <hr className="wp-ch-divider" />
 
             {/* Section 09 */}
-            <div className="wp-chapter">
+            <div className="wp-chapter" id="section-09">
               <div className="wp-ch-number">Section 09</div>
               <div className="wp-ch-title">Conclusion</div>
               <div className="wp-ch-rule"></div>
