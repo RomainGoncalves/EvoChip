@@ -75,7 +75,7 @@ const EvoHero = ({
           </h1>
 
           <p className="text-xl text-slate-300 mb-10 leading-relaxed max-w-2xl">
-            AltiCore, Evochip's patented mathematical framework{" "}
+            AltiCore, EvoChip's patented mathematical framework,{" "}
             <span className="font-bold text-cyan-400">
               replaces arithmetic-intensive neural networks
             </span>{" "}
@@ -144,7 +144,7 @@ const EvoHero = ({
                 </div>
               </div>
               <p className="text-slate-300 text-sm font-mono tracking-tighter uppercase">
-                Reduced arithmetic intensity. Orders-of-magnitude efficientcy
+                Reduced arithmetic intensity. Orders-of-magnitude efficiency
                 gains.
               </p>
             </div>
@@ -699,7 +699,7 @@ const EvoProducts = ({
           <div className="px-8 py-4 bg-slate-800/60 border border-slate-600/50 rounded-xl text-center max-w-xs w-full sm:w-auto">
             <h4 className="text-white font-bold text-lg">AltiCoreAI</h4>
             <p className="text-slate-300 text-sm font-mono">
-              AI Systems Built on Alticore
+              AI Systems Built on AltiCore
             </p>
           </div>
 
@@ -852,9 +852,9 @@ const EvoProducts = ({
               Deterministic AI for Microcontrollers
             </p>
             <p className="text-slate-300 text-sm leading-relaxed mb-8 grow">
-              AlticoreMCU enables training and execution of AI models locally
+              AltiCoreMCU enables training and execution of AI models locally
               across the microcontroller spectrum—from low-end 8-bit legacy MCUs
-              to high-performance embedded processors. Built on the Alticore
+              to high-performance embedded processors. Built on the AltiCore
               mathematical framework, it deploys software inference to MCU-class
               devices with{" "}
               <span className="text-mcu font-bold">
@@ -864,15 +864,15 @@ const EvoProducts = ({
               <span className="text-mcu font-bold">On-device training</span> is
               supported on compatible hardware, enabling adaptive intelligence
               on resource-constrained systems without reliance on NPUs or cloud
-              infrastructure. <br />(
+              infrastructure. <br />
               <span className="text-mcu font-bold">(*)</span> 521 bytes of RAM
-              on Arduino uno 8bit - see the AltiCoreMCU Currency Demo Video).
+              on Arduino Uno 8bit (see the AltiCoreMCU Currency Demo Video).
             </p>
             <div className="grid grid-cols-2 gap-3 mb-8 font-mono">
               {[
                 "Any MCU Word Size Support",
                 "e.g: ~9,000 Inf/Sec (16MHz)",
-                "Local Training/Infer",
+                "Local Training/INFERENCE",
                 "Zero Cloud / NPU",
               ].map((spec) => (
                 <div key={spec} className="flex items-start gap-2">

@@ -24,7 +24,7 @@ export default function PrivacyPolicy() {
         <div className="space-y-8 text-slate-300 leading-relaxed">
           <section>
             <p>
-              EvoChip Corp. (&ldquo;Evochip,&rdquo; &ldquo;we,&rdquo;
+              EvoChip Corp. (&ldquo;EvoChip,&rdquo; &ldquo;we,&rdquo;
               &ldquo;our,&rdquo; and/or &ldquo;us&rdquo;) values the privacy of
               individuals who use our website and related services
               (collectively, our &ldquo;Services&rdquo;). This privacy policy
