@@ -873,9 +873,14 @@ const EvoProducts = () => {
               ))}
             </div>
             <div className="flex gap-3 mt-auto">
-              <Link href="/mcu-technical-details" className="w-full">
+              <Link href="/mcu-technical-details" className="flex-1">
                 <Button className="w-full text-sm bg-mcu text-slate-900 shadow-[0_0_20px_rgba(96,165,250,0.4)] hover:bg-mcu-dark hover:shadow-[0_0_30px_rgba(96,165,250,0.6)]">
                   Technical Details
+                </Button>
+              </Link>
+              <Link href="/mcu-whitepaper" className="flex-1">
+                <Button className="w-full text-sm bg-transparent border border-mcu/40 !text-mcu hover:border-mcu hover:bg-mcu/10">
+                  White Paper
                 </Button>
               </Link>
             </div>
@@ -925,9 +930,14 @@ const EvoProducts = () => {
               ))}
             </div>
             <div className="flex gap-3 mt-auto">
-              <Link href="/swp-technical-details" className="w-full">
+              <Link href="/swp-technical-details" className="flex-1">
                 <Button className="w-full text-sm bg-sw text-slate-900 shadow-[0_0_20px_rgba(45,212,191,0.4)] hover:bg-sw-dark hover:shadow-[0_0_30px_rgba(45,212,191,0.6)]">
                   Technical Details
+                </Button>
+              </Link>
+              <Link href="/swp-whitepaper" className="flex-1">
+                <Button className="w-full text-sm bg-transparent border border-sw/40 !text-sw hover:border-sw hover:bg-sw/10">
+                  White Paper
                 </Button>
               </Link>
             </div>
