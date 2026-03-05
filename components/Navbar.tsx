@@ -14,11 +14,7 @@ import {
 import { Button } from "@/components/ui";
 import { Logo } from "@/components/brand";
 
-interface NavbarProps {
-  onViewChange: (view: string) => void;
-}
-
-export const Navbar = ({ onViewChange }: NavbarProps) => {
+export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
@@ -172,14 +168,6 @@ export const Navbar = ({ onViewChange }: NavbarProps) => {
               </Link>
             );
           })}
-          {/* <div className="h-6 w-px bg-slate-700 mx-2"></div> */}
-          {/* <Button
-            variant="outline"
-            className="py-2 px-4 text-xs"
-            onClick={() => onViewChange("alticore_home")}
-          >
-            Visit AltiCore
-          </Button> */}
         </div>
         <button
           className="lg:hidden text-white"
@@ -250,15 +238,6 @@ export const Navbar = ({ onViewChange }: NavbarProps) => {
               </Link>
             );
           })}
-          {/* <Button
-            variant="outline"
-            onClick={() => {
-              setIsOpen(false);
-              onViewChange("alticore_home");
-            }}
-          >
-            Visit AltiCore
-          </Button> */}
         </div>
       )}
     </nav>

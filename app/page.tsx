@@ -654,11 +654,7 @@ const EvoInnovation = () => (
   </section>
 );
 
-const EvoProducts = ({
-  onViewChange,
-}: {
-  onViewChange: (view: string) => void;
-}) => {
+const EvoProducts = () => {
   const scrollToSection = (id: string) => {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: "smooth" });
@@ -2180,11 +2176,11 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-slate-900 text-slate-200">
-      <Navbar onViewChange={setCurrentView} />
-      <EvoHero onViewChange={setCurrentView} />
+      <Navbar />
+      <EvoHero />
       <EvoHeroVideos />
       {/* <SwShowcase /> */}
-      <EvoProducts onViewChange={setCurrentView} />
+      <EvoProducts />
       <EvoInnovation />
       <EvoTechnology />
       <PodcastSection />

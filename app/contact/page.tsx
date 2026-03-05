@@ -14,7 +14,7 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-slate-900 text-slate-200 font-sans">
-      <Navbar onViewChange={() => router.push("/")} />
+      <Navbar />
 
       {/* Hero */}
       <section className="relative pt-32 pb-16 overflow-hidden bg-slate-900">

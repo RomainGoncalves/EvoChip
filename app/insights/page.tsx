@@ -11,7 +11,7 @@ export default function InsightsRoute() {
 
   return (
     <div className="min-h-screen bg-slate-900 text-slate-200">
-      <Navbar onViewChange={() => router.push("/")} />
+      <Navbar />
       <InsightsPage onArticleClick={(id) => router.push(`/insights/${id}`)} />
       <Footer />
       <CookieConsentBanner />

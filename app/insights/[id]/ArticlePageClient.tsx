@@ -14,7 +14,7 @@ export default function ArticlePageClient() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-slate-200">
-      <Navbar onViewChange={() => router.push("/")} />
+      <Navbar />
       <ArticleDetailView
         article={article}
         onBack={() => router.push("/insights")}
