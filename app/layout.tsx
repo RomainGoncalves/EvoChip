@@ -15,7 +15,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "EvoChip",
+  title: {
+    template: "%s | EvoChip",
+    default: "EvoChip",
+  },
   description: "The Future of AI Hardware",
 };
 

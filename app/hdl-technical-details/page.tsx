@@ -11,6 +11,10 @@ import {
 import { ProductPageLayout } from "@/components/layouts/ProductPageLayout";
 import { HdlShowcase } from "@/components/sections/HdlShowcase";
 
+export const metadata = {
+  title: "AltiCoreHDL — Technical Details",
+};
+
 export default function HdlTechnicalDetailsPage() {
   return (
     <ProductPageLayout>
