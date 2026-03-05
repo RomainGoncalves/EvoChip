@@ -792,7 +792,7 @@ const EvoProducts = () => {
           <p className="text-xl text-white italic font-medium leading-relaxed">
             "AI scales today by adding hardware; AltiCore scales with smarter
             logic, unlocking profitable AI from 8-bit MCUs to custom silicon
-            capable of trillions of inferences per second."
+            capable of billions of inferences per second."
           </p>
         </div>
 
@@ -812,8 +812,8 @@ const EvoProducts = () => {
             suffix="x"
             label="Speed Multiplier"
             labelColor="text-teal-400"
-            asterisks={2}
-            asterisksHref="/swp-technical-details#swp-vs-nn-server"
+            // asterisks={2}
+            // asterisksHref="/swp-technical-details#swp-vs-nn-server"
           />
           <HeroMetric
             color="hdl"
