@@ -42,19 +42,12 @@ import {
   HeroMetric,
 } from "@/components/ui";
 import { VideoEmbed } from "@/components/brand";
-import { SwShowcase } from "@/components/sections/SwShowcase";
 import { PodcastSection } from "@/components/sections/PodcastSection";
 import { EvoContactSection } from "@/components/sections/ContactSection";
 import { Footer } from "@/components/sections/Footer";
 import { Navbar } from "@/components/Navbar";
 
-// --- EVO CHIP SITE COMPONENTS (Corporate - PROTECTED) ---
-
-const EvoHero = ({
-  onViewChange,
-}: {
-  onViewChange: (view: string) => void;
-}) => {
+const EvoHero = () => {
   const heroImageAlt =
     "Diagram illustrating the replacement of a complex neural network (NN) with a simple, efficient gate-level logic unit.";
 

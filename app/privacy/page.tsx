@@ -18,7 +18,7 @@ export default function PrivacyPolicy() {
 
         <h1 className="text-4xl font-bold text-white mb-4">Privacy Policy</h1>
         <p className="text-slate-400 text-sm mb-8">
-          Last Updated: February 3, 2026
+          Last Updated: March 5, 2026
         </p>
 
         <div className="space-y-8 text-slate-300 leading-relaxed">
@@ -87,9 +87,13 @@ export default function PrivacyPolicy() {
               </strong>{" "}
               We or our third-party partners collect information using cookies,
               pixel tags, or similar technologies. Our third-party partners,
-              such as analytics and advertising partners, may use these
-              technologies to collect information about your online activities
-              over time.
+              such as analytics partners, may use these technologies to collect
+              information about your online activities over time. This includes
+              information such as pages visited, time spent on pages, referring
+              URLs, browser type, device type, operating system, and general
+              geographic location derived from your IP address. We use Google
+              Analytics (GA4), which automatically anonymizes IP addresses
+              before storage.
             </p>
             <p className="mt-4 text-slate-400 italic">
               Please note that if you delete or choose not to accept cookies
@@ -153,9 +157,14 @@ export default function PrivacyPolicy() {
             </p>
             <p className="mb-4">
               <strong className="text-white">Analytics Partners.</strong> We use
-              analytics services such as Google Analytics to collect and process
-              certain analytics data. You can learn more about Google&apos;s
-              practices by visiting{" "}
+              Google Analytics (GA4) to collect and process analytics data about
+              how visitors use our website. Google Analytics collects information
+              such as page paths visited, session duration, browser and device
+              type, and anonymized IP-derived location. This data is processed
+              by Google LLC and may be transferred to and stored on servers
+              outside your country of residence, including in the United States.
+              Google Analytics data is retained for up to 14 months. You can
+              learn more about Google&apos;s practices by visiting{" "}
               <a
                 href="https://policies.google.com/technologies/partner-sites"
                 className="text-cyan-400 hover:text-cyan-300"
@@ -164,7 +173,8 @@ export default function PrivacyPolicy() {
               >
                 https://policies.google.com/technologies/partner-sites
               </a>
-              .
+              . Our legal basis for this processing is our legitimate interest
+              in understanding how our website is used in order to improve it.
             </p>
             <p className="mb-4">
               <strong className="text-white">
@@ -202,12 +212,100 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-semibold text-white mb-4">
               Your Choices
             </h2>
-            <p>
+            <p className="mb-4">
               <strong className="text-white">Marketing Communications.</strong>{" "}
               You can unsubscribe from our promotional emails via the link
               provided in the emails. Even if you opt out of receiving
               promotional messages from us, you will continue to receive
               administrative messages from us.
+            </p>
+            <p className="mb-4">
+              <strong className="text-white">Analytics Opt-Out.</strong> You can
+              opt out of Google Analytics tracking by installing the{" "}
+              <a
+                href="https://tools.google.com/dlpage/gaoptout"
+                className="text-cyan-400 hover:text-cyan-300"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Google Analytics Opt-out Browser Add-on
+              </a>
+              . You may also opt out by disabling cookies in your browser
+              settings; however, this may affect your ability to use certain
+              features of our website.
+            </p>
+            <p>
+              <strong className="text-white">Do Not Track.</strong> Some
+              browsers offer a &ldquo;Do Not Track&rdquo; signal. Our website
+              does not currently respond to Do Not Track signals.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-semibold text-white mb-4">
+              Your Data Protection Rights
+            </h2>
+            <p className="mb-4">
+              Depending on your location, you may have the following rights
+              regarding your personal information:
+            </p>
+            <ul className="list-disc list-inside space-y-2 ml-4 mb-4">
+              <li>
+                <strong className="text-white">Right to access</strong> — you
+                may request a copy of the personal data we hold about you.
+              </li>
+              <li>
+                <strong className="text-white">Right to rectification</strong>{" "}
+                — you may request that we correct inaccurate or incomplete data.
+              </li>
+              <li>
+                <strong className="text-white">Right to erasure</strong> — you
+                may request that we delete your personal data, subject to
+                certain exceptions.
+              </li>
+              <li>
+                <strong className="text-white">
+                  Right to restrict processing
+                </strong>{" "}
+                — you may request that we limit how we use your data.
+              </li>
+              <li>
+                <strong className="text-white">
+                  Right to data portability
+                </strong>{" "}
+                — you may request a machine-readable copy of your personal data.
+              </li>
+              <li>
+                <strong className="text-white">Right to object</strong> — you
+                may object to processing based on legitimate interests,
+                including analytics.
+              </li>
+              <li>
+                <strong className="text-white">
+                  Right to withdraw consent
+                </strong>{" "}
+                — where processing is based on consent, you may withdraw it at
+                any time without affecting prior processing.
+              </li>
+            </ul>
+            <p className="mb-4">
+              If you are located in the European Economic Area (EEA), United
+              Kingdom, or Switzerland, these rights are provided under the GDPR
+              or equivalent legislation. If you are located in California, you
+              may have additional rights under the CCPA, including the right to
+              know, delete, and opt out of the sale of personal information. We
+              do not sell personal information.
+            </p>
+            <p>
+              To exercise any of these rights, please contact us at{" "}
+              <a
+                href="mailto:contact@evochip.ai"
+                className="text-cyan-400 hover:text-cyan-300"
+              >
+                contact@evochip.ai
+              </a>
+              . We will respond within 30 days. You also have the right to lodge
+              a complaint with your local data protection authority.
             </p>
           </section>
 
