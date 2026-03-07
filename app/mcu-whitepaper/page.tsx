@@ -120,7 +120,10 @@ export default function MCUWhitePaper() {
           .wp-toc-grid { grid-template-columns: 1fr; }
           .wp-body-section { padding: 32px 24px; }
           .wp-doc-footer { padding: 16px 24px; flex-direction: column; align-items: flex-start; }
-          .wp-stat-bar { gap: 20px; }
+          .wp-stat-bar { flex-wrap: wrap; gap: 16px; }
+          .wp-stat { flex: 0 0 calc(50% - 8px); }
+          .wp-stat-val { white-space: normal; }
+          .wp-stat-lbl { white-space: normal; }
           .wp-stat-div { display: none; }
         }
       `}</style>
