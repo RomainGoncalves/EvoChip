@@ -52,7 +52,7 @@ export default function MCUWhitePaper() {
         /* TOC */
         .wp-toc { background: #f4f6fa; border-left: 4px solid #c8923a; padding: 36px 64px; }
         .wp-toc-title { font-size: 11px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: #5a6070; margin-bottom: 20px; }
-        .wp-toc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 40px; }
+        .wp-toc-grid { display: grid; grid-template-columns: 1fr 1fr; grid-auto-flow: column; grid-template-rows: repeat(5, auto); gap: 6px 40px; }
         .wp-toc-item { display: flex; align-items: baseline; gap: 8px; font-size: 13px; color: #1a2744; text-decoration: none; }
         .wp-toc-item:hover span:last-child { text-decoration: underline; color: #c8923a; }
         .wp-toc-num { font-weight: 700; color: #c8923a; font-size: 12px; min-width: 20px; }
@@ -117,7 +117,7 @@ export default function MCUWhitePaper() {
         @media (max-width: 700px) {
           .wp-cover-inner { padding: 32px 24px; }
           .wp-toc { padding: 24px; }
-          .wp-toc-grid { grid-template-columns: 1fr; }
+          .wp-toc-grid { grid-template-columns: 1fr; grid-auto-flow: row; grid-template-rows: none; }
           .wp-body-section { padding: 32px 24px; }
           .wp-doc-footer { padding: 16px 24px; flex-direction: column; align-items: flex-start; }
           .wp-stat-bar { flex-wrap: wrap; gap: 16px; }
@@ -175,35 +175,34 @@ export default function MCUWhitePaper() {
                 <span className="wp-toc-num">01</span>
                 <span>Executive Summary</span>
               </a>
-              <a href="#section-05" className="wp-toc-item">
-                <span className="wp-toc-num">05</span>
-                <span>Deployment Workflow and Integration Model</span>
-              </a>
               <a href="#section-02" className="wp-toc-item">
                 <span className="wp-toc-num">02</span>
                 <span>Product Boundary and Integration Scope</span>
-              </a>
-              <a href="#section-06" className="wp-toc-item">
-                <span className="wp-toc-num">06</span>
-                <span>Demonstrated Implementations and Measured Performance</span>
               </a>
               <a href="#section-03" className="wp-toc-item">
                 <span className="wp-toc-num">03</span>
                 <span>Runtime Execution, Timing, and Memory Contract</span>
               </a>
-              <a href="#section-07" className="wp-toc-item">
-                <span className="wp-toc-num">07</span>
-                <span>Ecosystem Integration</span>
-              </a>
               <a href="#section-04" className="wp-toc-item">
                 <span className="wp-toc-num">04</span>
                 <span>Core Technical Architecture</span>
+              </a>
+              <a href="#section-05" className="wp-toc-item">
+                <span className="wp-toc-num">05</span>
+                <span>Deployment Workflow and Integration Model</span>
+              </a>
+              <a href="#section-06" className="wp-toc-item">
+                <span className="wp-toc-num">06</span>
+                <span>Demonstrated Implementations and Measured Performance</span>
+              </a>
+              <a href="#section-07" className="wp-toc-item">
+                <span className="wp-toc-num">07</span>
+                <span>Ecosystem Integration</span>
               </a>
               <a href="#section-08" className="wp-toc-item">
                 <span className="wp-toc-num">08</span>
                 <span>Target Applications</span>
               </a>
-              <div className="wp-toc-item" style={{ gridColumn: "1 / -1" }}></div>
               <a href="#section-09" className="wp-toc-item">
                 <span className="wp-toc-num">09</span>
                 <span>Conclusion</span>
