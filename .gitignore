@@ -15,6 +15,7 @@
 
 /docs
 /out
+/files
 
 # next.js
 /.next/
