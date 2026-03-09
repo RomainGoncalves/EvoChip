@@ -797,6 +797,8 @@ const EvoProducts = () => {
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8 mt-16">
+          {/* AltiCoreMCU */}
+          <div className="flex flex-col">
           <HeroMetric
             color="mcu"
             prefix="Less than"
@@ -804,30 +806,7 @@ const EvoProducts = () => {
             label="of RAM"
             asterisks={1}
           />
-
-          <HeroMetric
-            color="sw"
-            prefix="Up to"
-            value="28"
-            suffix="x"
-            label="Speed Multiplier"
-            labelColor="text-teal-400"
-            // asterisks={2}
-            // asterisksHref="/swp-technical-details#swp-vs-nn-server"
-          />
-          <HeroMetric
-            color="hdl"
-            prefix="Proven"
-            value="100"
-            suffix="%"
-            label="deterministic"
-            labelColor="text-yellow-400"
-          />
-        </div>
-
-        <div className="grid lg:grid-cols-3 gap-8">
-          {/* AltiCoreMCU */}
-          <div className="bg-slate-900 rounded-2xl p-6 md:p-8 border border-mcu/30 shadow-[0_0_30px_rgba(96,165,250,0.2)] flex flex-col">
+          <div className="bg-slate-900 rounded-2xl p-6 md:p-8 border border-mcu/30 shadow-[0_0_30px_rgba(96,165,250,0.2)] flex flex-col grow">
             <div className="inline-flex mb-4 px-2 py-0.5 bg-blue-900/30 border border-mcu/30 rounded text-[9px] font-mono text-mcu uppercase font-bold w-fit">
               unique logic-dominant architecture
             </div>
@@ -885,9 +864,19 @@ const EvoProducts = () => {
               </Link>
             </div>
           </div>
+          </div>
 
           {/* AltiCoreSWP */}
-          <div className="bg-slate-900 rounded-2xl p-6 md:p-8 border border-sw/30 shadow-[0_0_30px_rgba(45,212,191,0.1)] flex flex-col">
+          <div className="flex flex-col">
+          <HeroMetric
+            color="sw"
+            prefix="Up to"
+            value="28"
+            suffix="x"
+            label="Speed Multiplier"
+            labelColor="text-teal-400"
+          />
+          <div className="bg-slate-900 rounded-2xl p-6 md:p-8 border border-sw/30 shadow-[0_0_30px_rgba(45,212,191,0.1)] flex flex-col grow">
             <div className="inline-flex mb-4 px-2 py-0.5 bg-teal-900/30 border border-sw/30 rounded text-[9px] font-mono text-sw uppercase font-bold w-fit">
               unique logic-dominant architecture
             </div>
@@ -942,9 +931,19 @@ const EvoProducts = () => {
               </Link>
             </div>
           </div>
+          </div>
 
           {/* AltiCoreHDL */}
-          <div className="bg-slate-900 rounded-2xl p-6 md:p-8 border border-hdl/30 shadow-[0_0_30px_rgba(245,158,11,0.1)] flex flex-col">
+          <div className="flex flex-col">
+          <HeroMetric
+            color="hdl"
+            prefix="Proven"
+            value="100"
+            suffix="%"
+            label="deterministic"
+            labelColor="text-yellow-400"
+          />
+          <div className="bg-slate-900 rounded-2xl p-6 md:p-8 border border-hdl/30 shadow-[0_0_30px_rgba(245,158,11,0.1)] flex flex-col grow">
             <div className="inline-flex mb-4 px-2 py-0.5 bg-amber-900/20 border border-hdl/30 rounded text-[9px] font-mono text-hdl uppercase font-bold w-fit">
               unique logic-dominant architecture
             </div>
@@ -993,12 +992,18 @@ const EvoProducts = () => {
               ))}
             </div>
             <div className="flex gap-3 mt-auto">
-              <Link href="/hdl-technical-details" className="w-full">
-                <Button className="flex-1 text-sm bg-hdl text-slate-900 shadow-[0_0_20px_rgba(245,158,11,0.4)] hover:bg-hdl hover:shadow-[0_0_30px_rgba(245,158,11,0.6)] w-full">
+              <Link href="/hdl-technical-details" className="flex-1">
+                <Button className="w-full text-sm bg-hdl text-slate-900 shadow-[0_0_20px_rgba(245,158,11,0.4)] hover:bg-hdl hover:shadow-[0_0_30px_rgba(245,158,11,0.6)]">
                   Technical Details
                 </Button>
               </Link>
+              <Link href="/hdl-whitepaper" className="flex-1">
+                <Button className="w-full text-sm bg-transparent border border-hdl/40 !text-hdl hover:border-hdl hover:bg-hdl/10">
+                  White Paper
+                </Button>
+              </Link>
             </div>
+          </div>
           </div>
         </div>
       </div>
