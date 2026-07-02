@@ -113,7 +113,28 @@ const EvoHero = () => {
             </div>
           </div>
         </div>
-        <div className="relative" aria-label={heroImageAlt}>
+        <div className="flex flex-col gap-4">
+          {/* CRN press mention */}
+          <a
+            href="https://www.crn.com/news/ai/2026/evochip-targets-lower-cost-gpu-free-ai-inference-with-its-alticore-software"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-6 bg-slate-800/60 border border-slate-700/60 rounded-xl px-7 py-5 backdrop-blur-sm hover:border-cyan-500/50 hover:bg-slate-700/60 transition-colors cursor-pointer"
+          >
+            <div className="bg-blue-200 rounded-lg px-3 py-2 flex-shrink-0 flex items-center justify-center">
+              <img src="/crn-logo.svg" alt="CRN logo" className="h-14 w-auto" />
+            </div>
+            <div className="w-px self-stretch bg-slate-700/60" />
+            <p className="text-slate-200 text-base leading-snug">
+              {"On "}
+              <span className="text-white font-bold">CRN.com</span>
+              {", "}
+              <span className="text-white font-bold">Joe Kovar</span>
+              {" - chief editor, talks about EvoChip.ai technology."}
+            </p>
+          </a>
+
+          <div className="relative" aria-label={heroImageAlt}>
           <div className="relative z-10 bg-slate-900/50 backdrop-blur-md p-1 rounded-2xl border border-cyan-500/20 shadow-2xl">
             <div className="bg-slate-950 rounded-xl p-8 overflow-hidden relative min-h-100 flex flex-col justify-center items-center text-center">
               <h3 className="text-slate-400 font-mono mb-8 uppercase tracking-widest text-sm">
@@ -142,6 +163,7 @@ const EvoHero = () => {
               </p>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </section>
