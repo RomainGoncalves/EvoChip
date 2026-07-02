@@ -119,6 +119,7 @@ const EvoHero = () => {
             href="https://www.crn.com/news/ai/2026/evochip-targets-lower-cost-gpu-free-ai-inference-with-its-alticore-software"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => typeof window.gtag === "function" && window.gtag("event", "click_to_crn_article")}
             className="flex items-center gap-6 bg-slate-800/60 border border-slate-700/60 rounded-xl px-7 py-5 backdrop-blur-sm hover:border-cyan-500/50 hover:bg-slate-700/60 transition-colors cursor-pointer"
           >
             <div className="bg-blue-200 rounded-lg px-3 py-2 flex-shrink-0 flex items-center justify-center">
