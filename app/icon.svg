@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="copper" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C0714A"/>
+      <stop offset="50%" stop-color="#D4975A"/>
+      <stop offset="100%" stop-color="#A0562F"/>
+    </linearGradient>
+  </defs>
+  <!-- Dark background -->
+  <rect width="32" height="32" rx="4" fill="#0F172A"/>
+  <!-- E: vertical bar -->
+  <rect x="7" y="7" width="4" height="18" fill="url(#copper)"/>
+  <!-- E: top bar -->
+  <rect x="7" y="7" width="14" height="4" fill="url(#copper)"/>
+  <!-- E: middle bar (shorter, matching logo) -->
+  <rect x="7" y="14" width="11" height="4" fill="url(#copper)"/>
+  <!-- E: bottom bar -->
+  <rect x="7" y="21" width="14" height="4" fill="url(#copper)"/>
+</svg>
