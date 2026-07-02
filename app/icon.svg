@@ -5,9 +5,16 @@
       <stop offset="50%" stop-color="#D4975A"/>
       <stop offset="100%" stop-color="#A0562F"/>
     </linearGradient>
+    <linearGradient id="copperBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A0562F"/>
+      <stop offset="50%" stop-color="#D4975A"/>
+      <stop offset="100%" stop-color="#A0562F"/>
+    </linearGradient>
   </defs>
-  <!-- Dark background -->
-  <rect width="32" height="32" rx="4" fill="#0F172A"/>
+  <!-- Slate-900 background -->
+  <rect width="32" height="32" rx="5" fill="#0F172A"/>
+  <!-- Copper border frame (like the logo rectangle) -->
+  <rect x="1.5" y="1.5" width="29" height="29" rx="4" fill="none" stroke="url(#copperBorder)" stroke-width="1.5"/>
   <!-- E: vertical bar -->
   <rect x="7" y="7" width="4" height="18" fill="url(#copper)"/>
   <!-- E: top bar -->
