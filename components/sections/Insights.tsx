@@ -66,12 +66,13 @@ const InsightsPage = ({ onArticleClick }: InsightsPageProps) => {
               <h3 className="text-3xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors leading-tight">
                 {featured.title}
               </h3>
-              <div className="flex items-center gap-2 text-slate-500 text-sm mb-5">
+              <div className="flex items-center gap-3 text-slate-400 text-base mb-5">
                 <img
                   src={featured.authorAvatar}
-                  className="w-6 h-6 rounded-full"
-                />{" "}
-                {featured.author}{featured.authorTitle && <><span className="text-slate-600">·</span> {featured.authorTitle}</>}
+                  className="w-16 h-16 rounded-full"
+                />
+                <span className="font-semibold text-slate-300">{featured.author}</span>
+                {featured.authorTitle && <><span className="text-slate-600">·</span> <span>{featured.authorTitle}</span></>}
               </div>
               <p className="text-slate-400 text-base leading-relaxed line-clamp-3">
                 {featured.excerpt}
