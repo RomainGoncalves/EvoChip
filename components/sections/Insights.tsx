@@ -30,57 +30,109 @@ type ArticleDetailViewProps = {
 };
 
 // --- INSIGHTS HUB COMPONENTS ---
-const InsightsPage = ({ onArticleClick }: InsightsPageProps) => (
-  <section className="pt-32 pb-24 min-h-screen bg-slate-900">
-    <div className="container mx-auto px-6">
-      <SectionHeading subtitle="Media Hub" title="Insights & Intelligence" />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {insightsData.map((article) => (
+const InsightsPage = ({ onArticleClick }: InsightsPageProps) => {
+  const [featured, ...rest] = insightsData;
+
+  return (
+    <section className="pt-32 pb-24 min-h-screen bg-slate-900">
+      <div className="container mx-auto px-6">
+        <SectionHeading subtitle="Media Hub" title="Insights & Intelligence" />
+
+        {/* Featured article — latest, centered, 2-column width */}
+        <div className="flex justify-center mb-10">
           <div
-            key={article.id}
-            className="bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden hover:border-cyan-500/30 transition-all cursor-pointer group flex flex-col h-full"
-            onClick={() => onArticleClick(article.id)}
+            className="w-full md:w-2/3 bg-slate-800/40 border border-cyan-500/20 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all cursor-pointer group flex flex-col shadow-[0_0_40px_rgba(6,182,212,0.05)] hover:shadow-[0_0_40px_rgba(6,182,212,0.12)]"
+            onClick={() => onArticleClick(featured.id)}
           >
-            <div className="aspect-video relative overflow-hidden bg-slate-950">
+            <div className="aspect-[32/9] relative overflow-hidden bg-slate-950">
               <img
-                src={article.image}
-                alt={article.title}
-                className={`w-full h-full ${article.objectFit === "contain" ? "object-contain p-4" : "object-cover"} opacity-60 group-hover:opacity-100 transition-opacity`}
+                src={featured.image}
+                alt={featured.title}
+                className={`w-full h-full ${featured.objectFit === "contain" ? "object-contain p-4" : "object-cover"} opacity-60 group-hover:opacity-100 transition-opacity`}
               />
-              <div className="absolute top-4 left-4">
+              <div className="absolute top-4 left-4 flex items-center gap-2">
                 <span className="bg-cyan-500 text-slate-900 text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">
-                  {article.category}
+                  {featured.category}
+                </span>
+                <span className="bg-slate-900/80 text-cyan-400 text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded border border-cyan-500/30">
+                  Latest
                 </span>
               </div>
             </div>
-            <div className="p-6 flex-grow flex flex-col">
-              <div className="flex items-center gap-3 text-cyan-400 font-mono text-[10px] uppercase tracking-widest mb-3">
-                <Calendar className="w-3 h-3" /> {article.date}
+            <div className="p-8 flex-grow flex flex-col">
+              <div className="flex items-center gap-3 text-cyan-400 font-mono text-[10px] uppercase tracking-widest mb-4">
+                <Calendar className="w-3 h-3" /> {featured.date}
               </div>
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors leading-tight">
-                {article.title}
+              <h3 className="text-3xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors leading-tight">
+                {featured.title}
               </h3>
-              <div className="flex items-center gap-2 text-slate-500 text-xs mb-4">
+              <div className="flex items-center gap-2 text-slate-500 text-sm mb-5">
                 <img
-                  src={article.authorAvatar}
-                  className="w-5 h-5 rounded-full"
+                  src={featured.authorAvatar}
+                  className="w-6 h-6 rounded-full"
                 />{" "}
-                {article.author}
+                {featured.author}{featured.authorTitle && <><span className="text-slate-600">·</span> {featured.authorTitle}</>}
               </div>
-              <p className="text-slate-400 text-sm leading-relaxed line-clamp-3">
-                {article.excerpt}
+              <p className="text-slate-400 text-base leading-relaxed line-clamp-3">
+                {featured.excerpt}
               </p>
-              <div className="mt-auto pt-6 flex items-center gap-2 text-cyan-400 text-xs font-bold uppercase tracking-widest">
+              <div className="mt-auto pt-6 flex items-center gap-2 text-cyan-400 text-sm font-bold uppercase tracking-widest">
                 Read More{" "}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </div>
             </div>
           </div>
-        ))}
+        </div>
+
+        {/* Remaining articles */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {rest.map((article) => (
+            <div
+              key={article.id}
+              className="bg-slate-800/40 border border-slate-700/50 rounded-2xl overflow-hidden hover:border-cyan-500/30 transition-all cursor-pointer group flex flex-col h-full"
+              onClick={() => onArticleClick(article.id)}
+            >
+              <div className="aspect-video relative overflow-hidden bg-slate-950">
+                <img
+                  src={article.image}
+                  alt={article.title}
+                  className={`w-full h-full ${article.objectFit === "contain" ? "object-contain p-4" : "object-cover"} opacity-60 group-hover:opacity-100 transition-opacity`}
+                />
+                <div className="absolute top-4 left-4">
+                  <span className="bg-cyan-500 text-slate-900 text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded">
+                    {article.category}
+                  </span>
+                </div>
+              </div>
+              <div className="p-6 flex-grow flex flex-col">
+                <div className="flex items-center gap-3 text-cyan-400 font-mono text-[10px] uppercase tracking-widest mb-3">
+                  <Calendar className="w-3 h-3" /> {article.date}
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors leading-tight">
+                  {article.title}
+                </h3>
+                <div className="flex items-center gap-2 text-slate-500 text-xs mb-4">
+                  <img
+                    src={article.authorAvatar}
+                    className="w-5 h-5 rounded-full"
+                  />{" "}
+                  {article.author}{article.authorTitle && <><span className="text-slate-600">·</span> {article.authorTitle}</>}
+                </div>
+                <p className="text-slate-400 text-sm leading-relaxed line-clamp-3">
+                  {article.excerpt}
+                </p>
+                <div className="mt-auto pt-6 flex items-center gap-2 text-cyan-400 text-xs font-bold uppercase tracking-widest">
+                  Read More{" "}
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 const ArticleDetailView = ({ article, onBack }: ArticleDetailViewProps) => {
   if (!article) return null;
