@@ -77,18 +77,18 @@ export const InvestorPortalContent = () => {
               Key Metrics
             </h3>
             <KPICard
-              title="Target Exit Valuation"
-              value={"> $1 Billion"}
+              title="Post Seed Round"
+              value={"$1 Million"}
               icon={TrendingUp}
               color="text-green-400"
-              subtitle="Strategic acquisition roadmap."
+              subtitle="$20 Million Post Money Valuation - Q3 2026"
             />
             <KPICard
               title="Series A Round"
-              value="$10M Target"
+              value="$10 Million"
               icon={Rocket}
               color="text-cyan-400"
-              subtitle="Current Raise: $100M Pre-Money."
+              subtitle="$100 Million Post Money Valuation - H1 2027"
             />
           </div>
 
