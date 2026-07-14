@@ -825,8 +825,8 @@ const EvoProducts = () => {
           <HeroMetric
             color="mcu"
             prefix="Less than"
-            value="521B"
-            label="of RAM"
+            value="521"
+            label="bytes of RAM"
             asterisks={1}
           />
           <div className="bg-slate-900 rounded-2xl p-6 md:p-8 border border-mcu/30 shadow-[0_0_30px_rgba(96,165,250,0.2)] flex flex-col grow">
