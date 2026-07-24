@@ -29,7 +29,7 @@ import { VideoEmbed } from "@/components/brand";
 const MCU_STATS: OperationalBoxItem[] = [
   {
     label: "Ultra-Lightweight Footprint",
-    val: "< 521B",
+    val: "< 521 bytes",
     sub: "parameter RAM (example)",
   },
   {
@@ -59,8 +59,8 @@ export const McuShowcase = () => (
       <HeroMetric
         color="mcu"
         prefix="Benchmark example"
-        value="521B"
-        label="Model State RAM"
+        value="521 bytes"
+        label="of Model State RAM"
         asterisks={1}
       />
 
